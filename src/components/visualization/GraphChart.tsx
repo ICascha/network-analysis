@@ -6,27 +6,30 @@ export const GraphChart = () => {
   const [nodes, setNodes] = useState([]);
   const [edges, setEdges] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null); // TypeScript syntax
   const graphRef = useRef<GraphCanvasRef>(null);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Fetch nodes and edges data from JSON files
+        // Get the base URL for GitHub Pages in Vite
+        const basePath = import.meta.env.BASE_URL;
+        
+        // Fetch nodes and edges data from JSON files with the correct base path
         const [nodesResponse, edgesResponse] = await Promise.all([
-          fetch('/nodes.json'),
-          fetch('/edges.json')
+          fetch(`${basePath}nodes.json`),
+          fetch(`${basePath}edges.json`)
         ]);
-
+        
         // Check if responses are successful
         if (!nodesResponse.ok || !edgesResponse.ok) {
           throw new Error('Failed to fetch graph data');
         }
-
+        
         // Parse JSON responses
         const nodesData = await nodesResponse.json();
         const edgesData = await edgesResponse.json();
-
+        
         // Update state with fetched data
         setNodes(nodesData);
         setEdges(edgesData);
@@ -39,10 +42,10 @@ export const GraphChart = () => {
         setLoading(false);
       }
     };
-
+    
     fetchData();
   }, []);
-
+  
   // Add selection functionality
   const { selections, actives, onNodeClick, onCanvasClick } = useSelection({
     ref: graphRef,
@@ -50,15 +53,15 @@ export const GraphChart = () => {
     edges: edges,
     pathSelectionType: 'all'
   });
-
+  
   if (loading) {
     return <div>Loading graph data...</div>;
   }
-
+  
   if (error) {
     return <div>Error loading graph: {error}</div>;
   }
-
+  
   return (
     <GraphCanvas 
       ref={graphRef}
