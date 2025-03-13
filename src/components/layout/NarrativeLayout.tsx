@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { MainContent } from '../visualization/MainContent';
 import { Info } from 'lucide-react';
 import {
@@ -19,7 +19,7 @@ const initialSettings: ModelSettings = {
 };
 
 export const NarrativeLayout = () => {
-  const [settings, setSettings] = useState<ModelSettings>(initialSettings);
+  const [settings] = useState<ModelSettings>(initialSettings);
   
   const basePath = import.meta.env.BASE_URL;
 

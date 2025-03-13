@@ -30,7 +30,7 @@ interface MainContentProps {
   settings: ModelSettings;
 }
 
-export const MainContent = ({ settings }: MainContentProps) => {
+export const MainContent = ({ }: MainContentProps) => {
   return (
     <div className="p-4">
       <div className="space-y-8">
