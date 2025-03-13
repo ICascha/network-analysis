@@ -1,0 +1,933 @@
+[
+  {
+    "source": "Radicalisering",
+    "target": "Privacy-inbreuken",
+    "id": "Radicalisering-Privacy-inbreuken",
+    "label": "1",
+    "citaat_relatie": "Het kabinet wil voorkomen dat uitreizigers straffeloos blijven en vervolgens, zonder dat nog vervolging mogelijk is, terugkeren naar Nederland."
+  },
+  {
+    "source": "Radicalisering",
+    "target": "Online Radicalisering",
+    "id": "Radicalisering-Online Radicalisering",
+    "label": "1",
+    "citaat_relatie": "In verschillende fasen en vanuit verschillende kaders is sprake van toezicht wanneer uitreizigers terugkeren naar Nederland."
+  },
+  {
+    "source": "Online Radicalisering",
+    "target": "Eenlingen",
+    "id": "Online Radicalisering-Eenlingen",
+    "label": "2",
+    "citaat_relatie": "Vrijgekomen uitreizigers kunnen (onder de radar) terugkeren naar Nederland. | Er is sprake van radicalisering waarvan op termijn een dreiging kan uitgaan."
+  },
+  {
+    "source": "Ondermijning",
+    "target": "Maatschappelijke Onrust",
+    "id": "Ondermijning-Maatschappelijke Onrust",
+    "label": "1",
+    "citaat_relatie": "Georganiseerde criminaliteit de potentie heeft om -op de langere termijn- de nationale veiligheid aan te tasten."
+  },
+  {
+    "source": "Ondermijning",
+    "target": "Veiligheid",
+    "id": "Ondermijning-Veiligheid",
+    "label": "1",
+    "citaat_relatie": "De studie van het ANV belicht terecht de zogenaamde systeeminvalshoek, waarbij misbruik van gelegenheidsstructuren kan leiden tot aantasting van de nationale veiligheid."
+  },
+  {
+    "source": "Kwetsbaarheden",
+    "target": "Ondermijning",
+    "id": "Kwetsbaarheden-Ondermijning",
+    "label": "1",
+    "citaat_relatie": "Bij (delen van) overheidsorganisaties, bijvoorbeeld bij gemeenten, kan een gebrek aan bewustzijn en informatiedeling rond georganiseerde criminaliteit, samen met een soms versnipperde aanpak, gelegenheid bieden voor criminele activiteiten."
+  },
+  {
+    "source": "Informatie-uitwisseling",
+    "target": "Cyberaanvallen",
+    "id": "Informatie-uitwisseling-Cyberaanvallen",
+    "label": "3",
+    "citaat_relatie": "Voorts heeft Onze Minister, ter voorkoming van nadelige maatschappelijke gevolgen, tot taak: het verstrekken van ingevolge het eerste lid, onderdeel c, verkregen gegevens over dreigingen en incidenten met betrekking tot andere informatiesystemen. | Ter uitvoering van de in artikel 2 genoemde taken verstrekt Onze Minister geen vertrouwelijke gegevens met betrekking tot een aanbieder indien: de geheimhouding van die gegevens onvoldoende is gewaarborgd. | Onvoldoende digitale weerbaarheid van het MKB en andere sectoren veroorzaakt cyberaanvallen op vitale infrastructuur."
+  },
+  {
+    "source": "Online Radicalisering",
+    "target": "Radicalisering",
+    "id": "Online Radicalisering-Radicalisering",
+    "label": "1",
+    "citaat_relatie": "Zonder een fysiek terrein kan bijvoorbeeld een boodschap over een Kalifaat niet meer worden uitgedragen."
+  },
+  {
+    "source": "Grondrechten",
+    "target": "Onvoldoende Voorbereiding",
+    "id": "Grondrechten-Onvoldoende Voorbereiding",
+    "label": "2",
+    "citaat_relatie": "In een rechtsstaat kunnen noodverordeningen niet te lang van kracht blijven, mede met het oog op de ingrijpende gevolgen voor de vrijheden en grondrechten van eenieder. | Dit betreft maatregelen die eerder zijn toegepast om covid-19 te bestrijden en die een enorme, soms ontwrichtende, impact hebben gehad op mensen, vrijheden en bedrijven."
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "Desinformatie",
+    "id": "Statelijke Beïnvloeding-Desinformatie",
+    "label": "1",
+    "citaat_relatie": "Een ander voorbeeld zijn Russische desinformatiecampagnes rond MH17."
+  },
+  {
+    "source": "Desinformatie",
+    "target": "Vertrouwen",
+    "id": "Desinformatie-Vertrouwen",
+    "label": "5",
+    "citaat_relatie": "De aanpak van die landen wordt ook wel een whole-of_society approach genoemd. Dat vergt van de AIVD en MIVD een integrale wijze van onderzoek naar die landen waar de dreiging vanuit gaat. | De kern van de Rapid Deployment Capacity... zal... o.a. kunnen worden aangevuld met maritieme en luchtcapaciteiten. | Het kabinet ziet dat hierdoor de drempel voor potentiële tegenstanders wordt verlaagd om kwaadwillende activiteiten uit te voeren als cyberaanvallen en desinformatiecampagnes. | De AIVD stelt dat dit narratief de democratische rechtsorde ondermijnt. In de eerste plaats omdat het een wereldbeeld creëert dat feitelijke onjuist is. | De regering vooralsnog geweigerd nadere informatie aan de Eerste Kamer te verstrekken."
+  },
+  {
+    "source": "Vertrouwen",
+    "target": "Ondermijning",
+    "id": "Vertrouwen-Ondermijning",
+    "label": "2",
+    "citaat_relatie": "Wanneer personen op grote schaal de legitimiteit van de overheid en democratische instituties afwijzen, kan dit op termijn de democratische rechtsorde ondermijnen. | Wanneer personen op grote schaal de legitimiteit van de overheid en democratische instituties afwijzen, kan dit op termijn de democratische rechtsorde ondermijnen."
+  },
+  {
+    "source": "DDoS-aanvallen",
+    "target": "Cyberaanvallen",
+    "id": "DDoS-aanvallen-Cyberaanvallen",
+    "label": "1",
+    "citaat_relatie": "Hierdoor zijn de websites van deze organisaties tijdelijk onbereikbaar geweest en is de eenvoud van hacktivisme duidelijk naar voren gekomen."
+  },
+  {
+    "source": "Afhankelijkheid",
+    "target": "Informatie-uitwisseling",
+    "id": "Afhankelijkheid-Informatie-uitwisseling",
+    "label": "2",
+    "citaat_relatie": "De Citrix-problematiek maakte nogmaals duidelijk dat incidenten bij organisaties die niet als vitaal zijn aangemerkt tot overlast of onrust kunnen leiden. | In de landen die deze tegen willen gaan zijn de politieke bevoegdheden op deze deelterreinen vaak ontoereikend of verdeeld over verschillende departementen."
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "Samenwerking Veiligheid",
+    "id": "Statelijke Beïnvloeding-Samenwerking Veiligheid",
+    "label": "1",
+    "citaat_relatie": "In het licht van de toegenomen cyberdreiging vanuit statelijke actoren,... die direct en rechtstreeks inbreuk maken op Nederlandse en Europese belangen,... heeft Nederland de ambitie om... samenwerking te bevorderen..."
+  },
+  {
+    "source": "Samenwerking Veiligheid",
+    "target": "Defensieuitgaven",
+    "id": "Samenwerking Veiligheid-Defensieuitgaven",
+    "label": "1",
+    "citaat_relatie": "Nederland... heeft de ambitie om een leidende rol te spelen in het versterken van bestaande coalities als EU en NAVO..."
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "Cyberaanvallen",
+    "id": "Statelijke Beïnvloeding-Cyberaanvallen",
+    "label": "2",
+    "citaat_relatie": "De cyberdreiging tegen Nederland en zijn bondgenoten is onverminderd groot en vraagt om een sterke krijgsmacht met een sterke cyberpoot. | De veiligheid van digitale processen is en blijft essentieel in onze maatschappij en is dus onlosmakelijk verbonden met de nationale veiligheid."
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "Afhankelijkheid",
+    "id": "Statelijke Beïnvloeding-Afhankelijkheid",
+    "label": "1",
+    "citaat_relatie": "De Tijdelijke wet cyberoperaties voor bulkdatasets en de vernieuwing die eraan komt van de Wet op de inlichtingen- en veiligheidsdiensten, de Wiv, zijn stappen om Nederland weerbaarder te maken in het informatiedomein in de schemerzone van het conflict."
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "Vertrouwen en Controle",
+    "id": "Statelijke Beïnvloeding-Vertrouwen en Controle",
+    "label": "1",
+    "citaat_relatie": "Geopolitieke dreigingen en cyberaanvallen vanuit staten leiden tot verlies van vertrouwen in digitale betalingssystemen."
+  },
+  {
+    "source": "Kwetsbaarheden",
+    "target": "Cyberaanvallen",
+    "id": "Kwetsbaarheden-Cyberaanvallen",
+    "label": "1",
+    "citaat_relatie": "Kwetsbaarheden in digitale infrastructuur resulteren in cyberaanvallen op vitale infrastructuur."
+  },
+  {
+    "source": "Jihadistische Dreiging",
+    "target": "Eenlingen",
+    "id": "Jihadistische Dreiging-Eenlingen",
+    "label": "2",
+    "citaat_relatie": "Een aanslag is dus voorstelbaar. Daarbij moet vooral worden gedacht aan een aanslag van eenlingen of kleine groepen vanuit een jihadistisch motief of uit een andere extremistische hoek. | De machtsovername van de Taliban in Afghanistan kan op termijn de voedingsbodem voor en bewegingsruimte van terroristische organisaties, zoals Al Qa’ida, versterken."
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Gereedheid",
+    "id": "Geopolitieke Spanningen-Gereedheid",
+    "label": "2",
+    "citaat_relatie": "De bewapening voor luchtverdediging van de nieuwe LC-fregatten is meer geavanceerd dan die van de huidige schepen. | Ondertussen is de veiligheidssituatie in de wereld in hoog tempo aan het verslechteren. [...] staat vast dat het conflict lang invloed zal hebben op zowel de verhoudingen op het wereldtoneel als de veiligheidssituatie in Europa."
+  },
+  {
+    "source": "Afhankelijkheid",
+    "target": "Vertrouwen",
+    "id": "Afhankelijkheid-Vertrouwen",
+    "label": "2",
+    "citaat_relatie": "Defensie heeft meerdere projecten in gang gezet om de zeewaardigheid en de operationele relevantie van de vier huidige LC-fregatten op peil te houden. | Schaarste aan basisbehoeften zoals voedsel en energie, leidt tot verlies van vertrouwen in de overheid door crises en gebrek aan informatie."
+  },
+  {
+    "source": "Onvoldoende Voorbereiding",
+    "target": "Infectieziekten",
+    "id": "Onvoldoende Voorbereiding-Infectieziekten",
+    "label": "7",
+    "citaat_relatie": "Als gevolg van deze inventarisatie worden witte vlekken ingevuld en surveillance-activiteiten uitgebreid of samengevoegd. | De commissie concludeert dat het de regering en de overheid in ruime zin ontbreekt aan een samenhangend overheidsbreed kader van taken en bevoegdheden om te komen tot een effectief, efficiënt en controleerbaar handelen. | De leden van de commissie VWS zijn van mening dat tot nu toe onvoldoende voortgang is geboekt bij het oplossen van de hierboven geschetste vraagpunten. | Het virus circuleerde er binnen korte tijd uiterst snel en de Chinese autoriteiten deelden onvoldoende betrouwbare data over de epidemiologische ontwikkelingen. Hierdoor had de internationale gemeenschap geen zicht op de circulatie van mogelijke nieuwe zorgwekkende virusvarianten. | de gereedschapskist met maatregelen in het wetsvoorstel mogelijk beperkt is in omvang om voor infectieziekten met andere kenmerken dan luchtweginfecties zoals covid-19, voldoende grondslagen te hebben in de Wet publieke gezondheid. | De Chinese autoriteiten deelden onvoldoende betrouwbare data over de epidemiologische ontwikkelingen. Hierdoor had de internationale gemeenschap geen zicht op de circulatie van mogelijke nieuwe zorgwekkende virusvarianten. | Preventieve maatregelen om een infectieziekte te voorkomen zowel de individuele als volksgezondheid ten goede komt. Het voorkomt het nemen van zware collectieve maatregelen."
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Desinformatie",
+    "id": "Geopolitieke Spanningen-Desinformatie",
+    "label": "1",
+    "citaat_relatie": "De leden van de VVD-fractie delen de zorgen van het kabinet over geopolitieke ontwikkelingen, de verslechterde veiligheidssituatie in de wereld en in regio’s nabij Europa, alsook de snelle opkomst van nieuwe en hybride dreigingen."
+  },
+  {
+    "source": "Gereedheid",
+    "target": "Afhankelijkheid",
+    "id": "Gereedheid-Afhankelijkheid",
+    "label": "1",
+    "citaat_relatie": "We moeten nu bouwen aan deze vormen van samenwerking zodat we in (pre-)conflictsituaties deze relaties en samenwerking kunnen benutten."
+  },
+  {
+    "source": "Afhankelijkheid",
+    "target": "Vertrouwen en Controle",
+    "id": "Afhankelijkheid-Vertrouwen en Controle",
+    "label": "3",
+    "citaat_relatie": "Een toegenomen afhankelijkheid van buitenlandse technologie leidt tot verlies van controle over digitale infrastructuur. | Door de afhankelijkheid van (buitenlandse) partijen groeit de kwetsbaarheid voor spionage, verstoring en sabotage. | De afhankelijkheid van grote techbedrijven voor AI-technologie kan leiden tot verlies van controle over AI-systemen."
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Geopolitieke Spanningen",
+    "id": "Klimaatverandering-Geopolitieke Spanningen",
+    "label": "1",
+    "citaat_relatie": "Ook klimaatverandering brengt nieuwe dreigingen met zich mee. Zo kan klimaatverandering werken als katalysator van dreigingen."
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Vertrouwen",
+    "id": "Geopolitieke Spanningen-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "De international rules-based order staat onder druk en wereldwijde ontwikkelingen hebben gevolgen voor de vrede en stabiliteit."
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Informatie-uitwisseling",
+    "id": "Klimaatverandering-Informatie-uitwisseling",
+    "label": "1",
+    "citaat_relatie": "Meerdere rapporten laten zien dat Caribisch Nederland niet ontkomt aan de gevolgen van klimaatverandering. Te voorzien is dat op termijn maatregelen nodig zijn om de gevolgen van klimaatverandering het hoofd te kunnen bieden. Het gaat bij klimaatadaptatiemaatregelen ook om het nu al maken van de juiste keuzes met name in de ruimtelijke ordening en inrichting van Caribisch Nederland."
+  },
+  {
+    "source": "Informatie-uitwisseling",
+    "target": "Klimaatverandering",
+    "id": "Informatie-uitwisseling-Klimaatverandering",
+    "label": "1",
+    "citaat_relatie": "De uitkomsten, die in 2023 worden verwacht, kunnen worden verwerkt in een klimaateffectatlas en als bouwsteen worden gebruikt bij risicodialogen en bij besluitvorming in het kader van ruimtelijke ordening en ruimtelijke inrichting en bij het opstellen van adaptatiestrategieën."
+  },
+  {
+    "source": "Afhankelijkheid",
+    "target": "Klimaatverandering",
+    "id": "Afhankelijkheid-Klimaatverandering",
+    "label": "1",
+    "citaat_relatie": "Verdragspartijen hebben onder de Overeenkomst van Parijs verschillende rechten en voordelen. Ontwikkelingslanden kunnen aanspraak maken op financiering, capaciteitsopbouw en overdracht van technologie."
+  },
+  {
+    "source": "Rechts-extremisme",
+    "target": "Jihadistische Dreiging",
+    "id": "Rechts-extremisme-Jihadistische Dreiging",
+    "label": "3",
+    "citaat_relatie": "de NCTV stelt dat ook normalisering van rechts-extremistisch gedachtegoed kan leiden tot geweld. | Het gebruik van terroristisch geweld is daarbij volgens aanhangers gerechtvaardigd. | Het kwaadaardig elite narratief, een complottheorie, is hier onderdeel van en voedt het wantrouwen tegen de overheid en democratische instituties zoals media, rechtspraak en wetenschap."
+  },
+  {
+    "source": "Online Radicalisering",
+    "target": "Jihadistische Dreiging",
+    "id": "Online Radicalisering-Jihadistische Dreiging",
+    "label": "1",
+    "citaat_relatie": "Het is zorgelijk en kwalijk dat deze ontwikkeling haat en onverdraagzaamheid naar andersdenkenden normaliseert en kan zorgen voor snelle online radicalisering richting geweld."
+  },
+  {
+    "source": "Rechts-extremisme",
+    "target": "Ondermijning",
+    "id": "Rechts-extremisme-Ondermijning",
+    "label": "3",
+    "citaat_relatie": "rechts-extremistische groepen die geen terroristische aanslagen voorstaan toch een bedreiging vormen voor de democratische rechtsorde, omdat hun gedachtegoed haaks staat op de waarden van onze democratische rechtsorde. | Dit ondermijnt de democratische rechtsorde door het aantasten van het publieke vertrouwen in de rechtsstaat | Dit ondermijnt de democratische rechtsorde door het aantasten van het publieke vertrouwen in de rechtsstaat."
+  },
+  {
+    "source": "Radicalisering",
+    "target": "Eenlingen",
+    "id": "Radicalisering-Eenlingen",
+    "label": "1",
+    "citaat_relatie": "De dreiging overschrijdt nationale grenzen en de recente aanslagen en arrestaties elders in Europa laten zien dat onze open samenlevingen relatief kwetsbaar blijven voor de daden van een gewelddadige eenling of van kleine cellen."
+  },
+  {
+    "source": "Veiligheid",
+    "target": "Radicalisering",
+    "id": "Veiligheid-Radicalisering",
+    "label": "1",
+    "citaat_relatie": "Aanleiding waren de ontwikkelingen zoals geschetst in het DTN32: de dreiging die uitgaat van zogenoemde jihadgangers en terugkeerders, de toenemende jihadistische radicalisering van kleine groepen jongeren in Nederland en de verslechtering van de situatie in het Midden-Oosten en Noord-Afrika."
+  },
+  {
+    "source": "Cyberaanvallen",
+    "target": "Vertrouwen",
+    "id": "Cyberaanvallen-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "Verstoringen van belangrijke processen kunnen snel leiden tot grote economische schade of zelfs maatschappelijke ontwrichting."
+  },
+  {
+    "source": "DDoS-aanvallen",
+    "target": "Kennistransfer",
+    "id": "DDoS-aanvallen-Kennistransfer",
+    "label": "1",
+    "citaat_relatie": "Dit vraagt om actieve cyberbescherming met als doel meer grip te krijgen op digitale dreigingen."
+  },
+  {
+    "source": "Online Radicalisering",
+    "target": "Rechts-extremisme",
+    "id": "Online Radicalisering-Rechts-extremisme",
+    "label": "6",
+    "citaat_relatie": "Daarnaast wordt maximaal ingezet om te zorgen dat daders van terroristische misdrijven worden opgespoord, vervolgd en bestraft. Bovendien wordt op dit moment een wetsvoorstel voorbereid dat voorziet in het verhogen van het strafmaximum voor deelname aan een terroristische organisatie naar 20 jaar. | Het rechtsextremisme en het rechts-extremistische en terroristische geweld kunnen tegenwoordig niet los gezien worden van de online context, waarin discussies en meningen over maatschappelijke ontwikkelingen en gebeurtenissen een voedingsbodem en rekruteringsdomein kunnen vormen voor (oproepen tot) geweld. | Het is voorstelbaar dat een minderjarige of jongvolwassene die is geradicaliseerd binnen het rechtsextremistische onlinemilieu overgaat tot geweld. | Er zijn ook in Nederland enkele voorbeelden bekend van jonge jihadisten die buiten de gekende fysieke netwerken om radicaliseren, onder invloed van online propaganda. | Het rechtsextremistische gedachtegoed en daarmee samenhangende gedragingen vormen een reële bedreiging voor de nationale veiligheid. | Het is voorstelbaar dat een minderjarige of jongvolwassene die is geradicaliseerd binnen het rechtsextremistische onlinemilieu overgaat tot geweld."
+  },
+  {
+    "source": "Rechts-extremisme",
+    "target": "Vertrouwen",
+    "id": "Rechts-extremisme-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "Dit ondermijnt de democratische rechtsorde door het aantasten van het publieke vertrouwen in de rechtsstaat."
+  },
+  {
+    "source": "Cyberaanvallen",
+    "target": "Afhankelijkheid",
+    "id": "Cyberaanvallen-Afhankelijkheid",
+    "label": "3",
+    "citaat_relatie": "Naast cyberaanvallen, gaat ook van grootschalige uitval een dreiging uit. | Verstoringen van belangrijke processen kunnen snel leiden tot grote economische schade of zelfs maatschappelijke ontwrichting. | Verstoring van vitale infrastructuur door aanvallen of conflicten veroorzaakt schaarste aan voedsel en gezondheidszorg tijdens crises."
+  },
+  {
+    "source": "Cyberaanvallen",
+    "target": "Vertrouwen en Controle",
+    "id": "Cyberaanvallen-Vertrouwen en Controle",
+    "label": "2",
+    "citaat_relatie": "Met name de inzet van ransomware kan grote gevolgen krijgen voor de nationale veiligheid. | Dit bemoeilijkt het ondoorzichtige en heimelijke karakter van hybride dreigingen de attributie en het handelingsperspectief."
+  },
+  {
+    "source": "Afhankelijkheid",
+    "target": "Kwetsbaarheden",
+    "id": "Afhankelijkheid-Kwetsbaarheden",
+    "label": "2",
+    "citaat_relatie": "Digitale risico’s worden beïnvloed door vele, ook niet-digitale, factoren. | De beschreven casus maakt daarnaast duidelijk dat dit soort IoT apparatuur aan hogere veiligheidsnormen moet voldoen met het oog op de nationale veiligheid."
+  },
+  {
+    "source": "Infectieziekten",
+    "target": "Onvoldoende Voorbereiding",
+    "id": "Infectieziekten-Onvoldoende Voorbereiding",
+    "label": "8",
+    "citaat_relatie": "Stel dat binnen nu en vijf, tien of twintig jaar een nieuw dodelijk virus ons land teistert. [...] Ik vraag me af of deze wet nu goed genoeg is. | Dit wetsvoorstel creëert een structureel wettelijk kader voor de bestrijding van een epidemie van infectieziekten behorend tot groep A1, of een directe dreiging daarvan. | de aanwezigheid van de ziekmakende en levensbedreigende bacteriën in het onderzochte vlees de gezondheid van de consument ernstig kan bedreigen | De coronacrisis had een ongekende omvang, en heeft ons laten zien dat een goede voorbereiding op een eventuele volgende pandemie noodzakelijk is. | de vraag werd opgeworpen of de wetgeving voor het nemen van collectieve maatregelen nu 'af' en 'toereikend' is of dat aanvullende wijzigingen noodzakelijk zijn. | Zij leggen de regering daarom nog graag enige vragen voor. | Dit onderscheid wordt gerechtvaardigd door het bijzondere karakter van infectieziekten in de A1-groep en het vergaande karakter van de collectieve maatregelen die op basis van indeling in de A1-groep mogelijk kunnen worden gemaakt. | De noodbevoegdheid is noodzakelijk, omdat zich in een epidemie van een A1-infectieziekte omstandigheden kunnen voordoen waarin maatregelen nodig zijn waar op dat moment (nog) geen specifieke bevoegdheidsgrondslag voor is."
+  },
+  {
+    "source": "Grondrechten",
+    "target": "Vertrouwen",
+    "id": "Grondrechten-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "Dat is misschien een antwoord dat op papier perfect klopt, maar het gaat totaal voorbij aan de realiteit."
+  },
+  {
+    "source": "Maatschappelijke Onrust",
+    "target": "Economische Impact",
+    "id": "Maatschappelijke Onrust-Economische Impact",
+    "label": "1",
+    "citaat_relatie": "Dit roept op tot een interruptie van mevrouw Van den Berg."
+  },
+  {
+    "source": "Vertrouwen en Controle",
+    "target": "Informatie-uitwisseling",
+    "id": "Vertrouwen en Controle-Informatie-uitwisseling",
+    "label": "1",
+    "citaat_relatie": "Cyberveiligheid is bij de ene instelling een regulier aandachtspunt en bij anderen nog nauwelijks."
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "Polarisatie",
+    "id": "Statelijke Beïnvloeding-Polarisatie",
+    "label": "1",
+    "citaat_relatie": "constaterende dat er signalen zijn dat pro-Palestijnse demonstraties in het Westen vanuit onder meer Arabische landen en een terreurbeweging als Hezbollah worden aangewakkerd;"
+  },
+  {
+    "source": "Intimidatie",
+    "target": "Agressie tegen Journalisten",
+    "id": "Intimidatie-Agressie tegen Journalisten",
+    "label": "1",
+    "citaat_relatie": "constaterende dat acties en uitspraken van Kamerleden bijdragen aan het klimaat van agressie en wantrouwen waar deze problemen uit voortkomen;"
+  },
+  {
+    "source": "Gereedheid",
+    "target": "Defensieuitgaven",
+    "id": "Gereedheid-Defensieuitgaven",
+    "label": "1",
+    "citaat_relatie": "een concrete communicatiestrategie nodig heeft met meer aandacht voor diversiteit... omdat niet alle potentiële doelgroepen nu voldoende worden bereikt"
+  },
+  {
+    "source": "Agressie tegen Journalisten",
+    "target": "Informatie-uitwisseling",
+    "id": "Agressie tegen Journalisten-Informatie-uitwisseling",
+    "label": "1",
+    "citaat_relatie": "constaterende dat vanuit de sector, PersVeilig en de overheid het tot nu toe niet gelukt is met Twitter over deze problematiek in gesprek te gaan;"
+  },
+  {
+    "source": "Chemische Ongevallen",
+    "target": "Cybercriminaliteit",
+    "id": "Chemische Ongevallen-Cybercriminaliteit",
+    "label": "1",
+    "citaat_relatie": "De eenvoudige toegankelijkheid van aanvalsmiddelen en het gebruik van onveilige producten en diensten zijn oorzaken van deze laagdrempeligheid."
+  },
+  {
+    "source": "Infectieziekten",
+    "target": "Vertrouwen",
+    "id": "Infectieziekten-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "Een aantal antwoorden geeft aanleiding voor vervolgvragen."
+  },
+  {
+    "source": "Droneveiligheid",
+    "target": "Economische Impact",
+    "id": "Droneveiligheid-Economische Impact",
+    "label": "1",
+    "citaat_relatie": "Een evenwichtige uitvoering van essentieel belang is om negatieve effecten op het leven van burgers en bedrijven te minimaliseren."
+  },
+  {
+    "source": "Ondermijning",
+    "target": "Rechts-extremisme",
+    "id": "Ondermijning-Rechts-extremisme",
+    "label": "1",
+    "citaat_relatie": "Sterker, het door rechts-extremisten structureel zaaien van haat jegens minderheden, de rechtsstaat en de democratie kan (op termijn) ook op niet-gewelddadige wijze een bedreiging voor de nationale veiligheid vormen."
+  },
+  {
+    "source": "Desinformatie",
+    "target": "Intimidatie",
+    "id": "Desinformatie-Intimidatie",
+    "label": "1",
+    "citaat_relatie": "Dergelijke complotten kunnen verregaande gevolgen hebben. Het kan het publieke vertrouwen in de instituties aantasten, aanzetten tot bedreigingen, intimideren of gebruik van geweld"
+  },
+  {
+    "source": "Desinformatie",
+    "target": "Polarisatie",
+    "id": "Desinformatie-Polarisatie",
+    "label": "4",
+    "citaat_relatie": "Dergelijke complotten kunnen verregaande gevolgen hebben. Het kan het publieke vertrouwen in de instituties aantasten, aanzetten tot bedreigingen, intimideren of gebruik van geweld, aanzetten tot extremistisch handelen en de voedingsbodem voor radicalisering richting terrorisme vergroten. | Een fenomeen dat polarisatie versterkt, is desinformatie: het doelbewust – veelal heimelijk – bewust verspreiden van misleidende of foutieve informatie. | Een fenomeen dat polarisatie versterkt, is desinformatie. | De AIVD signaleert dat dit onze manier van samenleven kan schaden, want vertrouwen is het fundament van onze democratische rechtsorde."
+  },
+  {
+    "source": "Antisemitisme",
+    "target": "Meldingsbereidheid",
+    "id": "Antisemitisme-Meldingsbereidheid",
+    "label": "1",
+    "citaat_relatie": "Het COC stelt dat slachtoffers van anti-homogeweld een hoge drempel over moeten om hun verhaal te doen bij de politie."
+  },
+  {
+    "source": "Eenlingen",
+    "target": "Veiligheid",
+    "id": "Eenlingen-Veiligheid",
+    "label": "1",
+    "citaat_relatie": "De door ISIS aangestuurde aanslagen in Parijs en de aanslagen in Brussel laten op indringende wijze de aard en omvang zien van de huidige terroristische dreiging tegen Europa."
+  },
+  {
+    "source": "DDoS-aanvallen",
+    "target": "Kwetsbaarheden",
+    "id": "DDoS-aanvallen-Kwetsbaarheden",
+    "label": "1",
+    "citaat_relatie": "Deze classificatie was vanwege actief misbruik van deze kwetsbaarheid, met een hoge kans op schade wanneer een organisatie getroffen wordt."
+  },
+  {
+    "source": "Jihadistische Dreiging",
+    "target": "Informatie-uitwisseling",
+    "id": "Jihadistische Dreiging-Informatie-uitwisseling",
+    "label": "1",
+    "citaat_relatie": "Die rechtshulpverzoeken zijn tot op heden onbeantwoord gebleven."
+  },
+  {
+    "source": "Kwetsbaarheden",
+    "target": "Statelijke Beïnvloeding",
+    "id": "Kwetsbaarheden-Statelijke Beïnvloeding",
+    "label": "1",
+    "citaat_relatie": "Verhoogde kwetsbaarheid door gebrek aan bewustwording van statelijke dreigingen, veroorzaakt schade aan Nederlandse publieke belangen door statelijke actoren en ongewenste buitenlandse inmenging."
+  },
+  {
+    "source": "Gereedheid",
+    "target": "Geopolitieke Spanningen",
+    "id": "Gereedheid-Geopolitieke Spanningen",
+    "label": "1",
+    "citaat_relatie": "Volgens de Iraanse autoriteiten hebben specifieke, commerciële geschillen geleid tot enkele voorvallen met koopvaardijschepen."
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Defensieuitgaven",
+    "id": "Geopolitieke Spanningen-Defensieuitgaven",
+    "label": "2",
+    "citaat_relatie": "overwegende dat dit niet alleen vraagt om investeringen in Defensie maar ook om het voorbereiden en weerbaar maken van de gehele samenleving en overheid; | overwegende dat dit niet alleen vraagt om investeringen in Defensie maar ook om het voorbereiden en weerbaar maken van de gehele samenleving en overheid;"
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Informatie-uitwisseling",
+    "id": "Geopolitieke Spanningen-Informatie-uitwisseling",
+    "label": "1",
+    "citaat_relatie": "verzoekt het kabinet om scenario’s uit te werken, inclusief de benodigde beleidskeuzes en draaiboeken, om Nederland bij verschillende dreigingsniveaus veilig te houden,"
+  },
+  {
+    "source": "Onvoldoende Voorbereiding",
+    "target": "Chemische Ongevallen",
+    "id": "Onvoldoende Voorbereiding-Chemische Ongevallen",
+    "label": "1",
+    "citaat_relatie": "Als deze grenswaarden worden overschreden, is dat een teken dat het bedrijf verbeteringen moet doorvoeren in de proceshygiëne."
+  },
+  {
+    "source": "Hybride Dreigingen",
+    "target": "Afhankelijkheid",
+    "id": "Hybride Dreigingen-Afhankelijkheid",
+    "label": "2",
+    "citaat_relatie": "De combinatie van dreiging, afhankelijkheid en de grijze zone tussen oorlog en vrede waarin hybride confrontatie en conflict plaatsvindt, creëert een complex spanningsveld rond hybride dreigingen. | Hybride dreigingen gericht op kandidaat-lidstaten leidt tot afhankelijkheid van nationale bevoegdheden en verdragskaders."
+  },
+  {
+    "source": "Cybercriminaliteit",
+    "target": "Cyberaanvallen",
+    "id": "Cybercriminaliteit-Cyberaanvallen",
+    "label": "1",
+    "citaat_relatie": "Moedwillige cyberbedreigingen resulteren in Storing en uitval van missiekritieke ICT-systemen."
+  },
+  {
+    "source": "Chemische Ongevallen",
+    "target": "Cyberaanvallen",
+    "id": "Chemische Ongevallen-Cyberaanvallen",
+    "label": "1",
+    "citaat_relatie": "Grote ongevallen op het spoor (evt. met gevaarlijke stoffen) kunnen Uitval van andere vitale processen (zoals elektriciteitsvoorziening en telecommunicatie) veroorzaken."
+  },
+  {
+    "source": "Infectieziekten",
+    "target": "Economische Impact",
+    "id": "Infectieziekten-Economische Impact",
+    "label": "8",
+    "citaat_relatie": "Ernstige grensoverschrijdende gezondheidsbedreigingen zoals pandemieën kunnen de volksgezondheid ernstig onder druk zetten, wat leidt tot een aanzienlijke impact van gezondheidscrises op de economie, met gevolgen voor de interne markt. | afgezien van een volksgezondheidsdreiging had deze crisis uiteraard ook aanzienlijke economische consequenties. | Ik zou zelf deze conclusies niet zomaar trekken. Er wordt gehandeld naar het principe van vraag en aanbod binnen de EU interne markt om tot een goed verdienmodel te komen. | Inmiddels wordt steeds inzichtelijker welke gevolgen en impact de destijds genomen maatregelen hebben gehad voor de samenleving als geheel, zowel op economisch gebied als op de fysieke en mentale volksgezondheid. | Bij de bestrijding van Covid-19 zijn immers ook maatregelen genomen die proportioneel leken in het kader van de virusbestrijding, maar die toch grote negatieve neveneffecten hadden. | Bij de bestrijding van Covid-19 zijn immers ook maatregelen genomen die proportioneel leken in het kader van de virusbestrijding, maar die toch grote negatieve neveneffecten hadden. | Bij de bestrijding van Covid-19 zijn immers ook maatregelen genomen die proportioneel leken in de kader van de virusbestrijding, maar die toch grote negatieve neveneffecten hadden, | Dit wettelijk kader moet zorgen voor een effectievere bestrijding van toekomstige epidemieën."
+  },
+  {
+    "source": "Jihadistische Dreiging",
+    "target": "Rechts-extremisme",
+    "id": "Jihadistische Dreiging-Rechts-extremisme",
+    "label": "3",
+    "citaat_relatie": "Op korte termijn is er sprake van een beperkte geweldsdreiging, op langere termijn kan antiinstitutioneel extremisme de democratische rechtsorde ondermijnen. | Door kleine minderheden wordt echter nagedacht over de vraag wanneer geweld mag worden toegepast of worden voorbereidingen getroffen op een gewelddadige confrontatie met de overheid. | Door het gewelddadige conflict in Israël en de Palestijnse gebieden, koranschendingen in verschillende Europese landen en de oproepen tot aanslagen van terroristische organisaties is de dreiging vanuit het jihadisme toegenomen."
+  },
+  {
+    "source": "Polarisatie",
+    "target": "Vertrouwen",
+    "id": "Polarisatie-Vertrouwen",
+    "label": "2",
+    "citaat_relatie": "Dat nu ook DTN 52 een nadere duiding behoeft kan afbreuk doen aan het vertrouwen van de Tweede Kamer en de Nederlandse bevolking in het instrument. | Sommige anti-institutioneel-extremisten trekken zich terug in eigen groepen en pleiten voor een parallelle samenleving zonder daarbij de Nederlandse wet- en regelgeving te accepteren."
+  },
+  {
+    "source": "Intimidatie Asielzoekerscentra",
+    "target": "Polarisatie",
+    "id": "Intimidatie Asielzoekerscentra-Polarisatie",
+    "label": "1",
+    "citaat_relatie": "Dit laatste kan ertoe leiden dat sommigen zich minder snel publiek maar ook intern zullen uitspreken tegen jihadgang en al Qa’ida. Deze ontwikkeling zet de weerbaarheid binnen moslimgemeenschappen tegen extremisme en geweld uit ideologische motieven onder druk."
+  },
+  {
+    "source": "Ondermijning",
+    "target": "Gereedheid",
+    "id": "Ondermijning-Gereedheid",
+    "label": "1",
+    "citaat_relatie": "De verharding in de georganiseerde criminaliteit en de verlaging van de drempels voor het uiten van bedreigingen en het toepassen van geweld. Hierdoor moeten grotere én andere groepen personen en functionarissen worden beveiligd dan voorheen."
+  },
+  {
+    "source": "Ondermijning",
+    "target": "Meldingsbereidheid",
+    "id": "Ondermijning-Meldingsbereidheid",
+    "label": "1",
+    "citaat_relatie": "De verharding in de georganiseerde criminaliteit en de verlaging van de drempels voor het uiten van bedreigingen en het toepassen van geweld."
+  },
+  {
+    "source": "Ondermijning",
+    "target": "Informatie-uitwisseling",
+    "id": "Ondermijning-Informatie-uitwisseling",
+    "label": "1",
+    "citaat_relatie": "De verharding in de georganiseerde criminaliteit en de verlaging van de drempels voor het uiten van bedreigingen en het toepassen van geweld."
+  },
+  {
+    "source": "Ondermijning",
+    "target": "Jihadistische Dreiging",
+    "id": "Ondermijning-Jihadistische Dreiging",
+    "label": "1",
+    "citaat_relatie": "De verharding in de georganiseerde criminaliteit en de verlaging van de drempels voor het uiten van bedreigingen en het toepassen van geweld."
+  },
+  {
+    "source": "Gereedheid",
+    "target": "Informatie-uitwisseling",
+    "id": "Gereedheid-Informatie-uitwisseling",
+    "label": "1",
+    "citaat_relatie": "Het stelsel is in de huidige constellatie niet in staat gebleken om zichzelf door te ontwikkelen."
+  },
+  {
+    "source": "Cyberaanvallen",
+    "target": "Maatschappelijke Onrust",
+    "id": "Cyberaanvallen-Maatschappelijke Onrust",
+    "label": "1",
+    "citaat_relatie": "Economische instabiliteit door cyberaanvallen op kritieke infrastructuur."
+  },
+  {
+    "source": "Jihadistische Dreiging",
+    "target": "Veiligheid",
+    "id": "Jihadistische Dreiging-Veiligheid",
+    "label": "1",
+    "citaat_relatie": "Door het gewelddadige conflict in Israël en de Palestijnse gebieden, koranschendingen in verschillende Europese landen en de oproepen tot aanslagen van terroristische organisaties is de dreiging vanuit het jihadisme toegenomen."
+  },
+  {
+    "source": "Veiligheid",
+    "target": "Jihadistische Dreiging",
+    "id": "Veiligheid-Jihadistische Dreiging",
+    "label": "1",
+    "citaat_relatie": "Een optelsom van ontwikkelingen zorgt voor de verhoging van het dreigingsniveau van niveau 3 naar 4."
+  },
+  {
+    "source": "Antisemitisme",
+    "target": "Afhankelijkheid",
+    "id": "Antisemitisme-Afhankelijkheid",
+    "label": "1",
+    "citaat_relatie": "De joodse gemeenschap is van mening dat van cameratoezicht een minder afschrikwekkende werking uit gaat."
+  },
+  {
+    "source": "Online Radicalisering",
+    "target": "Intimidatie Asielzoekerscentra",
+    "id": "Online Radicalisering-Intimidatie Asielzoekerscentra",
+    "label": "1",
+    "citaat_relatie": "de maatschappelijke rust en orde ondermijnt?"
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "Vertrouwen",
+    "id": "Statelijke Beïnvloeding-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "De Russische agressie is dit jaar... waarmee getracht werd de Russische invloedssfeer uit te breiden."
+  },
+  {
+    "source": "Informatie-uitwisseling",
+    "target": "Online Radicalisering",
+    "id": "Informatie-uitwisseling-Online Radicalisering",
+    "label": "1",
+    "citaat_relatie": "overwegende dat gemeenten een cruciale rol spelen in de aanpak van radicalisering, extremisme en terrorisme, maar dat lokaal beleid lang gericht was op de bestrijding van jihadisme, en dat bewustzijn over het accelerationisme en hoe daarmee om te gaan nog versterking behoeft;"
+  },
+  {
+    "source": "Polarisatie",
+    "target": "Intimidatie",
+    "id": "Polarisatie-Intimidatie",
+    "label": "2",
+    "citaat_relatie": "Deze aantasting vindt plaats in de context van de toenemende polarisatie van de samenleving. | Degenen die geïntimideerd en bedreigd worden, bevinden zich in een context van toenemende polarisatie van de samenleving."
+  },
+  {
+    "source": "Ondermijning",
+    "target": "Agressie tegen Journalisten",
+    "id": "Ondermijning-Agressie tegen Journalisten",
+    "label": "2",
+    "citaat_relatie": "Daarnaast komt een deel van de agressie en het geweld tegen journalisten, maar ook tegen togaberoepen, vanuit de hoek van de georganiseerde criminaliteit. | Een deel van de agressie en het geweld tegen journalisten [...] komt vanuit de hoek van de georganiseerde criminaliteit."
+  },
+  {
+    "source": "Eenlingen",
+    "target": "Polarisatie",
+    "id": "Eenlingen-Polarisatie",
+    "label": "1",
+    "citaat_relatie": "De aanslagen bedreigen de open democratie van alle Europese samenlevingen. Daarbij kunnen de aanslagen tegenstellingen tussen bevolkingsgroepen verscherpen."
+  },
+  {
+    "source": "Eenlingen",
+    "target": "Economische Impact",
+    "id": "Eenlingen-Economische Impact",
+    "label": "1",
+    "citaat_relatie": "De aanslagen hebben ons buurland België zwaar getroffen en tot een tijdelijke ontwrichting van de Belgische samenleving geleid."
+  },
+  {
+    "source": "Eenlingen",
+    "target": "Maatschappelijke Onrust",
+    "id": "Eenlingen-Maatschappelijke Onrust",
+    "label": "1",
+    "citaat_relatie": "De angst mag en zal ons niet regeren, want dat is wat de terroristen met deze daden willen bereiken."
+  },
+  {
+    "source": "Veiligheid",
+    "target": "Economische Impact",
+    "id": "Veiligheid-Economische Impact",
+    "label": "1",
+    "citaat_relatie": "De aanslagen in Brussel tonen opnieuw de verwevenheid tussen interne en externe veiligheid."
+  },
+  {
+    "source": "Agressie tegen Journalisten",
+    "target": "Ondermijning",
+    "id": "Agressie tegen Journalisten-Ondermijning",
+    "label": "1",
+    "citaat_relatie": "In algemene zin is de afgelopen periode gebleken dat excessieve vormen van dreiging en geweld tegen de dragers van onze democratische instituten vanuit criminele netwerken geen taboe meer zijn."
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "Geopolitieke Spanningen",
+    "id": "Statelijke Beïnvloeding-Geopolitieke Spanningen",
+    "label": "1",
+    "citaat_relatie": "Als gevolg van geopolitieke ontwikkelingen worden Nederland en haar bondgenoten steeds vaker openlijk en heimelijk geconfronteerd met handelingen van statelijke actoren."
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Samenwerking Veiligheid",
+    "id": "Geopolitieke Spanningen-Samenwerking Veiligheid",
+    "label": "1",
+    "citaat_relatie": "De noodzaak van samenwerking is breder dan alleen de samenwerking met buitenlandse inlichtingen- en veiligheidsdiensten."
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Cybercriminaliteit",
+    "id": "Geopolitieke Spanningen-Cybercriminaliteit",
+    "label": "1",
+    "citaat_relatie": "Deze wet beoogt de meest urgente operationele knelpunten bij de MIVD en de AIVD weg te nemen om zo de noodzakelijke wendbaarheid en snelheid bij onderzoeken naar landen met een offensief cyberprogramma te bewerkstellingen."
+  },
+  {
+    "source": "Cybercriminaliteit",
+    "target": "Privacy-inbreuken",
+    "id": "Cybercriminaliteit-Privacy-inbreuken",
+    "label": "1",
+    "citaat_relatie": "Bij deze en andere voorbeelden zal uiteraard nadrukkelijk worden bezien hoe zij zich verhouden tot relevante mensenrechtelijke kaders."
+  },
+  {
+    "source": "Hybride Dreigingen",
+    "target": "Vertrouwen",
+    "id": "Hybride Dreigingen-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "Hybride dreigingen zijn niet alleen op de overheid gericht, maar gaan de hele samenleving aan."
+  },
+  {
+    "source": "Rechts-extremisme",
+    "target": "Online Radicalisering",
+    "id": "Rechts-extremisme-Online Radicalisering",
+    "label": "2",
+    "citaat_relatie": "De mogelijkheid blijft bestaan dat een minderjarige of jongvolwassene geradicaliseerd binnen het rechtsextremistische onlinemilieu geweld gaat gebruiken. | Radicalisering en extremisme op grond van extreemrechts gedachtengoed kennen een voedingsbodem in, en dragen ook bij aan een toenemende polarisatie in Nederland."
+  },
+  {
+    "source": "Witwassen",
+    "target": "Agressie tegen Journalisten",
+    "id": "Witwassen-Agressie tegen Journalisten",
+    "label": "1",
+    "citaat_relatie": "de mogelijke schending van de grondwettelijke vrijheid van drukpers naar aanleiding van de gewelddadige aanhouding van onderzoeksjournalist Rypke Zeilmaker van dezelfde uitgeverij"
+  },
+  {
+    "source": "Intimidatie",
+    "target": "Meldingsbereidheid",
+    "id": "Intimidatie-Meldingsbereidheid",
+    "label": "2",
+    "citaat_relatie": "Bijvoorbeeld deurwaarders. Indien het woonadres van de ondernemer gelijk is aan het vestigingsadres van de onderneming, dan blijft het adres echter zichtbaar in het handelsregister als vestigingsadres. | Er geldt een uitzondering voor autoriteiten die een gerechtvaardigde grond hebben om ze te raadplegen."
+  },
+  {
+    "source": "Corruptie",
+    "target": "Meldingsbereidheid",
+    "id": "Corruptie-Meldingsbereidheid",
+    "label": "1",
+    "citaat_relatie": "De dynamiek van internationale drugshandel die corruptie bevordert leidt tot een wegkijkcultuur en beperkte bereidheid om corrupt gedrag te melden."
+  },
+  {
+    "source": "Informatie-uitwisseling",
+    "target": "Statelijke Beïnvloeding",
+    "id": "Informatie-uitwisseling-Statelijke Beïnvloeding",
+    "label": "1",
+    "citaat_relatie": "Ik ben het met de heer Akerboom eens dat de veiligheid van onze instellingen verder moet worden verhoogd. Het is duidelijk dat deze bewustwording nodig is in alle lagen van de organisaties en vertaald dient te worden in maatregelen gericht op het tegengaan van dreigingen."
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "DDoS-aanvallen",
+    "id": "Statelijke Beïnvloeding-DDoS-aanvallen",
+    "label": "1",
+    "citaat_relatie": "Het bereiken van 100% veiligheid is helaas onmogelijk, er zal altijd een risico op cyber- en kennisveiligheidsincidenten blijven bestaan."
+  },
+  {
+    "source": "Kwetsbaarheden",
+    "target": "DDoS-aanvallen",
+    "id": "Kwetsbaarheden-DDoS-aanvallen",
+    "label": "1",
+    "citaat_relatie": "Deze groeiende impact wordt onderstreept door de verstoringen die vorig voorjaar optraden door DDoS-aanvallen op Nederlandse banken en overheidsdiensten zoals DigiD."
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Infectieziekten",
+    "id": "Klimaatverandering-Infectieziekten",
+    "label": "1",
+    "citaat_relatie": "Gezondheidsdreigingen als gevolg van nucleaire incidenten worden al door EURATOM geregeld en zijn daarom uitgesloten van dit voorstel tot besluit."
+  },
+  {
+    "source": "Meldingsbereidheid",
+    "target": "Intimidatie",
+    "id": "Meldingsbereidheid-Intimidatie",
+    "label": "1",
+    "citaat_relatie": "Door terughoudendheid bij het melden en aangeven bij de politie van agressie en geweld... is er geen duidelijk beeld van het aantal incidenten."
+  },
+  {
+    "source": "Intimidatie Asielzoekerscentra",
+    "target": "Meldingsbereidheid",
+    "id": "Intimidatie Asielzoekerscentra-Meldingsbereidheid",
+    "label": "1",
+    "citaat_relatie": "Dat de meldingsbereidheid een punt van aandacht is, onderkent het COA."
+  },
+  {
+    "source": "Meldingsbereidheid",
+    "target": "Intimidatie Asielzoekerscentra",
+    "id": "Meldingsbereidheid-Intimidatie Asielzoekerscentra",
+    "label": "1",
+    "citaat_relatie": "Zoals aangegeven in de beantwoording van de eerdere Kamervragen kunnen misdragingen consequenties hebben voor de asielprocedure."
+  },
+  {
+    "source": "Desinformatie",
+    "target": "Rechts-extremisme",
+    "id": "Desinformatie-Rechts-extremisme",
+    "label": "1",
+    "citaat_relatie": "Ten tweede noemt de AIVD dat het narratief een aansporing kan zijn voor individuele aanhangers van deze beweging om geweld te gebruiken tegen mensen van wie zij denken dat deze bij ‘de elite’ horen."
+  },
+  {
+    "source": "Antisemitisme",
+    "target": "Intimidatie Asielzoekerscentra",
+    "id": "Antisemitisme-Intimidatie Asielzoekerscentra",
+    "label": "1",
+    "citaat_relatie": "Een onderzoek naar mogelijke voedingsbodems en triggerfactoren voor antisemitisme [...] zal begin 2015 worden opgeleverd."
+  },
+  {
+    "source": "Afhankelijkheid",
+    "target": "Economische Impact",
+    "id": "Afhankelijkheid-Economische Impact",
+    "label": "1",
+    "citaat_relatie": "Brancheorganisatie Vee en Logistiek Nederland geeft als verklaring dat door tijdelijke capaciteitsproblemen bij een aantal Nederlandse en Duitse slachterijen minder varkens konden worden afgevoerd in Nederland in Duitsland."
+  },
+  {
+    "source": "Desinformatie",
+    "target": "Defensieuitgaven",
+    "id": "Desinformatie-Defensieuitgaven",
+    "label": "2",
+    "citaat_relatie": "Toename van cyberaanvallen en desinformatie resulteert in versterking van de weerbaarheid van de EU tegen externe dreigingen. | Desinformatie en ongewenste inmenging die de democratie ondermijnen, leidt tot de noodzaak tot investeringen in Defensie."
+  },
+  {
+    "source": "Statelijke Beïnvloeding",
+    "target": "Agressie tegen Journalisten",
+    "id": "Statelijke Beïnvloeding-Agressie tegen Journalisten",
+    "label": "1",
+    "citaat_relatie": "Het kabinet zal zich ervoor blijven inzetten dat deze rechten worden geborgd. Daarnaast zal het kabinet ook in Europees verband blijven benadrukken dat maatregelen die worden genomen in de strijd tegen terrorisme in evenwicht moeten zijn met de bescherming van fundamentele rechten."
+  },
+  {
+    "source": "Online Radicalisering",
+    "target": "Grondrechten",
+    "id": "Online Radicalisering-Grondrechten",
+    "label": "1",
+    "citaat_relatie": "Om haatzaaiende jihadistische content, die aanzet tot radicalisering, het hoofd te bieden wordt nationaal en internationaal ingezet op samenwerking met internetbedrijven."
+  },
+  {
+    "source": "Infectieziekten",
+    "target": "Maatschappelijke Onrust",
+    "id": "Infectieziekten-Maatschappelijke Onrust",
+    "label": "1",
+    "citaat_relatie": "De regering gaat echter bij de beantwoording niet in op de mate waarin er op dat moment sprake was van een directe dreiging van de volksgezondheid en of die dreiging van dien aard was dat collectieve maatregelen noodzakelijk waren."
+  },
+  {
+    "source": "Maatschappelijke Onrust",
+    "target": "Desinformatie",
+    "id": "Maatschappelijke Onrust-Desinformatie",
+    "label": "1",
+    "citaat_relatie": "Een aantal antwoorden geeft aanleiding voor vervolgvragen. Op enkele vragen werd niet specifiek geantwoord, zodat deze fractieleden zich genoodzaakt zien alsnog een reactie te vragen."
+  },
+  {
+    "source": "Infectieziekten",
+    "target": "Grondrechten",
+    "id": "Infectieziekten-Grondrechten",
+    "label": "5",
+    "citaat_relatie": "Daarnaast zijn er op mondiaal en EU-niveau allerlei ontwikkelingen die tot veranderingen in internationale regels en afspraken kunnen leiden, ook op het gebied van internationale gegevensuitwisseling. | Een gedegen wettelijke grondslag met een volwaardige democratische legitimatie is noodzakelijk voor de invoering van de mogelijkheid om grondrechten in te perken. | Een gedegen wettelijke grondslag met een volwaardige democratische legitimatie is noodzakelijk voor de invoering van de mogelijkheid om grondrechten in te perken. | de toetsing op proportionaliteit aangaande de afweging tussen de bestrijding van het virus en de beperking van grondrechten. | Onderdeel van deze motie is tevens hoe bij het bestrijden van dergelijke epidemieën zo veel als mogelijk gehandeld wordt in overeenstemming met de uitgangspunten van de democratische rechtsstaat, het zo min mogelijk inperken van grondrechten."
+  },
+  {
+    "source": "Onvoldoende Voorbereiding",
+    "target": "Vertrouwen",
+    "id": "Onvoldoende Voorbereiding-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "Dit kwam het draagvlak en naleving aantoonbaar niet ten goede."
+  },
+  {
+    "source": "Economische Impact",
+    "target": "Grondrechten",
+    "id": "Economische Impact-Grondrechten",
+    "label": "1",
+    "citaat_relatie": "de afweging tussen de bestrijding van de ziekteverwekker en de beperking van grondrechten."
+  },
+  {
+    "source": "Cyberaanvallen",
+    "target": "Kwetsbaarheden",
+    "id": "Cyberaanvallen-Kwetsbaarheden",
+    "label": "1",
+    "citaat_relatie": "De risico’s op digitale incidenten nemen toe door de toegenomen digitalisering en de opkomst van het Internet of Things (IoT). Dit wordt versterkt doordat statelijke actoren zeer actief zijn in het digitale domein."
+  },
+  {
+    "source": "Intimidatie",
+    "target": "Vertrouwen",
+    "id": "Intimidatie-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "Op momenten dat de vrijheid en veiligheid van leraren onder druk komt te staan is het van groot belang om hen te steunen."
+  },
+  {
+    "source": "DDoS-aanvallen",
+    "target": "Cybercriminaliteit",
+    "id": "DDoS-aanvallen-Cybercriminaliteit",
+    "label": "1",
+    "citaat_relatie": "Criminelen zetten cryptoware (gijzelvirussen) steeds vaker in om hun doeleinden te bereiken."
+  },
+  {
+    "source": "Kwetsbaarheden",
+    "target": "Cybercriminaliteit",
+    "id": "Kwetsbaarheden-Cybercriminaliteit",
+    "label": "1",
+    "citaat_relatie": "Zolang de updates niet geïnstalleerd zijn, blijven delen van hun netwerk kwetsbaar."
+  },
+  {
+    "source": "Maatschappelijke Onrust",
+    "target": "Intimidatie",
+    "id": "Maatschappelijke Onrust-Intimidatie",
+    "label": "1",
+    "citaat_relatie": "de Kamer heeft met de motie Klaver het kabinet verzocht om alle instrumenten beschikbaar te stellen aan de politie en de veiligheidsinstanties om adequaat in te grijpen en de openbare orde te handhaven bij geweld, bedreiging en intimidatie."
+  },
+  {
+    "source": "Informatie-uitwisseling",
+    "target": "Vertrouwen",
+    "id": "Informatie-uitwisseling-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "De Afdeling advisering van de Raad van State adviseert nader te concretiseren hoe de verwerking van persoonsgegevens bij de NCTV vorm zal krijgen."
+  },
+  {
+    "source": "Privacy-inbreuken",
+    "target": "Vertrouwen",
+    "id": "Privacy-inbreuken-Vertrouwen",
+    "label": "1",
+    "citaat_relatie": "De Afdeling wijst er in dat verband op dat de door de regering beoogde wijziging... impliceert dat of en zo ja, op welke wijze de NCTV zelf informatie mag verzamelen afhangt van de situatie."
+  },
+  {
+    "source": "Onvoldoende Voorbereiding",
+    "target": "Grondrechten",
+    "id": "Onvoldoende Voorbereiding-Grondrechten",
+    "label": "1",
+    "citaat_relatie": "Een noodverordening is een tijdelijke grondslag voor een maatregel, die zo spoedig mogelijk moet worden voorzien door een specifieke grondslag gelet op de mogelijke inperking van grondrechten."
+  },
+  {
+    "source": "Gereedheid",
+    "target": "Kennistransfer",
+    "id": "Gereedheid-Kennistransfer",
+    "label": "1",
+    "citaat_relatie": "Oorzaken zijn veranderingen in internationale netwerken en de posities daarbinnen van Noordvleugel clusters, een gebrek aan stedelijke samenhang en bestuurlijke verbrokkeling, de dichtslibbende infrastructuur..."
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Cyberaanvallen",
+    "id": "Geopolitieke Spanningen-Cyberaanvallen",
+    "label": "1",
+    "citaat_relatie": "Het risico op betrokkenheid bij een grootschalig gewapend conflict door NAVO-verplichtingen, resulteert in verstoring van vitale infrastructuur en processen."
+  },
+  {
+    "source": "Vertrouwen",
+    "target": "Afhankelijkheid",
+    "id": "Vertrouwen-Afhankelijkheid",
+    "label": "3",
+    "citaat_relatie": "Verlies van maatschappelijke weerbaarheid door externe dreigingen, leidt tot economische destabilisatie door langdurige verstoring en schokken in de waardeketens. | Verlies van vertrouwen in de overheid door crises en gebrek aan informatie, resulteert in afhankelijkheid van cruciale goederen en diensten in crisistijd. | Verlies van maatschappelijke weerbaarheid door onvoldoende zelfredzaamheid resulteert in economische destabilisatie door langdurige uitval en schaarste."
+  },
+  {
+    "source": "Jihadistische Dreiging",
+    "target": "Online Radicalisering",
+    "id": "Jihadistische Dreiging-Online Radicalisering",
+    "label": "1",
+    "citaat_relatie": "Mobiliserende gebeurtenissen, zoals het aanhoudende gewelddadige conflict in Israël en de Palestijnse gebieden, de koranschendingen in Nederland en de manier waarop jihadistische organisaties er in hun (online) propaganda op inspelen, leiden tot (voorbereidingen op) terroristische geweldsdaden in Europa."
+  },
+  {
+    "source": "Maatschappelijke Onrust",
+    "target": "Defensieuitgaven",
+    "id": "Maatschappelijke Onrust-Defensieuitgaven",
+    "label": "1",
+    "citaat_relatie": "Maatregelen opsporing • Veiligheidsmaatregelen & preventieve maatregelen openbare orde > Sleutelbesluiten zijn opgenomen in handreiking TGB en gaan over: - Stilleggen maatschappelijke activiteiten, zoals OV - Sluiting van scholen, andere (onderwijs-) instellingen - Publieke overheidsinstellingen (gemeentekantoren, politiebureaus - Inzet van Defensie (t.b.v. bewaken en beveiligen)"
+  }
+]

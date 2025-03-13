@@ -1,0 +1,217 @@
+[
+  {
+    "id": "Biodiversiteit Criminaliteit",
+    "label": "Biodiversiteit Criminaliteit",
+    "citaat": "In dit rapport zijn negen vormen van milieucriminaliteit geselecteerd die nader zijn uitgediept, variërend van dreigingen voor bodem en waterkwaliteit en biodiversiteit tot dreigingen gerelateerd aan de circulaire economie."
+  },
+  {
+    "id": "Statelijke Beïnvloeding",
+    "label": "Statelijke Beïnvloeding",
+    "citaat": "De dreiging van digitale spionage tegen Defensie, toeleveranciers, bondgenootschappelijke netwerken en producenten van militair-relevante producten is aanzienlijk... Deze dreiging neemt in omvang toe, wordt steeds agressiever en geavanceerder."
+  },
+  {
+    "id": "Afhankelijkheid",
+    "label": "Afhankelijkheid",
+    "citaat": "Defensie is sterk afhankelijk van hoogwaardige communicatie- en informatiesystemen, genetwerkte wapensystemen en logistieke systemen."
+  },
+  {
+    "id": "Informatie-uitwisseling",
+    "label": "Informatie-uitwisseling",
+    "citaat": "De belangrijkste ‘capaciteit’ waarover Defensie moet beschikken zijn slimme, kundige en gemotiveerde cyberprofessionals."
+  },
+  {
+    "id": "Cybercriminaliteit",
+    "label": "Cybercriminaliteit",
+    "citaat": "Belangrijk onderdeel van de bestaande aanpak is het voorkomen en beperken van acties van zogeheten insider threats."
+  },
+  {
+    "id": "Witwassen",
+    "label": "Witwassen",
+    "citaat": "De dreiging ‘witwassen via professionele dienstverleners’ kreeg van de 18 grootste witwasdreigingen verreweg de hoogste score, namelijk een potentiële impact score van 67 op een schaal van 0 tot en met 100."
+  },
+  {
+    "id": "Economische Impact",
+    "label": "Economische Impact",
+    "citaat": "De inschatting van de potentiële impact verschilt niet in sterke mate tussen de 18 grootste witwasdreigingen."
+  },
+  {
+    "id": "Samenwerking Veiligheid",
+    "label": "Samenwerking Veiligheid",
+    "citaat": "De FATF is een intergouvernementeel orgaan, opgericht door de G-7 in 1989, dat zich richt op het op mondiaal niveau voorkomen en bestrijden van witwassen."
+  },
+  {
+    "id": "Vertrouwen",
+    "label": "Vertrouwen",
+    "citaat": "De gevolgen van witwasdreigingen betreffen de ontregeling van de maatschappelijke orde."
+  },
+  {
+    "id": "Radicalisering",
+    "label": "Radicalisering",
+    "citaat": "Het kabinet wil voorkomen dat uitreizigers straffeloos blijven en vervolgens, zonder dat nog vervolging mogelijk is, terugkeren naar Nederland. Om risico’s voor de nationale veiligheid te beperken is er in verschillende fasen en vanuit verschillende kaders sprake van toezicht wanneer uitreizigers terugkeren naar Nederland."
+  },
+  {
+    "id": "Online Radicalisering",
+    "label": "Online Radicalisering",
+    "citaat": "De mogelijkheid dat een rechtsextremistisch georiënteerde alleen handelende dader in Nederland een aanslag pleegt is voorstelbaar."
+  },
+  {
+    "id": "Eenlingen",
+    "label": "Eenlingen",
+    "citaat": "Potentieel Gewelddadige Eenlingen zijn personen die, zonder medewerking van anderen en vanuit een persoonlijke krenking of grief, een dreiging vormen richting de maatschappij."
+  },
+  {
+    "id": "Jihadistische Dreiging",
+    "label": "Jihadistische Dreiging",
+    "citaat": "De afgelopen jaren zijn aanslagen in Europa veelal door islamitische en jihadistische alleen handelende daders gepleegd."
+  },
+  {
+    "id": "Privacy-inbreuken",
+    "label": "Privacy-inbreuken",
+    "citaat": "De grondslag voor het identificeren en analyseren van dreigingen en risico’s op het gebied van terrorisme en nationale veiligheid, inmiddels juridisch kwetsbaar is geworden."
+  },
+  {
+    "id": "Veiligheid",
+    "label": "Veiligheid",
+    "citaat": "De toenemende verwevenheid tussen binnen- en buitenlandse veiligheid en de groeiende samenhang tussen zogenoemde ‘safety’ en ‘security’ onderwerpen."
+  },
+  {
+    "id": "Ondermijning",
+    "label": "Ondermijning",
+    "citaat": "Een grote dreiging komt vanuit de georganiseerde criminaliteit, die zich steeds verder in de haarvaten van onze samenleving nestelt."
+  },
+  {
+    "id": "Maatschappelijke Onrust",
+    "label": "Maatschappelijke Onrust",
+    "citaat": "Het betreft immers een dreiging die de potentie heeft de maatschappelijke stabiliteit in Nederland aan te tasten."
+  },
+  {
+    "id": "Kwetsbaarheden",
+    "label": "Kwetsbaarheden",
+    "citaat": "Bij (delen van) overheidsorganisaties, bijvoorbeeld bij gemeenten, kan een gebrek aan bewustzijn en informatiedeling rond georganiseerde criminaliteit, samen met een soms versnipperde aanpak, gelegenheid bieden voor criminele activiteiten."
+  },
+  {
+    "id": "Cyberaanvallen",
+    "label": "Cyberaanvallen",
+    "citaat": "De vitale aanbieder geeft Onze Minister onverwijld kennis van een inbreuk op de veiligheid of een verlies van integriteit van zijn informatiesysteem waardoor de beschikbaarheid of betrouwbaarheid van een product of dienst in belangrijke mate wordt of kan worden onderbroken."
+  },
+  {
+    "id": "Infectieziekten",
+    "label": "Infectieziekten",
+    "citaat": "...in verband met de bestrijding van een epidemie van infectieziekten behorend tot groep A1, of een directe dreiging daarvan."
+  },
+  {
+    "id": "Grondrechten",
+    "label": "Grondrechten",
+    "citaat": "verschillende belangen, zoals grondrechten, sociale, financieeleconomische, maatschappelijke en andere gezondheidsbelangen, goed worden meegewogen in de afweging over de inzet van maatregelen."
+  },
+  {
+    "id": "Onvoldoende Voorbereiding",
+    "label": "Onvoldoende Voorbereiding",
+    "citaat": "Indien de samenleving echter wel in een dergelijk scenario terechtkomt, is het nodig om ook snel te kunnen handelen."
+  },
+  {
+    "id": "Geopolitieke Spanningen",
+    "label": "Geopolitieke Spanningen",
+    "citaat": "Conflicten van de toekomst laten zich moeilijk voorspellen. Crises komen snel op en het strijdtoneel is in toenemende mate onoverzichtelijk, complex en wijdverspreid."
+  },
+  {
+    "id": "Rechts-extremisme",
+    "label": "Rechts-extremisme",
+    "citaat": "Rechts-extremisme binnen de defensieorganisatie kan de interne veiligheid van de krijgsmacht ondermijnen."
+  },
+  {
+    "id": "CBRN Dreigingen",
+    "label": "CBRN Dreigingen",
+    "citaat": "De proliferatie van massavernietigingswapens vormt een bedreiging voor de internationale veiligheid."
+  },
+  {
+    "id": "Desinformatie",
+    "label": "Desinformatie",
+    "citaat": "Een ander voorbeeld zijn Russische desinformatiecampagnes rond MH17."
+  },
+  {
+    "id": "DDoS-aanvallen",
+    "label": "DDoS-aanvallen",
+    "citaat": "DDoS-aanvallen werden uitgevoerd."
+  },
+  {
+    "id": "Defensieuitgaven",
+    "label": "Defensieuitgaven",
+    "citaat": "Nederland heeft de ambitie om een leidende rol te spelen in het versterken van bestaande coalities als EU en NAVO."
+  },
+  {
+    "id": "Vertrouwen en Controle",
+    "label": "Vertrouwen en Controle",
+    "citaat": "Dat maakt het nog belangrijker dat ons betalingsverkeer veilig en betrouwbaar is en blijft."
+  },
+  {
+    "id": "Gereedheid",
+    "label": "Gereedheid",
+    "citaat": "Defensie heeft meerdere projecten in gang gezet om de zeewaardigheid en de operationele relevantie van de vier huidige LC-fregatten op peil te houden totdat zij uit de vaart gaan in de periode 2034–2038."
+  },
+  {
+    "id": "Hybride Dreigingen",
+    "label": "Hybride Dreigingen",
+    "citaat": "verzoekt de regering om in aanloop naar of tijdens de NAVO-top in 2025 een zij-evenement te organiseren dat zich richt op cybersecurity en hybride dreigingen, zodat landen, bedrijven en organisaties daar hun kennis en kunde kunnen uitwisselen."
+  },
+  {
+    "id": "Klimaatverandering",
+    "label": "Klimaatverandering",
+    "citaat": "De gevolgen van klimaatverandering en de Covid-19 pandemie."
+  },
+  {
+    "id": "Intimidatie Asielzoekerscentra",
+    "label": "Intimidatie Asielzoekerscentra",
+    "citaat": "Erkent u dat u van 22.000 asielzoekers, die vorig jaar zonder documenten Nederland zijn binnengekomen, geen idee heeft wie zij zijn en wat zij hier komen doen?"
+  },
+  {
+    "id": "Intimidatie",
+    "label": "Intimidatie",
+    "citaat": "Het aantal online bedreigingen richting politieagenten afgelopen jaar is verdubbeld."
+  },
+  {
+    "id": "Polarisatie",
+    "label": "Polarisatie",
+    "citaat": "Tenslotte valt op dat diverse thema’s zorgen voor polarisatie in de maatschappij."
+  },
+  {
+    "id": "Chemische Ongevallen",
+    "label": "Chemische Ongevallen",
+    "citaat": "In 2011 heeft het toenmalige ministerie van Infrastructuur en Milieu het beleid voor prioritaire stoffen herzien. Deze stoffen, sindsdien aangeduid als ZZS, worden door de overheid met voorrang aangepakt, omdat ze gevaarlijk kunnen zijn voor mens en milieu."
+  },
+  {
+    "id": "Kennistransfer",
+    "label": "Kennistransfer",
+    "citaat": "Het versterken en verbreden van de kennis- en innovatiebasis van Defensie waarbij een heldere militaire onderzoeks- en innovatiebehoefte inzicht kan geven."
+  },
+  {
+    "id": "Antisemitisme",
+    "label": "Antisemitisme",
+    "citaat": "Het aantal meldingen van antisemitische incidenten ook in Nederland verveelvoudigd sinds de aanval van Hamas op Israël."
+  },
+  {
+    "id": "Droneveiligheid",
+    "label": "Droneveiligheid",
+    "citaat": "Deze drones vormen bewust of onbewust een voortdurend risico voor de Luchtvaartveiligheid."
+  },
+  {
+    "id": "Seismische Risico's",
+    "label": "Seismische Risico's",
+    "citaat": "Het is voor de duiding van wat de tijdelijke maatregel betekent voor het veiligheidsrisico in Groningen belangrijk dat voor de tijdelijke maatregel alleen de impact van het veranderde productieniveau op het seismisch risico wordt doorgerekend."
+  },
+  {
+    "id": "Agressie tegen Journalisten",
+    "label": "Agressie tegen Journalisten",
+    "citaat": "constaterende dat journalisten vaak geen aangifte doen, omdat zij het idee hebben dat er niets met een melding wordt gedaan; verzoekt de regering een gespecialiseerde eenheid binnen de politie op te richten die zich bezighoudt met agressie en bedreiging tegen journalisten,"
+  },
+  {
+    "id": "Meldingsbereidheid",
+    "label": "Meldingsbereidheid",
+    "citaat": "Het COC stelt dat slachtoffers van anti-homogeweld een hoge drempel over moeten om hun verhaal te doen bij de politie."
+  },
+  {
+    "id": "Corruptie",
+    "label": "Corruptie",
+    "citaat": "Corruptie door financiële omkoping van medewerkers van publieke instanties die verantwoordelijk zijn voor toezicht, opsporing en handhaving in de haven."
+  }
+]
