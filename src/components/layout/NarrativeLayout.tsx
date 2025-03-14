@@ -99,23 +99,6 @@ export const NarrativeLayout = () => {
           <div className="relative w-full">
             <MainContent settings={settings} />
           </div>
-
-          {/* Footer Section */}
-          <div className="w-full bg-white py-8 px-4">
-            <div className="max-w-7xl mx-auto text-center">
-              <p className="text-gray-600">
-                Meer weten?{' '}
-                <a
-                  href="https://denkwerk.online/rapporten/kiezen-én-delen-januari-2025/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[rgb(0,153,168)] hover:text-[rgb(0,123,138)] underline"
-                >
-                  Vind hier het volledige rapport
-                </a>.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>

@@ -95,7 +95,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         graphRef.current?.fitNodesInView();        
       },        
       zoomIn: () => {          
-        graphRef.current?.zoomIn();        
+        graphRef.current?.zoomIn();
       },        
       zoomOut: () => {          
         graphRef.current?.zoomOut();        
