@@ -131,7 +131,7 @@ export const MainContent = ({ }: MainContentProps) => {
           <div className="flex flex-col md:flex-row">
             {/* Left side with graph */}
             <div className="md:w-1/2">
-              <div style={{ position: "relative", width: '100%', height: '480px' }}>
+              <div style={{ position: "relative", width: '100%', height: '100%' }}>
                 {/* Camera controls overlay */}
                 <div className="absolute top-2 right-2 z-10 bg-background/80 p-1 rounded-md shadow-sm">
                   <CameraControls graphRef={graphRef} />

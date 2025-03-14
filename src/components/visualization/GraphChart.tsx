@@ -1,104 +1,117 @@
-import { GraphCanvas, GraphCanvasRef, useSelection } from 'reagraph'; 
-import { useRef, useImperativeHandle, forwardRef, useMemo, act } from 'react'; 
+import { GraphCanvas, GraphCanvasRef, useSelection } from 'reagraph';  
+import { useRef, useImperativeHandle, forwardRef, useEffect } from 'react';  
 import { Node as CustomNode, Edge } from './networkDataService';  
 
-// Interface for our props 
-interface GraphChartProps {   
-  nodes: CustomNode[];   
-  edges: Edge[];   
-  loading?: boolean;   
-  error?: string | null;   
-  selectedNodeId: string | null;   
+// Interface for our props  
+interface GraphChartProps {    
+  nodes: CustomNode[];    
+  edges: Edge[];    
+  loading?: boolean;    
+  error?: string | null;    
+  selectedNodeId: string | null;    
   onNodeSelect: (nodeId: string | null) => void;
   showRelationships?: boolean;
 }  
 
-// Interface for the ref we expose 
-export interface GraphChartRef {   
-  centerOnNode: (nodeId: string) => void;   
-  fitAllNodesInView: () => void;   
-  zoomIn: () => void;   
-  zoomOut: () => void;   
-  resetCamera: () => void; 
+// Interface for the ref we expose  
+export interface GraphChartRef {    
+  centerOnNode: (nodeId: string) => void;    
+  fitAllNodesInView: () => void;    
+  zoomIn: () => void;    
+  zoomOut: () => void;    
+  resetCamera: () => void;  
 }  
 
-const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(   
-  ({ nodes, edges, loading, error, selectedNodeId, onNodeSelect, showRelationships = false }, ref) => {     
-    // Internal ref to the actual GraphCanvas     
-    const graphRef = useRef<GraphCanvasRef>(null);      
+const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(    
+  ({ nodes, edges, loading, error, selectedNodeId, onNodeSelect, showRelationships = false }, ref) => {      
+    // Internal ref to the actual GraphCanvas      
+    const graphRef = useRef<GraphCanvasRef>(null);        
 
-    // Always use useSelection hook, but only apply path selection when showRelationships is true
-    const { selections, actives } = useSelection({
+    // Use the selection hook
+    const { 
+      selections, 
+      actives, 
+      clearSelections, 
+      setSelections 
+    } = useSelection({
       ref: graphRef,
       nodes,
       edges,
-      pathSelectionType: 'in',
-      selections: selectedNodeId ? [selectedNodeId] : [],
+      pathSelectionType: showRelationships ? 'all' : 'direct',
+      selections: [],
     });
 
-    console.log(selections);
-    console.log(actives);
-    
-    // Expose methods to the parent component via ref     
-    useImperativeHandle(ref, () => ({       
-      centerOnNode: (nodeId: string) => {         
-        if (graphRef.current) {           
-          // Use only fitNodesInView with a specific zoom level for smoothness           
-          graphRef.current.centerGraph([nodeId]);           
-          if(graphRef.current.getControls().camera.zoom < 2){             
-            graphRef.current.zoomIn();           
-          }           
-          console.log(graphRef.current.getControls().camera.zoom);         
-        }       
-      },       
-      fitAllNodesInView: () => {         
-        graphRef.current?.fitNodesInView();       
-      },       
-      zoomIn: () => {         
-        graphRef.current?.zoomIn();       
-      },       
-      zoomOut: () => {         
-        graphRef.current?.zoomOut();       
-      },       
-      resetCamera: () => {         
-        graphRef.current?.resetControls();       
-      }     
+    // Reset selections when selected node or showRelationships changes
+    useEffect(() => {
+      // Clear all existing selections
+      clearSelections();
+      
+      // If there's a selected node, add it to selections
+      if (selectedNodeId) {
+        setSelections([selectedNodeId]);
+      }
+    }, [selectedNodeId, showRelationships, clearSelections, setSelections]);
+
+    // Expose methods to the parent component via ref      
+    useImperativeHandle(ref, () => ({        
+      centerOnNode: (nodeId: string) => {          
+        if (graphRef.current) {            
+          // Use only fitNodesInView with a specific zoom level for smoothness            
+          graphRef.current.centerGraph([nodeId]);            
+          if(graphRef.current.getControls().camera.zoom < 2){              
+            graphRef.current.zoomIn();            
+          }            
+          console.log(graphRef.current.getControls().camera.zoom);          
+        }        
+      },        
+      fitAllNodesInView: () => {          
+        graphRef.current?.fitNodesInView();        
+      },        
+      zoomIn: () => {          
+        graphRef.current?.zoomIn();        
+      },        
+      zoomOut: () => {          
+        graphRef.current?.zoomOut();        
+      },        
+      resetCamera: () => {          
+        graphRef.current?.resetControls();        
+      }      
     }));
-    
+
     // Handle node click manually to maintain our own state
     const handleNodeClick = (node: any) => {
       if (node && node.id) {
         onNodeSelect(node.id);
       }
     };
-    
+      
     // Handle canvas click to clear selection
     const handleCanvasClick = () => {
       onNodeSelect(null);
     };
-    
-    // Render loading state     
-    if (loading) {       
-      return (         
-        <div className="flex h-full items-center justify-center">           
-          <div className="animate-pulse text-muted-foreground">             
-            Loading graph data...           
-          </div>         
-        </div>       
-      );     
-    }      
-    
-    // Render error state     
-    if (error) {       
-      return (         
-        <div className="flex h-full items-center justify-center">           
-          <div className="text-red-500">             
-            Error loading graph: {error}           
-          </div>         
-        </div>       
-      );     
+      
+    // Render loading state      
+    if (loading) {        
+      return (          
+        <div className="flex h-full items-center justify-center">            
+          <div className="animate-pulse text-muted-foreground">              
+            Loading graph data...            
+          </div>          
+        </div>        
+      );      
+    }        
+      
+    // Render error state      
+    if (error) {        
+      return (          
+        <div className="flex h-full items-center justify-center">            
+          <div className="text-red-500">              
+            Error loading graph: {error}            
+          </div>          
+        </div>        
+      );      
     }
-    
+      
     // Render the graph
     return (
       <GraphCanvas
@@ -106,15 +119,15 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         nodes={nodes}
         edges={edges}
         selections={selections}
-        actives={selectedNodeId ? [selectedNodeId] : []} // Always only highlight the selected node
+        actives={actives}
         onNodeClick={handleNodeClick}
         onCanvasClick={handleCanvasClick}
       />
     );
-  } 
+  }  
 );  
 
-// Add display name for debugging 
+// Add display name for debugging  
 GraphChart.displayName = 'GraphChart';  
 
 export default GraphChart;
