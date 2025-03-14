@@ -1,4 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Eye } from "lucide-react";
 import { useState, useEffect, useRef } from 'react';
@@ -37,6 +37,9 @@ export const MainContent = ({ }: MainContentProps) => {
   
   // State for show relationships toggle
   const [showRelationships, setShowRelationships] = useState<boolean>(false);
+  
+  // State for panel visibility on mobile
+  const [showPanel, setShowPanel] = useState<boolean>(false);
   
   // Computed value for the selected node object
   const selectedNode = selectedNodeId 
@@ -97,6 +100,10 @@ export const MainContent = ({ }: MainContentProps) => {
   // Handle selection from either source
   const handleNodeSelect = (nodeId: string | null) => {
     setSelectedNodeId(nodeId);
+    // Show panel on mobile when node is selected
+    if (nodeId && window.innerWidth < 768) {
+      setShowPanel(true);
+    }
   };
   
   // Toggle relationship visibility
@@ -125,128 +132,150 @@ export const MainContent = ({ }: MainContentProps) => {
   };
 
   return (
-    <div className="p-6">
-      <Card className="overflow-hidden border-0 shadow-sm">
-        <CardContent className="p-0">
-          <div className="flex flex-col md:flex-row">
-            {/* Left side with graph */}
-            <div className="md:w-1/2">
-              <div style={{ position: "relative", width: '100%', height: '100%' }}>
-                {/* Camera controls overlay */}
-                <div className="absolute top-2 right-2 z-10 bg-background/80 p-1 rounded-md shadow-sm">
-                  <CameraControls graphRef={graphRef} />
+    <div className="relative w-full h-[calc(100vh-96px)]">
+      {/* Full-width graph container */}
+      <div className="absolute inset-0 w-full h-full">
+        <GraphChart 
+          ref={graphRef}
+          nodes={nodes} 
+          edges={edges} 
+          loading={loading} 
+          error={error}
+          selectedNodeId={selectedNodeId}
+          onNodeSelect={handleNodeSelect}
+          showRelationships={showRelationships}
+        />
+      </div>
+      
+      {/* Camera controls - fixed position */}
+      <div className="absolute top-4 left-4 z-10 bg-background/70 backdrop-blur-md p-2 rounded-lg shadow-lg">
+        <CameraControls graphRef={graphRef} />
+      </div>
+      
+      {/* Mobile toggle button for panel */}
+      <div className="md:hidden absolute top-4 right-4 z-10">
+        <Button 
+          variant="secondary" 
+          className="bg-background/70 backdrop-blur-md shadow-lg" 
+          onClick={() => setShowPanel(!showPanel)}
+        >
+          {showPanel ? "Hide Panel" : "Show Panel"}
+        </Button>
+      </div>
+      
+      {/* Floating glass panel */}
+      <div className={`absolute right-0 top-0 bottom-0 z-10 w-full md:w-2/5 lg:w-1/3 transform transition-transform duration-300 ease-in-out ${
+        showPanel ? 'translate-x-0' : 'translate-x-full md:translate-x-0'
+      }`}>
+        <Card className="h-full bg-background/60 backdrop-blur-md border-0 shadow-lg rounded-l-lg rounded-r-none overflow-hidden">
+          <div className="flex flex-col h-full p-4">
+            {/* Node selector and controls */}
+            <div className="mb-4 pt-2">
+              <h4 className="text-sm font-medium mb-2">Select Dreiging</h4>
+              <div className="flex gap-2 items-center">
+                <div className="flex-1">
+                  <NodeSelector 
+                    nodes={nodes}
+                    selectedNodeId={selectedNodeId}
+                    onSelectNode={handleNodeSelect}
+                    placeholder="Select a dreiging..."
+                  />
                 </div>
-                <GraphChart 
-                  ref={graphRef}
-                  nodes={nodes} 
-                  edges={edges} 
-                  loading={loading} 
-                  error={error}
-                  selectedNodeId={selectedNodeId}
-                  onNodeSelect={handleNodeSelect}
-                  showRelationships={showRelationships}
-                />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className={`whitespace-nowrap ${showRelationships ? 'bg-primary/10' : ''}`}
+                  onClick={toggleRelationships}
+                  disabled={!selectedNodeId}
+                  title={!selectedNodeId ? "Select a node first" : undefined}
+                >
+                  <Eye className="h-4 w-4 mr-1" />
+                  {showRelationships ? 'Hide Relations' : 'Show Relations'}
+                </Button>
               </div>
             </div>
             
-            {/* Subtle divider for larger screens */}
-            <div className="hidden md:block w-px bg-border/30 mx-1"></div>
+            {/* Divider */}
+            <div className="w-full h-px bg-border/30 my-2"></div>
             
-            {/* Right side with controls and details */}
-            <div className="md:w-1/2 p-6">
-              {/* Node selector dropdown and relationship toggle */}
-              <div className="mb-6">
-                <h4 className="text-sm font-medium mb-2">Select Dreiging</h4>
-                <div className="flex gap-2 items-center">
-                  <div className="flex-1">
-                    <NodeSelector 
-                      nodes={nodes}
-                      selectedNodeId={selectedNodeId}
-                      onSelectNode={handleNodeSelect}
-                      placeholder="Select a dreiging..."
-                    />
-                  </div>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className={`whitespace-nowrap ${showRelationships ? 'bg-primary/10' : ''}`}
-                    onClick={toggleRelationships}
-                    disabled={!selectedNodeId}
-                    title={!selectedNodeId ? "Select a node first" : undefined}
-                  >
-                    <Eye className="h-4 w-4 mr-1" />
-                    {showRelationships ? 'Hide Relations' : 'Show Relations'}
-                  </Button>
-                </div>
-              </div>
+            {/* Node information */}
+            <div className="flex-1 overflow-hidden flex flex-col">
+              <h4 className="text-sm font-medium mb-3">Selected Dreiging</h4>
               
-              {/* Node Selection Information - with fixed height */}
-              <div className="mt-6 pt-6 border-t border-border/30 h-[480px] flex flex-col">
-                <h4 className="text-sm font-medium mb-4">Selected Dreiging</h4>
-                {selectedNode ? (
-                  <div className="flex flex-col h-full">
-                    <div className="p-4 bg-primary/5 rounded-lg flex-shrink-0">
-                      <p className="font-medium text-lg">{selectedNode.label}</p>
-                      <div className="text-sm text-muted-foreground mt-1">
-                        <span>Mentioned in <span className="font-semibold">{selectedNode.nr_docs}</span> documents</span>
-                        <span className="mx-2">•</span>
-                        <span><span className="font-semibold">{getTotalCitationsCount(selectedNode)}</span> total citations</span>
-                      </div>
+              {selectedNode ? (
+                <div className="flex flex-col h-full">
+                  <div className="p-3 bg-primary/10 backdrop-blur-md rounded-lg flex-shrink-0">
+                    <p className="font-medium text-lg">{selectedNode.label}</p>
+                    <div className="text-sm text-muted-foreground mt-1">
+                      <span>Mentioned in <span className="font-semibold">{selectedNode.nr_docs}</span> documents</span>
+                      <span className="mx-2">•</span>
+                      <span><span className="font-semibold">{getTotalCitationsCount(selectedNode)}</span> total citations</span>
                     </div>
+                  </div>
+                  
+                  {/* Citations section */}
+                  <div className="mt-4 flex-1 flex flex-col overflow-hidden">
+                    <h5 className="text-sm font-medium mb-2 flex-shrink-0">Documents</h5>
                     
-                    {/* Citations section - with flex and overflow */}
-                    <div className="mt-4 flex-1 flex flex-col overflow-hidden">
-                      <h5 className="text-sm font-medium mb-3 flex-shrink-0">Documents</h5>
+                    <div className="space-y-3 overflow-y-auto pr-2 flex-1">
+                      {selectedNode.citaten && groupCitationsByDocument(selectedNode.citaten).map((document, index) => (
+                        <div key={index} className="p-3 bg-background/50 rounded-lg border border-border/20">
+                          <div className="flex justify-between items-start mb-2">
+                            <a 
+                              href={formatDocumentLink(document.document_link)} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-sm font-medium text-primary hover:underline"
+                            >
+                              {document.title}
+                            </a>
+                            <div className="text-xs text-muted-foreground">{document.publication_date}</div>
+                          </div>
+                          
+                          <div className="flex text-xs text-muted-foreground mb-2 space-x-2">
+                            <div>{document.document_type}</div>
+                            <div>•</div>
+                            <div>{document.source}</div>
+                            <div>•</div>
+                            <div>{document.citaten.length} citation{document.citaten.length !== 1 ? 's' : ''}</div>
+                          </div>
+                          
+                          {document.citaten.map((citaat, citaatIndex) => (
+                            <div key={citaatIndex} className="text-sm mt-2 italic bg-muted/40 p-2 rounded">
+                              "{citaat}"
+                            </div>
+                          ))}
+                        </div>
+                      ))}
                       
-                      <div className="space-y-4 overflow-y-auto pr-2 flex-1">
-                        {selectedNode.citaten && groupCitationsByDocument(selectedNode.citaten).map((document, index) => (
-                          <div key={index} className="p-4 bg-muted/30 rounded-lg">
-                            <div className="flex justify-between items-start mb-2">
-                              <a 
-                                href={formatDocumentLink(document.document_link)} 
-                                target="_blank" 
-                                rel="noopener noreferrer"
-                                className="text-sm font-medium text-primary hover:underline"
-                              >
-                                {document.title}
-                              </a>
-                              <div className="text-xs text-muted-foreground">{document.publication_date}</div>
-                            </div>
-                            
-                            <div className="flex text-xs text-muted-foreground mb-3 space-x-2">
-                              <div>{document.document_type}</div>
-                              <div>•</div>
-                              <div>{document.source}</div>
-                              <div>•</div>
-                              <div>{document.citaten.length} citation{document.citaten.length !== 1 ? 's' : ''}</div>
-                            </div>
-                            
-                            {document.citaten.map((citaat, citaatIndex) => (
-                              <div key={citaatIndex} className="text-sm mt-2 italic bg-muted/20 p-3 rounded">
-                                "{citaat}"
-                              </div>
-                            ))}
-                          </div>
-                        ))}
-                        
-                        {(!selectedNode.citaten || selectedNode.citaten.length === 0) && (
-                          <div className="text-sm text-muted-foreground p-4 bg-muted/30 rounded-lg">
-                            No citations available for this node.
-                          </div>
-                        )}
-                      </div>
+                      {(!selectedNode.citaten || selectedNode.citaten.length === 0) && (
+                        <div className="text-sm text-muted-foreground p-3 bg-muted/30 rounded-lg">
+                          No citations available for this node.
+                        </div>
+                      )}
                     </div>
                   </div>
-                ) : (
-                  <div className="text-sm text-muted-foreground p-4 bg-muted/30 rounded-lg">
-                    Click on a node in the graph or select one from the dropdown to view its details.
-                  </div>
-                )}
-              </div>
+                </div>
+              ) : (
+                <div className="text-sm text-muted-foreground p-4 bg-muted/30 rounded-lg">
+                  Click on a node in the graph or select one from the dropdown to view its details.
+                </div>
+              )}
+            </div>
+            
+            {/* Mobile close button */}
+            <div className="md:hidden mt-4">
+              <Button 
+                variant="outline" 
+                className="w-full" 
+                onClick={() => setShowPanel(false)}
+              >
+                Close Panel
+              </Button>
             </div>
           </div>
-        </CardContent>
-      </Card>
+        </Card>
+      </div>
     </div>
   );
 };

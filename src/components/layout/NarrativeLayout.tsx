@@ -25,7 +25,7 @@ export const NarrativeLayout = () => {
   const basePath = import.meta.env.BASE_URL;
 
   return (
-    <div className="flex flex-col w-full min-h-screen bg-gray-50">
+    <div className="flex flex-col w-full min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Floating Circles with Dialogs */}
       <div className="fixed top-8 left-8 z-50">
         <Dialog>
@@ -39,9 +39,9 @@ export const NarrativeLayout = () => {
               />
             </div>
           </DialogTrigger>
-          <DialogContent className="max-w-2xl bg-white">
+          <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-sm">
             <DialogHeader>
-              <DialogTitle>Over Denkwerk</DialogTitle>
+              <DialogTitle className="text-xl">Over Denkwerk</DialogTitle>
             </DialogHeader>
             <div className="p-6">
               <p className="text-gray-700 leading-relaxed">
@@ -62,9 +62,9 @@ export const NarrativeLayout = () => {
               <Info className="h-8 w-8 text-white" />
             </div>
           </DialogTrigger>
-          <DialogContent className="max-w-2xl bg-white">
+          <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-sm">
             <DialogHeader>
-              <DialogTitle>Toelichting model</DialogTitle>
+              <DialogTitle className="text-xl">Toelichting model</DialogTitle>
             </DialogHeader>
             <ModelExplanation/>
           </DialogContent>
@@ -83,7 +83,7 @@ export const NarrativeLayout = () => {
           <div className="absolute bottom-2 left-2 text-white text-xs bg-black/50 px-2 py-1 rounded">
             Foto: ©ESA/NASA - André Kuipers
           </div>
-          <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-white text-center px-4">
+          <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center px-4">
             <h1 className="text-5xl font-bold mb-8">
               Netwerk Analyse
             </h1>
@@ -93,34 +93,27 @@ export const NarrativeLayout = () => {
           </div>
         </div>
 
-        {/* Main Content with partial grey background */}
+        {/* Full-width Visualization Section */}
         <div className="w-full">
-          <div className="max-w-[2400px] mx-auto px-8 relative">
-            <div className="absolute left-8 right-8 top-0 bottom-0 bg-white shadow-lg" />
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12">
-              {/* Empty Settings Section with border */}
-              <div
-                className="relative pt-8 border-t border-gray-200"
-              >
-                <div className="space-y-8 mb-16">
-                  <MainContent settings={settings} />
-                  {/* Empty content area */}
-                </div>
+          {/* Main Visualization Content - Full Width */}
+          <div className="relative w-full">
+            <MainContent settings={settings} />
+          </div>
 
-                <div className="text-center mt-12">
-                  <p className="text-gray-600">
-                    Meer weten?{' '}
-                    <a
-                      href="https://denkwerk.online/rapporten/kiezen-én-delen-januari-2025/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[rgb(0,153,168)] hover:text-[rgb(0,123,138)] underline"
-                    >
-                      Vind hier het volledige rapport
-                    </a>.
-                  </p>
-                </div>
-              </div>
+          {/* Footer Section */}
+          <div className="w-full bg-white py-8 px-4">
+            <div className="max-w-7xl mx-auto text-center">
+              <p className="text-gray-600">
+                Meer weten?{' '}
+                <a
+                  href="https://denkwerk.online/rapporten/kiezen-én-delen-januari-2025/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[rgb(0,153,168)] hover:text-[rgb(0,123,138)] underline"
+                >
+                  Vind hier het volledige rapport
+                </a>.
+              </p>
             </div>
           </div>
         </div>
