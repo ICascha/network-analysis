@@ -1,6 +1,31 @@
-import { GraphCanvas, GraphCanvasRef, useSelection } from 'reagraph';  
-import { useRef, useImperativeHandle, forwardRef, useEffect } from 'react';  
+import { GraphCanvas, GraphCanvasRef, useSelection, lightTheme } from 'reagraph';  
+import { useRef, useImperativeHandle, forwardRef, useEffect, act } from 'react';  
 import { Node as CustomNode, Edge } from './networkDataService';  
+
+const denkWerkTheme = {
+  ...lightTheme,
+  node: {
+    ...lightTheme.node,
+    color: 'rgb(0,153,168)',
+    fill: 'rgb(0,153,168)',
+    activeFill: 'rgb(0,168,120)', // Changed to teal green
+    label: {
+      ...lightTheme.node.label,
+      activeColor: 'rgb(0,168,120)', // Changed to teal green
+    },
+  },
+  edge: {
+    ...lightTheme.edge,
+    activeStroke: 'rgb(0,168,120)', // Changed to teal green
+    activeFill: 'rgb(0,168,120)', // Changed to teal green
+  },
+  arrow: {
+    activeFill: 'rgb(0,168,120)', // Changed to teal green
+  },
+  ring: {
+    activeFill: 'rgb(0,168,120)', // Changed to teal green
+  }
+};
 
 // Interface for our props  
 interface GraphChartProps {    
@@ -123,6 +148,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         onNodeClick={handleNodeClick}
         onCanvasClick={handleCanvasClick}
         sizingType="pagerank"
+        theme={denkWerkTheme}
       />
     );
   }  
