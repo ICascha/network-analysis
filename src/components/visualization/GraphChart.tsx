@@ -1,5 +1,5 @@
 import { GraphCanvas, GraphCanvasRef, useSelection, lightTheme } from 'reagraph';  
-import { useRef, useImperativeHandle, forwardRef, useEffect, act } from 'react';  
+import { useRef, useImperativeHandle, forwardRef, useEffect } from 'react';  
 import { Node as CustomNode, Edge } from './networkDataService';  
 
 const denkWerkTheme = {
@@ -20,9 +20,11 @@ const denkWerkTheme = {
     activeFill: 'rgb(0,168,120)', // Changed to teal green
   },
   arrow: {
+    ...lightTheme.arrow,
     activeFill: 'rgb(0,168,120)', // Changed to teal green
   },
   ring: {
+    ...lightTheme.ring,
     activeFill: 'rgb(0,168,120)', // Changed to teal green
   }
 };
