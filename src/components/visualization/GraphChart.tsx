@@ -122,6 +122,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         actives={actives}
         onNodeClick={handleNodeClick}
         onCanvasClick={handleCanvasClick}
+        sizingType="pagerank"
       />
     );
   }  
