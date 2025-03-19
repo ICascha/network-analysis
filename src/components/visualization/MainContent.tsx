@@ -1,12 +1,23 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Eye } from "lucide-react";
+import { Eye, Settings } from "lucide-react";
 import { useState, useEffect, useRef } from 'react';
 import type { ModelSettings } from '@/types/settings';
 import GraphChart, { GraphChartRef } from './GraphChart';
 import NodeSelector from './NodeSelector';
 import CameraControls from './CameraControls';
-import { fetchNetworkData, Node, Edge, Citation } from './networkDataService';
+import { getNetworkWithHITS, Node, Edge, Citation } from './networkDataService';
+import GraphSettings from './GraphSettings';
+import {
+  Sheet,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface MainContentProps {
   settings: ModelSettings;
@@ -40,6 +51,13 @@ export const MainContent = ({ }: MainContentProps) => {
   
   // State for panel visibility on mobile
   const [showPanel, setShowPanel] = useState<boolean>(false);
+  
+  // State for HITS scoring metric
+  const [scoringMetric, setScoringMetric] = useState<'hub' | 'auth'>('hub');
+  
+  // State for node size control
+  const [minNodeSize, setMinNodeSize] = useState<number>(5);
+  const [maxNodeSize, setMaxNodeSize] = useState<number>(15);
   
   // Computed value for the selected node object
   const selectedNode = selectedNodeId 
@@ -77,7 +95,7 @@ export const MainContent = ({ }: MainContentProps) => {
     const loadNetworkData = async () => {
       try {
         setLoading(true);
-        const data = await fetchNetworkData();
+        const data = await getNetworkWithHITS();
         
         // Make sure we have valid arrays
         const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
@@ -104,11 +122,6 @@ export const MainContent = ({ }: MainContentProps) => {
     if (nodeId && window.innerWidth < 768) {
       setShowPanel(true);
     }
-  };
-  
-  // Toggle relationship visibility
-  const toggleRelationships = () => {
-    setShowRelationships(!showRelationships);
   };
 
   // Center the view when a node is selected
@@ -144,12 +157,48 @@ export const MainContent = ({ }: MainContentProps) => {
           selectedNodeId={selectedNodeId}
           onNodeSelect={handleNodeSelect}
           showRelationships={showRelationships}
+          sizingAttribute={scoringMetric}
+          minNodeSize={minNodeSize}
+          maxNodeSize={maxNodeSize}
         />
       </div>
       
-      {/* Camera controls - fixed position */}
+      {/* Camera controls only - fixed position */}
       <div className="absolute top-4 left-4 z-10 bg-background/70 backdrop-blur-md p-2 rounded-lg shadow-lg">
         <CameraControls graphRef={graphRef} />
+      </div>
+      
+      {/* Settings Button only */}
+      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 flex items-center">
+        <div className="bg-background/70 backdrop-blur-md p-2 rounded-lg shadow-lg">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <Button variant="outline" size="sm" className="gap-1 px-3">
+                      <Settings className="h-4 w-4" />
+                      <span>Instellingen</span>
+                    </Button>
+                  </SheetTrigger>
+                  <GraphSettings
+                    scoringMetric={scoringMetric}
+                    setScoringMetric={setScoringMetric}
+                    minNodeSize={minNodeSize}
+                    setMinNodeSize={setMinNodeSize}
+                    maxNodeSize={maxNodeSize}
+                    setMaxNodeSize={setMaxNodeSize}
+                    showRelationships={showRelationships}
+                    setShowRelationships={setShowRelationships}
+                  />
+                </Sheet>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Open geavanceerde instellingen</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+        </div>
       </div>
       
       {/* Mobile toggle button for panel */}
@@ -185,7 +234,7 @@ export const MainContent = ({ }: MainContentProps) => {
                   variant="outline"
                   size="sm"
                   className={`whitespace-nowrap ${showRelationships ? 'bg-primary/10' : ''}`}
-                  onClick={toggleRelationships}
+                  onClick={() => setShowRelationships(!showRelationships)}
                   disabled={!selectedNodeId}
                   title={!selectedNodeId ? "Select a node first" : undefined}
                 >

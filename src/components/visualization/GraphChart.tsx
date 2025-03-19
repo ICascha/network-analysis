@@ -38,6 +38,9 @@ interface GraphChartProps {
   selectedNodeId: string | null;    
   onNodeSelect: (nodeId: string | null) => void;
   showRelationships?: boolean;
+  sizingAttribute?: 'hub' | 'auth'; // Added sizing attribute prop
+  minNodeSize?: number; // Added min node size prop
+  maxNodeSize?: number; // Added max node size prop
 }  
 
 // Interface for the ref we expose  
@@ -50,7 +53,18 @@ export interface GraphChartRef {
 }  
 
 const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(    
-  ({ nodes, edges, loading, error, selectedNodeId, onNodeSelect, showRelationships = false }, ref) => {      
+  ({ 
+    nodes, 
+    edges, 
+    loading, 
+    error, 
+    selectedNodeId, 
+    onNodeSelect, 
+    showRelationships = false,
+    sizingAttribute = 'hub', // Default to hub scoring
+    minNodeSize = 5, // Default min node size
+    maxNodeSize = 15, // Default max node size
+  }, ref) => {      
     // Internal ref to the actual GraphCanvas      
     const graphRef = useRef<GraphCanvasRef>(null);        
 
@@ -149,8 +163,11 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         actives={actives}
         onNodeClick={handleNodeClick}
         onCanvasClick={handleCanvasClick}
-        sizingType="pagerank"
+        sizingType="attribute"
+        sizingAttribute={sizingAttribute} // Use the dynamic sizing attribute
         theme={denkWerkTheme}
+        minNodeSize={minNodeSize}
+        maxNodeSize={maxNodeSize}
       />
     );
   }  
