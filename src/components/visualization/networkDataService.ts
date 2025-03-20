@@ -202,3 +202,184 @@ export const getNetworkWithHITS = async (iterations: number = 10): Promise<Netwo
   const networkData = await fetchNetworkData();
   return calculateHITS(networkData, iterations);
 };
+
+/**
+ * Calculates eigenvector centrality scores for nodes in the network
+ * - eigen_centrality: treats the graph as undirected
+ * - eigen_centrality_in: based on incoming edges (prestige)
+ * - eigen_centrality_out: based on outgoing edges (importance)
+ * 
+ * @param networkData The network data containing nodes and edges
+ * @param k The number of iterations to run the algorithm
+ * @returns The network data with updated eigenvector centrality scores
+ */
+export const calculateEigenvectorCentrality = (networkData: NetworkData, k: number = 10): NetworkData => {
+  const { nodes, edges } = networkData;
+  
+  // Create a map for quick access to nodes by id
+  const nodeMap = new Map<string, Node>();
+  
+  // Step 1: Initialize all eigenvector centrality scores to 1
+  nodes.forEach(node => {
+    // Ensure data object exists
+    if (!node.data) {
+      node.data = {};
+    }
+    node.data.eigen_centrality = 1;
+    node.data.eigen_centrality_in = 1;
+    node.data.eigen_centrality_out = 1;
+    nodeMap.set(node.id, node);
+  });
+  
+  // Create maps to store incoming and outgoing neighbors for each node
+  const incomingNeighbors = new Map<string, string[]>();
+  const outgoingNeighbors = new Map<string, string[]>();
+  
+  // Initialize empty arrays for all nodes
+  nodes.forEach(node => {
+    incomingNeighbors.set(node.id, []);
+    outgoingNeighbors.set(node.id, []);
+  });
+  
+  // Populate the directed neighbors maps using the edges
+  edges.forEach(edge => {
+    const sourceId = edge.source;
+    const targetId = edge.target;
+    
+    // Add targetId to the outgoing neighbors of sourceId
+    const outNeighbors = outgoingNeighbors.get(sourceId) || [];
+    outNeighbors.push(targetId);
+    outgoingNeighbors.set(sourceId, outNeighbors);
+    
+    // Add sourceId to the incoming neighbors of targetId
+    const inNeighbors = incomingNeighbors.get(targetId) || [];
+    inNeighbors.push(sourceId);
+    incomingNeighbors.set(targetId, inNeighbors);
+  });
+  
+  // Create undirected neighbors map by combining incoming and outgoing
+  const undirectedNeighbors = new Map<string, string[]>();
+  
+  nodes.forEach(node => {
+    const nodeId = node.id;
+    const inNeighbors = incomingNeighbors.get(nodeId) || [];
+    const outNeighbors = outgoingNeighbors.get(nodeId) || [];
+    
+    // Use a Set to avoid duplicates when combining in and out neighbors
+    const allNeighborsSet = new Set([...inNeighbors, ...outNeighbors]);
+    undirectedNeighbors.set(nodeId, Array.from(allNeighborsSet));
+  });
+  
+  // 1. Undirected eigenvector centrality
+  for (let step = 0; step < k; step++) {
+    // Create temporary scores for this iteration
+    const tempScores = new Map<string, number>();
+    let norm = 0;
+    
+    // Update each node's score based on its neighbors
+    nodes.forEach(node => {
+      const neighbors = undirectedNeighbors.get(node.id) || [];
+      let newScore = 0;
+      
+      // Sum the scores of all neighbors
+      neighbors.forEach(neighborId => {
+        const neighbor = nodeMap.get(neighborId);
+        if (neighbor && neighbor.data && neighbor.data.eigen_centrality !== undefined) {
+          newScore += neighbor.data.eigen_centrality;
+        }
+      });
+      
+      tempScores.set(node.id, newScore);
+      norm += Math.pow(newScore, 2);
+    });
+    
+    // Normalize scores
+    norm = Math.sqrt(norm);
+    if (norm > 0) {
+      nodes.forEach(node => {
+        if (node.data) {
+          node.data.eigen_centrality = (tempScores.get(node.id) || 0) / norm;
+        }
+      });
+    }
+  }
+  
+  // 2. In-degree eigenvector centrality (prestige)
+  for (let step = 0; step < k; step++) {
+    // Create temporary scores for this iteration
+    const tempScores = new Map<string, number>();
+    let norm = 0;
+    
+    // Update each node's score based on its incoming neighbors
+    nodes.forEach(node => {
+      const neighbors = incomingNeighbors.get(node.id) || [];
+      let newScore = 0;
+      
+      // Sum the scores of all incoming neighbors
+      neighbors.forEach(neighborId => {
+        const neighbor = nodeMap.get(neighborId);
+        if (neighbor && neighbor.data && neighbor.data.eigen_centrality_in !== undefined) {
+          newScore += neighbor.data.eigen_centrality_in;
+        }
+      });
+      
+      tempScores.set(node.id, newScore);
+      norm += Math.pow(newScore, 2);
+    });
+    
+    // Normalize scores
+    norm = Math.sqrt(norm);
+    if (norm > 0) {
+      nodes.forEach(node => {
+        if (node.data) {
+          node.data.eigen_centrality_in = (tempScores.get(node.id) || 0) / norm;
+        }
+      });
+    }
+  }
+  
+  // 3. Out-degree eigenvector centrality (importance)
+  for (let step = 0; step < k; step++) {
+    // Create temporary scores for this iteration
+    const tempScores = new Map<string, number>();
+    let norm = 0;
+    
+    // Update each node's score based on its outgoing neighbors
+    nodes.forEach(node => {
+      const neighbors = outgoingNeighbors.get(node.id) || [];
+      let newScore = 0;
+      
+      // Sum the scores of all outgoing neighbors
+      neighbors.forEach(neighborId => {
+        const neighbor = nodeMap.get(neighborId);
+        if (neighbor && neighbor.data && neighbor.data.eigen_centrality_out !== undefined) {
+          newScore += neighbor.data.eigen_centrality_out;
+        }
+      });
+      
+      tempScores.set(node.id, newScore);
+      norm += Math.pow(newScore, 2);
+    });
+    
+    // Normalize scores
+    norm = Math.sqrt(norm);
+    if (norm > 0) {
+      nodes.forEach(node => {
+        if (node.data) {
+          node.data.eigen_centrality_out = (tempScores.get(node.id) || 0) / norm;
+        }
+      });
+    }
+  }
+  
+  return { nodes, edges };
+};
+
+/**
+ * Get network data with both HITS and eigenvector centrality calculations
+ */
+export const getNetworkWithAllCentralityMetrics = async (iterations: number = 10): Promise<NetworkData> => {
+  const networkData = await fetchNetworkData();
+  const networkWithHITS = calculateHITS(networkData, iterations);
+  return calculateEigenvectorCentrality(networkWithHITS, iterations);
+};

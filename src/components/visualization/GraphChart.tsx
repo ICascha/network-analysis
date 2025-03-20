@@ -38,7 +38,7 @@ interface GraphChartProps {
   selectedNodeId: string | null;    
   onNodeSelect: (nodeId: string | null) => void;
   showRelationships?: boolean;
-  sizingAttribute?: 'hub' | 'auth'; // Added sizing attribute prop
+  sizingAttribute?: 'hub' | 'auth' | 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out'; // Added sizing attribute prop
   minNodeSize?: number; // Added min node size prop
   maxNodeSize?: number; // Added max node size prop
 }  

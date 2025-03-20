@@ -28,9 +28,12 @@ import {
   ToggleGroupItem
 } from "@/components/ui/toggle-group";
 
+// Updated type to include new eigenvector centrality metrics
+type CentralityMetric = 'hub' | 'auth' | 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out';
+
 interface GraphSettingsProps {
-  scoringMetric: 'hub' | 'auth';
-  setScoringMetric: (value: 'hub' | 'auth') => void;
+  scoringMetric: CentralityMetric;
+  setScoringMetric: (value: CentralityMetric) => void;
   minNodeSize: number;
   setMinNodeSize: (value: number) => void;
   maxNodeSize: number;
@@ -49,6 +52,24 @@ const GraphSettings = ({
   showRelationships,
   setShowRelationships
 }: GraphSettingsProps) => {
+  // Helper function to get description text for the selected metric
+  const getMetricDescription = (metric: CentralityMetric): string => {
+    switch (metric) {
+      case 'hub':
+        return 'Knooppunten die naar veel belangrijke bronnen verwijzen zijn groter.';
+      case 'auth':
+        return 'Knooppunten waarnaar veel belangrijke bronnen verwijzen zijn groter.';
+      case 'eigen_centrality':
+        return 'Knooppunten met meer verbindingen (inkomend en uitgaand) met andere centrale knooppunten zijn groter.';
+      case 'eigen_centrality_in':
+        return 'Knooppunten met meer inkomende verbindingen van andere prestigieuze knooppunten zijn groter (prestige).';
+      case 'eigen_centrality_out':
+        return 'Knooppunten met meer uitgaande verbindingen naar andere belangrijke knooppunten zijn groter (belang).';
+      default:
+        return '';
+    }
+  };
+
   return (
     <SheetContent className="w-full sm:max-w-md overflow-y-auto">
       <SheetHeader className="mb-5">
@@ -77,12 +98,12 @@ const GraphSettings = ({
               <div className="bg-muted/50 p-3 rounded-lg space-y-3">
                 <div>
                   <Label htmlFor="node-sizing" className="text-sm flex items-center gap-1">
-                    Op basis van het HITS algoritme
+                    Centraliteit Algoritme
                     <TooltipProvider>
                       <Tooltip>
                         <TooltipTrigger asChild>
                           <a 
-                            href="https://en.wikipedia.org/wiki/HITS_algorithm" 
+                            href="https://en.wikipedia.org/wiki/Centrality" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="text-muted-foreground hover:text-primary"
@@ -91,31 +112,68 @@ const GraphSettings = ({
                           </a>
                         </TooltipTrigger>
                         <TooltipContent>
-                          <p className="text-xs max-w-[200px]">HITS Algoritme berekent twee scores voor knooppunten: Verbindingshub (verwijst naar veel autoriteitsbronnen) en Autoriteitsbron (wordt verwezen door veel hubs)</p>
+                          <p className="text-xs max-w-[250px]">Netwerk centraliteit algoritmes berekenen hoe belangrijk een knooppunt is in het netwerk gebaseerd op verschillende criteria zoals connectiviteit, positie, en verbindingen.</p>
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>:
                   </Label>
-                  <ToggleGroup 
-                    type="single" 
-                    value={scoringMetric} 
-                    onValueChange={(value) => {
-                      if (value) setScoringMetric(value as 'hub' | 'auth');
-                    }}
-                    className="mt-2"
-                    id="node-sizing"
-                  >
-                    <ToggleGroupItem value="hub" aria-label="Size by hub score" className="flex-1">
-                      Verbindingshub
-                    </ToggleGroupItem>
-                    <ToggleGroupItem value="auth" aria-label="Size by authority score" className="flex-1">
-                      Autoriteitsbron
-                    </ToggleGroupItem>
-                  </ToggleGroup>
+                  
+                  {/* Eigenvector Centrality Section */}
+                  <div className="mt-3 border-l-2 border-primary/30 pl-3">
+                    <Label className="text-xs font-medium">Eigenvector Centraliteit:</Label>
+                    <ToggleGroup 
+                      type="single" 
+                      value={scoringMetric} 
+                      onValueChange={(value) => {
+                        if (value === 'eigen_centrality' || value === 'eigen_centrality_in' || value === 'eigen_centrality_out') 
+                          setScoringMetric(value as CentralityMetric);
+                      }}
+                      className="mt-1"
+                    >
+                      <ToggleGroupItem value="eigen_centrality" aria-label="Size by undirected eigenvector centrality" className="flex-1 text-xs py-1">
+                        Ongerichte Centraliteit
+                      </ToggleGroupItem>
+                    </ToggleGroup>
+                    <ToggleGroup 
+                      type="single" 
+                      value={scoringMetric} 
+                      onValueChange={(value) => {
+                        if (value === 'eigen_centrality' || value === 'eigen_centrality_in' || value === 'eigen_centrality_out') 
+                          setScoringMetric(value as CentralityMetric);
+                      }}
+                      className="mt-1"
+                    >
+                      <ToggleGroupItem value="eigen_centrality_in" aria-label="Size by in-degree eigenvector centrality" className="flex-1 text-xs py-1">
+                        Prestige (Inkomend)
+                      </ToggleGroupItem>
+                      <ToggleGroupItem value="eigen_centrality_out" aria-label="Size by out-degree eigenvector centrality" className="flex-1 text-xs py-1">
+                        Belang (Uitgaand)
+                      </ToggleGroupItem>
+                    </ToggleGroup>
+                  </div>
+
+                                    {/* HITS Algorithm Section */}
+                                    <div className="mt-3 border-l-2 border-primary/30 pl-3">
+                    <Label className="text-xs font-medium">HITS Algoritme:</Label>
+                    <ToggleGroup 
+                      type="single" 
+                      value={scoringMetric} 
+                      onValueChange={(value) => {
+                        if (value === 'hub' || value === 'auth') setScoringMetric(value);
+                      }}
+                      className="mt-1"
+                    >
+                      <ToggleGroupItem value="hub" aria-label="Size by hub score" className="flex-1 text-xs py-1">
+                        Verbindingshub
+                      </ToggleGroupItem>
+                      <ToggleGroupItem value="auth" aria-label="Size by authority score" className="flex-1 text-xs py-1">
+                        Autoriteitsbron
+                      </ToggleGroupItem>
+                    </ToggleGroup>
+                  </div>
+                  
                   <p className="text-xs text-muted-foreground mt-2">
-                    {scoringMetric === 'hub' 
-                      ? 'Knooppunten die naar veel belangrijke bronnen verwijzen zijn groter.' 
-                      : 'Knooppunten waarnaar veel belangrijke bronnen verwijzen zijn groter.'}
+                    {getMetricDescription(scoringMetric)}
                   </p>
                 </div>
                 

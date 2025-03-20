@@ -6,7 +6,7 @@ import type { ModelSettings } from '@/types/settings';
 import GraphChart, { GraphChartRef } from './GraphChart';
 import NodeSelector from './NodeSelector';
 import CameraControls from './CameraControls';
-import { getNetworkWithHITS, Node, Edge, Citation } from './networkDataService';
+import { getNetworkWithAllCentralityMetrics, Node, Edge, Citation } from './networkDataService';
 import GraphSettings from './GraphSettings';
 import {
   Sheet,
@@ -22,6 +22,9 @@ import {
 interface MainContentProps {
   settings: ModelSettings;
 }
+
+// Updated type for centrality metrics
+type CentralityMetric = 'hub' | 'auth' | 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out';
 
 // Interface for grouping citations by document
 interface GroupedCitation {
@@ -52,8 +55,8 @@ export const MainContent = ({ }: MainContentProps) => {
   // State for panel visibility on mobile
   const [showPanel, setShowPanel] = useState<boolean>(false);
   
-  // State for HITS scoring metric
-  const [scoringMetric, setScoringMetric] = useState<'hub' | 'auth'>('hub');
+  // Updated: State for centrality scoring metric (now includes eigenvector centrality options)
+  const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('eigen_centrality_out');
   
   // State for node size control
   const [minNodeSize, setMinNodeSize] = useState<number>(5);
@@ -90,12 +93,13 @@ export const MainContent = ({ }: MainContentProps) => {
     return Array.from(groupedMap.values());
   };
 
-  // Fetch data when component mounts
+  // Fetch data when component mounts - using the new function for all centrality metrics
   useEffect(() => {
     const loadNetworkData = async () => {
       try {
         setLoading(true);
-        const data = await getNetworkWithHITS();
+        // Updated: Using the new function that calculates all centrality metrics
+        const data = await getNetworkWithAllCentralityMetrics();
         
         // Make sure we have valid arrays
         const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
@@ -260,6 +264,42 @@ export const MainContent = ({ }: MainContentProps) => {
                       <span className="mx-2">•</span>
                       <span><span className="font-semibold">{getTotalCitationsCount(selectedNode)}</span> total citations</span>
                     </div>
+                    
+                    {/* Display centrality metrics if available */}
+                    {selectedNode.data && (
+                      <div className="mt-2 pt-2 border-t border-border/20 grid grid-cols-2 gap-2 text-xs">
+                        {selectedNode.data.hub !== undefined && (
+                          <div>
+                            <span className="text-muted-foreground">HITS Hub: </span>
+                            <span className="font-mono">{selectedNode.data.hub.toFixed(4)}</span>
+                          </div>
+                        )}
+                        {selectedNode.data.auth !== undefined && (
+                          <div>
+                            <span className="text-muted-foreground">HITS Authority: </span>
+                            <span className="font-mono">{selectedNode.data.auth.toFixed(4)}</span>
+                          </div>
+                        )}
+                        {selectedNode.data.eigen_centrality !== undefined && (
+                          <div>
+                            <span className="text-muted-foreground">Eigen Centrality: </span>
+                            <span className="font-mono">{selectedNode.data.eigen_centrality.toFixed(4)}</span>
+                          </div>
+                        )}
+                        {selectedNode.data.eigen_centrality_in !== undefined && (
+                          <div>
+                            <span className="text-muted-foreground">Prestige (In): </span>
+                            <span className="font-mono">{selectedNode.data.eigen_centrality_in.toFixed(4)}</span>
+                          </div>
+                        )}
+                        {selectedNode.data.eigen_centrality_out !== undefined && (
+                          <div>
+                            <span className="text-muted-foreground">Importance (Out): </span>
+                            <span className="font-mono">{selectedNode.data.eigen_centrality_out.toFixed(4)}</span>
+                          </div>
+                        )}
+                      </div>
+                    )}
                   </div>
                   
                   {/* Citations section */}
