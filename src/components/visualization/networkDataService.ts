@@ -24,6 +24,7 @@ export interface RelationCitation {
 export interface Node {
   id: string;
   label: string;
+  summary: string; // Added summary field
   citaten: Citation[];
   nr_docs: number;
   data?: {

@@ -1,5 +1,5 @@
 import { GraphCanvas, GraphCanvasRef, useSelection, lightTheme } from 'reagraph';  
-import { useRef, useImperativeHandle, forwardRef, useEffect } from 'react';  
+import { useRef, useImperativeHandle, forwardRef, useEffect, useMemo } from 'react';  
 import { Node as CustomNode, Edge } from './networkDataService';  
 
 const denkWerkTheme = {
@@ -41,6 +41,9 @@ interface GraphChartProps {
   sizingAttribute?: 'hub' | 'auth' | 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out'; // Added sizing attribute prop
   minNodeSize?: number; // Added min node size prop
   maxNodeSize?: number; // Added max node size prop
+  // New props for edge filtering and sizing
+  edgeWeightCutoff?: number; // Minimum weight threshold for edges
+  useWeightBasedEdgeSize?: boolean; // Whether to use weight for edge size
 }  
 
 // Interface for the ref we expose  
@@ -64,9 +67,21 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
     sizingAttribute = 'hub', // Default to hub scoring
     minNodeSize = 5, // Default min node size
     maxNodeSize = 15, // Default max node size
+    edgeWeightCutoff = 2, // Default edge weight cutoff
+    useWeightBasedEdgeSize = false, // Default to not using weight for edge size
   }, ref) => {      
     // Internal ref to the actual GraphCanvas      
     const graphRef = useRef<GraphCanvasRef>(null);        
+
+    // Filter edges based on weight cutoff and add size attribute if needed
+    const processedEdges = useMemo(() => {
+      return edges
+        .filter(edge => edge.weight >= edgeWeightCutoff)
+        .map(edge => ({
+          ...edge,
+          size: useWeightBasedEdgeSize ? edge.weight : 1, // Set size based on weight if enabled
+        }));
+    }, [edges, edgeWeightCutoff, useWeightBasedEdgeSize]);
 
     // Use the selection hook
     const { 
@@ -77,7 +92,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
     } = useSelection({
       ref: graphRef,
       nodes,
-      edges,
+      edges: processedEdges, // Use processed edges
       pathSelectionType: showRelationships ? 'all' : 'direct',
       selections: [],
     });
@@ -156,9 +171,10 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
     // Render the graph
     return (
       <GraphCanvas
+        edgeInterpolation="curved"
         ref={graphRef}
         nodes={nodes}
-        edges={edges}
+        edges={processedEdges} // Use processed edges
         selections={selections}
         actives={actives}
         onNodeClick={handleNodeClick}

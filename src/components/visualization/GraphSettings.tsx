@@ -27,6 +27,7 @@ import {
   ToggleGroup,
   ToggleGroupItem
 } from "@/components/ui/toggle-group";
+import { Switch } from "@/components/ui/switch";
 
 // Updated type to include new eigenvector centrality metrics
 type CentralityMetric = 'hub' | 'auth' | 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out';
@@ -40,6 +41,11 @@ interface GraphSettingsProps {
   setMaxNodeSize: (value: number) => void;
   showRelationships: boolean;
   setShowRelationships: (value: boolean) => void;
+  // New props for edge filtering and sizing
+  edgeWeightCutoff: number;
+  setEdgeWeightCutoff: (value: number) => void;
+  useWeightBasedEdgeSize: boolean;
+  setUseWeightBasedEdgeSize: (value: boolean) => void;
 }
 
 const GraphSettings = ({
@@ -50,7 +56,11 @@ const GraphSettings = ({
   maxNodeSize,
   setMaxNodeSize,
   showRelationships,
-  setShowRelationships
+  setShowRelationships,
+  edgeWeightCutoff,
+  setEdgeWeightCutoff,
+  useWeightBasedEdgeSize,
+  setUseWeightBasedEdgeSize
 }: GraphSettingsProps) => {
   // Helper function to get description text for the selected metric
   const getMetricDescription = (metric: CentralityMetric): string => {
@@ -152,8 +162,8 @@ const GraphSettings = ({
                     </ToggleGroup>
                   </div>
 
-                                    {/* HITS Algorithm Section */}
-                                    <div className="mt-3 border-l-2 border-primary/30 pl-3">
+                  {/* HITS Algorithm Section */}
+                  <div className="mt-3 border-l-2 border-primary/30 pl-3">
                     <Label className="text-xs font-medium">HITS Algoritme:</Label>
                     <ToggleGroup 
                       type="single" 
@@ -217,7 +227,7 @@ const GraphSettings = ({
           <div className="space-y-4">
             <div>
               <h3 className="text-sm font-medium mb-2">Verbindings Weergave</h3>
-              <div className="bg-muted/50 p-3 rounded-lg space-y-3">
+              <div className="bg-muted/50 p-3 rounded-lg space-y-4">
                 <div className="flex items-center justify-between">
                   <Label htmlFor="show-relationships" className="text-sm">Toon Relaties Voor Geselecteerde Knooppunt</Label>
                   <Button
@@ -229,6 +239,64 @@ const GraphSettings = ({
                   >
                     {showRelationships ? 'Verbergen' : 'Tonen'}
                   </Button>
+                </div>
+
+                {/* Edge Weight Cutoff */}
+                <div className="pt-2 border-t border-border/20">
+                  <div className="flex items-center justify-between mb-2">
+                    <Label htmlFor="edge-weight-cutoff" className="text-sm flex items-center gap-1">
+                      Verbindingsgewicht Filter
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <Info className="h-3 w-3 text-muted-foreground hover:text-primary" />
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p className="text-xs max-w-[250px]">Verbindingen met een gewicht lager dan deze waarde worden niet getoond.</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    </Label>
+                    <span className="w-12 text-center text-sm">{edgeWeightCutoff}</span>
+                  </div>
+                  <Slider
+                    id="edge-weight-cutoff"
+                    value={[edgeWeightCutoff]}
+                    onValueChange={(value) => setEdgeWeightCutoff(value[0])}
+                    max={10}
+                    min={1}
+                    step={1}
+                    className="w-full"
+                  />
+                </div>
+
+                {/* Weight-based Edge Size */}
+                <div className="pt-2 border-t border-border/20">
+                  <div className="flex items-center justify-between">
+                    <div className="space-y-1">
+                      <Label htmlFor="weight-based-edge-size" className="text-sm flex items-center gap-1">
+                        Gewichtgebaseerde Verbindingsgrootte
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <Info className="h-3 w-3 text-muted-foreground hover:text-primary" />
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="text-xs max-w-[250px]">Als dit is ingeschakeld, wordt de dikte van verbindingen bepaald door hun gewicht.</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </Label>
+                      <p className="text-xs text-muted-foreground">
+                        Verbindingsgrootte is direct proportioneel aan het gewicht.
+                      </p>
+                    </div>
+                    <Switch
+                      id="weight-based-edge-size"
+                      checked={useWeightBasedEdgeSize}
+                      onCheckedChange={setUseWeightBasedEdgeSize}
+                    />
+                  </div>
                 </div>
               </div>
             </div>

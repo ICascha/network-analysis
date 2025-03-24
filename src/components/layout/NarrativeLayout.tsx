@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MainContent } from '../visualization/MainContent';
-import { Info } from 'lucide-react';
+import { Info, Home, Network, Clock, MessageSquare } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -8,8 +8,13 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import type { ModelSettings } from '@/types/settings';
 import ModelExplanation from './ModelExplanation';
+// Create a temporary placeholder until the real component is available
+const CitationsBackground = () => <div className="absolute inset-0 z-0"></div>;
 
 const initialSettings: ModelSettings = {
   productivity: 1.0,
@@ -19,13 +24,173 @@ const initialSettings: ModelSettings = {
   nonSourceJobs: 'standard'
 };
 
+// Primary brand color
+const brandColor = "rgb(0,153,168)";
+
+interface TypewriterTextProps {
+  text: string;
+  speed?: number;
+  onComplete?: () => void;
+}
+
+const TypewriterText = ({ text, speed = 40, onComplete }: TypewriterTextProps) => {
+  const [displayText, setDisplayText] = useState('');
+  const [isComplete, setIsComplete] = useState(false);
+  
+  useEffect(() => {
+    if (displayText.length < text.length) {
+      const timer = setTimeout(() => {
+        setDisplayText(text.slice(0, displayText.length + 1));
+      }, speed);
+      return () => clearTimeout(timer);
+    } else {
+      setIsComplete(true);
+      onComplete && onComplete();
+    }
+  }, [displayText, text, speed, onComplete]);
+  
+  return (
+    <p className="text-3xl text-gray-600 max-w-3xl mx-auto">
+      {displayText}
+      <span
+        className={`ml-1 ${isComplete ? 'hidden' : 'inline-block'}`}
+        style={{
+          animation: 'blink 0.7s infinite',
+          backgroundColor: brandColor
+        }}
+      >
+        &nbsp;
+      </span>
+      <style>{`
+        @keyframes blink {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+      `}</style>
+    </p>
+  );
+};
+
+interface LandingPageProps {
+  onNavigate: (tab: string) => void;
+}
+
+const LandingPage = ({ onNavigate }: LandingPageProps) => {
+  const [isTypewriterComplete, setIsTypewriterComplete] = useState(false);
+  
+  const handleTypewriterComplete = () => {
+    setIsTypewriterComplete(true);
+  };
+  
+  return (
+    <div className="relative z-10 py-16 px-8">
+      {/* Added a container div with a more subtle backdrop blur effect */}
+      <div className="max-w-6xl mx-auto bg-white/25 backdrop-blur-sm rounded-xl p-8">
+        <div className="text-center mb-16">
+          <TypewriterText 
+            text="Een analyse van duizend rapporten door middel van taalmodellen."
+            onComplete={handleTypewriterComplete}
+          />
+        </div>
+        
+        {isTypewriterComplete && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
+            <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
+              <CardHeader className="border-b border-gray-100">
+                <CardTitle className="flex items-center gap-2 text-gray-800">
+                  <Network className="h-5 w-5" style={{ color: brandColor }} />
+                  Complexiteitsanalyse
+                </CardTitle>
+                <CardDescription className="text-gray-600">Ontdek de verwevendheid van dreigingen
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-6">
+              <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus, at mollis lorem turpis vel lorem. Curabitur finibus, nibh fermentum malesuada lacinia, orci massa rutrum sapien, non gravida diam diam eget nulla.</p>
+                <Button 
+                  className="w-full text-white"
+                  style={{ backgroundColor: brandColor, borderColor: brandColor }}
+                  onClick={() => onNavigate('complexiteit')}
+                >
+                  Bekijken
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
+              <CardHeader className="border-b border-gray-100">
+                <CardTitle className="flex items-center gap-2 text-gray-800">
+                  <Clock className="h-5 w-5" style={{ color: brandColor }} />
+                  Tijdrijksanalyse
+                </CardTitle>
+                <CardDescription className="text-gray-600">
+                  Ontdek hoe dreigingen zich ontwikkelen
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-6">
+              <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus, at mollis lorem turpis vel lorem. Curabitur finibus, nibh fermentum malesuada lacinia, orci massa rutrum sapien, non gravida diam diam eget nulla.</p>
+                <Button 
+                  className="w-full text-white"
+                  style={{ backgroundColor: brandColor, borderColor: brandColor }}
+                  onClick={() => onNavigate('tijdrijks')}
+                >
+                  Bekijken
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
+              <CardHeader className="border-b border-gray-100">
+                <CardTitle className="flex items-center gap-2 text-gray-800">
+                  <MessageSquare className="h-5 w-5" style={{ color: brandColor }} />
+                  Topicanalyse
+                </CardTitle>
+                <CardDescription className="text-gray-600">
+                  Ontdek onderliggende details
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus, at mollis lorem turpis vel lorem. Curabitur finibus, nibh fermentum malesuada lacinia, orci massa rutrum sapien, non gravida diam diam eget nulla.</p>
+                <Button 
+                  className="w-full text-white"
+                  style={{ backgroundColor: brandColor, borderColor: brandColor }}
+                  onClick={() => onNavigate('topic')}
+                >
+                  Bekijken
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        )}
+      </div>
+      
+      {/* Add custom animation for fade-in */}
+      <style>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+          animation: fadeIn 0.5s ease-out;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+// The rest of the NarrativeLayout component remains exactly the same as in the original file
 export const NarrativeLayout = () => {
   const [settings] = useState<ModelSettings>(initialSettings);
+  const [activeTab, setActiveTab] = useState("landing");
   
   const basePath = import.meta.env.BASE_URL;
 
+  const handleNavigate = (tab: string) => {
+    setActiveTab(tab);
+  };
+
   return (
-    <div className="flex flex-col w-full min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
+    <div className="flex flex-col w-full min-h-screen">
       {/* Floating Circles with Dialogs */}
       <div className="fixed top-8 left-8 z-50">
         <Dialog>
@@ -58,7 +223,7 @@ export const NarrativeLayout = () => {
       <div className="fixed top-8 right-8 z-50">
         <Dialog>
           <DialogTrigger asChild>
-            <div className="relative w-16 h-16 rounded-full bg-cyan-600 flex items-center justify-center shadow-lg hover:scale-105 transition-transform cursor-pointer">
+            <div className="relative w-16 h-16 rounded-full bg-[rgb(0,153,168)] flex items-center justify-center shadow-lg hover:scale-105 transition-transform cursor-pointer">
               <Info className="h-8 w-8 text-white" />
             </div>
           </DialogTrigger>
@@ -83,9 +248,9 @@ export const NarrativeLayout = () => {
           <div className="absolute bottom-2 left-2 text-white text-xs bg-black/50 px-2 py-1 rounded">
             Foto: ©ESA/NASA - André Kuipers
           </div>
-          <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center px-4">
+          <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-white text-center px-4">
             <h1 className="text-5xl font-bold mb-8">
-              Netwerk Analyse
+              Dreigingsbeeld Nederland
             </h1>
             <p className="text-xl max-w-3xl">
               WORK IN PROGRESS
@@ -93,12 +258,91 @@ export const NarrativeLayout = () => {
           </div>
         </div>
 
-        {/* Full-width Visualization Section */}
-        <div className="w-full">
-          {/* Main Visualization Content - Full Width */}
-          <div className="relative w-full">
-            <MainContent settings={settings} />
+        {/* Navigation Section */}
+        <div className="bg-white shadow-md sticky top-0 z-40">
+          <div className="max-w-7xl mx-auto">
+            <nav className="flex">
+              <button 
+                onClick={() => handleNavigate('landing')}
+                className={cn(
+                  "flex items-center gap-2 px-6 py-4 text-gray-700 font-medium border-b-2 transition-colors",
+                  activeTab === 'landing' 
+                    ? "border-[rgb(0,153,168)] text-[rgb(0,153,168)]" 
+                    : "border-transparent hover:text-[rgb(0,153,168)] hover:bg-gray-50"
+                )}
+              >
+                <Home className="h-5 w-5" />
+                <span>Home</span>
+              </button>
+              
+              <button 
+                onClick={() => handleNavigate('complexiteit')}
+                className={cn(
+                  "flex items-center gap-2 px-6 py-4 text-gray-700 font-medium border-b-2 transition-colors",
+                  activeTab === 'complexiteit' 
+                    ? "border-[rgb(0,153,168)] text-[rgb(0,153,168)]" 
+                    : "border-transparent hover:text-[rgb(0,153,168)] hover:bg-gray-50"
+                )}
+              >
+                <Network className="h-5 w-5" />
+                <span>Complexiteitsanalyse</span>
+              </button>
+              
+              <button 
+                onClick={() => handleNavigate('tijdrijks')}
+                className={cn(
+                  "flex items-center gap-2 px-6 py-4 text-gray-700 font-medium border-b-2 transition-colors",
+                  activeTab === 'tijdrijks' 
+                    ? "border-[rgb(0,153,168)] text-[rgb(0,153,168)]" 
+                    : "border-transparent hover:text-[rgb(0,153,168)] hover:bg-gray-50"
+                )}
+              >
+                <Clock className="h-5 w-5" />
+                <span>Tijdrijksanalyse</span>
+              </button>
+              
+              <button 
+                onClick={() => handleNavigate('topic')}
+                className={cn(
+                  "flex items-center gap-2 px-6 py-4 text-gray-700 font-medium border-b-2 transition-colors",
+                  activeTab === 'topic' 
+                    ? "border-[rgb(0,153,168)] text-[rgb(0,153,168)]" 
+                    : "border-transparent hover:text-[rgb(0,153,168)] hover:bg-gray-50"
+                )}
+              >
+                <MessageSquare className="h-5 w-5" />
+                <span>Topicanalyse</span>
+              </button>
+            </nav>
           </div>
+        </div>
+
+        {/* Content Section based on active tab */}
+        <div className="w-full relative">
+          {activeTab === 'landing' && (
+            <>
+              <CitationsBackground />
+              <LandingPage onNavigate={handleNavigate} />
+            </>
+          )}
+          
+          {activeTab === 'complexiteit' && (
+            <div className="relative w-full bg-gray-50">
+              <MainContent settings={settings} />
+            </div>
+          )}
+          
+          {activeTab === 'tijdrijks' && (
+            <div className="bg-gray-50">
+              {/* <TijdrijksAnalyse /> */}
+            </div>
+          )}
+          
+          {activeTab === 'topic' && (
+            <div className="bg-gray-50">
+              {/* <TopicAnalyse /> */}
+            </div>
+          )}
         </div>
       </div>
     </div>

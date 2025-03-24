@@ -62,6 +62,10 @@ export const MainContent = ({ }: MainContentProps) => {
   const [minNodeSize, setMinNodeSize] = useState<number>(5);
   const [maxNodeSize, setMaxNodeSize] = useState<number>(15);
   
+  // New: State for edge weight cutoff and weight-based sizing
+  const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(2);
+  const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(true);
+  
   // Computed value for the selected node object
   const selectedNode = selectedNodeId 
     ? nodes.find(n => n.id === selectedNodeId) || null 
@@ -164,6 +168,8 @@ export const MainContent = ({ }: MainContentProps) => {
           sizingAttribute={scoringMetric}
           minNodeSize={minNodeSize}
           maxNodeSize={maxNodeSize}
+          edgeWeightCutoff={edgeWeightCutoff}
+          useWeightBasedEdgeSize={useWeightBasedEdgeSize}
         />
       </div>
       
@@ -194,6 +200,10 @@ export const MainContent = ({ }: MainContentProps) => {
                     setMaxNodeSize={setMaxNodeSize}
                     showRelationships={showRelationships}
                     setShowRelationships={setShowRelationships}
+                    edgeWeightCutoff={edgeWeightCutoff}
+                    setEdgeWeightCutoff={setEdgeWeightCutoff}
+                    useWeightBasedEdgeSize={useWeightBasedEdgeSize}
+                    setUseWeightBasedEdgeSize={setUseWeightBasedEdgeSize}
                   />
                 </Sheet>
               </TooltipTrigger>
@@ -204,6 +214,16 @@ export const MainContent = ({ }: MainContentProps) => {
           </TooltipProvider>
         </div>
       </div>
+      
+      {/* Edge Filter Info */}
+      {edgeWeightCutoff > 2 && (
+        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="bg-background/70 backdrop-blur-md px-3 py-1 rounded-lg shadow-lg text-xs">
+            <span className="text-muted-foreground">Filteren: </span>
+            <span>Alleen verbindingen met gewicht ≥ {edgeWeightCutoff} worden getoond</span>
+          </div>
+        </div>
+      )}
       
       {/* Mobile toggle button for panel */}
       <div className="md:hidden absolute top-4 right-4 z-10">
@@ -259,6 +279,14 @@ export const MainContent = ({ }: MainContentProps) => {
                 <div className="flex flex-col h-full">
                   <div className="p-3 bg-primary/10 backdrop-blur-md rounded-lg flex-shrink-0">
                     <p className="font-medium text-lg">{selectedNode.label}</p>
+                    
+                    {/* Display the node summary */}
+                    {selectedNode.summary && (
+                      <p className="text-sm mt-1 mb-2 text-muted-foreground">
+                        {selectedNode.summary}
+                      </p>
+                    )}
+                    
                     <div className="text-sm text-muted-foreground mt-1">
                       <span>Mentioned in <span className="font-semibold">{selectedNode.nr_docs}</span> documents</span>
                       <span className="mx-2">•</span>

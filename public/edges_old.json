@@ -1,0 +1,1959 @@
+[
+  {
+    "source": "Ongelijkheid",
+    "target": "Digitale Ongelijkheid",
+    "id": "Ongelijkheid-Digitale Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 3,
+        "citaat": "Zo schaadt toenemende ongelijkheid in algemene zin sociale cohesie.",
+        "oorzaak": "Toenemende sociale ongelijkheid kan de sociale cohesie onder druk zetten.",
+        "gevolg": "De groeiende digitale ongelijkheid kan leiden tot sociale uitsluiting en een verzwakking van de sociale cohesie."
+      }
+    ]
+  },
+  {
+    "source": "Polarisatie",
+    "target": "Digitale Ongelijkheid",
+    "id": "Polarisatie-Digitale Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 3,
+        "citaat": "Het moderne proces van individualisering is in meerdere opzichten ambivalent: het zorgt voor emancipatie en progressie, maar ook voor lossere sociale verbanden.",
+        "oorzaak": "Individualisering kan leiden tot een afname van sociale verbondenheid en solidariteit.",
+        "gevolg": "De groeiende digitale ongelijkheid kan leiden tot sociale uitsluiting en een verzwakking van de sociale cohesie."
+      }
+    ]
+  },
+  {
+    "source": "Polarisatie",
+    "target": "Vertrouwen overheid",
+    "id": "Polarisatie-Vertrouwen overheid",
+    "label": "3",
+    "weight": 3,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 7,
+        "citaat": "Als de bevolking in de toekomst van samenstelling verandert, door onder meer doorgaande vergrijzing en migratie, kan dat de sociale cohesie beïnvloeden. Wanneer mensen niet op elkaar lijken in hun gewoonten, opvattingen en belangen, kan het lastiger zijn zich onderling te verbinden.",
+        "oorzaak": "Verlies van sociale cohesie door demografische veranderingen en ongelijkheid.",
+        "gevolg": "Afname van vertrouwen in instituties en politieke participatie."
+      },
+      {
+        "source": "scp",
+        "filename": 83,
+        "citaat": "Dit leidde ertoe dat sceptische mensen op zoek gingen naar alternatieve geluiden.",
+        "oorzaak": "Sociale onrust en polarisatie door tegenstellingen tussen coronasceptici en voorstanders van overheidsmaatregelen.",
+        "gevolg": "Afname van vertrouwen in de overheid en democratische processen door wantrouwen en scepsis onder de bevolking."
+      },
+      {
+        "source": "scp",
+        "filename": 83,
+        "citaat": "Zij voelen zich niet serieus genomen en beschrijven ervaringen van verschillende vormen van institutionele uitsluiting.",
+        "oorzaak": "Uitsluiting en afwijzing van coronasceptische burgers in de samenleving.",
+        "gevolg": "Afname van vertrouwen in de overheid en democratische processen door wantrouwen en scepsis onder de bevolking."
+      }
+    ]
+  },
+  {
+    "source": "Arbeidsmarktkrapte",
+    "target": "Meisjesstress",
+    "id": "Arbeidsmarktkrapte-Meisjesstress",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 9,
+        "citaat": "De arbeidsmarkt heeft te maken met vergrijzing, ontgroening en bijbehorende personeelstekorten in kraptesectoren. Deze ontwikkelingen en uitdagingen vragen om mensen die zich blijven ontwikkelen.",
+        "oorzaak": "Krapte op de arbeidsmarkt en personeelstekorten in vitale sectoren.",
+        "gevolg": "De druk op individuen om zich voortdurend te ontwikkelen, wat kan leiden tot stress en burn-out."
+      }
+    ]
+  },
+  {
+    "source": "Ondersteuning",
+    "target": "Ongelijkheid",
+    "id": "Ondersteuning-Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 9,
+        "citaat": "In dit rapport borduren we voort op dit eerdere werk en bekijken we mensbeelden met betrekking tot LLO vanuit de burger.",
+        "oorzaak": "De veronderstelling dat iedereen zelf verantwoordelijk is voor zijn ontwikkeling negeert kwetsbare groepen.",
+        "gevolg": "Ongelijke toegang tot scholing en ontwikkeling voor kwetsbare groepen."
+      }
+    ]
+  },
+  {
+    "source": "Investeringen",
+    "target": "Overheidsschuld",
+    "id": "Investeringen-Overheidsschuld",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 18,
+        "citaat": "Het kabinet buigt om op onderwijs, innovatie en onderzoek. Hier is sprake van een potentiële afruil: de ombuigingen leveren nu financiële ruimte op voor de overheidsfinanciën, maar gaan mogelijk ten koste van de brede welvaart in de toekomst.",
+        "oorzaak": "Afname van investeringen in onderwijs en innovatie kan de toekomstige economische groei en concurrentiekracht ondermijnen.",
+        "gevolg": "Risico's van oplopende staatsschuld kunnen de financiële stabiliteit van Nederland onder druk zetten."
+      }
+    ]
+  },
+  {
+    "source": "Vertrouwen overheid",
+    "target": "Armoede",
+    "id": "Vertrouwen overheid-Armoede",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 18,
+        "citaat": "Wanneer dit niet lukt, bestaat het risico dat het vertrouwen daalt.",
+        "oorzaak": "Afname van vertrouwen in de overheid kan leiden tot een vermindering van de legitimiteit van de overheid en een afname van de sociale samenhang.",
+        "gevolg": "Toenemende armoede en financiële onzekerheid onder kwetsbare groepen kan leiden tot sociale onrust en een afname van sociale cohesie."
+      }
+    ]
+  },
+  {
+    "source": "Arbeidsmarktkrapte",
+    "target": "Voorspellingsmodellen",
+    "id": "Arbeidsmarktkrapte-Voorspellingsmodellen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 22,
+        "citaat": "Een krappe arbeidsmarkt vraagt om een politieke afweging en prioritering binnen de energietransitie.",
+        "oorzaak": "Krapte op de arbeidsmarkt belemmert de uitvoering van het Nationaal Isolatieprogramma.",
+        "gevolg": "Implementatie van isolatiebeleid kan leiden tot een gebrek aan actuele en relevante data."
+      }
+    ]
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Ongelijkheid",
+    "id": "Vergrijzing-Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 33,
+        "citaat": "De vergrijzing van de bevolking kan druk uitoefenen op de zorgsystemen en de economie, wat kan leiden tot een grotere kloof in de samenleving.",
+        "oorzaak": "De vergrijzing van de bevolking kan druk uitoefenen op de zorgsystemen en de economie, vooral als de verhouding tussen werkenden en gepensioneerden verandert.",
+        "gevolg": "De economische ongelijkheid tussen verschillende sociale groepen kan toenemen, wat kan leiden tot een grotere kloof in de samenleving."
+      }
+    ]
+  },
+  {
+    "source": "Ondersteuning",
+    "target": "Beleidscoherentie",
+    "id": "Ondersteuning-Beleidscoherentie",
+    "label": "2",
+    "weight": 2,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 34,
+        "citaat": "Nog altijd wordt in Nederland een behoorlijke groep mensen die hulp of ondersteuning nodig hebben, niet bereikt. Hierdoor dreigt hun situatie problematischer te worden en worden bestaande ongelijkheden tussen groepen verder vergroot.",
+        "oorzaak": "Onbereikbaarheid van kwetsbare groepen leidt tot verergering van problemen en vergroot ongelijkheden.",
+        "gevolg": "Inefficiënte dienstverlening door onrealistische aannames en strikte beleidskaders."
+      },
+      {
+        "source": "scp",
+        "filename": 34,
+        "citaat": "Tegelijkertijd hebben hulpverleners vaak onvoldoende tijd en ruimte om op inwoners die vastlopen in hun problemen af te kunnen stappen.",
+        "oorzaak": "Beperkte middelen en personeelstekorten belemmeren adequate ondersteuning door gemeenten.",
+        "gevolg": "Inefficiënte dienstverlening door onrealistische aannames en strikte beleidskaders."
+      }
+    ]
+  },
+  {
+    "source": "Toeslagen",
+    "target": "Arbeidsmarktkrapte",
+    "id": "Toeslagen-Arbeidsmarktkrapte",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 45,
+        "citaat": "Afschaffing van het STAP-budget kan de toegang tot bijscholing voor kwetsbare groepen verminderen, wat leidt tot grotere ongelijkheid en mismatch tussen vaardigheden van de beroepsbevolking en de eisen van de arbeidsmarkt.",
+        "oorzaak": "Afschaffing van het STAP-budget kan de toegang tot bijscholing voor kwetsbare groepen verminderen, wat leidt tot grotere ongelijkheid.",
+        "gevolg": "Mismatch tussen vaardigheden van de beroepsbevolking en de eisen van de arbeidsmarkt kan economische groei belemmeren."
+      }
+    ]
+  },
+  {
+    "source": "Automatisering",
+    "target": "Arbeidsmarktkrapte",
+    "id": "Automatisering-Arbeidsmarktkrapte",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 45,
+        "citaat": "Toenemende automatisering en digitalisering kunnen leiden tot werkloosheid en sociale spanningen, vooral onder laagopgeleiden, wat resulteert in verlies van toegang tot opleidingsmogelijkheden.",
+        "oorzaak": "Toenemende automatisering en digitalisering kunnen leiden tot werkloosheid en sociale spanningen, vooral onder laagopgeleiden.",
+        "gevolg": "Verlies van toegang tot opleidingsmogelijkheden kan leiden tot een verouderde beroepsbevolking en afname van innovatiecapaciteit."
+      }
+    ]
+  },
+  {
+    "source": "Vertrouwen overheid",
+    "target": "Aardgasvrij",
+    "id": "Vertrouwen overheid-Aardgasvrij",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 46,
+        "citaat": "Wanneer visies sterk uiteenlopen, kan dit gevolgen hebben voor het vertrouwen van burgers in de overheid en voor de effectiviteit van beleid.",
+        "oorzaak": "Verlies van vertrouwen in de overheid door discrepanties tussen beleids- en burgervisies.",
+        "gevolg": "Ongelijkheid in toegang tot duurzame energie en de gevolgen daarvan voor sociale rechtvaardigheid."
+      }
+    ]
+  },
+  {
+    "source": "Aardgasvrij",
+    "target": "Vertrouwen overheid",
+    "id": "Aardgasvrij-Vertrouwen overheid",
+    "label": "2",
+    "weight": 2,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 46,
+        "citaat": "Inzicht in visies van burgers en de overheid en de verschillen daartussen is van belang, omdat (te) grote discrepanties gevolgen kunnen hebben voor het vertrouwen van burgers in de overheid.",
+        "oorzaak": "Ongelijkheid in toegang tot duurzame energie en de gevolgen daarvan voor sociale rechtvaardigheid.",
+        "gevolg": "Verlies van vertrouwen in de overheid door discrepanties tussen beleids- en burgervisies."
+      },
+      {
+        "source": "tno",
+        "filename": 348,
+        "citaat": "De communicatie over de aardgasvrije transitie is vaak onvoldoende, wat leidt tot onduidelijkheid en frustratie bij bewoners.",
+        "oorzaak": "De communicatie over de aardgasvrije transitie is vaak onvoldoende, wat leidt tot onduidelijkheid en frustratie bij bewoners.",
+        "gevolg": "De negatieve ervaringen van bewoners met de uitvoering van werkzaamheden kunnen leiden tot een afname van vertrouwen in de overheid en uitvoerende partijen."
+      }
+    ]
+  },
+  {
+    "source": "Ongelijkheid",
+    "target": "Vertrouwen overheid",
+    "id": "Ongelijkheid-Vertrouwen overheid",
+    "label": "3",
+    "weight": 3,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 54,
+        "citaat": "Ongelijkheid in de samenleving leidt tot sociale onrust, afname van sociale cohesie en vertrouwen in de politiek.",
+        "oorzaak": "Ongelijkheid in de samenleving leidt tot sociale onrust, afname van sociale cohesie en vertrouwen in de politiek.",
+        "gevolg": "Effectiviteit van overheidsbeleid is cruciaal voor het waarborgen van de kwaliteit van de samenleving."
+      },
+      {
+        "source": "scp",
+        "filename": 91,
+        "citaat": "Ongelijkheid in toegang tot hulpbronnen en economische middelen leidt tot maatschappelijk onbehagen.",
+        "oorzaak": "Ongelijkheid in toegang tot hulpbronnen en economische middelen leidt tot maatschappelijk onbehagen.",
+        "gevolg": "Maatschappelijk onbehagen en de afname van de legitimiteit van de democratische rechtsstaat."
+      },
+      {
+        "source": "scp",
+        "filename": 91,
+        "citaat": "De kloof tussen stedelijke en plattelandsgebieden leidt tot maatschappelijke spanningen en een gevoel van verwaarlozing.",
+        "oorzaak": "De kloof tussen stedelijke en plattelandsgebieden leidt tot maatschappelijke spanningen en een gevoel van verwaarlozing.",
+        "gevolg": "De afname van vertrouwen in de overheid en politieke instituties leidt tot een gevoel van onmacht en een afname van de betrokkenheid bij de democratie."
+      }
+    ]
+  },
+  {
+    "source": "Arbeidsmarktkrapte",
+    "target": "Vergrijzing",
+    "id": "Arbeidsmarktkrapte-Vergrijzing",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 70,
+        "citaat": "Krapte op de arbeidsmarkt die leidt tot personeelstekorten in cruciale sectoren zoals zorg en onderwijs.",
+        "oorzaak": "Krapte op de arbeidsmarkt die leidt tot personeelstekorten in cruciale sectoren zoals zorg en onderwijs.",
+        "gevolg": "De druk op de zorg door vergrijzing en uitbreiding van medische mogelijkheden leidt tot een tekort aan personeel en middelen, wat de kwaliteit van zorg in gevaar kan brengen."
+      }
+    ]
+  },
+  {
+    "source": "Vertrouwen overheid",
+    "target": "Ondersteuning",
+    "id": "Vertrouwen overheid-Ondersteuning",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 72,
+        "citaat": "De impliciete mensbeelden in beleid kunnen leiden tot uitsluiting van bepaalde groepen burgers, wat het vertrouwen in de overheid schaadt.",
+        "oorzaak": "De impliciete mensbeelden in beleid kunnen leiden tot uitsluiting van bepaalde groepen burgers, wat het vertrouwen in de overheid schaadt.",
+        "gevolg": "De afhankelijkheid van de bevolking van overheidscommunicatie kan leiden tot een gebrek aan zelfredzaamheid."
+      }
+    ]
+  },
+  {
+    "source": "Polarisatie",
+    "target": "Ondersteuning",
+    "id": "Polarisatie-Ondersteuning",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 72,
+        "citaat": "De verharding van mensbeelden kan leiden tot negatieve stereotypering van groepen, zoals de onwelwillende vaccinatieweigeraar, wat sociale cohesie onder druk zet.",
+        "oorzaak": "De verharding van mensbeelden kan leiden tot negatieve stereotypering van groepen, zoals de onwelwillende vaccinatieweigeraar, wat sociale cohesie onder druk zet.",
+        "gevolg": "De focus op specifieke beleidsdoelen kan andere belangrijke sociale en gezondheidsproblemen onderbelichten, zoals mentale gezondheidsproblemen van jongeren."
+      }
+    ]
+  },
+  {
+    "source": "Ondersteuning",
+    "target": "Werkgelegenheid",
+    "id": "Ondersteuning-Werkgelegenheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 72,
+        "citaat": "De afhankelijkheid van de bevolking van overheidscommunicatie kan leiden tot een gebrek aan zelfredzaamheid.",
+        "oorzaak": "De afhankelijkheid van de bevolking van overheidscommunicatie kan leiden tot een gebrek aan zelfredzaamheid.",
+        "gevolg": "De impact van de coronacrisis op de werkgelegenheid, waardoor iedereen, jong en oud, zijn of haar baan kan verliezen."
+      }
+    ]
+  },
+  {
+    "source": "Desinformatie",
+    "target": "Polarisatie",
+    "id": "Desinformatie-Polarisatie",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 83,
+        "citaat": "Hierdoor stapelden hun gevoelens van uitsluiting zich op en werd hun wantrouwen verder gevoed.",
+        "oorzaak": "Desinformatie en alternatieve narratieven kunnen de volksgezondheid en democratische processen ondermijnen.",
+        "gevolg": "Sociale onrust en polarisatie door tegenstellingen tussen coronasceptici en voorstanders van overheidsmaatregelen."
+      }
+    ]
+  },
+  {
+    "source": "Polarisatie",
+    "target": "Desinformatie",
+    "id": "Polarisatie-Desinformatie",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 85,
+        "citaat": "De polariserende berichtgeving in de media kan leiden tot een verscherping van de maatschappelijke verdeeldheid en conflicten tussen verschillende groepen.",
+        "oorzaak": "De polariserende berichtgeving in de media kan leiden tot een verscherping van de maatschappelijke verdeeldheid en conflicten tussen verschillende groepen.",
+        "gevolg": "De mogelijkheid van overheidsinmenging in de vrijheid van meningsuiting om de volksgezondheid te beschermen kan leiden tot een afname van democratische waarden en burgerlijke vrijheden."
+      }
+    ]
+  },
+  {
+    "source": "Vertrouwen overheid",
+    "target": "Desinformatie",
+    "id": "Vertrouwen overheid-Desinformatie",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "scp",
+        "filename": 86,
+        "citaat": "Bij het geloof in een andere uitleg van de coronacrisis dan die van de overheid zal een laag vertrouwen, of wantrouwen, in de overheid een grote rol spelen.",
+        "oorzaak": "Afname van vertrouwen in de overheid en instituties, wat kan leiden tot maatschappelijke onrust en polarisatie.",
+        "gevolg": "Coronascepsis kan leiden tot een lagere vaccinatiebereidheid en een afname van de effectiviteit van gezondheidsmaatregelen, wat de volksgezondheid in gevaar kan brengen."
+      }
+    ]
+  },
+  {
+    "source": "Arbeidsmarktkrapte",
+    "target": "Migratiebeleid",
+    "id": "Arbeidsmarktkrapte-Migratiebeleid",
+    "label": "2",
+    "weight": 2,
+    "citaat_relaties": [
+      {
+        "source": "clingendael",
+        "filename": 1,
+        "citaat": "Beperkingen op arbeidsmigratie kunnen leiden tot een tekort aan arbeidskrachten in cruciale sectoren, wat de economische groei van Nederland kan belemmeren. De focus op het beperken van arbeidsmigratie kan de integratie van nieuwe EU-lidstaten in de Europese Unie belemmeren, wat geopolitieke spanningen kan veroorzaken.",
+        "oorzaak": "Beperkingen op arbeidsmigratie kunnen leiden tot een tekort aan arbeidskrachten in cruciale sectoren, wat de economische groei van Nederland kan belemmeren.",
+        "gevolg": "De focus op het beperken van arbeidsmigratie kan de integratie van nieuwe EU-lidstaten in de Europese Unie belemmeren, wat geopolitieke spanningen kan veroorzaken."
+      },
+      {
+        "source": "clingendael",
+        "filename": 1,
+        "citaat": "Beperkingen op arbeidsmigratie kunnen leiden tot een tekort aan arbeidskrachten in cruciale sectoren, wat de economische groei van Nederland kan belemmeren. De toenemende druk op de sociale voorzieningen en de woningmarkt door arbeidsmigratie kan leiden tot maatschappelijke onrust en een afname van de sociale cohesie.",
+        "oorzaak": "Beperkingen op arbeidsmigratie kunnen leiden tot een tekort aan arbeidskrachten in cruciale sectoren, wat de economische groei van Nederland kan belemmeren.",
+        "gevolg": "De toenemende druk op de sociale voorzieningen en de woningmarkt door arbeidsmigratie kan leiden tot maatschappelijke onrust en een afname van de sociale cohesie."
+      }
+    ]
+  },
+  {
+    "source": "Hybride Veiligheid",
+    "target": "Kwetsbaarheden",
+    "id": "Hybride Veiligheid-Kwetsbaarheden",
+    "label": "2",
+    "weight": 2,
+    "citaat_relaties": [
+      {
+        "source": "clingendael",
+        "filename": 17,
+        "citaat": "De kwetsbaarheden van NATO’s digitale infrastructuur – de afhankelijkheid daarvan is verder toegenomen sinds de COVID-19 pandemie – wordt beschouwd als een belangrijk aandachtspunt voor de Alliantie.",
+        "oorzaak": "Verhoogde dreiging van hybride activiteiten zoals sabotage, cyberaanvallen en desinformatie door geopolitieke spanningen.",
+        "gevolg": "Kwetsbaarheden in digitale infrastructuur door toenemende afhankelijkheid, vooral in het licht van cyberaanvallen."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 62,
+        "citaat": "De ontwikkelingen in het digitale domein hebben ervoor gezorgd dat spionage en sabotage, al dan niet door statelijke actoren, een vlucht hebben genomen.",
+        "oorzaak": "Statelijke dreigingen zoals spionage, verstoring en sabotage.",
+        "gevolg": "Digitale dreigingen die de continuïteit van vitale processen bedreigen."
+      }
+    ]
+  },
+  {
+    "source": "Oorlogsdreiging",
+    "target": "Defensie-uitgaven",
+    "id": "Oorlogsdreiging-Defensie-uitgaven",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "clingendael",
+        "filename": 62,
+        "citaat": "De noodzaak om snel defensiemateriaal te moderniseren kan leiden tot een tekort aan middelen en vertragingen in de levering.",
+        "oorzaak": "De Russische invasie van Oekraïne heeft geleid tot een verhoogde militaire dreiging in Europa, wat de noodzaak voor een sterkere defensiecapaciteit in Nederland benadrukt.",
+        "gevolg": "De noodzaak om snel defensiemateriaal te moderniseren kan leiden tot een tekort aan middelen en vertragingen in de levering."
+      }
+    ]
+  },
+  {
+    "source": "Kwetsbaarheden",
+    "target": "Technologieafhankelijkheid",
+    "id": "Kwetsbaarheden-Technologieafhankelijkheid",
+    "label": "3",
+    "weight": 3,
+    "citaat_relaties": [
+      {
+        "source": "clingendael",
+        "filename": 70,
+        "citaat": "Kwetsbaarheid van digitale infrastructuur in havens door afhankelijkheid van buitenlandse technologie, wat kan leiden tot cyberaanvallen en datalekken, kan ook resulteren in afhankelijkheid van buitenlandse investeringen en technologie in Europese havens die leidt tot verlies van strategische autonomie en controle over infrastructuur.",
+        "oorzaak": "Kwetsbaarheid van digitale infrastructuur in havens door afhankelijkheid van buitenlandse technologie, wat kan leiden tot cyberaanvallen en datalekken.",
+        "gevolg": "Afhankelijkheid van buitenlandse investeringen en technologie in Europese havens kan leiden tot verlies van strategische autonomie en controle over infrastructuur."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 33,
+        "citaat": "Afhankelijkheid van digitale middelen maakt Nederland kwetsbaar voor cyberaanvallen en digitale verstoringen.",
+        "oorzaak": "Afhankelijkheid van digitale middelen maakt Nederland kwetsbaar voor cyberaanvallen en digitale verstoringen.",
+        "gevolg": "Economische veiligheid wordt bedreigd door spionage en ongewenste investeringen vanuit andere landen."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 63,
+        "citaat": "De toenemende digitale dreigingen van statelijke actoren, zoals digitale spionage en sabotage, vormen een significante bedreiging voor de nationale veiligheid en de werking van vitale infrastructuur. De economische verwevenheid met staatsgeleide economieën kan leiden tot ongewenste afhankelijkheden, wat risico's met zich meebrengt voor de Nederlandse economie en democratische rechtsorde.",
+        "oorzaak": "De toenemende digitale dreigingen van statelijke actoren, zoals digitale spionage en sabotage, vormen een significante bedreiging voor de nationale veiligheid en de werking van vitale infrastructuur.",
+        "gevolg": "De economische verwevenheid met staatsgeleide economieën kan leiden tot ongewenste afhankelijkheden, wat risico's met zich meebrengt voor de Nederlandse economie en democratische rechtsorde."
+      }
+    ]
+  },
+  {
+    "source": "Oorlogsdreiging",
+    "target": "Oekraïense Vluchtelingen",
+    "id": "Oorlogsdreiging-Oekraïense Vluchtelingen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "clingendael",
+        "filename": 116,
+        "citaat": "Een protracted conflict creëert niet alleen een risico voor de nationale veiligheid, maar kan ook leiden tot een toestroom van vluchtelingen.",
+        "oorzaak": "Een protracted conflict tussen Rusland en Oekraïne kan leiden tot langdurige instabiliteit in Europa, met verhoogde risico's voor de nationale veiligheid van Nederland.",
+        "gevolg": "De aanhoudende oorlog in Oekraïne kan leiden tot een toename van het aantal vluchtelingen in Nederland, wat druk kan uitoefenen op de sociale infrastructuur."
+      }
+    ]
+  },
+  {
+    "source": "Luchtvervuiling",
+    "target": "Emissies",
+    "id": "Luchtvervuiling-Emissies",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "clingendael",
+        "filename": 129,
+        "citaat": "Opposition to the (judicial and political) effects of complying with these rules in the Netherlands was a significant driver for the protests.",
+        "oorzaak": "Hoge stikstofemissies van de landbouwsector vormen een ecologische bedreiging voor de biodiversiteit en de kwaliteit van de natuur in Nederland.",
+        "gevolg": "De juridische verplichtingen om stikstofemissies te verminderen kunnen leiden tot economische en sociale spanningen binnen de landbouwgemeenschap."
+      }
+    ]
+  },
+  {
+    "source": "Jihadistische Dreiging",
+    "target": "Radicalisering",
+    "id": "Jihadistische Dreiging-Radicalisering",
+    "label": "13",
+    "weight": 13,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 20,
+        "citaat": "De jihadistische dreiging blijft de voornaamste terroristische dreiging tegen Nederland, ondanks de verzwakking van ISIS. [...] de dreiging van rechts-terrorisme en andere vormen van extremisme blijft bestaan, wat kan leiden tot geweld en maatschappelijke onrust.",
+        "oorzaak": "De jihadistische dreiging blijft de voornaamste terroristische dreiging tegen Nederland, ondanks de verzwakking van ISIS.",
+        "gevolg": "De dreiging van rechts-terrorisme en andere vormen van extremisme blijft bestaan, wat kan leiden tot geweld en maatschappelijke onrust."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 30,
+        "citaat": "De terroristische dreiging het afgelopen half jaar wel toegenomen. Er zijn steeds meer signalen dat jihadistische organisaties voorbereidingen treffen om in Europa terroristische aanslagen te plegen.",
+        "oorzaak": "De toegenomen terroristische dreiging vanuit jihadistische organisaties, met Nederland als expliciet doelwit.",
+        "gevolg": "De mogelijkheid van radicalisering van individuen door online jihadistische propaganda, wat leidt tot een verhoogde kans op geweld."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 30,
+        "citaat": "De terroristische dreiging vanuit rechts-terroristische bewegingen, zoals het accelerationisme, is onveranderd.",
+        "oorzaak": "De toegenomen terroristische dreiging vanuit jihadistische organisaties, met Nederland als expliciet doelwit.",
+        "gevolg": "De dreiging van aanslagen door rechts-extremistische bewegingen, die zich online manifesteren maar nog niet hebben geleid tot daadwerkelijke aanslagen."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 31,
+        "citaat": "Nederland werd daarin specifiek genoemd als doelwit. [...] doordat de koranvernielingen dreigementen geuit tegen ‘ongelovigen’.",
+        "oorzaak": "De toegenomen terroristische dreiging vanuit jihadistische organisaties, die Nederland expliciet als doelwit beschouwen, vooral als vergelding voor koranvernielingen.",
+        "gevolg": "De mogelijkheid van radicalisering van individuen door online jihadistische propaganda, wat kan leiden tot geweld."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 35,
+        "citaat": "De dreiging van jihadistisch terrorisme in Nederland blijft aanzienlijk, met de mogelijkheid van aanslagen door eenlingen of kleine groepen.",
+        "oorzaak": "De dreiging van jihadistisch terrorisme in Nederland blijft aanzienlijk, met de mogelijkheid van aanslagen door eenlingen of kleine groepen.",
+        "gevolg": "De groeiende invloed van salafistische aanjagers in Nederland kan leiden tot radicalisering en een bedreiging voor de nationale veiligheid."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 82,
+        "citaat": "Daarnaast wordt, zoals aangekondigd in de Nationale Contraterrorisme Strategie 2022-2026, ingezet op het tegengaan van verspreiding van gewelddadig extremistische en terroristische content online.",
+        "oorzaak": "Jihadistisch terrorisme in Nederland",
+        "gevolg": "Verspreiding van gewelddadig extremistische en terroristische content online"
+      },
+      {
+        "source": "open_overheid",
+        "filename": 88,
+        "citaat": "Dit DTN 50 laat zien dat de dreiging substantieel is en de kans op een aanslag reëel. Het DTN schetst onder andere de dreiging van uitreizigers en terugkeerders, de geweldsdreiging die vanuit lone actors of kleine netwerken in het rechtsextremistische milieu voorstelbaar is.",
+        "oorzaak": "De dreiging van terrorisme in Nederland is substantieel, met een reële kans op aanslagen door zowel uitreizigers als terugkeerders.",
+        "gevolg": "De opkomst van lone actors en kleine netwerken in het rechtsextremistische milieu vormt een significante bedreiging voor de nationale veiligheid."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 89,
+        "citaat": "De dreiging van jihadistisch terrorisme in Nederland blijft substantieel, met actieve netwerken die aanslagen kunnen plannen en uitvoeren, wat kan leiden tot de dreiging van extremistisch geweld vanuit zowel jihadistische als extreemrechtse groeperingen, die kunnen leiden tot confrontaties en geweld.",
+        "oorzaak": "De dreiging van jihadistisch terrorisme in Nederland blijft substantieel, met actieve netwerken die aanslagen kunnen plannen en uitvoeren.",
+        "gevolg": "De dreiging van extremistisch geweld vanuit zowel jihadistische als extreemrechtse groeperingen, die kunnen leiden tot confrontaties en geweld."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 100,
+        "citaat": "Door kleine minderheden wordt echter nagedacht over de vraag wanneer geweld mag worden toegepast of worden voorbereidingen getroffen op een gewelddadige confrontatie met de overheid.",
+        "oorzaak": "De aanhoudende dreiging van jihadistische netwerken die mogelijk aanslagen in Europa voorbereiden.",
+        "gevolg": "De mogelijkheid van geweld door anti-institutioneel extremisme, vooral door kleine minderheden die zich tegen de overheid keren."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 103,
+        "citaat": "De terroristische dreiging vanuit rechts-terroristische bewegingen, zoals het accelerationisme, is onveranderd. De omvang van de beweging is echter niet gegroeid en de zeer verontrustende uitingen op het internet hebben zich in Nederland vooralsnog niet vertaald naar daadwerkelijke aanslagen.",
+        "oorzaak": "De toegenomen terroristische dreiging vanuit jihadistische organisaties, met Nederland als expliciet doelwit.",
+        "gevolg": "De dreiging van aanslagen door rechts-extremistische bewegingen, die zich online manifesteren maar nog niet in daadwerkelijke aanslagen hebben geleid."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 103,
+        "citaat": "Een deel van de aanhangers van samenzweringstheorieën voedt het wantrouwen in de overheid door het narratief van een kwaadaardige elite.",
+        "oorzaak": "De toegenomen terroristische dreiging vanuit jihadistische organisaties, met Nederland als expliciet doelwit.",
+        "gevolg": "De ondermijning van de democratische rechtsorde door anti-institutioneel extremisme, dat wantrouwen in de overheid voedt."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 117,
+        "citaat": "Deze aanslag illustreert de dreiging die uitgaat van de terugkeer naar Europa van jihadisten die in Syrië hebben deelgenomen aan de strijd.",
+        "oorzaak": "De dreiging van jihadistische aanslagen door teruggekeerde strijders uit Syrië en Irak blijft reëel en substantieel.",
+        "gevolg": "De aanhoudende jihadistische propaganda via sociale media heeft een radicaliserende werking op jongeren in Nederland, wat kan leiden tot een toename van gewelddadige radicalisering en aanslagen."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 125,
+        "citaat": "Door het gewelddadige conflict in Israël en de Palestijnse gebieden, koranschendingen in verschillende Europese landen en de oproepen tot aanslagen van terroristische organisaties is de dreiging vanuit het jihadisme toegenomen. [...] Dit ondermijnt de democratische rechtsorde door het aantasten van het publieke vertrouwen in de rechtsstaat en het draagt bij aan een sfeer van bedreigingen, intimidatie en intolerantie.",
+        "oorzaak": "De dreiging van jihadistisch terrorisme is toegenomen door gewelddadige conflicten en oproepen tot aanslagen.",
+        "gevolg": "Rechts-extremisme en anti-institutioneel extremisme ondermijnen de democratische rechtsorde en creëren een sfeer van bedreiging en intolerantie."
+      }
+    ]
+  },
+  {
+    "source": "Kwetsbaarheden",
+    "target": "Cybersecurity",
+    "id": "Kwetsbaarheden-Cybersecurity",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 24,
+        "citaat": "Als dreigings- of incidentinformatie over de netwerk- en informatiesystemen van deze andere aanbieders bij hen terecht was gekomen, dan hadden deze nadelige gevolgen mogelijk kunnen worden voorkomen of had de impact van deze aanvallen mogelijk kunnen worden beperkt.",
+        "oorzaak": "Digitale aanvallen op aanbieders kunnen leiden tot ernstige verstoringen in de dienstverlening, wat maatschappelijke gevolgen kan hebben.",
+        "gevolg": "Het gebrek aan informatie over dreigingen en incidenten kan leiden tot kwetsbaarheid van netwerk- en informatiesystemen van aanbieders."
+      }
+    ]
+  },
+  {
+    "source": "Cybersecurity",
+    "target": "Kwetsbaarheden",
+    "id": "Cybersecurity-Kwetsbaarheden",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 24,
+        "citaat": "Dit heeft als nadelig maatschappelijk gevolg dat de beschikbaarheid of betrouwbaarheid van hun netwerk- en informatiesystemen en daarmee de continuïteit van de dienstverlening van die andere aanbieders in gevaar komt.",
+        "oorzaak": "Het gebrek aan informatie over dreigingen en incidenten kan leiden tot kwetsbaarheid van netwerk- en informatiesystemen van aanbieders.",
+        "gevolg": "Digitale aanvallen op aanbieders kunnen leiden tot ernstige verstoringen in de dienstverlening, wat maatschappelijke gevolgen kan hebben."
+      }
+    ]
+  },
+  {
+    "source": "Oorlogsdreiging",
+    "target": "Kwetsbaarheden",
+    "id": "Oorlogsdreiging-Kwetsbaarheden",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 29,
+        "citaat": "De huidige ontwikkelingen maken dat een gewapende confrontatie tussen Rusland en het Westen in de komende jaren en decennia tot de mogelijkheden behoort.",
+        "oorzaak": "Militaire dreiging vanuit Rusland die de Europese veiligheidsstructuren ondermijnt en kan leiden tot een gewapend conflict.",
+        "gevolg": "Risico's van sabotage van vitale infrastructuur die kunnen leiden tot ernstige verstoringen van militaire operaties en economische schade."
+      }
+    ]
+  },
+  {
+    "source": "Radicalisering",
+    "target": "Jihadistische Dreiging",
+    "id": "Radicalisering-Jihadistische Dreiging",
+    "label": "9",
+    "weight": 9,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 34,
+        "citaat": "De voorstelbaarheid van een terroristische aanslag in Nederland uit rechts-extremistische hoek is vooral gebaseerd op de betrokkenheid van jonge Nederlandse mannen bij internationale, online accelerationistische netwerken. [...] Hierdoor willen zij chaos creëren in de samenleving waarin het huidige politieke bestel kan worden vervangen door een witte (nationaalsocialistische) etnostaat.",
+        "oorzaak": "De groeiende groep van rechts-extremistische jongeren die betrokken zijn bij online accelerationistische netwerken kan leiden tot terroristische aanslagen.",
+        "gevolg": "De jihadistische beweging in Nederland blijft een significante dreiging voor de nationale veiligheid, met de mogelijkheid van aanslagen door alleenhandelende daders of kleine groepen."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 48,
+        "citaat": "De mogelijkheid dat een extreemrechts georiënteerde eenling in Nederland copycat gedrag vertoont naar aanleiding van een aanslag zoals in Christchurch (maart 2019), is voorstelbaar.",
+        "oorzaak": "De aanhoudende dreiging van rechts-extremistisch geweld, vooral door eenlingen die online radicaliseren en mogelijk copycat-gedrag vertonen na aanslagen in andere landen.",
+        "gevolg": "De dreiging van terroristische aanslagen door radicale individuen, vooral vanuit de jihadistische beweging, blijft bestaan."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 48,
+        "citaat": "Het dreigingsbeeld is echter veranderlijk en op termijn kan de dreiging weer toenemen.",
+        "oorzaak": "De invloed van COVID-19 op de terroristische dreiging, waarbij de pandemie kan leiden tot een toename van radicalisering en geweld door sociaal-economische en politieke onrust.",
+        "gevolg": "De dreiging van terroristische aanslagen door radicale individuen, vooral vanuit de jihadistische beweging, blijft bestaan."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 48,
+        "citaat": "Wegens het onverminderde belang van online propaganda voor de instandhouding van de jihadistische beweging en het potentiële bereik en de bruikbare functies van beide platforms, zullen jihadisten hierop actief blijven om hun boodschappen te verspreiden.",
+        "oorzaak": "De aanhoudende online aanwezigheid van jihadistische propaganda, ondanks beperkingen, kan de radicalisering van individuen bevorderen.",
+        "gevolg": "De dreiging van terroristische aanslagen door radicale individuen, vooral vanuit de jihadistische beweging, blijft bestaan."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 48,
+        "citaat": "Tot slot blijven zorgen bestaan over eenlingen bij wie zich een combinatie van extremistisch gedachtegoed en psychische problemen voordoet.",
+        "oorzaak": "De radicalisering van individuen door online complottheorieën en anti-overheid sentimenten, wat kan leiden tot geweld.",
+        "gevolg": "De dreiging van terroristische aanslagen door radicale individuen, vooral vanuit de jihadistische beweging, blijft bestaan."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 48,
+        "citaat": "Dit is nog nergens concreet geworden.",
+        "oorzaak": "De polarisatie in de Nederlandse samenleving door extremisme, wat kan leiden tot maatschappelijke onrust en radicalisering.",
+        "gevolg": "De dreiging van terroristische aanslagen door radicale individuen, vooral vanuit de jihadistische beweging, blijft bestaan."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 77,
+        "citaat": "De huidige dreiging vanuit jihadistische en rechts-extremistische hoek leidt niet tot een hoger dreigingsniveau.",
+        "oorzaak": "Rechts-extremisme en anti-overheidssentiment kunnen leiden tot gewelddadige acties.",
+        "gevolg": "Jihadistische bewegingen en terugkeerders vormen een significante dreiging voor de nationale veiligheid."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 77,
+        "citaat": "De arrestaties in de afgelopen jaren van personen die betrokken waren bij de online verspreiding van ISIS-propaganda, hebben zeer waarschijnlijk bijgedragen aan de afgenomen zichtbaarheid en de verspreiding van jihadistische content binnen de Nederlandse beweging.",
+        "oorzaak": "Online verspreiding van jihadistische propaganda en financiering van terrorisme blijven problematisch.",
+        "gevolg": "Jihadistische bewegingen en terugkeerders vormen een significante dreiging voor de nationale veiligheid."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 100,
+        "citaat": "Door het opge­ laaide conflict in Israël en de Palestijnse gebieden, koranschendingen in verschillende Europese landen en de oproepen tot aanslagen van terroristische organisaties is de dreiging vanuit het jihadisme toegenomen.",
+        "oorzaak": "De verhoogde kans op aanslagen door rechts-terrorisme en online radicalisering van jongeren.",
+        "gevolg": "De aanhoudende dreiging van jihadistische netwerken die mogelijk aanslagen in Europa voorbereiden."
+      }
+    ]
+  },
+  {
+    "source": "Klimaatonvrede",
+    "target": "Kwetsbaarheden",
+    "id": "Klimaatonvrede-Kwetsbaarheden",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 35,
+        "citaat": "De klimaatdiscussie leidt tot polarisatie in de samenleving, wat kan resulteren in extremistische acties.",
+        "oorzaak": "De klimaatdiscussie leidt tot polarisatie in de samenleving, wat kan resulteren in extremistische acties.",
+        "gevolg": "De mogelijkheid van aanslagen op vitale infrastructuur, zoals ziekenhuizen, kan leiden tot chaos en instabiliteit."
+      }
+    ]
+  },
+  {
+    "source": "Kwetsbaarheden",
+    "target": "Jihadistische Dreiging",
+    "id": "Kwetsbaarheden-Jihadistische Dreiging",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 35,
+        "citaat": "Brandstichtingen en sabotage van telecommasten kunnen leiden tot verstoring van de communicatie-infrastructuur en daarmee de bereikbaarheid van hulpdiensten in gevaar brengen.",
+        "oorzaak": "Brandstichtingen en sabotage van telecommasten kunnen leiden tot verstoring van de communicatie-infrastructuur en daarmee de bereikbaarheid van hulpdiensten in gevaar brengen.",
+        "gevolg": "De dreiging van jihadistisch terrorisme in Nederland blijft aanzienlijk, met de mogelijkheid van aanslagen door eenlingen of kleine groepen."
+      }
+    ]
+  },
+  {
+    "source": "Intimidatie",
+    "target": "Cybersecurity",
+    "id": "Intimidatie-Cybersecurity",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 37,
+        "citaat": "De impact van dreiging en beveiliging op de werkplekken van advocaten en rechters kan leiden tot een vermindering van de effectiviteit en samenwerking binnen het rechtssysteem.",
+        "oorzaak": "De impact van dreiging en beveiliging op de werkplekken van advocaten en rechters kan leiden tot een vermindering van de effectiviteit en samenwerking binnen het rechtssysteem.",
+        "gevolg": "Onvoldoende informatievoorziening over dreigingsbeelden en beveiligingsmaatregelen leidt tot onduidelijkheid en een gevoel van onveiligheid bij betrokkenen."
+      }
+    ]
+  },
+  {
+    "source": "Oorlogsdreiging",
+    "target": "Hybride Veiligheid",
+    "id": "Oorlogsdreiging-Hybride Veiligheid",
+    "label": "2",
+    "weight": 2,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 59,
+        "citaat": "Het DBSA 2 constateert dat de internationale rechtsorde in toenemende mate onder druk is komen te staan. Dit belang wordt door verschillende statelijke actoren ter discussie gesteld en neergezet als een westers construct, en daarmee structureel aangetast.",
+        "oorzaak": "De verhoogde dreiging van een agressiever Rusland dat nucleaire retoriek hanteert.",
+        "gevolg": "Hybride dreigingen die de nationale veiligheid ondermijnen, zoals spionage, sabotage en cyberaanvallen."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 65,
+        "citaat": "De internationale veiligheidssituatie is de afgelopen jaren sterk verslechterd en dit raakt Nederland. De I&V-diensten geven aan dat als gevolg van de Russische oorlog in Oekraïne het voor het eerst in lange tijd reëel is dat Nederland via de collectieve verdedigingsclausule in het NAVOverdrag (“artikel 5”) direct betrokken raakt bij een grootschalig gewapend conflict.",
+        "oorzaak": "De verslechterde internationale veiligheidssituatie, met name door de Russische oorlog in Oekraïne, kan leiden tot een directe betrokkenheid van Nederland bij een grootschalig gewapend conflict.",
+        "gevolg": "De noodzaak om de weerbaarheid van de maatschappij te verhogen, gezien de huidige geopolitieke ontwikkelingen."
+      }
+    ]
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Hybride Veiligheid",
+    "id": "Geopolitieke Spanningen-Hybride Veiligheid",
+    "label": "2",
+    "weight": 2,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 59,
+        "citaat": "Deze middelen worden al dan niet in samenhang ingezet. Deze dreigingen raken de veiligheid van NAVO-landen en EU-lidstaten, de internationale rechtsorde en de open Nederlandse samenleving.",
+        "oorzaak": "De toenemende (geo)politisering van de wereld economie waarbij economische instrumenten als machtsmiddel worden ingezet.",
+        "gevolg": "Hybride dreigingen die de nationale veiligheid ondermijnen, zoals spionage, sabotage en cyberaanvallen."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 62,
+        "citaat": "Verschillende landen proberen hun wereldwijde invloed te vergroten, met toenemende spanningen tussen mogendheden tot gevolg.",
+        "oorzaak": "Geopolitieke spanningen en concurrentie tussen mogendheden.",
+        "gevolg": "Statelijke dreigingen zoals spionage, verstoring en sabotage."
+      }
+    ]
+  },
+  {
+    "source": "Hybride Veiligheid",
+    "target": "Buitenlandse Inmenging",
+    "id": "Hybride Veiligheid-Buitenlandse Inmenging",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 59,
+        "citaat": "Deze dreigingen raken de veiligheid van NAVO-landen en EU-lidstaten, de internationale rechtsorde en de open Nederlandse samenleving.",
+        "oorzaak": "Hybride dreigingen die de nationale veiligheid ondermijnen, zoals spionage, sabotage en cyberaanvallen.",
+        "gevolg": "De impact van ongewenste buitenlandse inmenging op democratische processen en instituties."
+      }
+    ]
+  },
+  {
+    "source": "Sociale Onrust",
+    "target": "Migratiebeleid",
+    "id": "Sociale Onrust-Migratiebeleid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 61,
+        "citaat": "De belangen kunnen echter ook samenvallen, zodat staten op een natuurlijke wijze toch ook samenwerken, om gedeelde uitdagingen aan te pakken zoals klimaatverandering, de proliferatie van massavernietigingswapens en fragiliteit in instabiele regio’s.",
+        "oorzaak": "Klimaatverandering leidt tot fragiliteit, conflicten en economische onrust.",
+        "gevolg": "Instabiliteit in nabijgelegen landen leidt tot migratiestromen en sociale onrust in Nederland."
+      }
+    ]
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Jihadistische Dreiging",
+    "id": "Geopolitieke Spanningen-Jihadistische Dreiging",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 61,
+        "citaat": "De Russische agressie is dit jaar met name zichtbaar geworden in Oekraïne, ... en gaat zo ten koste van onze welvaart en veiligheid en de capaciteit om gezamenlijk mondiale problemen aan te pakken.",
+        "oorzaak": "Militaire conflicten en geopolitieke spanningen in verschillende regio's bedreigen de nationale veiligheid.",
+        "gevolg": "Jihadistisch geweld en extremisme vormen een directe bedreiging voor de nationale veiligheid."
+      }
+    ]
+  },
+  {
+    "source": "Hybride Veiligheid",
+    "target": "Technologieafhankelijkheid",
+    "id": "Hybride Veiligheid-Technologieafhankelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 62,
+        "citaat": "Ook buitenlandse investeringen en overnames in Nederland kunnen leiden tot verlies van (gedeeltelijke) zeggenschap over vitale infrastructuren.",
+        "oorzaak": "Statelijke dreigingen zoals spionage, verstoring en sabotage.",
+        "gevolg": "Verlies van zeggenschap over vitale infrastructuren door buitenlandse investeringen."
+      }
+    ]
+  },
+  {
+    "source": "Technologieafhankelijkheid",
+    "target": "Buitenlandse Inmenging",
+    "id": "Technologieafhankelijkheid-Buitenlandse Inmenging",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 63,
+        "citaat": "De economische verwevenheid met staatsgeleide economieën kan leiden tot ongewenste afhankelijkheden, wat risico's met zich meebrengt voor de Nederlandse economie en democratische rechtsorde. Ongewenste buitenlandse inmenging kan leiden tot ontwrichting van de democratische rechtsorde en de open samenleving, met gevolgen voor de integriteit van politieke besluitvorming en sociale stabiliteit.",
+        "oorzaak": "De economische verwevenheid met staatsgeleide economieën kan leiden tot ongewenste afhankelijkheden, wat risico's met zich meebrengt voor de Nederlandse economie en democratische rechtsorde.",
+        "gevolg": "Ongewenste buitenlandse inmenging kan leiden tot ontwrichting van de democratische rechtsorde en de open samenleving, met gevolgen voor de integriteit van politieke besluitvorming en sociale stabiliteit."
+      }
+    ]
+  },
+  {
+    "source": "Cybersecurity",
+    "target": "Radicalisering",
+    "id": "Cybersecurity-Radicalisering",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 70,
+        "citaat": "De beperking van de NCTV in het monitoren van online bronnen kan leiden tot een gebrek aan inzicht in de ontwikkelingen rondom rechts-extremisme, wat de nationale veiligheid in gevaar kan brengen.",
+        "oorzaak": "De beperking van de NCTV in het monitoren van online bronnen kan leiden tot een gebrek aan inzicht in de ontwikkelingen rondom rechts-extremisme, wat de nationale veiligheid in gevaar kan brengen.",
+        "gevolg": "De verspreiding van rechts-extremistisch gedachtegoed, zoals de omvolkingstheorie, vormt een significante dreiging voor de nationale veiligheid."
+      }
+    ]
+  },
+  {
+    "source": "Bedreigingen",
+    "target": "Desinformatie",
+    "id": "Bedreigingen-Desinformatie",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 80,
+        "citaat": "Digitale bedreigingen aan het adres van politici kunnen leiden tot een verzwakking van de democratische processen en de rechtsstaat, vooral wanneer deze bedreigingen moeilijk te traceren zijn.",
+        "oorzaak": "Digitale bedreigingen aan het adres van politici kunnen leiden tot een verzwakking van de democratische processen en de rechtsstaat, vooral wanneer deze bedreigingen moeilijk te traceren zijn.",
+        "gevolg": "De afhankelijkheid van sociale media voor het identificeren van bedreigers kan leiden tot een verhoogd risico op misbruik van deze platforms voor het verspreiden van haat en geweld."
+      }
+    ]
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Cybersecurity",
+    "id": "Aardbevingen-Cybersecurity",
+    "label": "2",
+    "weight": 2,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 111,
+        "citaat": "De seismische dreiging door gaswinning kan leiden tot schade aan gebouwen en infrastructuur, wat de noodzaak voor het actualiseren van de Nationale Praktijkrichtlijn (NPR) oproept.",
+        "oorzaak": "Seismische dreiging door gaswinning in Groningen kan leiden tot schade aan gebouwen en infrastructuur.",
+        "gevolg": "Inconsistenties in veiligheidsbeleid door de noodzaak om de Nationale Praktijkrichtlijn (NPR) te actualiseren."
+      },
+      {
+        "source": "open_overheid",
+        "filename": 111,
+        "citaat": "De vertraging in de afbouw van gaswinning kan economische gevolgen hebben, wat ook leidt tot inconsistenties in het veiligheidsbeleid dat vernieuwd moet worden.",
+        "oorzaak": "Vertraging in de afbouw van gaswinning kan economische gevolgen hebben voor de regio en het land.",
+        "gevolg": "Inconsistenties in veiligheidsbeleid door de noodzaak om de Nationale Praktijkrichtlijn (NPR) te actualiseren."
+      }
+    ]
+  },
+  {
+    "source": "Vertrouwen overheid",
+    "target": "Intimidatie",
+    "id": "Vertrouwen overheid-Intimidatie",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 114,
+        "citaat": "Vanwege de benodigde interdepartementale afstemming is het helaas niet mogelijk om binnen de gestelde termijn van drie weken de vragen te beantwoorden.",
+        "oorzaak": "Vertraging in de beantwoording van Kamervragen",
+        "gevolg": "Geweld en intimidatie tegen raadsleden"
+      }
+    ]
+  },
+  {
+    "source": "Jihadistische Dreiging",
+    "target": "Stabilisatie",
+    "id": "Jihadistische Dreiging-Stabilisatie",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 116,
+        "citaat": "De dreiging van Improvised Explosive Devices (IED’s) voor de stad Gao is verhoogd van matig naar significant, wat een directe bedreiging vormt voor de veiligheid van Nederlandse militairen in Mali.",
+        "oorzaak": "De dreiging van Improvised Explosive Devices (IED’s) voor de stad Gao is verhoogd van matig naar significant, wat een directe bedreiging vormt voor de veiligheid van Nederlandse militairen in Mali.",
+        "gevolg": "De escalatie van geweld en de dood van burgers tijdens demonstraties in Gao wijzen op een verslechterende sociale situatie en kunnen leiden tot verdere onrust en destabilisatie in de regio."
+      }
+    ]
+  },
+  {
+    "source": "Technologieafhankelijkheid",
+    "target": "Jihadistische Dreiging",
+    "id": "Technologieafhankelijkheid-Jihadistische Dreiging",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 128,
+        "citaat": "De afhankelijkheid van informatie van buitenlandse partners kan leiden tot kwetsbaarheden in de nationale veiligheid.",
+        "oorzaak": "De afhankelijkheid van informatie van buitenlandse partners kan leiden tot kwetsbaarheden in de nationale veiligheid.",
+        "gevolg": "De dreiging van terrorisme in Nederland blijft significant, met een verhoogd risico op aanslagen door extremistische groeperingen."
+      }
+    ]
+  },
+  {
+    "source": "Cybersecurity",
+    "target": "Jihadistische Dreiging",
+    "id": "Cybersecurity-Jihadistische Dreiging",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 128,
+        "citaat": "Het gebrek aan internetmonitoring kan leiden tot een onvolledig beeld van de dreigingen die zich online voordoen.",
+        "oorzaak": "Het gebrek aan internetmonitoring kan leiden tot een onvolledig beeld van de dreigingen die zich online voordoen.",
+        "gevolg": "De dreiging van terrorisme in Nederland blijft significant, met een verhoogd risico op aanslagen door extremistische groeperingen."
+      }
+    ]
+  },
+  {
+    "source": "Jihadistische Dreiging",
+    "target": "Cybersecurity",
+    "id": "Jihadistische Dreiging-Cybersecurity",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "open_overheid",
+        "filename": 135,
+        "citaat": "Er zijn geen concrete aanwijzingen voor een aanslag, maar incidenten in het buitenland verhogen de alertheid. De noodzaak voor beveiligingsmaatregelen varieert afhankelijk van de dreiging en risico, wat kan leiden tot onvoorspelbare situaties.",
+        "oorzaak": "Er zijn geen concrete aanwijzingen voor een aanslag, maar incidenten in het buitenland verhogen de alertheid.",
+        "gevolg": "De noodzaak voor beveiligingsmaatregelen varieert afhankelijk van de dreiging en risico, wat kan leiden tot onvoorspelbare situaties."
+      }
+    ]
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Overheidsschuld",
+    "id": "Geopolitieke Spanningen-Overheidsschuld",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 7,
+        "citaat": "De onvoorspelbaarheid van internationale ontwikkelingen maakt de vooruitzichten voor de uitvoer extra onzeker. ... grotere economische onzekerheid, wat een dempend effect heeft op mondiale economische activiteit en investeringen.",
+        "oorzaak": "Onzekerheid door geopolitieke ontwikkelingen en handelsbeleid.",
+        "gevolg": "Stijgende inflatie en overheidsschuld die de economische stabiliteit onder druk zetten."
+      }
+    ]
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Overheidsschuld",
+    "id": "Vergrijzing-Overheidsschuld",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 8,
+        "citaat": "De gemiddelde stijging op de middellange termijn (2027 tot en met 2033) ligt rond de 1,1% en is hiermee lager dan de afgelopen decennia. Vooral de lagere toename van het arbeidsaanbod zorgt voor een daling van de bbp-groei.",
+        "oorzaak": "Afname van de economische groei door vergrijzing en dalend arbeidsaanbod.",
+        "gevolg": "Daling van de collectieve lastendruk en oplopend overheidstekort."
+      }
+    ]
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Vergrijzing",
+    "id": "Geopolitieke Spanningen-Vergrijzing",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 8,
+        "citaat": "De groei van de wereldhandel komt voornamelijk door een toenemende handel van opkomende economieën. Deze groei is met meer dan de gebruikelijke onzekerheid omgeven, vanwege verschillende geopolitieke ontwikkelingen.",
+        "oorzaak": "Onzekerheid in internationale handel door geopolitieke ontwikkelingen.",
+        "gevolg": "Afname van de economische groei door vergrijzing en dalend arbeidsaanbod."
+      }
+    ]
+  },
+  {
+    "source": "Emissies",
+    "target": "Woningnood",
+    "id": "Emissies-Woningnood",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 8,
+        "citaat": "De ontwikkeling van de investeringen is onzeker, onder andere door de stikstofproblematiek.",
+        "oorzaak": "Stikstofproblematiek die leidt tot vertraging in woningbouw en infrastructuurprojecten.",
+        "gevolg": "Stijgende woningprijzen die de koopkracht onder druk zetten."
+      }
+    ]
+  },
+  {
+    "source": "Zorgkosten",
+    "target": "Woningnood",
+    "id": "Zorgkosten-Woningnood",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 8,
+        "citaat": "Dit komt doordat we het arbeidsaanbodmodel herschat hebben op basis van nieuwe data, wat resulteert in een hogere raming van het structureel arbeidsaanbod.",
+        "oorzaak": "Stijgende zorguitgaven door demografische ontwikkelingen en vergrijzing.",
+        "gevolg": "Stijgende woningprijzen die de koopkracht onder druk zetten."
+      }
+    ]
+  },
+  {
+    "source": "Inflatie Koopkracht",
+    "target": "Woningnood",
+    "id": "Inflatie Koopkracht-Woningnood",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 8,
+        "citaat": "Inflatie zal de koopkracht van huishoudens onder druk zetten.",
+        "oorzaak": "Inflatie die de koopkracht van huishoudens onder druk zet.",
+        "gevolg": "Stijgende woningprijzen die de koopkracht onder druk zetten."
+      }
+    ]
+  },
+  {
+    "source": "Zorgkosten",
+    "target": "Investeringen",
+    "id": "Zorgkosten-Investeringen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 9,
+        "citaat": "Belangrijke oorzaken van de stijgende zorguitgaven zijn de demografische ontwikkeling en (in mindere mate) de inkomensgroei en de stijging van de relatieve inputprijs van zorg.",
+        "oorzaak": "Stijgende zorguitgaven door demografische ontwikkelingen en vergrijzing.",
+        "gevolg": "Onzekerheid en inefficiëntie in zorgfinanciering door verschuivingen tussen regelingen."
+      }
+    ]
+  },
+  {
+    "source": "Arbeidsmarktkrapte",
+    "target": "Zorgkosten",
+    "id": "Arbeidsmarktkrapte-Zorgkosten",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 9,
+        "citaat": "In een krappe arbeidsmarkt kan het een uitdaging zijn voor de zorgsector om voldoende personeel aan te trekken en te behouden.",
+        "oorzaak": "Krapte op de arbeidsmarkt in de zorgsector en personeelstekorten.",
+        "gevolg": "Stijgende zorguitgaven door demografische ontwikkelingen en vergrijzing."
+      }
+    ]
+  },
+  {
+    "source": "Investeringen",
+    "target": "Kwetsbaarheid",
+    "id": "Investeringen-Kwetsbaarheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 18,
+        "citaat": "Daling van de arbeidsproductiviteit in de marktsector kan leiden tot een verzwakking van de economie en een lagere levensstandaard voor de bevolking.",
+        "oorzaak": "Daling van de arbeidsproductiviteit in de marktsector kan leiden tot een verzwakking van de economie en een lagere levensstandaard voor de bevolking.",
+        "gevolg": "Afhankelijkheid van internationale handel en export kan leiden tot economische kwetsbaarheid en ongelijkmatige verdeling van welvaart."
+      }
+    ]
+  },
+  {
+    "source": "Kwetsbaarheid",
+    "target": "Investeringen",
+    "id": "Kwetsbaarheid-Investeringen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 18,
+        "citaat": "Afhankelijkheid van internationale handel en export kan leiden tot economische kwetsbaarheid en ongelijkmatige verdeling van welvaart.",
+        "oorzaak": "Afhankelijkheid van internationale handel en export kan leiden tot economische kwetsbaarheid en ongelijkmatige verdeling van welvaart.",
+        "gevolg": "De toenemende kloof in productiviteit tussen de meest productieve bedrijven en de minder productieve bedrijven kan leiden tot sociale ongelijkheid en een gebrek aan economische kansen voor kleinere bedrijven."
+      }
+    ]
+  },
+  {
+    "source": "Werkgelegenheid",
+    "target": "Overheidsschuld",
+    "id": "Werkgelegenheid-Overheidsschuld",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 25,
+        "citaat": "De Covid-19 pandemie heeft geleid tot ongekende economische schokken die zowel de vraag als het aanbod in de wereldeconomie hebben beïnvloed; de stijgende inflatie als gevolg van de expansieve fiscale maatregelen kan de economische stabiliteit op lange termijn bedreigen.",
+        "oorzaak": "De Covid-19 pandemie heeft geleid tot ongekende economische schokken die zowel de vraag als het aanbod in de wereldeconomie hebben beïnvloed.",
+        "gevolg": "De stijgende inflatie als gevolg van de expansieve fiscale maatregelen kan de economische stabiliteit op lange termijn bedreigen."
+      }
+    ]
+  },
+  {
+    "source": "Ongelijkheid",
+    "target": "Meisjesstress",
+    "id": "Ongelijkheid-Meisjesstress",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 32,
+        "citaat": "Door de sterke vermogensgroei tussen 1992 en 2022 heeft driekwart van de veertigers meer vermogen – gecorrigeerd voor consumenteninflatie - dan hun ouders op dezelfde leeftijd.",
+        "oorzaak": "De vermogensgroei is ongelijk verdeeld, wat kan leiden tot economische instabiliteit en sociale onrust.",
+        "gevolg": "De afhankelijkheid van kinderen van de financiële steun van ouders kan leiden tot een gebrek aan zelfredzaamheid en ondernemerschap."
+      }
+    ]
+  },
+  {
+    "source": "Kwetsbaarheid",
+    "target": "Woningnood",
+    "id": "Kwetsbaarheid-Woningnood",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 52,
+        "citaat": "De coronapandemie en de meer grimmige geopolitieke situatie hebben geleid tot zorgen over internationale afhankelijkheid.",
+        "oorzaak": "Internationale afhankelijkheid kan leiden tot kwetsbaarheid in de economie.",
+        "gevolg": "De druk op sociale voorzieningen en infrastructuur door bevolkingsgroei, wat kan leiden tot woningtekorten en hogere prijzen."
+      }
+    ]
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Woningnood",
+    "id": "Vergrijzing-Woningnood",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 52,
+        "citaat": "De groei van het aantal huishoudens door toegenomen migratie en de groeiende individualisering hebben geleid tot verdere druk op de woningmarkt.",
+        "oorzaak": "Vergrijzing van de bevolking leidt tot druk op sociale voorzieningen en de arbeidsmarkt.",
+        "gevolg": "De druk op sociale voorzieningen en infrastructuur door bevolkingsgroei, wat kan leiden tot woningtekorten en hogere prijzen."
+      }
+    ]
+  },
+  {
+    "source": "Woningnood",
+    "target": "Ongelijkheid",
+    "id": "Woningnood-Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 52,
+        "citaat": "De financiële crisis, de flexibilisering van de arbeidsmarkt en machtsconcentratie bij grote bedrijven hebben nieuwe vragen opgeroepen over bestaanszekerheid en de verdeling van welvaart in de samenleving.",
+        "oorzaak": "De druk op sociale voorzieningen en infrastructuur door bevolkingsgroei, wat kan leiden tot woningtekorten en hogere prijzen.",
+        "gevolg": "Ongelijkheid in de samenleving kan toenemen door economische keuzes."
+      }
+    ]
+  },
+  {
+    "source": "Klimaatimpact",
+    "target": "Ongelijkheid",
+    "id": "Klimaatimpact-Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 52,
+        "citaat": "De opwarming van de aarde en de afname van biodiversiteit hebben de schijnwerper gezet op de gebrekkige duurzaamheid van onze huidige productie en consumptie.",
+        "oorzaak": "Klimaatverandering en afname van biodiversiteit bedreigen de ecologische duurzaamheid.",
+        "gevolg": "Ongelijkheid in de samenleving kan toenemen door economische keuzes."
+      }
+    ]
+  },
+  {
+    "source": "Energiearmoede",
+    "target": "Ongelijkheid",
+    "id": "Energiearmoede-Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 58,
+        "citaat": "Stijgende energieprijzen en onzekerheid over toekomstige energieprijzen kunnen leiden tot energiearmoede en onvoorspelbare financiële gevolgen voor huishoudens. Ongelijke inkomenseffecten van woningisolatie leiden tot financiële kwetsbaarheid voor huishoudens met lagere inkomens.",
+        "oorzaak": "Stijgende energieprijzen en onzekerheid over toekomstige energieprijzen kunnen leiden tot energiearmoede en onvoorspelbare financiële gevolgen voor huishoudens.",
+        "gevolg": "Ongelijke inkomenseffecten van woningisolatie leiden tot financiële kwetsbaarheid voor huishoudens met lagere inkomens."
+      }
+    ]
+  },
+  {
+    "source": "Overheidsschuld",
+    "target": "Inflatie Koopkracht",
+    "id": "Overheidsschuld-Inflatie Koopkracht",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 61,
+        "citaat": "Een deel van de in het hoofdlijnenakkoord afgesproken lastenverlichting wordt vertraagd ingevoerd. Hierdoor is vanaf 2025 dekking gevonden voor de budgettaire derving als gevolg van de uitspraak van de Hoge Raad met betrekking tot box 3.",
+        "oorzaak": "Verhoogd overheidstekort en EMU-schuld door vertraagde lastenverlichting.",
+        "gevolg": "Vertraging in de koopkrachtstijging en stijgende armoede door lagere lastenverlichting."
+      }
+    ]
+  },
+  {
+    "source": "Inflatie Koopkracht",
+    "target": "Overheidsschuld",
+    "id": "Inflatie Koopkracht-Overheidsschuld",
+    "label": "2",
+    "weight": 2,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 61,
+        "citaat": "De koopkrachtstijging komt door de verminderde lastenverlichting in 2025 wat lager uit dan eerder geraamd.",
+        "oorzaak": "Vertraging in de koopkrachtstijging en stijgende armoede door lagere lastenverlichting.",
+        "gevolg": "Verhoogd overheidstekort en EMU-schuld door vertraagde lastenverlichting."
+      },
+      {
+        "source": "cpb",
+        "filename": 71,
+        "citaat": "Dit resulteert in een groei van de contractlonen in de marktsector in 2024 van 6,4%, volgend jaar zwakt die groei af naar 4,2%.",
+        "oorzaak": "Inflatie en stijgende kosten drukken de koopkracht.",
+        "gevolg": "Financiële druk door oplopende overheidsschuld en begrotingstekorten."
+      }
+    ]
+  },
+  {
+    "source": "Ongelijkheid",
+    "target": "Aardgasvrij",
+    "id": "Ongelijkheid-Aardgasvrij",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 67,
+        "citaat": "Door ongelijke toegang tot subsidies profiteren woningeigenaren met minder hulpbronnen mogelijk minder van generieke subsidieregelingen.",
+        "oorzaak": "Ongelijke toegang tot subsidies voor woningverduurzaming.",
+        "gevolg": "Ongelijkheid in de energietransitie leidt tot sociale onvrede."
+      }
+    ]
+  },
+  {
+    "source": "Arbeidsmarktkrapte",
+    "target": "Investeringen",
+    "id": "Arbeidsmarktkrapte-Investeringen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 71,
+        "citaat": "De terugval in uitvoer van Nederlandse makelij draagt dus bij aan de vertraging van de bbp-groei in de afgelopen anderhalf jaar.",
+        "oorzaak": "Krappe arbeidsmarkt leidt tot stijgende loonkosten en remt economische groei.",
+        "gevolg": "Daling van de uitvoer uit eigen productie drukt de economische groei."
+      }
+    ]
+  },
+  {
+    "source": "Geopolitieke Spanningen",
+    "target": "Investeringen",
+    "id": "Geopolitieke Spanningen-Investeringen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 87,
+        "citaat": "Geopolitieke spanningen kunnen negatieve gevolgen hebben voor de Nederlandse economie. Denk daarbij aan een handelsoorlog tussen de Verenigde Staten (VS) en China, of oplopende spanningen tussen China en Taiwan. [...] Daarnaast zorgen geopolitieke spanningen ook voor veel onzekerheid. Bedrijven investeren minder en huishoudens sparen meer, wat een negatief effect heeft op de economische groei.",
+        "oorzaak": "Geopolitieke spanningen en handelsconflicten kunnen de economische groei negatief beïnvloeden.",
+        "gevolg": "Onzekerheid over de toekomst kan investeringen afremmen en de neutrale rente verlagen."
+      }
+    ]
+  },
+  {
+    "source": "Inflatie Koopkracht",
+    "target": "Werkgelegenheid",
+    "id": "Inflatie Koopkracht-Werkgelegenheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 87,
+        "citaat": "Een hogere rente maakt, vooral als deze lang aanhoudt, het aangaan, herfinancieren en afbetalen van leningen duurder. [...] Deze voorziene stijging van de staatsschuld maakt Nederland in de toekomst minder weerbaar voor mogelijke toekomstige crises.",
+        "oorzaak": "Stijgende rente en inflatie beperken de financieringsruimte voor bedrijven en huishoudens, wat kan leiden tot lagere investeringen en consumptie.",
+        "gevolg": "De impact van de coronaschuld op de nationale economie kan leiden tot langdurige financiële druk op huishoudens en bedrijven."
+      }
+    ]
+  },
+  {
+    "source": "Inflatie Koopkracht",
+    "target": "Arbeidsmarktkrapte",
+    "id": "Inflatie Koopkracht-Arbeidsmarktkrapte",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 103,
+        "citaat": "De uitbraak van de oorlog in Oekraïne en het vervolgens dichtdraaien van de gaskraan door Rusland, leidden in 2022 tot sterkte stijgingen van energie- en voedselprijzen. En in 2023 begonnen de lonen aanzienlijk te stijgen.",
+        "oorzaak": "Stijgende inflatie door schommelingen in energieprijzen en voedselprijzen.",
+        "gevolg": "Mogelijke loon-prijsspiraal door stijgende lonen en krapte op de arbeidsmarkt."
+      }
+    ]
+  },
+  {
+    "source": "Kwetsbaarheid",
+    "target": "Geopolitieke Spanningen",
+    "id": "Kwetsbaarheid-Geopolitieke Spanningen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 118,
+        "citaat": "De afhankelijkheid van intermediaire goederen uit RCH kan leiden tot hogere productiekosten voor Nederlandse bedrijfstakken.",
+        "oorzaak": "De afhankelijkheid van intermediaire goederen uit RCH kan leiden tot hogere productiekosten voor Nederlandse bedrijfstakken.",
+        "gevolg": "De ontkoppeling van handelsrelaties tussen het Westen en Rusland/China kan leiden tot aanzienlijke economische verliezen voor Nederland, met name door herverdelingen tussen bedrijfstakken."
+      }
+    ]
+  },
+  {
+    "source": "Ongelijkheid",
+    "target": "Geopolitieke Spanningen",
+    "id": "Ongelijkheid-Geopolitieke Spanningen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 118,
+        "citaat": "De verhoging van invoertarieven kan leiden tot een verschuiving in de concurrentiepositie van binnenlandse producenten, wat kan resulteren in economische ongelijkheid en sociale onrust.",
+        "oorzaak": "De verhoging van invoertarieven kan leiden tot een verschuiving in de concurrentiepositie van binnenlandse producenten, wat kan resulteren in economische ongelijkheid en sociale onrust.",
+        "gevolg": "De ontkoppeling van handelsrelaties tussen het Westen en Rusland/China kan leiden tot aanzienlijke economische verliezen voor Nederland, met name door herverdelingen tussen bedrijfstakken."
+      }
+    ]
+  },
+  {
+    "source": "Investeringen",
+    "target": "Arbeidsmarktkrapte",
+    "id": "Investeringen-Arbeidsmarktkrapte",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 121,
+        "citaat": "De Nederlandse economie vertoont tekenen van stagnatie, wat kan leiden tot een lagere groei en een verhoogd risico op economische recessie.",
+        "oorzaak": "De Nederlandse economie vertoont tekenen van stagnatie, wat kan leiden tot een lagere groei en een verhoogd risico op economische recessie.",
+        "gevolg": "De krapte op de arbeidsmarkt houdt aan, wat kan leiden tot een mismatch tussen vraag en aanbod van arbeid en een stijging van de werkloosheid."
+      }
+    ]
+  },
+  {
+    "source": "Arbeidsmarktkrapte",
+    "target": "Armoede",
+    "id": "Arbeidsmarktkrapte-Armoede",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 121,
+        "citaat": "De krapte op de arbeidsmarkt houdt aan, wat kan leiden tot een mismatch tussen vraag en aanbod van arbeid en een stijging van de werkloosheid.",
+        "oorzaak": "De krapte op de arbeidsmarkt houdt aan, wat kan leiden tot een mismatch tussen vraag en aanbod van arbeid en een stijging van de werkloosheid.",
+        "gevolg": "Stijgende armoede onder uitkeringsgerechtigden na 2024 door afbouw van bijstandsmaatregelen."
+      }
+    ]
+  },
+  {
+    "source": "Armoede",
+    "target": "Woningnood",
+    "id": "Armoede-Woningnood",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 121,
+        "citaat": "Stijgende armoede onder uitkeringsgerechtigden na 2024 door afbouw van bijstandsmaatregelen.",
+        "oorzaak": "Stijgende armoede onder uitkeringsgerechtigden na 2024 door afbouw van bijstandsmaatregelen.",
+        "gevolg": "De stijgende huurprijzen kunnen de betaalbaarheid van woningen onder druk zetten, wat leidt tot sociale onrust en armoede."
+      }
+    ]
+  },
+  {
+    "source": "Kwetsbaarheid",
+    "target": "Technologieafhankelijkheid",
+    "id": "Kwetsbaarheid-Technologieafhankelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 128,
+        "citaat": "Afhankelijkheid van wereldwijde waardeketens kan leiden tot economische kwetsbaarheid, wat kan resulteren in een verlies van productiecapaciteit door verschuiving naar diensten.",
+        "oorzaak": "Afhankelijkheid van wereldwijde waardeketens kan leiden tot economische kwetsbaarheid.",
+        "gevolg": "Verlies van productiecapaciteit door verschuiving naar diensten kan de nationale veiligheid ondermijnen."
+      }
+    ]
+  },
+  {
+    "source": "Technologieafhankelijkheid",
+    "target": "Ongelijkheid",
+    "id": "Technologieafhankelijkheid-Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 128,
+        "citaat": "Verlies van productiecapaciteit door verschuiving naar diensten kan de nationale veiligheid ondermijnen, wat kan leiden tot sociale ongelijkheid.",
+        "oorzaak": "Verlies van productiecapaciteit door verschuiving naar diensten kan de nationale veiligheid ondermijnen.",
+        "gevolg": "Sociale ongelijkheid kan toenemen door de verschuiving naar een diensteneconomie, wat kan leiden tot maatschappelijke onrust."
+      }
+    ]
+  },
+  {
+    "source": "Energiearmoede",
+    "target": "Investeringen",
+    "id": "Energiearmoede-Investeringen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 134,
+        "citaat": "Hogere energieprijzen door beperking van vrijstellingen en externe factoren, resulteert in onzekerheid in ramingen die de nationale begroting en financiële stabiliteit ondermijnen.",
+        "oorzaak": "Hogere energieprijzen door beperking van vrijstellingen en externe factoren.",
+        "gevolg": "Onzekerheid in ramingen die de nationale begroting en financiële stabiliteit ondermijnen."
+      }
+    ]
+  },
+  {
+    "source": "Investeringen",
+    "target": "Inflatie Koopkracht",
+    "id": "Investeringen-Inflatie Koopkracht",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 134,
+        "citaat": "Onzekerheid in ramingen die de nationale begroting en financiële stabiliteit ondermijnen, leidt tot lagere koopkracht door beperking van inflatiecorrectie in de inkomstenbelasting.",
+        "oorzaak": "Onzekerheid in ramingen die de nationale begroting en financiële stabiliteit ondermijnen.",
+        "gevolg": "Lagere koopkracht door beperking van inflatiecorrectie in de inkomstenbelasting."
+      }
+    ]
+  },
+  {
+    "source": "Ongelijkheid",
+    "target": "Flexibilisering",
+    "id": "Ongelijkheid-Flexibilisering",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 142,
+        "citaat": "These findings offer perspective for targeted prevention policies that provide proactive support to vulnerable groups.",
+        "oorzaak": "Ongelijkheid in risicoblootstelling leidt tot kwetsbaarheid en sociale onrust.",
+        "gevolg": "Correlatie tussen arbeidsschokken en gezondheidschokken kan leiden tot negatieve gevolgen."
+      }
+    ]
+  },
+  {
+    "source": "Investeringen",
+    "target": "Werkgelegenheid",
+    "id": "Investeringen-Werkgelegenheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 145,
+        "citaat": "De Tozo-regeling kan een prikkel geven om minder te werken, wat leidt tot een daling in de productiviteit en economische output. De langdurige coronamaatregelen en de daaropvolgende economische gevolgen kunnen leiden tot een verhoogde werkloosheid en sociale onrust.",
+        "oorzaak": "De Tozo-regeling kan een prikkel geven om minder te werken, wat leidt tot een daling in de productiviteit en economische output.",
+        "gevolg": "De langdurige coronamaatregelen en de daaropvolgende economische gevolgen kunnen leiden tot een verhoogde werkloosheid en sociale onrust."
+      }
+    ]
+  },
+  {
+    "source": "Belastingontwijking",
+    "target": "Investeringen",
+    "id": "Belastingontwijking-Investeringen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 164,
+        "citaat": "Veranderingen in belastingwetgeving kunnen leiden tot onvoorspelbare economische gedragingen van belastingplichtigen, wat resulta(ert) in onzekerheid in budgettaire ramingen door gebrek aan betrouwbare data en aannames.",
+        "oorzaak": "Veranderingen in belastingwetgeving kunnen leiden tot onvoorspelbare economische gedragingen van belastingplichtigen.",
+        "gevolg": "Onzekerheid in budgettaire ramingen door gebrek aan betrouwbare data en aannames."
+      }
+    ]
+  },
+  {
+    "source": "Publieke Financiering",
+    "target": "Investeringen",
+    "id": "Publieke Financiering-Investeringen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 172,
+        "citaat": "Onzekerheid over de economische baten van nieuwe technologieën en de effectiviteit van R&D-beleid kan leiden tot inefficiëntie in investeringen en beleidsvorming; daling van de totale factorproductiviteit (TFP) en onderzoeksproductiviteit kan de economische groei op lange termijn negatief beïnvloeden.",
+        "oorzaak": "Onzekerheid over de economische baten van nieuwe technologieën en de effectiviteit van R&D-beleid kan leiden tot inefficiëntie in investeringen en beleidsvorming.",
+        "gevolg": "Daling van de totale factorproductiviteit (TFP) en onderzoeksproductiviteit kan de economische groei op lange termijn negatief beïnvloeden."
+      }
+    ]
+  },
+  {
+    "source": "Inflatie Koopkracht",
+    "target": "Investeringen",
+    "id": "Inflatie Koopkracht-Investeringen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "cpb",
+        "filename": 176,
+        "citaat": "De consumptie van huishoudens neemt niet veel toe, omdat er tegenover de inkomensondersteunende maatregelen ook lastenverzwaringen staan.",
+        "oorzaak": "Stijgende inflatie en de impact op de koopkracht van huishoudens.",
+        "gevolg": "Economische groei blijft achter door beperkte consumptie van huishoudens."
+      }
+    ]
+  },
+  {
+    "source": "Publieke Financiering",
+    "target": "Digitale Ongelijkheid",
+    "id": "Publieke Financiering-Digitale Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 89,
+        "citaat": "De afhankelijkheid van externe financiering voor ontwikkeltrajecten kan leiden tot onzekere situaties, wat technologische achterstand en afhankelijkheid van digitale platforms kan veroorzaken en de effectiviteit van leerprocessen ondermijnt.",
+        "oorzaak": "Afhankelijkheid van externe financiering voor ontwikkeltrajecten kan leiden tot onzekere situaties.",
+        "gevolg": "Technologische achterstand en afhankelijkheid van digitale platforms kunnen de effectiviteit van leerprocessen ondermijnen."
+      }
+    ]
+  },
+  {
+    "source": "Energiezekerheid",
+    "target": "Woningnood",
+    "id": "Energiezekerheid-Woningnood",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 174,
+        "citaat": "Afhankelijkheid van fossiele brandstoffen voor energievoorziening kan leiden tot economische kwetsbaarheid en ecologische schade, wat kan leiden tot de noodzaak voor investeringen in de woningvoorraad.",
+        "oorzaak": "Afhankelijkheid van fossiele brandstoffen voor energievoorziening kan leiden tot economische kwetsbaarheid en ecologische schade.",
+        "gevolg": "De noodzaak voor investeringen in de woningvoorraad kan leiden tot economische druk op huishoudens, vooral in tijden van financiële onzekerheid."
+      }
+    ]
+  },
+  {
+    "source": "Aardgasvrij",
+    "target": "Voorspellingsmodellen",
+    "id": "Aardgasvrij-Voorspellingsmodellen",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 174,
+        "citaat": "De energietransitie kan leiden tot sociale ongelijkheid, wat kan resulteren in onzekerheid in invoergegevens en aannames die leiden tot onnauwkeurige modelresultaten.",
+        "oorzaak": "De energietransitie kan leiden tot sociale ongelijkheid, vooral als bepaalde bevolkingsgroepen niet in staat zijn om te investeren in verduurzaming.",
+        "gevolg": "Onzekerheid in invoergegevens en aannames kan leiden tot onnauwkeurige modelresultaten, wat beleidsbeslissingen kan beïnvloeden."
+      }
+    ]
+  },
+  {
+    "source": "Luchtkwaliteit",
+    "target": "Luchtvervuiling",
+    "id": "Luchtkwaliteit-Luchtvervuiling",
+    "label": "2",
+    "weight": 2,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 215,
+        "citaat": "De impact van koude start-emissies op de luchtkwaliteit, die niet adequaat worden gemeten en geanalyseerd, wat leidt tot onjuiste inschattingen van de totale emissies.",
+        "oorzaak": "De impact van koude start-emissies op de luchtkwaliteit, die niet adequaat worden gemeten en geanalyseerd, wat leidt tot onjuiste inschattingen van de totale emissies.",
+        "gevolg": "De toename van luchtverontreiniging door wegverkeer, met name door stikstofoxiden (NOx) en fijnstof (PM10, PM2.5), die schadelijk zijn voor de volksgezondheid en het milieu."
+      },
+      {
+        "source": "tno",
+        "filename": 606,
+        "citaat": "De inefficiëntie van huidige meetmethoden voor fijnstofemissies kan leiden tot onvoldoende regulering van vervuilende voertuigen, wat de schadelijke effecten van fijnstof op de gezondheid van de bevolking, die kunnen leiden tot ernstige gezondheidsproblemen zoals hart- en vaatziekten, zal verergeren.",
+        "oorzaak": "De inefficiëntie van huidige meetmethoden voor fijnstofemissies kan leiden tot onvoldoende regulering van vervuilende voertuigen.",
+        "gevolg": "De schadelijke effecten van fijnstof op de gezondheid van de bevolking, die kunnen leiden tot ernstige gezondheidsproblemen zoals hart- en vaatziekten."
+      }
+    ]
+  },
+  {
+    "source": "Woningnood",
+    "target": "Emissies",
+    "id": "Woningnood-Emissies",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 229,
+        "citaat": "De Nederlandse bouwsector staat voor enorme uitdagingen. Met de toenemende druk op de woningmarkt ligt er de komende jaren een bouwopgave van ongeveer 100.000 nieuwbouwwoningen per jaar.",
+        "oorzaak": "Druk op de woningmarkt en de noodzaak om nieuwbouwwoningen te realiseren, wat leidt tot een verhoogde vraag naar bouwmaterialen en -diensten.",
+        "gevolg": "Inefficiënties in bouwlogistiek door gebrekkige integrale ketenregie en samenwerking tussen stakeholders."
+      }
+    ]
+  },
+  {
+    "source": "Aardgasvrij",
+    "target": "Ongelijkheid",
+    "id": "Aardgasvrij-Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 348,
+        "citaat": "De uitvoering van aardgasvrije projecten kan leiden tot overlast voor bewoners, wat hun bereidheid om deel te nemen kan beïnvloeden.",
+        "oorzaak": "De uitvoering van aardgasvrije projecten kan leiden tot overlast voor bewoners, wat hun bereidheid om deel te nemen kan beïnvloeden.",
+        "gevolg": "De lange duur van werkzaamheden in woningen kan leiden tot aanzienlijke overlast voor bewoners, wat hun welzijn en levenskwaliteit beïnvloedt."
+      }
+    ]
+  },
+  {
+    "source": "Woningnood",
+    "target": "Luchtvervuiling",
+    "id": "Woningnood-Luchtvervuiling",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 349,
+        "citaat": "Door deze verdichting worden water, groene plekken of sportmogelijkheden vaak ingenomen door bebouwing en wegen, waardoor een gezonde leefomgeving nog verder onder druk komt te staan.",
+        "oorzaak": "Druk op de leefomgeving door verstedelijking en infrastructuur.",
+        "gevolg": "Impact van luchtverontreiniging en andere omgevingsfactoren op de gezondheid."
+      }
+    ]
+  },
+  {
+    "source": "Luchtvervuiling",
+    "target": "Ongelijkheid",
+    "id": "Luchtvervuiling-Ongelijkheid",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 349,
+        "citaat": "Deze kansenongelijkheid wordt niet alleen verklaard door individuele factoren zoals leefstijl en werk, maar wordt in belangrijke mate ook bepaald door de leefomstandigheden.",
+        "oorzaak": "Impact van luchtverontreiniging en andere omgevingsfactoren op de gezondheid.",
+        "gevolg": "Gezondheidsverschillen en sociale ongelijkheid door sociaaleconomische factoren."
+      }
+    ]
+  },
+  {
+    "source": "Luchtvervuiling",
+    "target": "Luchtkwaliteit",
+    "id": "Luchtvervuiling-Luchtkwaliteit",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 362,
+        "citaat": "In order to improve air quality and to lower nitrogen deposition, nitrogen oxide emissions from vessel engines must respect certain Tier norms to obtain the required Engine International Air Pollution Prevention (EIAPP) certificate for sailing.",
+        "oorzaak": "De uitstoot van stikstofoxiden (NOx) door zeeschepen in de haven van Rotterdam heeft een significante impact op de luchtkwaliteit en de stikstofdepositie in Nederland.",
+        "gevolg": "De metingen van stikstofoxiden (NOx) en koolstofdioxide (CO2) zijn cruciaal voor het monitoren van luchtkwaliteit, wat een directe impact heeft op de volksgezondheid en het milieu."
+      }
+    ]
+  },
+  {
+    "source": "Kwetsbaarheden",
+    "target": "Aardgasvrij",
+    "id": "Kwetsbaarheden-Aardgasvrij",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 365,
+        "citaat": "Afhankelijkheid van complexe technologieën kan leiden tot operationele kwetsbaarheden en verstoringen, wat bijdraagt aan de overgang naar gasloos wonen kan leiden tot hogere energiekosten en sociale onvrede.",
+        "oorzaak": "Afhankelijkheid van complexe technologieën kan leiden tot operationele kwetsbaarheden en verstoringen.",
+        "gevolg": "Overgang naar gasloos wonen kan leiden tot hogere energiekosten en sociale onvrede."
+      }
+    ]
+  },
+  {
+    "source": "Aardgasvrij",
+    "target": "Kostenbeheer",
+    "id": "Aardgasvrij-Kostenbeheer",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 365,
+        "citaat": "De overgang naar gasloos wonen kan leiden tot hogere energiekosten en sociale onvrede, wat op zijn beurt kan leiden tot de noodzaak voor continue aanpassingen aan technologie, wat extra kosten en vertragingen met zich meebrengt.",
+        "oorzaak": "Overgang naar gasloos wonen kan leiden tot hogere energiekosten en sociale onvrede.",
+        "gevolg": "Noodzaak voor continue aanpassingen aan technologie kan leiden tot extra kosten en vertragingen."
+      }
+    ]
+  },
+  {
+    "source": "Klimaatonvrede",
+    "target": "Aardgasvrij",
+    "id": "Klimaatonvrede-Aardgasvrij",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 374,
+        "citaat": "De hoge kosten van klimaatmaatregelen kunnen leiden tot maatschappelijke onvrede en ongelijkheid, en dit kan leiden tot wantrouwen en weerstand tegen maatregelen.",
+        "oorzaak": "De hoge kosten van klimaatmaatregelen kunnen leiden tot maatschappelijke onvrede en ongelijkheid.",
+        "gevolg": "De communicatie en participatie van burgers in het energie- en klimaatbeleid is onvoldoende, wat kan leiden tot wantrouwen en weerstand tegen maatregelen."
+      }
+    ]
+  },
+  {
+    "source": "Werkgelegenheid",
+    "target": "Arbeidsmarktkrapte",
+    "id": "Werkgelegenheid-Arbeidsmarktkrapte",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 604,
+        "citaat": "De COVID-19 crisis heeft daardoor zeker een impact gehad op de arbeidsmarkt.",
+        "oorzaak": "De COVID-19 crisis heeft geleid tot een afname van de werkgelegenheid in bepaalde sectoren, wat een significante impact heeft op de economie.",
+        "gevolg": "De afname van het aantal organisaties dat gebruik maakt van scholingsfondsen kan leiden tot een tekort aan vaardigheden en kennis in de arbeidsmarkt."
+      }
+    ]
+  },
+  {
+    "source": "Kwetsbaarheid",
+    "target": "Emissies",
+    "id": "Kwetsbaarheid-Emissies",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 613,
+        "citaat": "De afhankelijkheid van traditionele, primaire grondstoffen maakt de sector kwetsbaar voor schaarste en prijsstijgingen, wat de economische stabiliteit kan bedreigen. Onvoldoende samenwerking en afstemming tussen betrokken partijen in de betonketen kan leiden tot inefficiënties en verhoogde kosten.",
+        "oorzaak": "De afhankelijkheid van traditionele, primaire grondstoffen maakt de sector kwetsbaar voor schaarste en prijsstijgingen, wat de economische stabiliteit kan bedreigen.",
+        "gevolg": "Onvoldoende samenwerking en afstemming tussen betrokken partijen in de betonketen kan leiden tot inefficiënties en verhoogde kosten."
+      }
+    ]
+  },
+  {
+    "source": "Werkgelegenheid",
+    "target": "Hybride Werken",
+    "id": "Werkgelegenheid-Hybride Werken",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "tno",
+        "filename": 638,
+        "citaat": "Vanwege de COVID-19 pandemie is de vragenlijst van de NEA op enkele punten gewijzigd: er is gevraagd naar de invloed van coronamaatregelen op het werk op het moment van invullen.",
+        "oorzaak": "De COVID-19 pandemie heeft een significante impact gehad op de arbeidsomstandigheden en werkgelegenheid in Nederland, wat kan leiden tot langdurige economische gevolgen.",
+        "gevolg": "De veranderingen in de werkomstandigheden door de pandemie kunnen leiden tot een verhoogd ziekteverzuim en een afname van de productiviteit."
+      }
+    ]
+  },
+  {
+    "source": "Droogteproblemen",
+    "target": "Extreme Neerslag",
+    "id": "Droogteproblemen-Extreme Neerslag",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "knmi",
+        "filename": 76,
+        "citaat": "Langdurig lage rivierafvoeren relevant zijn voor de zoetwatervoorziening en de bevaarbaarheid van de rivieren.",
+        "oorzaak": "Verlies van zoetwatervoorziening door langdurige laagwaterperioden.",
+        "gevolg": "Verhoogde druk op de infrastructuur door frequentere en intensievere overstromingen."
+      }
+    ]
+  },
+  {
+    "source": "Klimaatimpact",
+    "target": "Extreme Neerslag",
+    "id": "Klimaatimpact-Extreme Neerslag",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "knmi",
+        "filename": 91,
+        "citaat": "De impact van klimaatverandering op de afvoeren van de grote rivieren kan leiden tot onvoorspelbare en extreme weersomstandigheden, wat resulteert in overstromingen door hoge afvoeren in de Maas en Rijn die schade aan de infrastructuur en waterveiligheid veroorzaken.",
+        "oorzaak": "De impact van klimaatverandering op de afvoeren van de grote rivieren kan leiden tot onvoorspelbare en extreme weersomstandigheden.",
+        "gevolg": "Overstromingen door hoge afvoeren in de Maas en Rijn kunnen schade aan de infrastructuur en waterveiligheid veroorzaken."
+      }
+    ]
+  },
+  {
+    "source": "Extreme Neerslag",
+    "target": "Klimaatimpact",
+    "id": "Extreme Neerslag-Klimaatimpact",
+    "label": "1",
+    "weight": 1,
+    "citaat_relaties": [
+      {
+        "source": "knmi",
+        "filename": 107,
+        "citaat": "Extreme neerslag kan leiden tot aanzienlijke wateroverlast in stedelijke gebieden, wat de infrastructuur en het rioolstelsel onder druk zet.",
+        "oorzaak": "Extreme neerslag kan leiden tot aanzienlijke wateroverlast in stedelijke gebieden, wat de infrastructuur en het rioolstelsel onder druk zet.",
+        "gevolg": "De toenemende frequentie van extreme neerslag kan de nationale economie schaden door schade aan gebouwen, infrastructuur en verstoring van economische activiteiten."
+      }
+    ]
+  }
+]
