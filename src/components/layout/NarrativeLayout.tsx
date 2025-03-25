@@ -120,7 +120,7 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
               <CardHeader className="border-b border-gray-100">
                 <CardTitle className="flex items-center gap-2 text-gray-800">
                   <Clock className="h-5 w-5" style={{ color: brandColor }} />
-                  Tijdrijksanalyse
+                  Tijkdreeksanalyse
                 </CardTitle>
                 <CardDescription className="text-gray-600">
                   Ontdek hoe dreigingen zich ontwikkelen
@@ -131,7 +131,7 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
                 <Button 
                   className="w-full text-white"
                   style={{ backgroundColor: brandColor, borderColor: brandColor }}
-                  onClick={() => onNavigate('tijdrijks')}
+                  onClick={() => onNavigate('tijkdreeks')}
                 >
                   Bekijken
                 </Button>
@@ -289,16 +289,16 @@ export const NarrativeLayout = () => {
               </button>
               
               <button 
-                onClick={() => handleNavigate('tijdrijks')}
+                onClick={() => handleNavigate('tijkdreeks')}
                 className={cn(
                   "flex items-center gap-2 px-6 py-4 text-gray-700 font-medium border-b-2 transition-colors",
-                  activeTab === 'tijdrijks' 
+                  activeTab === 'tijkdreeks' 
                     ? "border-[rgb(0,153,168)] text-[rgb(0,153,168)]" 
                     : "border-transparent hover:text-[rgb(0,153,168)] hover:bg-gray-50"
                 )}
               >
                 <Clock className="h-5 w-5" />
-                <span>Tijdrijksanalyse</span>
+                <span>Tijkdreeksanalyse</span>
               </button>
               
               <button 
@@ -332,9 +332,9 @@ export const NarrativeLayout = () => {
             </div>
           )}
           
-          {activeTab === 'tijdrijks' && (
+          {activeTab === 'tijkdreeks' && (
             <div className="bg-gray-50">
-              {/* <TijdrijksAnalyse /> */}
+              {/* <TijkdreeksAnalyse /> */}
             </div>
           )}
           
