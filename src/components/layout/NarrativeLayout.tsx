@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { MainContent } from '../visualization/MainContent';
-import { Info, Home, Network, Clock, MessageSquare } from 'lucide-react';
+import TimeSeriesAnalysis from "../visualization/TimeSeriesAnalysis";
+import { Info, Home, Network, Clock, Newspaper } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -13,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import type { ModelSettings } from '@/types/settings';
 import ModelExplanation from './ModelExplanation';
+import SourceAnalysis from '../visualization/SourceAnalysis';
 // Create a temporary placeholder until the real component is available
 const CitationsBackground = () => <div className="absolute inset-0 z-0"></div>;
 
@@ -141,8 +143,8 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
             <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
               <CardHeader className="border-b border-gray-100">
                 <CardTitle className="flex items-center gap-2 text-gray-800">
-                  <MessageSquare className="h-5 w-5" style={{ color: brandColor }} />
-                  Topicanalyse
+                  <Newspaper className="h-5 w-5" style={{ color: brandColor }} />
+                  Bronanalyse
                 </CardTitle>
                 <CardDescription className="text-gray-600">
                   Ontdek onderliggende details
@@ -310,8 +312,8 @@ export const NarrativeLayout = () => {
                     : "border-transparent hover:text-[rgb(0,153,168)] hover:bg-gray-50"
                 )}
               >
-                <MessageSquare className="h-5 w-5" />
-                <span>Topicanalyse</span>
+                <Newspaper className="h-5 w-5" />
+                <span>Bronanalyse</span>
               </button>
             </nav>
           </div>
@@ -335,12 +337,13 @@ export const NarrativeLayout = () => {
           {activeTab === 'tijkdreeks' && (
             <div className="bg-gray-50">
               {/* <TijkdreeksAnalyse /> */}
+              <TimeSeriesAnalysis />
             </div>
           )}
           
           {activeTab === 'topic' && (
             <div className="bg-gray-50">
-              {/* <TopicAnalyse /> */}
+              <SourceAnalysis />
             </div>
           )}
         </div>
