@@ -30,29 +30,31 @@ const initialSettings: ModelSettings = {
 const brandColor = "rgb(0,153,168)";
 
 interface TypewriterTextProps {
-  text: string;
+  preText: string;
+  typewriterText: string;
   speed?: number;
   onComplete?: () => void;
 }
 
-const TypewriterText = ({ text, speed = 40, onComplete }: TypewriterTextProps) => {
+const TypewriterText = ({ preText, typewriterText, speed = 40, onComplete }: TypewriterTextProps) => {
   const [displayText, setDisplayText] = useState('');
   const [isComplete, setIsComplete] = useState(false);
   
   useEffect(() => {
-    if (displayText.length < text.length) {
+    if (displayText.length < typewriterText.length) {
       const timer = setTimeout(() => {
-        setDisplayText(text.slice(0, displayText.length + 1));
+        setDisplayText(typewriterText.slice(0, displayText.length + 1));
       }, speed);
       return () => clearTimeout(timer);
     } else {
       setIsComplete(true);
       onComplete && onComplete();
     }
-  }, [displayText, text, speed, onComplete]);
+  }, [displayText, typewriterText, speed, onComplete]);
   
   return (
     <p className="text-3xl text-gray-600 max-w-3xl mx-auto">
+      {preText}<br />
       {displayText}
       <span
         className={`ml-1 ${isComplete ? 'hidden' : 'inline-block'}`}
@@ -90,7 +92,8 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
       <div className="max-w-6xl mx-auto bg-white/25 backdrop-blur-sm rounded-xl p-8">
         <div className="text-center mb-16">
           <TypewriterText 
-            text="Een analyse van duizend rapporten door middel van taalmodellen."
+            preText="Een analyse van duizenden rapporten door middel van "
+            typewriterText="taalmodellen."
             onComplete={handleTypewriterComplete}
           />
         </div>

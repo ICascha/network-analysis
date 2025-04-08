@@ -6,6 +6,7 @@ import type { ModelSettings } from '@/types/settings';
 import GraphChart, { GraphChartRef } from './GraphChart';
 import NodeSelector from './NodeSelector';
 import CameraControls from './CameraControls';
+import ColorLegend from './ColorLegend'; // Import the new ColorLegend component
 import { getNetworkWithAllCentralityMetrics, Node, Edge, Citation } from './networkDataService';
 import GraphSettings from './GraphSettings';
 import {
@@ -63,7 +64,7 @@ export const MainContent = ({ }: MainContentProps) => {
   const [maxNodeSize, setMaxNodeSize] = useState<number>(15);
   
   // New: State for edge weight cutoff and weight-based sizing
-  const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(2);
+  const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(1.5);
   const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(true);
   
   // Computed value for the selected node object
@@ -176,6 +177,11 @@ export const MainContent = ({ }: MainContentProps) => {
       {/* Camera controls only - fixed position */}
       <div className="absolute top-4 left-4 z-10 bg-background/70 backdrop-blur-md p-2 rounded-lg shadow-lg">
         <CameraControls graphRef={graphRef} />
+      </div>
+      
+      {/* Color Legend - positioned below camera controls */}
+      <div className="absolute top-28 left-4 z-10">
+        <ColorLegend />
       </div>
       
       {/* Settings Button only */}

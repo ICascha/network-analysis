@@ -263,9 +263,9 @@ const GraphSettings = ({
                     id="edge-weight-cutoff"
                     value={[edgeWeightCutoff]}
                     onValueChange={(value) => setEdgeWeightCutoff(value[0])}
-                    max={10}
-                    min={1}
-                    step={1}
+                    max={5}
+                    min={0.5}
+                    step={0.01}
                     className="w-full"
                   />
                 </div>

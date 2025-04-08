@@ -2,30 +2,41 @@ import { GraphCanvas, GraphCanvasRef, useSelection, lightTheme } from 'reagraph'
 import { useRef, useImperativeHandle, forwardRef, useEffect, useMemo } from 'react';  
 import { Node as CustomNode, Edge } from './networkDataService';  
 
+// Define a sophisticated color palette for categories
+const categoryColors: Record<string, string> = {
+  'Gezondheid': 'rgb(72, 143, 177)', // Original teal blue
+  'Geopolitiek & militair': 'rgb(72, 92, 114)', // Slate blue
+  'Economisch': 'rgb(165, 137, 67)', // Muted gold
+  'Sociaal & Maatschappelijk': 'rgb(158, 109, 135)', // Muted mauve
+  'Ecologisch': 'rgb(105, 145, 94)', // Sage green
+  'Technologisch & digitaal': 'rgb(99, 113, 163)', // Dusty blue
+  'unknown': 'rgb(133, 133, 133)' // Sophisticated grey for unknown categories
+};
+
+// Base theme modification
 const denkWerkTheme = {
   ...lightTheme,
   node: {
     ...lightTheme.node,
-    color: 'rgb(0,153,168)',
-    fill: 'rgb(0,153,168)',
-    activeFill: 'rgb(0,168,120)', // Changed to teal green
+    activeFill: 'rgb(0,168,120)', // Changed to teal green for active nodes
     label: {
       ...lightTheme.node.label,
-      activeColor: 'rgb(0,168,120)', // Changed to teal green
+      activeColor: 'rgb(0,168,120)', // Changed to teal green for active labels
     },
   },
   edge: {
     ...lightTheme.edge,
-    activeStroke: 'rgb(0,168,120)', // Changed to teal green
-    activeFill: 'rgb(0,168,120)', // Changed to teal green
+    activeStroke: 'rgb(0,168,120)', // Changed to teal green for active edges
+    activeFill: 'rgb(0,168,120)', // Changed to teal green for active edges
+    opacity: 0.5,
   },
   arrow: {
     ...lightTheme.arrow,
-    activeFill: 'rgb(0,168,120)', // Changed to teal green
+    activeFill: 'rgb(0,168,120)', // Changed to teal green for active arrows
   },
   ring: {
     ...lightTheme.ring,
-    activeFill: 'rgb(0,168,120)', // Changed to teal green
+    activeFill: 'rgb(0,168,120)', // Changed to teal green for active rings
   }
 };
 
@@ -38,12 +49,11 @@ interface GraphChartProps {
   selectedNodeId: string | null;    
   onNodeSelect: (nodeId: string | null) => void;
   showRelationships?: boolean;
-  sizingAttribute?: 'hub' | 'auth' | 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out'; // Added sizing attribute prop
-  minNodeSize?: number; // Added min node size prop
-  maxNodeSize?: number; // Added max node size prop
-  // New props for edge filtering and sizing
-  edgeWeightCutoff?: number; // Minimum weight threshold for edges
-  useWeightBasedEdgeSize?: boolean; // Whether to use weight for edge size
+  sizingAttribute?: 'hub' | 'auth' | 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out'; 
+  minNodeSize?: number;
+  maxNodeSize?: number;
+  edgeWeightCutoff?: number;
+  useWeightBasedEdgeSize?: boolean;
 }  
 
 // Interface for the ref we expose  
@@ -64,23 +74,57 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
     selectedNodeId, 
     onNodeSelect, 
     showRelationships = false,
-    sizingAttribute = 'hub', // Default to hub scoring
-    minNodeSize = 5, // Default min node size
-    maxNodeSize = 15, // Default max node size
-    edgeWeightCutoff = 2, // Default edge weight cutoff
-    useWeightBasedEdgeSize = false, // Default to not using weight for edge size
+    sizingAttribute = 'hub',
+    minNodeSize = 5,
+    maxNodeSize = 15,
+    edgeWeightCutoff = 1.5,
+    useWeightBasedEdgeSize = false,
   }, ref) => {      
     // Internal ref to the actual GraphCanvas      
-    const graphRef = useRef<GraphCanvasRef>(null);        
+    const graphRef = useRef<GraphCanvasRef>(null);
+
+    // Process nodes to add category-based colors
+    const processedNodes = useMemo(() => {
+      return nodes.map(node => {
+        const category = node.category || 'unknown';
+        const color = categoryColors[category] || categoryColors.unknown;
+        
+        return {
+          ...node,
+          fill: color,
+          color: color
+        };
+      });
+    }, [nodes]);
 
     // Filter edges based on weight cutoff and add size attribute if needed
     const processedEdges = useMemo(() => {
+      // First find the min and max weights
+      const weights = edges.map(edge => edge.weight);
+      const minWeight = Math.min(...weights);
+      const maxWeight = Math.max(...weights);
+      
+      // Scale factor for normalization between 1 and 5
+      const scaleFactor = maxWeight === minWeight 
+        ? 1 
+        : 4 / (maxWeight - minWeight);
+      
       return edges
         .filter(edge => edge.weight >= edgeWeightCutoff)
-        .map(edge => ({
-          ...edge,
-          size: useWeightBasedEdgeSize ? edge.weight : 1, // Set size based on weight if enabled
-        }));
+        .map(edge => {
+          // Normalize weight to range 1-5 using min-max normalization and convert to integer
+          const normalizedWeight = Math.round(
+            1 + (edge.weight - minWeight) * scaleFactor
+          );
+          
+          return {
+            ...edge,
+            // Use normalized weight if useWeightBasedEdgeSize is true, otherwise use 1
+            size: useWeightBasedEdgeSize ? normalizedWeight : 1,
+            // Store the normalized weight for reference
+            normalizedWeight
+          };
+        });
     }, [edges, edgeWeightCutoff, useWeightBasedEdgeSize]);
 
     // Use the selection hook
@@ -91,8 +135,8 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
       setSelections 
     } = useSelection({
       ref: graphRef,
-      nodes,
-      edges: processedEdges, // Use processed edges
+      nodes: processedNodes, // Use processed nodes with colors
+      edges: processedEdges,
       pathSelectionType: showRelationships ? 'all' : 'direct',
       selections: [],
     });
@@ -173,14 +217,14 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
       <GraphCanvas
         edgeInterpolation="curved"
         ref={graphRef}
-        nodes={nodes}
-        edges={processedEdges} // Use processed edges
+        nodes={processedNodes} // Use processed nodes with category colors
+        edges={processedEdges}
         selections={selections}
         actives={actives}
         onNodeClick={handleNodeClick}
         onCanvasClick={handleCanvasClick}
         sizingType="attribute"
-        sizingAttribute={sizingAttribute} // Use the dynamic sizing attribute
+        sizingAttribute={sizingAttribute}
         theme={denkWerkTheme}
         minNodeSize={minNodeSize}
         maxNodeSize={maxNodeSize}
