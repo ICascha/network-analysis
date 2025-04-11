@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { MainContent } from '../visualization/MainContent';
 import TimeSeriesAnalysis from "../visualization/TimeSeriesAnalysis";
-import { Info, Home, Network, Clock, Newspaper } from 'lucide-react';
+import { Info, Home, Network, Clock, Newspaper, Calendar } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -15,6 +15,8 @@ import { cn } from "@/lib/utils";
 import type { ModelSettings } from '@/types/settings';
 import ModelExplanation from './ModelExplanation';
 import SourceAnalysis from '../visualization/SourceAnalysis';
+import ChronologicalAnalysis from '../visualization/ChronologicalAnalysis';
+
 // Create a temporary placeholder until the real component is available
 const CitationsBackground = () => <div className="absolute inset-0 z-0"></div>;
 
@@ -99,7 +101,7 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
         </div>
         
         {isTypewriterComplete && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-in">
             <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
               <CardHeader className="border-b border-gray-100">
                 <CardTitle className="flex items-center gap-2 text-gray-800">
@@ -110,7 +112,7 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
-              <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus, at mollis lorem turpis vel lorem. Curabitur finibus, nibh fermentum malesuada lacinia, orci massa rutrum sapien, non gravida diam diam eget nulla.</p>
+              <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus.</p>
                 <Button 
                   className="w-full text-white"
                   style={{ backgroundColor: brandColor, borderColor: brandColor }}
@@ -132,11 +134,33 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
-              <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus, at mollis lorem turpis vel lorem. Curabitur finibus, nibh fermentum malesuada lacinia, orci massa rutrum sapien, non gravida diam diam eget nulla.</p>
+              <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus.</p>
                 <Button 
                   className="w-full text-white"
                   style={{ backgroundColor: brandColor, borderColor: brandColor }}
                   onClick={() => onNavigate('tijkdreeks')}
+                >
+                  Bekijken
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
+              <CardHeader className="border-b border-gray-100">
+                <CardTitle className="flex items-center gap-2 text-gray-800">
+                  <Calendar className="h-5 w-5" style={{ color: brandColor }} />
+                  Chronologische analyse
+                </CardTitle>
+                <CardDescription className="text-gray-600">
+                  Volg de ontwikkeling van gebeurtenissen
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus.</p>
+                <Button 
+                  className="w-full text-white"
+                  style={{ backgroundColor: brandColor, borderColor: brandColor }}
+                  onClick={() => onNavigate('chronologisch')}
                 >
                   Bekijken
                 </Button>
@@ -154,7 +178,7 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-6">
-                <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus, at mollis lorem turpis vel lorem. Curabitur finibus, nibh fermentum malesuada lacinia, orci massa rutrum sapien, non gravida diam diam eget nulla.</p>
+                <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus.</p>
                 <Button 
                   className="w-full text-white"
                   style={{ backgroundColor: brandColor, borderColor: brandColor }}
@@ -307,6 +331,19 @@ export const NarrativeLayout = () => {
               </button>
               
               <button 
+                onClick={() => handleNavigate('chronologisch')}
+                className={cn(
+                  "flex items-center gap-2 px-6 py-4 text-gray-700 font-medium border-b-2 transition-colors",
+                  activeTab === 'chronologisch' 
+                    ? "border-[rgb(0,153,168)] text-[rgb(0,153,168)]" 
+                    : "border-transparent hover:text-[rgb(0,153,168)] hover:bg-gray-50"
+                )}
+              >
+                <Calendar className="h-5 w-5" />
+                <span>Chronologische analyse</span>
+              </button>
+              
+              <button 
                 onClick={() => handleNavigate('topic')}
                 className={cn(
                   "flex items-center gap-2 px-6 py-4 text-gray-700 font-medium border-b-2 transition-colors",
@@ -341,6 +378,12 @@ export const NarrativeLayout = () => {
             <div className="bg-gray-50">
               {/* <TijkdreeksAnalyse /> */}
               <TimeSeriesAnalysis />
+            </div>
+          )}
+          
+          {activeTab === 'chronologisch' && (
+            <div className="bg-gray-50">
+              <ChronologicalAnalysis />
             </div>
           )}
           

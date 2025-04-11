@@ -150,7 +150,7 @@ export const MainContent = ({ }: MainContentProps) => {
 
   // Calculate total citations count
   const getTotalCitationsCount = (node: Node): number => {
-    return node.citaten?.length || 0;
+    return node.nr_citations;
   };
 
   return (
@@ -338,7 +338,7 @@ export const MainContent = ({ }: MainContentProps) => {
                   
                   {/* Citations section */}
                   <div className="mt-4 flex-1 flex flex-col overflow-hidden">
-                    <h5 className="text-sm font-medium mb-2 flex-shrink-0">Documents</h5>
+                    <h5 className="text-sm font-medium mb-2 flex-shrink-0">Representatieve documenten</h5>
                     
                     <div className="space-y-3 overflow-y-auto pr-2 flex-1">
                       {selectedNode.citaten && groupCitationsByDocument(selectedNode.citaten).map((document, index) => (
@@ -352,15 +352,14 @@ export const MainContent = ({ }: MainContentProps) => {
                             >
                               {document.title}
                             </a>
-                            <div className="text-xs text-muted-foreground">{document.publication_date}</div>
                           </div>
                           
                           <div className="flex text-xs text-muted-foreground mb-2 space-x-2">
-                            <div>{document.document_type}</div>
+                          <div>{document.publication_date.slice(0, 7)}</div>
+                          <div>•</div>
+                            <div>{document.document_type || 'Onbekend'}</div>
                             <div>•</div>
                             <div>{document.source}</div>
-                            <div>•</div>
-                            <div>{document.citaten.length} citation{document.citaten.length !== 1 ? 's' : ''}</div>
                           </div>
                           
                           {document.citaten.map((citaat, citaatIndex) => (

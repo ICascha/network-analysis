@@ -27,6 +27,7 @@ export interface Node {
   summary: string; // Added summary field
   citaten: Citation[];
   nr_docs: number;
+  nr_citations: number;
   data?: {
     hub?: number;    // Added for HITS algorithm
     auth?: number;   // Added for HITS algorithm

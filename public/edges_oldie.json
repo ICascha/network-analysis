@@ -1,0 +1,5258 @@
+[
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Energieprijzen",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Energieprijzen",
+    "label": "4 (Lift: 2.79)",
+    "weight": 2.7941176470588234,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Nucleaire escalatie",
+    "id": "Russische agressie|||Nucleaire escalatie",
+    "label": "5 (Lift: 7.08)",
+    "weight": 7.083678541839271,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Broeikasgasemissies",
+    "id": "Klimaatverandering|||Broeikasgasemissies",
+    "label": "14 (Lift: 2.46)",
+    "weight": 2.4637233714109295,
+    "raw_count": 14,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Energievoorziening",
+    "id": "Online radicalisering|||Energievoorziening",
+    "label": "1 (Lift: 2.97)",
+    "weight": 2.96875,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energievoorziening",
+    "target": "Gevaarlijke stoffen",
+    "id": "Energievoorziening|||Gevaarlijke stoffen",
+    "label": "1 (Lift: 4.79)",
+    "weight": 4.7899159663865545,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Gebrek aan financiering",
+    "id": "Energieprijzen|||Gebrek aan financiering",
+    "label": "2 (Lift: 3.03)",
+    "weight": 3.0319148936170213,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Onzekerheid",
+    "id": "Waterstofbeschikbaarheid|||Onzekerheid",
+    "label": "3 (Lift: 6.63)",
+    "weight": 6.627906976744186,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Migratiedruk",
+    "id": "Georganiseerde criminaliteit|||Migratiedruk",
+    "label": "1 (Lift: 0.97)",
+    "weight": 0.9715909090909091,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Klimaatverandering",
+    "id": "Broeikasgasemissies|||Klimaatverandering",
+    "label": "16 (Lift: 4.46)",
+    "weight": 4.458930899608866,
+    "raw_count": 16,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Witwassen",
+    "id": "Georganiseerde criminaliteit|||Witwassen",
+    "label": "13 (Lift: 11.58)",
+    "weight": 11.578125,
+    "raw_count": 13,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Radioactief afval",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Radioactief afval",
+    "label": "3 (Lift: 15.27)",
+    "weight": 15.267857142857142,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Gegevensdeling",
+    "id": "Klimaatverandering|||Gegevensdeling",
+    "label": "1 (Lift: 0.36)",
+    "weight": 0.36075949367088606,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Stikstofdepositie",
+    "target": "Biodiversiteitsverlies",
+    "id": "Stikstofdepositie|||Biodiversiteitsverlies",
+    "label": "21 (Lift: 7.08)",
+    "weight": 7.0828402366863905,
+    "raw_count": 21,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Energievoorziening",
+    "id": "Klimaatverandering|||Energievoorziening",
+    "label": "8 (Lift: 2.41)",
+    "weight": 2.4050632911392404,
+    "raw_count": 8,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Luchtverontreiniging",
+    "id": "Onzekerheid emissies|||Luchtverontreiniging",
+    "label": "1 (Lift: 2.85)",
+    "weight": 2.85,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Luchtverontreiniging",
+    "id": "Klimaatverandering|||Luchtverontreiniging",
+    "label": "15 (Lift: 3.61)",
+    "weight": 3.607594936708861,
+    "raw_count": 15,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Zorgcapaciteit",
+    "id": "Vergrijzing|||Zorgcapaciteit",
+    "label": "36 (Lift: 11.61)",
+    "weight": 11.606334841628959,
+    "raw_count": 36,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Grondstoffenschaarste",
+    "id": "Biodiversiteitsverlies|||Grondstoffenschaarste",
+    "label": "3 (Lift: 2.98)",
+    "weight": 2.9790940766550524,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Biodiversiteitsverlies",
+    "id": "Broeikasgasemissies|||Biodiversiteitsverlies",
+    "label": "7 (Lift: 1.56)",
+    "weight": 1.560625814863103,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Circulaire economie",
+    "id": "Broeikasgasemissies|||Circulaire economie",
+    "label": "1 (Lift: 2.42)",
+    "weight": 2.4152542372881354,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Grondstoffenschaarste",
+    "id": "Broeikasgasemissies|||Grondstoffenschaarste",
+    "label": "1 (Lift: 0.71)",
+    "weight": 0.7069036792062836,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Stikstofdepositie",
+    "id": "Broeikasgasemissies|||Stikstofdepositie",
+    "label": "12 (Lift: 20.46)",
+    "weight": 20.45862412761715,
+    "raw_count": 12,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Vergrijzing",
+    "id": "Energieprijzen|||Vergrijzing",
+    "label": "2 (Lift: 2.02)",
+    "weight": 2.021276595744681,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale weerbaarheid",
+    "target": "Gegevensbescherming",
+    "id": "Digitale weerbaarheid|||Gegevensbescherming",
+    "label": "13 (Lift: 17.81)",
+    "weight": 17.8125,
+    "raw_count": 13,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Netcongestie",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Netcongestie",
+    "label": "14 (Lift: 8.91)",
+    "weight": 8.90625,
+    "raw_count": 14,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "AI-dreigingen",
+    "id": "Online radicalisering|||AI-dreigingen",
+    "label": "1 (Lift: 10.18)",
+    "weight": 10.178571428571429,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "AI-dreigingen",
+    "target": "Online radicalisering",
+    "id": "AI-dreigingen|||Online radicalisering",
+    "label": "4 (Lift: 11.96)",
+    "weight": 11.958041958041958,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "Digitale weerbaarheid",
+    "id": "Onzekerheid|||Digitale weerbaarheid",
+    "label": "1 (Lift: 4.38)",
+    "weight": 4.384615384615385,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale weerbaarheid",
+    "target": "Digitale dreigingen",
+    "id": "Digitale weerbaarheid|||Digitale dreigingen",
+    "label": "15 (Lift: 9.66)",
+    "weight": 9.65737951807229,
+    "raw_count": 15,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mensenhandel",
+    "target": "Mentale gezondheid",
+    "id": "Mensenhandel|||Mentale gezondheid",
+    "label": "5 (Lift: 13.19)",
+    "weight": 13.194444444444445,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Mensenhandel",
+    "id": "Georganiseerde criminaliteit|||Mensenhandel",
+    "label": "4 (Lift: 5.70)",
+    "weight": 5.7,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Defensiecapaciteiten",
+    "target": "Nucleaire escalatie",
+    "id": "Defensiecapaciteiten|||Nucleaire escalatie",
+    "label": "1 (Lift: 5.92)",
+    "weight": 5.916955017301038,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Grondstoffenschaarste",
+    "id": "Russische agressie|||Grondstoffenschaarste",
+    "label": "1 (Lift: 0.59)",
+    "weight": 0.5874270010305737,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Sancties Rusland",
+    "id": "Russische agressie|||Sancties Rusland",
+    "label": "13 (Lift: 18.42)",
+    "weight": 18.417564208782103,
+    "raw_count": 13,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Russische agressie",
+    "id": "Digitale dreigingen|||Russische agressie",
+    "label": "6 (Lift: 4.81)",
+    "weight": 4.810126582278481,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Sancties Rusland",
+    "target": "Russische agressie",
+    "id": "Sancties Rusland|||Russische agressie",
+    "label": "2 (Lift: 21.11)",
+    "weight": 21.11111111111111,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Jeugdgeweld",
+    "id": "Georganiseerde criminaliteit|||Jeugdgeweld",
+    "label": "3 (Lift: 6.75)",
+    "weight": 6.75,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Online radicalisering",
+    "id": "Digitale dreigingen|||Online radicalisering",
+    "label": "1 (Lift: 0.49)",
+    "weight": 0.4919447640966628,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Vertrouwenscrisis",
+    "id": "Jeugdgeweld|||Vertrouwenscrisis",
+    "label": "2 (Lift: 4.86)",
+    "weight": 4.864864864864865,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Gegevensdeling",
+    "id": "Vogelgriep|||Gegevensdeling",
+    "label": "3 (Lift: 3.02)",
+    "weight": 3.0176470588235293,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Mentale gezondheid",
+    "id": "Armoede|||Mentale gezondheid",
+    "label": "2 (Lift: 5.51)",
+    "weight": 5.507246376811594,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Jeugdgeweld",
+    "id": "Online radicalisering|||Jeugdgeweld",
+    "label": "2 (Lift: 7.50)",
+    "weight": 7.5,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Complexiteitssystemen",
+    "target": "Digitale dreigingen",
+    "id": "Complexiteitssystemen|||Digitale dreigingen",
+    "label": "1 (Lift: 1.72)",
+    "weight": 1.716867469879518,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Gegevensbescherming",
+    "id": "Digitale dreigingen|||Gegevensbescherming",
+    "label": "13 (Lift: 7.22)",
+    "weight": 7.215189873417722,
+    "raw_count": 13,
+    "citaat_relaties": []
+  },
+  {
+    "source": "China-dreiging",
+    "target": "Onzekerheid",
+    "id": "China-dreiging|||Onzekerheid",
+    "label": "1 (Lift: 4.32)",
+    "weight": 4.318181818181818,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "China-dreiging",
+    "target": "Digitale dreigingen",
+    "id": "China-dreiging|||Digitale dreigingen",
+    "label": "8 (Lift: 7.49)",
+    "weight": 7.491785323110625,
+    "raw_count": 8,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan financiering",
+    "target": "Vertraging",
+    "id": "Gebrek aan financiering|||Vertraging",
+    "label": "1 (Lift: 12.57)",
+    "weight": 12.573529411764707,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Stikstofdepositie",
+    "id": "Klimaatverandering|||Stikstofdepositie",
+    "label": "1 (Lift: 0.42)",
+    "weight": 0.4244229337304542,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Digitale dreigingen",
+    "id": "Geopolitieke spanningen|||Digitale dreigingen",
+    "label": "6 (Lift: 5.15)",
+    "weight": 5.150602409638554,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Klimaatverandering",
+    "id": "Migratiedruk|||Klimaatverandering",
+    "label": "1 (Lift: 0.41)",
+    "weight": 0.4110576923076923,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Migratiedruk",
+    "id": "Klimaatverandering|||Migratiedruk",
+    "label": "12 (Lift: 1.97)",
+    "weight": 1.9677790563866513,
+    "raw_count": 12,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Online radicalisering",
+    "id": "Jeugdgeweld|||Online radicalisering",
+    "label": "2 (Lift: 4.09)",
+    "weight": 4.090909090909091,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Biodiversiteitsverlies",
+    "id": "Klimaatverandering|||Biodiversiteitsverlies",
+    "label": "83 (Lift: 4.61)",
+    "weight": 4.606621226874392,
+    "raw_count": 83,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterverontreiniging",
+    "target": "Klimaatverandering",
+    "id": "Waterverontreiniging|||Klimaatverandering",
+    "label": "15 (Lift: 13.70)",
+    "weight": 13.701923076923077,
+    "raw_count": 15,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Gevaarlijke stoffen",
+    "id": "Digitale dreigingen|||Gevaarlijke stoffen",
+    "label": "3 (Lift: 3.09)",
+    "weight": 3.092224231464738,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Synthetische drugs",
+    "id": "Mentale gezondheid|||Synthetische drugs",
+    "label": "1 (Lift: 7.31)",
+    "weight": 7.3076923076923075,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Zorgcapaciteit|||Georganiseerde criminaliteit",
+    "label": "1 (Lift: 1.27)",
+    "weight": 1.2723214285714286,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Mentale gezondheid",
+    "id": "Jeugdgeweld|||Mentale gezondheid",
+    "label": "3 (Lift: 10.00)",
+    "weight": 10.0,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Emissiereductie",
+    "id": "Broeikasgasemissies|||Emissiereductie",
+    "label": "5 (Lift: 4.03)",
+    "weight": 4.02542372881356,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "China-dreiging",
+    "target": "Nucleaire escalatie",
+    "id": "China-dreiging|||Nucleaire escalatie",
+    "label": "3 (Lift: 13.72)",
+    "weight": 13.716577540106952,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Gebrek aan transparantie",
+    "id": "Netcongestie|||Gebrek aan transparantie",
+    "label": "2 (Lift: 5.94)",
+    "weight": 5.9375,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Luchtverontreiniging",
+    "target": "Klimaatverandering",
+    "id": "Luchtverontreiniging|||Klimaatverandering",
+    "label": "9 (Lift: 6.73)",
+    "weight": 6.726398601398602,
+    "raw_count": 9,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Klimaatverandering",
+    "id": "Biodiversiteitsverlies|||Klimaatverandering",
+    "label": "18 (Lift: 7.05)",
+    "weight": 7.0467032967032965,
+    "raw_count": 18,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Vertraging",
+    "id": "Aardbevingen|||Vertraging",
+    "label": "2 (Lift: 7.74)",
+    "weight": 7.737556561085973,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Zorgcapaciteit",
+    "id": "Synthetische drugs|||Zorgcapaciteit",
+    "label": "2 (Lift: 0.80)",
+    "weight": 0.8020637898686679,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Waterverontreiniging",
+    "id": "Synthetische drugs|||Waterverontreiniging",
+    "label": "1 (Lift: 2.32)",
+    "weight": 2.317073170731707,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Gevaarlijke stoffen",
+    "id": "Synthetische drugs|||Gevaarlijke stoffen",
+    "label": "1 (Lift: 1.99)",
+    "weight": 1.9860627177700347,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Digitale dreigingen",
+    "id": "Russische agressie|||Digitale dreigingen",
+    "label": "9 (Lift: 2.61)",
+    "weight": 2.611573052774478,
+    "raw_count": 9,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Desinformatie",
+    "target": "Russische agressie",
+    "id": "Desinformatie|||Russische agressie",
+    "label": "1 (Lift: 6.33)",
+    "weight": 6.333333333333333,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Witwassen",
+    "id": "Jeugdgeweld|||Witwassen",
+    "label": "2 (Lift: 3.75)",
+    "weight": 3.75,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Energievoorziening",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Energievoorziening",
+    "label": "4 (Lift: 5.94)",
+    "weight": 5.9375,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensbescherming",
+    "target": "Geopolitieke spanningen",
+    "id": "Gegevensbescherming|||Geopolitieke spanningen",
+    "label": "1 (Lift: 4.75)",
+    "weight": 4.75,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Migratiedruk",
+    "id": "Zorgcapaciteit|||Migratiedruk",
+    "label": "3 (Lift: 2.78)",
+    "weight": 2.7759740259740258,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Iraanse dreiging",
+    "target": "Online radicalisering",
+    "id": "Iraanse dreiging|||Online radicalisering",
+    "label": "3 (Lift: 14.57)",
+    "weight": 14.573863636363637,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Vaccinatietwijfel",
+    "id": "Mentale gezondheid|||Vaccinatietwijfel",
+    "label": "1 (Lift: 2.53)",
+    "weight": 2.529585798816568,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Zorgcapaciteit",
+    "id": "Mentale gezondheid|||Zorgcapaciteit",
+    "label": "4 (Lift: 2.53)",
+    "weight": 2.529585798816568,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Waterverontreiniging",
+    "id": "Klimaatverandering|||Waterverontreiniging",
+    "label": "14 (Lift: 5.61)",
+    "weight": 5.6118143459915615,
+    "raw_count": 14,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterverontreiniging",
+    "target": "Luchtverontreiniging",
+    "id": "Waterverontreiniging|||Luchtverontreiniging",
+    "label": "3 (Lift: 9.50)",
+    "weight": 9.5,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Vaccinatietwijfel",
+    "id": "Vogelgriep|||Vaccinatietwijfel",
+    "label": "21 (Lift: 16.25)",
+    "weight": 16.248868778280542,
+    "raw_count": 21,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Sociale ongelijkheid",
+    "target": "Mentale gezondheid",
+    "id": "Sociale ongelijkheid|||Mentale gezondheid",
+    "label": "2 (Lift: 18.10)",
+    "weight": 18.095238095238095,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Jeugdgeweld",
+    "id": "Synthetische drugs|||Jeugdgeweld",
+    "label": "3 (Lift: 6.59)",
+    "weight": 6.585365853658536,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Jeugdgeweld",
+    "id": "Mentale gezondheid|||Jeugdgeweld",
+    "label": "5 (Lift: 17.31)",
+    "weight": 17.307692307692307,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Online radicalisering",
+    "id": "Geopolitieke spanningen|||Online radicalisering",
+    "label": "1 (Lift: 1.62)",
+    "weight": 1.6193181818181819,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Politieke instabiliteit",
+    "id": "Online radicalisering|||Politieke instabiliteit",
+    "label": "1 (Lift: 5.48)",
+    "weight": 5.480769230769231,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Krimp veestapel",
+    "id": "Energieprijzen|||Krimp veestapel",
+    "label": "3 (Lift: 4.20)",
+    "weight": 4.198036006546645,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Politieke instabiliteit",
+    "target": "Defensiecapaciteiten",
+    "id": "Politieke instabiliteit|||Defensiecapaciteiten",
+    "label": "1 (Lift: 7.37)",
+    "weight": 7.370689655172414,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Defensiecapaciteiten",
+    "id": "Russische agressie|||Defensiecapaciteiten",
+    "label": "10 (Lift: 8.31)",
+    "weight": 8.305002428363283,
+    "raw_count": 10,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Iraanse dreiging",
+    "id": "Geopolitieke spanningen|||Iraanse dreiging",
+    "label": "1 (Lift: 71.25)",
+    "weight": 71.25,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "China-dreiging",
+    "id": "Vogelgriep|||China-dreiging",
+    "label": "2 (Lift: 2.37)",
+    "weight": 2.366782006920415,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Mensenhandel",
+    "id": "Jeugdgeweld|||Mensenhandel",
+    "label": "1 (Lift: 3.00)",
+    "weight": 3.0,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Vergrijzing",
+    "id": "Migratiedruk|||Vergrijzing",
+    "label": "1 (Lift: 2.38)",
+    "weight": 2.375,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Klimaatverandering",
+    "id": "Grondstoffenschaarste|||Klimaatverandering",
+    "label": "3 (Lift: 1.54)",
+    "weight": 1.5414663461538463,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Krimp veestapel",
+    "id": "Klimaatverandering|||Krimp veestapel",
+    "label": "6 (Lift: 3.33)",
+    "weight": 3.3300876338851024,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertraging",
+    "target": "Bezuinigingen",
+    "id": "Vertraging|||Bezuinigingen",
+    "label": "1 (Lift: 15.55)",
+    "weight": 15.545454545454545,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Vergrijzing",
+    "id": "Armoede|||Vergrijzing",
+    "label": "1 (Lift: 4.13)",
+    "weight": 4.130434782608695,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Vergrijzing",
+    "id": "Grondstoffenschaarste|||Vergrijzing",
+    "label": "1 (Lift: 2.97)",
+    "weight": 2.96875,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Energieprijzen",
+    "id": "Armoede|||Energieprijzen",
+    "label": "7 (Lift: 10.20)",
+    "weight": 10.20460358056266,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Migratiedruk",
+    "id": "Vergrijzing|||Migratiedruk",
+    "label": "1 (Lift: 0.76)",
+    "weight": 0.7620320855614974,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Vertrouwenscrisis",
+    "id": "Armoede|||Vertrouwenscrisis",
+    "label": "1 (Lift: 2.01)",
+    "weight": 2.009400705052879,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertrouwenscrisis",
+    "target": "Armoede",
+    "id": "Vertrouwenscrisis|||Armoede",
+    "label": "2 (Lift: 8.34)",
+    "weight": 8.341463414634147,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Armoede",
+    "id": "Vergrijzing|||Armoede",
+    "label": "6 (Lift: 4.91)",
+    "weight": 4.90674318507891,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Vertraging",
+    "id": "Zorgcapaciteit|||Vertraging",
+    "label": "3 (Lift: 3.59)",
+    "weight": 3.592436974789916,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Vertrouwenscrisis",
+    "id": "Digitale dreigingen|||Vertrouwenscrisis",
+    "label": "4 (Lift: 2.34)",
+    "weight": 2.3400615805679097,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Defensiecapaciteiten",
+    "target": "Digitale dreigingen",
+    "id": "Defensiecapaciteiten|||Digitale dreigingen",
+    "label": "2 (Lift: 2.42)",
+    "weight": 2.4238128986534373,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Grondstoffenschaarste",
+    "id": "Migratiedruk|||Grondstoffenschaarste",
+    "label": "1 (Lift: 1.04)",
+    "weight": 1.0426829268292683,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Desinformatie",
+    "target": "Online radicalisering",
+    "id": "Desinformatie|||Online radicalisering",
+    "label": "7 (Lift: 27.20)",
+    "weight": 27.204545454545453,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Mensenhandel",
+    "id": "Migratiedruk|||Mensenhandel",
+    "label": "14 (Lift: 19.95)",
+    "weight": 19.95,
+    "raw_count": 14,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Vertrouwenscrisis",
+    "id": "Energieprijzen|||Vertrouwenscrisis",
+    "label": "4 (Lift: 1.97)",
+    "weight": 1.966647498562392,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Digitale dreigingen",
+    "id": "Jeugdgeweld|||Digitale dreigingen",
+    "label": "1 (Lift: 1.08)",
+    "weight": 1.0843373493975903,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Nucleaire escalatie",
+    "id": "Geopolitieke spanningen|||Nucleaire escalatie",
+    "label": "3 (Lift: 12.57)",
+    "weight": 12.573529411764707,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Geopolitieke spanningen",
+    "id": "Klimaatverandering|||Geopolitieke spanningen",
+    "label": "4 (Lift: 1.60)",
+    "weight": 1.6033755274261603,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Politieke instabiliteit",
+    "target": "Migratiedruk",
+    "id": "Politieke instabiliteit|||Migratiedruk",
+    "label": "4 (Lift: 19.43)",
+    "weight": 19.431818181818183,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Complexiteitssystemen",
+    "target": "Grondstoffenschaarste",
+    "id": "Complexiteitssystemen|||Grondstoffenschaarste",
+    "label": "2 (Lift: 6.95)",
+    "weight": 6.951219512195122,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Luchtverontreiniging",
+    "id": "Biodiversiteitsverlies|||Luchtverontreiniging",
+    "label": "6 (Lift: 8.14)",
+    "weight": 8.142857142857142,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Sancties Rusland",
+    "id": "Geopolitieke spanningen|||Sancties Rusland",
+    "label": "1 (Lift: 4.19)",
+    "weight": 4.1911764705882355,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Grondstoffenschaarste",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Grondstoffenschaarste",
+    "label": "2 (Lift: 1.74)",
+    "weight": 1.7378048780487805,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Onzekerheid",
+    "id": "Netcongestie|||Onzekerheid",
+    "label": "1 (Lift: 1.98)",
+    "weight": 1.9791666666666667,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Vogelgriep",
+    "id": "Klimaatverandering|||Vogelgriep",
+    "label": "13 (Lift: 1.91)",
+    "weight": 1.9142340480495996,
+    "raw_count": 13,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Grondstoffenschaarste|||Afhankelijkheid fossiele brandstoffen",
+    "label": "1 (Lift: 1.67)",
+    "weight": 1.669921875,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieonzekerheid",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Energieonzekerheid|||Afhankelijkheid fossiele brandstoffen",
+    "label": "2 (Lift: 10.69)",
+    "weight": 10.6875,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieonzekerheid",
+    "target": "Netcongestie",
+    "id": "Energieonzekerheid|||Netcongestie",
+    "label": "4 (Lift: 12.21)",
+    "weight": 12.214285714285714,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Onzekerheid emissies",
+    "id": "Broeikasgasemissies|||Onzekerheid emissies",
+    "label": "8 (Lift: 6.82)",
+    "weight": 6.819541375872383,
+    "raw_count": 8,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Broeikasgasemissies",
+    "id": "Energieprijzen|||Broeikasgasemissies",
+    "label": "3 (Lift: 1.33)",
+    "weight": 1.331084587441619,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieonzekerheid",
+    "target": "Onzekerheid emissies",
+    "id": "Energieonzekerheid|||Onzekerheid emissies",
+    "label": "2 (Lift: 10.06)",
+    "weight": 10.058823529411764,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Energieprijzen",
+    "id": "Klimaatverandering|||Energieprijzen",
+    "label": "4 (Lift: 0.57)",
+    "weight": 0.5658972449739389,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Energieonzekerheid",
+    "id": "Energieprijzen|||Energieonzekerheid",
+    "label": "3 (Lift: 3.41)",
+    "weight": 3.410904255319149,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Emissiereductie",
+    "id": "Onzekerheid emissies|||Emissiereductie",
+    "label": "3 (Lift: 7.12)",
+    "weight": 7.125,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Iraanse dreiging",
+    "target": "China-dreiging",
+    "id": "Iraanse dreiging|||China-dreiging",
+    "label": "1 (Lift: 12.57)",
+    "weight": 12.573529411764707,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Woningtekort",
+    "id": "Migratiedruk|||Woningtekort",
+    "label": "2 (Lift: 7.77)",
+    "weight": 7.7727272727272725,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Krimp veestapel",
+    "target": "Broeikasgasemissies",
+    "id": "Krimp veestapel|||Broeikasgasemissies",
+    "label": "2 (Lift: 6.95)",
+    "weight": 6.951219512195122,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Energieonzekerheid",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Energieonzekerheid",
+    "label": "1 (Lift: 2.23)",
+    "weight": 2.2265625,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Krimp veestapel",
+    "id": "Emissiereductie|||Krimp veestapel",
+    "label": "1 (Lift: 6.92)",
+    "weight": 6.923076923076923,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Broeikasgasemissies",
+    "id": "Russische agressie|||Broeikasgasemissies",
+    "label": "1 (Lift: 0.59)",
+    "weight": 0.5874270010305737,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Energieonzekerheid",
+    "id": "Onzekerheid emissies|||Energieonzekerheid",
+    "label": "1 (Lift: 5.34)",
+    "weight": 5.34375,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Energieprijzen",
+    "id": "Broeikasgasemissies|||Energieprijzen",
+    "label": "1 (Lift: 0.57)",
+    "weight": 0.5682951146560319,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Waterstofbeschikbaarheid|||Afhankelijkheid fossiele brandstoffen",
+    "label": "7 (Lift: 8.70)",
+    "weight": 8.699127906976743,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Broeikasgasemissies",
+    "id": "Waterstofbeschikbaarheid|||Broeikasgasemissies",
+    "label": "4 (Lift: 3.88)",
+    "weight": 3.8797504254112307,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gevaarlijke stoffen",
+    "target": "Waterstofbeschikbaarheid",
+    "id": "Gevaarlijke stoffen|||Waterstofbeschikbaarheid",
+    "label": "4 (Lift: 23.92)",
+    "weight": 23.916083916083917,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Onzekerheid emissies",
+    "id": "Emissiereductie|||Onzekerheid emissies",
+    "label": "2 (Lift: 5.29)",
+    "weight": 5.294117647058823,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mensenhandel",
+    "target": "Migratiedruk",
+    "id": "Mensenhandel|||Migratiedruk",
+    "label": "10 (Lift: 16.19)",
+    "weight": 16.193181818181817,
+    "raw_count": 10,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mensenhandel",
+    "target": "Witwassen",
+    "id": "Mensenhandel|||Witwassen",
+    "label": "1 (Lift: 1.48)",
+    "weight": 1.484375,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertraging",
+    "target": "Vergrijzing",
+    "id": "Vertraging|||Vergrijzing",
+    "label": "1 (Lift: 8.64)",
+    "weight": 8.636363636363637,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Vergrijzing",
+    "id": "Zorgcapaciteit|||Vergrijzing",
+    "label": "6 (Lift: 13.57)",
+    "weight": 13.571428571428571,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Witwassen",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Witwassen|||Georganiseerde criminaliteit",
+    "label": "11 (Lift: 34.58)",
+    "weight": 34.57720588235294,
+    "raw_count": 11,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Synthetische drugs|||Georganiseerde criminaliteit",
+    "label": "7 (Lift: 9.12)",
+    "weight": 9.123475609756097,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Zorgcapaciteit",
+    "id": "Russische agressie|||Zorgcapaciteit",
+    "label": "2 (Lift: 0.46)",
+    "weight": 0.46316359696641385,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Energieprijzen",
+    "id": "Migratiedruk|||Energieprijzen",
+    "label": "1 (Lift: 0.84)",
+    "weight": 0.8382352941176471,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Vertraging",
+    "id": "Grondstoffenschaarste|||Vertraging",
+    "label": "3 (Lift: 4.72)",
+    "weight": 4.7150735294117645,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Desinformatie",
+    "id": "Online radicalisering|||Desinformatie",
+    "label": "3 (Lift: 23.75)",
+    "weight": 23.75,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Stikstofdepositie",
+    "target": "Klimaatverandering",
+    "id": "Stikstofdepositie|||Klimaatverandering",
+    "label": "3 (Lift: 1.26)",
+    "weight": 1.264792899408284,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Stikstofdepositie",
+    "id": "Biodiversiteitsverlies|||Stikstofdepositie",
+    "label": "1 (Lift: 2.39)",
+    "weight": 2.3949579831932772,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Energievoorziening",
+    "id": "Digitale dreigingen|||Energievoorziening",
+    "label": "1 (Lift: 0.90)",
+    "weight": 0.9018987341772152,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Zorgcapaciteit",
+    "id": "Armoede|||Zorgcapaciteit",
+    "label": "2 (Lift: 1.43)",
+    "weight": 1.4297658862876255,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Armoede",
+    "id": "Zorgcapaciteit|||Armoede",
+    "label": "2 (Lift: 1.99)",
+    "weight": 1.9860627177700347,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Bezuinigingen",
+    "id": "Migratiedruk|||Bezuinigingen",
+    "label": "1 (Lift: 4.28)",
+    "weight": 4.275,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Gebrek aan transparantie",
+    "id": "Biodiversiteitsverlies|||Gebrek aan transparantie",
+    "label": "1 (Lift: 3.39)",
+    "weight": 3.392857142857143,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertraging",
+    "target": "Gebrek aan financiering",
+    "id": "Vertraging|||Gebrek aan financiering",
+    "label": "1 (Lift: 12.95)",
+    "weight": 12.954545454545455,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Circulaire economie",
+    "id": "Klimaatverandering|||Circulaire economie",
+    "label": "5 (Lift: 3.01)",
+    "weight": 3.0063291139240507,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Aardbevingen",
+    "id": "Klimaatverandering|||Aardbevingen",
+    "label": "5 (Lift: 4.01)",
+    "weight": 4.008438818565401,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Netcongestie",
+    "id": "Digitale dreigingen|||Netcongestie",
+    "label": "3 (Lift: 1.16)",
+    "weight": 1.1595840867992766,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Politieke instabiliteit",
+    "id": "Digitale dreigingen|||Politieke instabiliteit",
+    "label": "1 (Lift: 1.67)",
+    "weight": 1.6650438169425512,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Klimaatverandering|||Afhankelijkheid fossiele brandstoffen",
+    "label": "3 (Lift: 0.68)",
+    "weight": 0.6764240506329114,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Witwassen",
+    "target": "Online radicalisering",
+    "id": "Witwassen|||Online radicalisering",
+    "label": "4 (Lift: 9.14)",
+    "weight": 9.144385026737968,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Jeugdgeweld",
+    "id": "Digitale dreigingen|||Jeugdgeweld",
+    "label": "1 (Lift: 1.14)",
+    "weight": 1.139240506329114,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Vogelgriep",
+    "id": "Russische agressie|||Vogelgriep",
+    "label": "2 (Lift: 0.98)",
+    "weight": 0.9830411037654498,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Vogelgriep",
+    "id": "Biodiversiteitsverlies|||Vogelgriep",
+    "label": "1 (Lift: 0.83)",
+    "weight": 0.8309037900874635,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Bezuinigingen",
+    "target": "Sociale ongelijkheid",
+    "id": "Bezuinigingen|||Sociale ongelijkheid",
+    "label": "1 (Lift: 7.60)",
+    "weight": 7.6,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Onzekerheid emissies",
+    "id": "Waterstofbeschikbaarheid|||Onzekerheid emissies",
+    "label": "10 (Lift: 11.70)",
+    "weight": 11.696306429548564,
+    "raw_count": 10,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Mentale gezondheid",
+    "id": "Zorgcapaciteit|||Mentale gezondheid",
+    "label": "2 (Lift: 3.02)",
+    "weight": 3.015873015873016,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieonzekerheid",
+    "target": "Gebrek aan transparantie",
+    "id": "Energieonzekerheid|||Gebrek aan transparantie",
+    "label": "1 (Lift: 14.25)",
+    "weight": 14.25,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Klimaatverandering",
+    "id": "Vergrijzing|||Klimaatverandering",
+    "label": "1 (Lift: 0.32)",
+    "weight": 0.3223981900452489,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Online radicalisering",
+    "id": "Grondstoffenschaarste|||Online radicalisering",
+    "label": "1 (Lift: 1.21)",
+    "weight": 1.2144886363636365,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Digitale weerbaarheid",
+    "id": "Digitale dreigingen|||Digitale weerbaarheid",
+    "label": "11 (Lift: 7.94)",
+    "weight": 7.936708860759493,
+    "raw_count": 11,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Gegevensdeling",
+    "id": "Georganiseerde criminaliteit|||Gegevensdeling",
+    "label": "1 (Lift: 2.14)",
+    "weight": 2.1375,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Mensenhandel",
+    "id": "Synthetische drugs|||Mensenhandel",
+    "label": "1 (Lift: 1.39)",
+    "weight": 1.3902439024390243,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Onvoldoende politiecapaciteit",
+    "id": "Jeugdgeweld|||Onvoldoende politiecapaciteit",
+    "label": "2 (Lift: 30.00)",
+    "weight": 30.0,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Iraanse dreiging",
+    "target": "Digitale dreigingen",
+    "id": "Iraanse dreiging|||Digitale dreigingen",
+    "label": "1 (Lift: 2.58)",
+    "weight": 2.575301204819277,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensbescherming",
+    "target": "Digitale dreigingen",
+    "id": "Gegevensbescherming|||Digitale dreigingen",
+    "label": "5 (Lift: 5.15)",
+    "weight": 5.150602409638554,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Vertrouwenscrisis",
+    "id": "Woningtekort|||Vertrouwenscrisis",
+    "label": "1 (Lift: 3.08)",
+    "weight": 3.081081081081081,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gevaarlijke stoffen",
+    "target": "Armoede",
+    "id": "Gevaarlijke stoffen|||Armoede",
+    "label": "1 (Lift: 3.21)",
+    "weight": 3.2082551594746715,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Geopolitieke spanningen",
+    "id": "Russische agressie|||Geopolitieke spanningen",
+    "label": "7 (Lift: 9.37)",
+    "weight": 9.366197183098592,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Gevaarlijke stoffen",
+    "id": "Klimaatverandering|||Gevaarlijke stoffen",
+    "label": "5 (Lift: 1.72)",
+    "weight": 1.7179023508137432,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Armoede",
+    "id": "Mentale gezondheid|||Armoede",
+    "label": "1 (Lift: 1.60)",
+    "weight": 1.6041275797373358,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Armoede",
+    "id": "Synthetische drugs|||Armoede",
+    "label": "1 (Lift: 1.02)",
+    "weight": 1.0172516359309935,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Armoede",
+    "id": "Woningtekort|||Armoede",
+    "label": "1 (Lift: 2.78)",
+    "weight": 2.7804878048780486,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Online radicalisering",
+    "id": "Mentale gezondheid|||Online radicalisering",
+    "label": "3 (Lift: 4.48)",
+    "weight": 4.484265734265734,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Complexiteitssystemen",
+    "id": "Gegevensdeling|||Complexiteitssystemen",
+    "label": "1 (Lift: 9.50)",
+    "weight": 9.5,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Woningtekort",
+    "id": "Armoede|||Woningtekort",
+    "label": "2 (Lift: 13.52)",
+    "weight": 13.517786561264822,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onvoldoende politiecapaciteit",
+    "target": "Witwassen",
+    "id": "Onvoldoende politiecapaciteit|||Witwassen",
+    "label": "1 (Lift: 3.24)",
+    "weight": 3.2386363636363638,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mensenhandel",
+    "target": "Jeugdgeweld",
+    "id": "Mensenhandel|||Jeugdgeweld",
+    "label": "4 (Lift: 15.00)",
+    "weight": 15.0,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Sociale ongelijkheid",
+    "id": "Woningtekort|||Sociale ongelijkheid",
+    "label": "1 (Lift: 4.56)",
+    "weight": 4.56,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "AI-dreigingen",
+    "id": "Digitale dreigingen|||AI-dreigingen",
+    "label": "2 (Lift: 6.18)",
+    "weight": 6.184448462929476,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Mensenhandel",
+    "id": "Mentale gezondheid|||Mensenhandel",
+    "label": "4 (Lift: 8.77)",
+    "weight": 8.76923076923077,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Bezuinigingen",
+    "target": "Energieprijzen",
+    "id": "Bezuinigingen|||Energieprijzen",
+    "label": "4 (Lift: 14.90)",
+    "weight": 14.901960784313726,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Energieprijzen|||Afhankelijkheid fossiele brandstoffen",
+    "label": "6 (Lift: 3.41)",
+    "weight": 3.410904255319149,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Zorgcapaciteit",
+    "id": "Vogelgriep|||Zorgcapaciteit",
+    "label": "38 (Lift: 7.35)",
+    "weight": 7.350678733031674,
+    "raw_count": 38,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Gebrek aan financiering",
+    "id": "Armoede|||Gebrek aan financiering",
+    "label": "1 (Lift: 6.20)",
+    "weight": 6.195652173913044,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Luchtverontreiniging",
+    "target": "Biodiversiteitsverlies",
+    "id": "Luchtverontreiniging|||Biodiversiteitsverlies",
+    "label": "2 (Lift: 1.20)",
+    "weight": 1.1958041958041958,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Digitale dreigingen",
+    "id": "Klimaatverandering|||Digitale dreigingen",
+    "label": "6 (Lift: 0.52)",
+    "weight": 0.5215799908494738,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Energieprijzen",
+    "id": "Gebrek aan transparantie|||Energieprijzen",
+    "label": "2 (Lift: 4.19)",
+    "weight": 4.1911764705882355,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "AI-dreigingen",
+    "target": "Desinformatie",
+    "id": "AI-dreigingen|||Desinformatie",
+    "label": "1 (Lift: 14.62)",
+    "weight": 14.615384615384615,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Migratiedruk|||Georganiseerde criminaliteit",
+    "label": "2 (Lift: 2.67)",
+    "weight": 2.671875,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Migratiedruk",
+    "id": "Gegevensdeling|||Migratiedruk",
+    "label": "3 (Lift: 3.89)",
+    "weight": 3.8863636363636362,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Witwassen",
+    "id": "Online radicalisering|||Witwassen",
+    "label": "8 (Lift: 11.88)",
+    "weight": 11.875,
+    "raw_count": 8,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Online radicalisering",
+    "id": "Georganiseerde criminaliteit|||Online radicalisering",
+    "label": "4 (Lift: 3.89)",
+    "weight": 3.8863636363636362,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Geopolitieke spanningen",
+    "id": "Vogelgriep|||Geopolitieke spanningen",
+    "label": "1 (Lift: 1.12)",
+    "weight": 1.1176470588235294,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Klimaatverandering",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Klimaatverandering",
+    "label": "8 (Lift: 2.74)",
+    "weight": 2.7403846153846154,
+    "raw_count": 8,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Gegevensbescherming",
+    "id": "Migratiedruk|||Gegevensbescherming",
+    "label": "2 (Lift: 2.19)",
+    "weight": 2.1923076923076925,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Zorgcapaciteit",
+    "id": "Netcongestie|||Zorgcapaciteit",
+    "label": "2 (Lift: 0.69)",
+    "weight": 0.6850961538461539,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Nucleaire escalatie",
+    "target": "Vogelgriep",
+    "id": "Nucleaire escalatie|||Vogelgriep",
+    "label": "1 (Lift: 2.91)",
+    "weight": 2.9081632653061225,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Zorgcapaciteit",
+    "id": "Migratiedruk|||Zorgcapaciteit",
+    "label": "3 (Lift: 1.23)",
+    "weight": 1.2331730769230769,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Vergrijzing",
+    "id": "Klimaatverandering|||Vergrijzing",
+    "label": "3 (Lift: 1.20)",
+    "weight": 1.2025316455696202,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Sociale ongelijkheid",
+    "id": "Zorgcapaciteit|||Sociale ongelijkheid",
+    "label": "3 (Lift: 4.89)",
+    "weight": 4.885714285714286,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Gebrek aan transparantie",
+    "id": "Zorgcapaciteit|||Gebrek aan transparantie",
+    "label": "1 (Lift: 3.39)",
+    "weight": 3.392857142857143,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Vertrouwenscrisis",
+    "id": "Migratiedruk|||Vertrouwenscrisis",
+    "label": "2 (Lift: 2.31)",
+    "weight": 2.310810810810811,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Zorgcapaciteit",
+    "id": "Energieprijzen|||Zorgcapaciteit",
+    "label": "3 (Lift: 0.52)",
+    "weight": 0.5247545008183306,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Defensiecapaciteiten",
+    "id": "Online radicalisering|||Defensiecapaciteiten",
+    "label": "1 (Lift: 2.46)",
+    "weight": 2.456896551724138,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Politieke instabiliteit",
+    "id": "Klimaatverandering|||Politieke instabiliteit",
+    "label": "4 (Lift: 2.22)",
+    "weight": 2.220058422590068,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Defensiecapaciteiten",
+    "id": "Klimaatverandering|||Defensiecapaciteiten",
+    "label": "3 (Lift: 0.75)",
+    "weight": 0.746398952422523,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Gevaarlijke stoffen",
+    "id": "Online radicalisering|||Gevaarlijke stoffen",
+    "label": "1 (Lift: 3.39)",
+    "weight": 3.392857142857143,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Grondstoffenschaarste",
+    "id": "Klimaatverandering|||Grondstoffenschaarste",
+    "label": "2 (Lift: 0.35)",
+    "weight": 0.35196048163013277,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Emissiereductie",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Emissiereductie",
+    "label": "3 (Lift: 2.97)",
+    "weight": 2.96875,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Emissiereductie|||Afhankelijkheid fossiele brandstoffen",
+    "label": "3 (Lift: 8.44)",
+    "weight": 8.4375,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Complexiteitssystemen",
+    "target": "Onzekerheid",
+    "id": "Complexiteitssystemen|||Onzekerheid",
+    "label": "3 (Lift: 23.75)",
+    "weight": 23.75,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Vertraging",
+    "id": "Gebrek aan transparantie|||Vertraging",
+    "label": "3 (Lift: 9.43)",
+    "weight": 9.430147058823529,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Gegevensbescherming",
+    "id": "Vogelgriep|||Gegevensbescherming",
+    "label": "1 (Lift: 0.52)",
+    "weight": 0.5158371040723982,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Klimaatverandering",
+    "id": "Onzekerheid emissies|||Klimaatverandering",
+    "label": "3 (Lift: 2.47)",
+    "weight": 2.4663461538461537,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Grondstoffenschaarste",
+    "id": "Gegevensdeling|||Grondstoffenschaarste",
+    "label": "2 (Lift: 2.78)",
+    "weight": 2.7804878048780486,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Biodiversiteitsverlies",
+    "id": "Grondstoffenschaarste|||Biodiversiteitsverlies",
+    "label": "3 (Lift: 1.23)",
+    "weight": 1.2331730769230769,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Waterstofbeschikbaarheid",
+    "id": "Energieprijzen|||Waterstofbeschikbaarheid",
+    "label": "6 (Lift: 4.96)",
+    "weight": 4.961315280464216,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "Gebrek aan financiering",
+    "id": "Onzekerheid|||Gebrek aan financiering",
+    "label": "3 (Lift: 32.88)",
+    "weight": 32.88461538461539,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Broeikasgasemissies",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Broeikasgasemissies",
+    "label": "4 (Lift: 3.48)",
+    "weight": 3.475609756097561,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Broeikasgasemissies",
+    "id": "Biodiversiteitsverlies|||Broeikasgasemissies",
+    "label": "2 (Lift: 1.99)",
+    "weight": 1.9860627177700347,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "AI-dreigingen",
+    "id": "Gegevensdeling|||AI-dreigingen",
+    "label": "1 (Lift: 8.14)",
+    "weight": 8.142857142857142,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensbescherming",
+    "target": "Gegevensdeling",
+    "id": "Gegevensbescherming|||Gegevensdeling",
+    "label": "5 (Lift: 21.38)",
+    "weight": 21.375,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Bezuinigingen",
+    "id": "Energieprijzen|||Bezuinigingen",
+    "label": "3 (Lift: 5.46)",
+    "weight": 5.457446808510638,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Energieonzekerheid",
+    "id": "Waterstofbeschikbaarheid|||Energieonzekerheid",
+    "label": "2 (Lift: 4.97)",
+    "weight": 4.97093023255814,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Energieprijzen",
+    "id": "Waterstofbeschikbaarheid|||Energieprijzen",
+    "label": "2 (Lift: 1.56)",
+    "weight": 1.5595075239398084,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Krimp veestapel",
+    "target": "Waterstofbeschikbaarheid",
+    "id": "Krimp veestapel|||Waterstofbeschikbaarheid",
+    "label": "1 (Lift: 6.48)",
+    "weight": 6.4772727272727275,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Armoede",
+    "id": "Energieprijzen|||Armoede",
+    "label": "21 (Lift: 9.32)",
+    "weight": 9.317592112091333,
+    "raw_count": 21,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Broeikasgasemissies",
+    "id": "Netcongestie|||Broeikasgasemissies",
+    "label": "3 (Lift: 2.61)",
+    "weight": 2.606707317073171,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Energieprijzen",
+    "id": "Emissiereductie|||Energieprijzen",
+    "label": "1 (Lift: 1.76)",
+    "weight": 1.7647058823529411,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Luchtverontreiniging",
+    "id": "Aardbevingen|||Luchtverontreiniging",
+    "label": "1 (Lift: 4.38)",
+    "weight": 4.384615384615385,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Waterverontreiniging",
+    "id": "Aardbevingen|||Waterverontreiniging",
+    "label": "1 (Lift: 7.31)",
+    "weight": 7.3076923076923075,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Politieke instabiliteit",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Politieke instabiliteit",
+    "label": "1 (Lift: 2.74)",
+    "weight": 2.7403846153846154,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Netcongestie|||Afhankelijkheid fossiele brandstoffen",
+    "label": "5 (Lift: 5.57)",
+    "weight": 5.56640625,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Emissiereductie",
+    "id": "Energieprijzen|||Emissiereductie",
+    "label": "4 (Lift: 2.02)",
+    "weight": 2.021276595744681,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Onzekerheid emissies",
+    "id": "Energieprijzen|||Onzekerheid emissies",
+    "label": "6 (Lift: 3.21)",
+    "weight": 3.2102628285356696,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Witwassen",
+    "id": "Synthetische drugs|||Witwassen",
+    "label": "21 (Lift: 18.25)",
+    "weight": 18.246951219512194,
+    "raw_count": 21,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Luchtverontreiniging",
+    "target": "Vogelgriep",
+    "id": "Luchtverontreiniging|||Vogelgriep",
+    "label": "7 (Lift: 11.10)",
+    "weight": 11.103896103896103,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vaccinatietwijfel",
+    "target": "Vogelgriep",
+    "id": "Vaccinatietwijfel|||Vogelgriep",
+    "label": "7 (Lift: 20.36)",
+    "weight": 20.357142857142858,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Netcongestie",
+    "id": "Klimaatverandering|||Netcongestie",
+    "label": "3 (Lift: 0.39)",
+    "weight": 0.38652802893309224,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "China-dreiging",
+    "target": "Grondstoffenschaarste",
+    "id": "China-dreiging|||Grondstoffenschaarste",
+    "label": "7 (Lift: 13.27)",
+    "weight": 13.270509977827052,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Grondstoffenschaarste",
+    "id": "Digitale dreigingen|||Grondstoffenschaarste",
+    "label": "5 (Lift: 2.64)",
+    "weight": 2.6397036122259956,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "China-dreiging",
+    "id": "Digitale dreigingen|||China-dreiging",
+    "label": "2 (Lift: 2.55)",
+    "weight": 2.5465376023827253,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "China-dreiging",
+    "id": "Grondstoffenschaarste|||China-dreiging",
+    "label": "2 (Lift: 6.29)",
+    "weight": 6.286764705882353,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Circulaire economie",
+    "target": "Waterstofbeschikbaarheid",
+    "id": "Circulaire economie|||Waterstofbeschikbaarheid",
+    "label": "2 (Lift: 15.55)",
+    "weight": 15.545454545454545,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Netcongestie",
+    "id": "Waterstofbeschikbaarheid|||Netcongestie",
+    "label": "5 (Lift: 3.55)",
+    "weight": 3.5506644518272426,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Onvoldoende politiecapaciteit",
+    "id": "Gebrek aan transparantie|||Onvoldoende politiecapaciteit",
+    "label": "1 (Lift: 17.81)",
+    "weight": 17.8125,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Nucleaire escalatie",
+    "target": "Geopolitieke spanningen",
+    "id": "Nucleaire escalatie|||Geopolitieke spanningen",
+    "label": "1 (Lift: 7.92)",
+    "weight": 7.916666666666667,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Migratiedruk",
+    "id": "Russische agressie|||Migratiedruk",
+    "label": "5 (Lift: 2.74)",
+    "weight": 2.736875800256082,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Energieprijzen",
+    "id": "Gegevensdeling|||Energieprijzen",
+    "label": "1 (Lift: 1.12)",
+    "weight": 1.1176470588235294,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gevaarlijke stoffen",
+    "target": "Radioactief afval",
+    "id": "Gevaarlijke stoffen|||Radioactief afval",
+    "label": "2 (Lift: 37.58)",
+    "weight": 37.582417582417584,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Iraanse dreiging",
+    "target": "Politieke instabiliteit",
+    "id": "Iraanse dreiging|||Politieke instabiliteit",
+    "label": "2 (Lift: 32.88)",
+    "weight": 32.88461538461539,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertraging",
+    "target": "Biodiversiteitsverlies",
+    "id": "Vertraging|||Biodiversiteitsverlies",
+    "label": "4 (Lift: 4.78)",
+    "weight": 4.783216783216783,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Emissiereductie",
+    "id": "Biodiversiteitsverlies|||Emissiereductie",
+    "label": "1 (Lift: 1.13)",
+    "weight": 1.130952380952381,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Krimp veestapel",
+    "target": "Stikstofdepositie",
+    "id": "Krimp veestapel|||Stikstofdepositie",
+    "label": "2 (Lift: 16.76)",
+    "weight": 16.764705882352942,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Onzekerheid",
+    "id": "Onzekerheid emissies|||Onzekerheid",
+    "label": "3 (Lift: 14.25)",
+    "weight": 14.25,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Stikstofdepositie",
+    "target": "Emissiereductie",
+    "id": "Stikstofdepositie|||Emissiereductie",
+    "label": "10 (Lift: 12.18)",
+    "weight": 12.179487179487179,
+    "raw_count": 10,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Stikstofdepositie",
+    "target": "Onzekerheid",
+    "id": "Stikstofdepositie|||Onzekerheid",
+    "label": "1 (Lift: 2.44)",
+    "weight": 2.4358974358974357,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Vertraging",
+    "id": "Broeikasgasemissies|||Vertraging",
+    "label": "2 (Lift: 1.70)",
+    "weight": 1.7048853439680958,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Complexiteitssystemen",
+    "id": "Emissiereductie|||Complexiteitssystemen",
+    "label": "1 (Lift: 15.00)",
+    "weight": 15.0,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Luchtverontreiniging",
+    "id": "Broeikasgasemissies|||Luchtverontreiniging",
+    "label": "2 (Lift: 1.93)",
+    "weight": 1.9322033898305084,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Bezuinigingen",
+    "id": "Woningtekort|||Bezuinigingen",
+    "label": "2 (Lift: 22.80)",
+    "weight": 22.8,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertrouwenscrisis",
+    "target": "Broeikasgasemissies",
+    "id": "Vertrouwenscrisis|||Broeikasgasemissies",
+    "label": "1 (Lift: 4.17)",
+    "weight": 4.170731707317073,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Krimp veestapel",
+    "target": "Vertrouwenscrisis",
+    "id": "Krimp veestapel|||Vertrouwenscrisis",
+    "label": "1 (Lift: 3.85)",
+    "weight": 3.8513513513513513,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Krimp veestapel",
+    "target": "Onzekerheid",
+    "id": "Krimp veestapel|||Onzekerheid",
+    "label": "2 (Lift: 15.83)",
+    "weight": 15.833333333333334,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Nucleaire escalatie",
+    "target": "Russische agressie",
+    "id": "Nucleaire escalatie|||Russische agressie",
+    "label": "4 (Lift: 21.11)",
+    "weight": 21.11111111111111,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Klimaatverandering",
+    "id": "Netcongestie|||Klimaatverandering",
+    "label": "4 (Lift: 1.37)",
+    "weight": 1.3701923076923077,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Migratiedruk",
+    "id": "Armoede|||Migratiedruk",
+    "label": "1 (Lift: 1.69)",
+    "weight": 1.6897233201581028,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Armoede",
+    "id": "Klimaatverandering|||Armoede",
+    "label": "1 (Lift: 0.18)",
+    "weight": 0.17598024081506639,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Complexiteitssystemen",
+    "target": "Migratiedruk",
+    "id": "Complexiteitssystemen|||Migratiedruk",
+    "label": "1 (Lift: 3.24)",
+    "weight": 3.2386363636363638,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Netcongestie",
+    "id": "Energieprijzen|||Netcongestie",
+    "label": "10 (Lift: 3.25)",
+    "weight": 3.248480243161094,
+    "raw_count": 10,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Digitale dreigingen",
+    "id": "Netcongestie|||Digitale dreigingen",
+    "label": "4 (Lift: 1.72)",
+    "weight": 1.716867469879518,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Nucleaire escalatie",
+    "id": "Digitale dreigingen|||Nucleaire escalatie",
+    "label": "1 (Lift: 1.27)",
+    "weight": 1.2732688011913627,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Onvoldoende politiecapaciteit",
+    "id": "Klimaatverandering|||Onvoldoende politiecapaciteit",
+    "label": "1 (Lift: 1.20)",
+    "weight": 1.2025316455696202,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Woningtekort",
+    "id": "Broeikasgasemissies|||Woningtekort",
+    "label": "1 (Lift: 2.63)",
+    "weight": 2.6348228043143296,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Geopolitieke spanningen",
+    "id": "Digitale dreigingen|||Geopolitieke spanningen",
+    "label": "2 (Lift: 2.41)",
+    "weight": 2.4050632911392404,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Geopolitieke spanningen",
+    "id": "Online radicalisering|||Geopolitieke spanningen",
+    "label": "1 (Lift: 3.96)",
+    "weight": 3.9583333333333335,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onvoldoende politiecapaciteit",
+    "target": "Online radicalisering",
+    "id": "Onvoldoende politiecapaciteit|||Online radicalisering",
+    "label": "5 (Lift: 17.67)",
+    "weight": 17.665289256198346,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensbescherming",
+    "target": "Vertrouwenscrisis",
+    "id": "Gegevensbescherming|||Vertrouwenscrisis",
+    "label": "2 (Lift: 4.62)",
+    "weight": 4.621621621621622,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "Energieonzekerheid",
+    "id": "Onzekerheid|||Energieonzekerheid",
+    "label": "1 (Lift: 8.22)",
+    "weight": 8.221153846153847,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Gebrek aan transparantie",
+    "id": "Digitale dreigingen|||Gebrek aan transparantie",
+    "label": "1 (Lift: 1.80)",
+    "weight": 1.8037974683544304,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Sociale ongelijkheid",
+    "id": "Armoede|||Sociale ongelijkheid",
+    "label": "3 (Lift: 8.92)",
+    "weight": 8.921739130434782,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Sociale ongelijkheid",
+    "id": "Mentale gezondheid|||Sociale ongelijkheid",
+    "label": "5 (Lift: 13.15)",
+    "weight": 13.153846153846153,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Luchtverontreiniging",
+    "target": "Sociale ongelijkheid",
+    "id": "Luchtverontreiniging|||Sociale ongelijkheid",
+    "label": "1 (Lift: 3.11)",
+    "weight": 3.109090909090909,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Nucleaire escalatie",
+    "target": "Defensiecapaciteiten",
+    "id": "Nucleaire escalatie|||Defensiecapaciteiten",
+    "label": "3 (Lift: 14.74)",
+    "weight": 14.741379310344827,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Russische agressie",
+    "id": "Geopolitieke spanningen|||Russische agressie",
+    "label": "1 (Lift: 2.64)",
+    "weight": 2.638888888888889,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "China-dreiging",
+    "id": "Onzekerheid|||China-dreiging",
+    "label": "1 (Lift: 7.74)",
+    "weight": 7.737556561085973,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertrouwenscrisis",
+    "target": "Zorgcapaciteit",
+    "id": "Vertrouwenscrisis|||Zorgcapaciteit",
+    "label": "1 (Lift: 1.64)",
+    "weight": 1.6442307692307692,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Woningtekort",
+    "id": "Vergrijzing|||Woningtekort",
+    "label": "1 (Lift: 3.05)",
+    "weight": 3.0481283422459895,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Vergrijzing",
+    "id": "Woningtekort|||Vergrijzing",
+    "label": "2 (Lift: 12.67)",
+    "weight": 12.666666666666666,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Vertrouwenscrisis",
+    "id": "Vergrijzing|||Vertrouwenscrisis",
+    "label": "1 (Lift: 0.91)",
+    "weight": 0.9062003179650239,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Digitale dreigingen",
+    "id": "Grondstoffenschaarste|||Digitale dreigingen",
+    "label": "6 (Lift: 3.86)",
+    "weight": 3.8629518072289155,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Online radicalisering",
+    "id": "Klimaatverandering|||Online radicalisering",
+    "label": "1 (Lift: 0.16)",
+    "weight": 0.16398158803222093,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Nucleaire escalatie",
+    "id": "Klimaatverandering|||Nucleaire escalatie",
+    "label": "4 (Lift: 1.70)",
+    "weight": 1.6976917349218168,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Circulaire economie",
+    "target": "Klimaatverandering",
+    "id": "Circulaire economie|||Klimaatverandering",
+    "label": "3 (Lift: 4.93)",
+    "weight": 4.9326923076923075,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Defensiecapaciteiten",
+    "target": "Klimaatverandering",
+    "id": "Defensiecapaciteiten|||Klimaatverandering",
+    "label": "1 (Lift: 0.97)",
+    "weight": 0.9671945701357466,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Vertraging",
+    "id": "Vogelgriep|||Vertraging",
+    "label": "1 (Lift: 0.59)",
+    "weight": 0.5916955017301038,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Onzekerheid|||Afhankelijkheid fossiele brandstoffen",
+    "label": "1 (Lift: 4.11)",
+    "weight": 4.110576923076923,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Iraanse dreiging",
+    "target": "Russische agressie",
+    "id": "Iraanse dreiging|||Russische agressie",
+    "label": "1 (Lift: 7.92)",
+    "weight": 7.916666666666667,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Sancties Rusland",
+    "target": "Witwassen",
+    "id": "Sancties Rusland|||Witwassen",
+    "label": "1 (Lift: 5.94)",
+    "weight": 5.9375,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Vertraging",
+    "id": "Netcongestie|||Vertraging",
+    "label": "5 (Lift: 5.24)",
+    "weight": 5.238970588235294,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "China-dreiging",
+    "target": "Krimp veestapel",
+    "id": "China-dreiging|||Krimp veestapel",
+    "label": "1 (Lift: 5.98)",
+    "weight": 5.979020979020979,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Biodiversiteitsverlies",
+    "id": "Migratiedruk|||Biodiversiteitsverlies",
+    "label": "1 (Lift: 0.33)",
+    "weight": 0.32884615384615384,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Vertrouwenscrisis",
+    "id": "Zorgcapaciteit|||Vertrouwenscrisis",
+    "label": "2 (Lift: 2.20)",
+    "weight": 2.200772200772201,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Vogelgriep",
+    "id": "Armoede|||Vogelgriep",
+    "label": "1 (Lift: 1.52)",
+    "weight": 1.5173025732031944,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Netcongestie",
+    "id": "Vergrijzing|||Netcongestie",
+    "label": "2 (Lift: 1.20)",
+    "weight": 1.1974789915966386,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Vergrijzing",
+    "id": "Mentale gezondheid|||Vergrijzing",
+    "label": "1 (Lift: 3.65)",
+    "weight": 3.6538461538461537,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vergrijzing",
+    "target": "Sociale ongelijkheid",
+    "id": "Vergrijzing|||Sociale ongelijkheid",
+    "label": "3 (Lift: 4.02)",
+    "weight": 4.023529411764706,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Zorgcapaciteit",
+    "id": "Gebrek aan transparantie|||Zorgcapaciteit",
+    "label": "1 (Lift: 1.03)",
+    "weight": 1.0276442307692308,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Mentale gezondheid",
+    "id": "Woningtekort|||Mentale gezondheid",
+    "label": "2 (Lift: 8.44)",
+    "weight": 8.444444444444445,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Vertraging",
+    "id": "Biodiversiteitsverlies|||Vertraging",
+    "label": "1 (Lift: 1.20)",
+    "weight": 1.1974789915966386,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Defensiecapaciteiten",
+    "id": "Biodiversiteitsverlies|||Defensiecapaciteiten",
+    "label": "1 (Lift: 1.40)",
+    "weight": 1.4039408866995073,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Complexiteitssystemen",
+    "target": "Netcongestie",
+    "id": "Complexiteitssystemen|||Netcongestie",
+    "label": "1 (Lift: 2.54)",
+    "weight": 2.544642857142857,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Vogelgriep",
+    "id": "Georganiseerde criminaliteit|||Vogelgriep",
+    "label": "1 (Lift: 0.87)",
+    "weight": 0.8724489795918368,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Desinformatie",
+    "id": "Digitale dreigingen|||Desinformatie",
+    "label": "3 (Lift: 7.22)",
+    "weight": 7.215189873417722,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energievoorziening",
+    "target": "Netcongestie",
+    "id": "Energievoorziening|||Netcongestie",
+    "label": "8 (Lift: 14.37)",
+    "weight": 14.369747899159664,
+    "raw_count": 8,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Emissiereductie",
+    "id": "Klimaatverandering|||Emissiereductie",
+    "label": "5 (Lift: 1.00)",
+    "weight": 1.0021097046413503,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Krimp veestapel",
+    "target": "China-dreiging",
+    "id": "Krimp veestapel|||China-dreiging",
+    "label": "1 (Lift: 8.38)",
+    "weight": 8.382352941176471,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "AI-dreigingen",
+    "target": "Sociale ongelijkheid",
+    "id": "AI-dreigingen|||Sociale ongelijkheid",
+    "label": "1 (Lift: 5.26)",
+    "weight": 5.2615384615384615,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Energieprijzen",
+    "id": "Grondstoffenschaarste|||Energieprijzen",
+    "label": "1 (Lift: 1.05)",
+    "weight": 1.0477941176470589,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Politieke instabiliteit",
+    "id": "Russische agressie|||Politieke instabiliteit",
+    "label": "2 (Lift: 3.71)",
+    "weight": 3.705308775731311,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onvoldoende politiecapaciteit",
+    "target": "Gegevensdeling",
+    "id": "Onvoldoende politiecapaciteit|||Gegevensdeling",
+    "label": "1 (Lift: 7.77)",
+    "weight": 7.7727272727272725,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Grondstoffenschaarste",
+    "id": "Emissiereductie|||Grondstoffenschaarste",
+    "label": "1 (Lift: 2.20)",
+    "weight": 2.1951219512195124,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Vertraging",
+    "id": "Migratiedruk|||Vertraging",
+    "label": "2 (Lift: 2.51)",
+    "weight": 2.514705882352941,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Waterstofbeschikbaarheid",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Waterstofbeschikbaarheid",
+    "label": "2 (Lift: 3.24)",
+    "weight": 3.2386363636363638,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertrouwenscrisis",
+    "target": "Sociale ongelijkheid",
+    "id": "Vertrouwenscrisis|||Sociale ongelijkheid",
+    "label": "1 (Lift: 6.84)",
+    "weight": 6.84,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertrouwenscrisis",
+    "target": "Biodiversiteitsverlies",
+    "id": "Vertrouwenscrisis|||Biodiversiteitsverlies",
+    "label": "2 (Lift: 2.63)",
+    "weight": 2.6307692307692307,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Vertrouwenscrisis",
+    "id": "Biodiversiteitsverlies|||Vertrouwenscrisis",
+    "label": "3 (Lift: 3.30)",
+    "weight": 3.301158301158301,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Sociale ongelijkheid",
+    "target": "Vertrouwenscrisis",
+    "id": "Sociale ongelijkheid|||Vertrouwenscrisis",
+    "label": "2 (Lift: 13.20)",
+    "weight": 13.204633204633204,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Biodiversiteitsverlies",
+    "id": "Energieprijzen|||Biodiversiteitsverlies",
+    "label": "1 (Lift: 0.14)",
+    "weight": 0.13993453355155483,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Vertraging",
+    "id": "Onzekerheid emissies|||Vertraging",
+    "label": "1 (Lift: 2.51)",
+    "weight": 2.514705882352941,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Migratiedruk",
+    "id": "Online radicalisering|||Migratiedruk",
+    "label": "1 (Lift: 1.62)",
+    "weight": 1.6193181818181819,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Energieonzekerheid",
+    "id": "Digitale dreigingen|||Energieonzekerheid",
+    "label": "1 (Lift: 1.35)",
+    "weight": 1.3528481012658229,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Klimaatverandering",
+    "id": "Aardbevingen|||Klimaatverandering",
+    "label": "3 (Lift: 3.79)",
+    "weight": 3.794378698224852,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertraging",
+    "target": "Emissiereductie",
+    "id": "Vertraging|||Emissiereductie",
+    "label": "1 (Lift: 4.32)",
+    "weight": 4.318181818181818,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Vaccinatietwijfel",
+    "id": "Gegevensdeling|||Vaccinatietwijfel",
+    "label": "1 (Lift: 2.19)",
+    "weight": 2.1923076923076925,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Netcongestie",
+    "id": "Zorgcapaciteit|||Netcongestie",
+    "label": "2 (Lift: 1.45)",
+    "weight": 1.4540816326530612,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Vogelgriep",
+    "id": "Zorgcapaciteit|||Vogelgriep",
+    "label": "6 (Lift: 4.99)",
+    "weight": 4.985422740524782,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Mentale gezondheid",
+    "id": "Vogelgriep|||Mentale gezondheid",
+    "label": "4 (Lift: 2.98)",
+    "weight": 2.980392156862745,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Energieprijzen",
+    "id": "Russische agressie|||Energieprijzen",
+    "label": "8 (Lift: 3.78)",
+    "weight": 3.7779618889809443,
+    "raw_count": 8,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Onzekerheid emissies",
+    "id": "Netcongestie|||Onzekerheid emissies",
+    "label": "1 (Lift: 1.05)",
+    "weight": 1.0477941176470589,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Onzekerheid emissies|||Afhankelijkheid fossiele brandstoffen",
+    "label": "3 (Lift: 8.02)",
+    "weight": 8.015625,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Energieprijzen",
+    "id": "Netcongestie|||Energieprijzen",
+    "label": "6 (Lift: 4.19)",
+    "weight": 4.1911764705882355,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Energieprijzen",
+    "id": "Onzekerheid emissies|||Energieprijzen",
+    "label": "1 (Lift: 1.68)",
+    "weight": 1.6764705882352942,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Onzekerheid emissies",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Onzekerheid emissies",
+    "label": "1 (Lift: 1.05)",
+    "weight": 1.0477941176470589,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Vertrouwenscrisis",
+    "id": "Online radicalisering|||Vertrouwenscrisis",
+    "label": "1 (Lift: 1.93)",
+    "weight": 1.9256756756756757,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Circulaire economie",
+    "id": "Gebrek aan transparantie|||Circulaire economie",
+    "label": "1 (Lift: 8.91)",
+    "weight": 8.90625,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Vertrouwenscrisis",
+    "id": "Vogelgriep|||Vertrouwenscrisis",
+    "label": "1 (Lift: 0.54)",
+    "weight": 0.5437201907790143,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "Zorgcapaciteit",
+    "id": "Onzekerheid|||Zorgcapaciteit",
+    "label": "1 (Lift: 1.26)",
+    "weight": 1.264792899408284,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertrouwenscrisis",
+    "target": "Gebrek aan financiering",
+    "id": "Vertrouwenscrisis|||Gebrek aan financiering",
+    "label": "1 (Lift: 14.25)",
+    "weight": 14.25,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energievoorziening",
+    "target": "Vertraging",
+    "id": "Energievoorziening|||Vertraging",
+    "label": "1 (Lift: 2.96)",
+    "weight": 2.958477508650519,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Gebrek aan transparantie",
+    "id": "Klimaatverandering|||Gebrek aan transparantie",
+    "label": "1 (Lift: 0.60)",
+    "weight": 0.6012658227848101,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Grondstoffenschaarste",
+    "id": "Energieprijzen|||Grondstoffenschaarste",
+    "label": "2 (Lift: 0.89)",
+    "weight": 0.8873897249610794,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Circulaire economie",
+    "target": "Grondstoffenschaarste",
+    "id": "Circulaire economie|||Grondstoffenschaarste",
+    "label": "3 (Lift: 12.51)",
+    "weight": 12.512195121951219,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Emissiereductie",
+    "id": "Netcongestie|||Emissiereductie",
+    "label": "1 (Lift: 0.99)",
+    "weight": 0.9895833333333334,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energievoorziening",
+    "target": "Waterstofbeschikbaarheid",
+    "id": "Energievoorziening|||Waterstofbeschikbaarheid",
+    "label": "4 (Lift: 18.29)",
+    "weight": 18.288770053475936,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Gebrek aan transparantie",
+    "id": "Emissiereductie|||Gebrek aan transparantie",
+    "label": "1 (Lift: 7.50)",
+    "weight": 7.5,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mensenhandel",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Mensenhandel|||Georganiseerde criminaliteit",
+    "label": "1 (Lift: 2.23)",
+    "weight": 2.2265625,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "Gegevensdeling",
+    "id": "Onzekerheid|||Gegevensdeling",
+    "label": "1 (Lift: 6.58)",
+    "weight": 6.576923076923077,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Defensiecapaciteiten",
+    "target": "Russische agressie",
+    "id": "Defensiecapaciteiten|||Russische agressie",
+    "label": "7 (Lift: 26.08)",
+    "weight": 26.07843137254902,
+    "raw_count": 7,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Onzekerheid emissies",
+    "id": "Klimaatverandering|||Onzekerheid emissies",
+    "label": "1 (Lift: 0.21)",
+    "weight": 0.2122114668652271,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Klimaatverandering",
+    "id": "Emissiereductie|||Klimaatverandering",
+    "label": "4 (Lift: 3.46)",
+    "weight": 3.4615384615384617,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "AI-dreigingen",
+    "target": "Digitale weerbaarheid",
+    "id": "AI-dreigingen|||Digitale weerbaarheid",
+    "label": "1 (Lift: 4.38)",
+    "weight": 4.384615384615385,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Desinformatie",
+    "target": "Vertrouwenscrisis",
+    "id": "Desinformatie|||Vertrouwenscrisis",
+    "label": "1 (Lift: 4.62)",
+    "weight": 4.621621621621622,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Politieke instabiliteit",
+    "id": "Geopolitieke spanningen|||Politieke instabiliteit",
+    "label": "2 (Lift: 10.96)",
+    "weight": 10.961538461538462,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Jeugdgeweld",
+    "id": "Armoede|||Jeugdgeweld",
+    "label": "1 (Lift: 3.91)",
+    "weight": 3.9130434782608696,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Grondstoffenschaarste",
+    "id": "Jeugdgeweld|||Grondstoffenschaarste",
+    "label": "1 (Lift: 2.20)",
+    "weight": 2.1951219512195124,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Testcapaciteit",
+    "target": "Vogelgriep",
+    "id": "Testcapaciteit|||Vogelgriep",
+    "label": "6 (Lift: 23.27)",
+    "weight": 23.26530612244898,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vaccinatietwijfel",
+    "target": "Gegevensbescherming",
+    "id": "Vaccinatietwijfel|||Gegevensbescherming",
+    "label": "1 (Lift: 3.65)",
+    "weight": 3.6538461538461537,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vaccinatietwijfel",
+    "target": "Testcapaciteit",
+    "id": "Vaccinatietwijfel|||Testcapaciteit",
+    "label": "1 (Lift: 20.36)",
+    "weight": 20.357142857142858,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Testcapaciteit",
+    "id": "Digitale dreigingen|||Testcapaciteit",
+    "label": "3 (Lift: 9.28)",
+    "weight": 9.276672694394213,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Defensiecapaciteiten",
+    "target": "Gebrek aan financiering",
+    "id": "Defensiecapaciteiten|||Gebrek aan financiering",
+    "label": "1 (Lift: 8.38)",
+    "weight": 8.382352941176471,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mensenhandel",
+    "target": "Online radicalisering",
+    "id": "Mensenhandel|||Online radicalisering",
+    "label": "2 (Lift: 3.24)",
+    "weight": 3.2386363636363638,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Klimaatverandering",
+    "id": "Energieprijzen|||Klimaatverandering",
+    "label": "4 (Lift: 0.70)",
+    "weight": 0.6996726677577741,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Zorgcapaciteit",
+    "id": "Grondstoffenschaarste|||Zorgcapaciteit",
+    "label": "1 (Lift: 0.51)",
+    "weight": 0.5138221153846154,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Energieprijzen",
+    "id": "Zorgcapaciteit|||Energieprijzen",
+    "label": "2 (Lift: 1.60)",
+    "weight": 1.596638655462185,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Netcongestie",
+    "id": "Grondstoffenschaarste|||Netcongestie",
+    "label": "1 (Lift: 0.95)",
+    "weight": 0.9542410714285714,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Waterstofbeschikbaarheid",
+    "id": "Netcongestie|||Waterstofbeschikbaarheid",
+    "label": "2 (Lift: 3.24)",
+    "weight": 3.2386363636363638,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Bezuinigingen",
+    "id": "Zorgcapaciteit|||Bezuinigingen",
+    "label": "1 (Lift: 4.07)",
+    "weight": 4.071428571428571,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Gevaarlijke stoffen",
+    "id": "Netcongestie|||Gevaarlijke stoffen",
+    "label": "2 (Lift: 3.39)",
+    "weight": 3.392857142857143,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gevaarlijke stoffen",
+    "target": "Netcongestie",
+    "id": "Gevaarlijke stoffen|||Netcongestie",
+    "label": "1 (Lift: 2.35)",
+    "weight": 2.348901098901099,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Circulaire economie",
+    "id": "Netcongestie|||Circulaire economie",
+    "label": "1 (Lift: 2.97)",
+    "weight": 2.96875,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Krimp veestapel",
+    "target": "Circulaire economie",
+    "id": "Krimp veestapel|||Circulaire economie",
+    "label": "1 (Lift: 11.88)",
+    "weight": 11.875,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Vertrouwenscrisis",
+    "id": "Georganiseerde criminaliteit|||Vertrouwenscrisis",
+    "label": "1 (Lift: 1.16)",
+    "weight": 1.1554054054054055,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertrouwenscrisis",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Vertrouwenscrisis|||Georganiseerde criminaliteit",
+    "label": "1 (Lift: 5.34)",
+    "weight": 5.34375,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Mentale gezondheid",
+    "id": "Digitale dreigingen|||Mentale gezondheid",
+    "label": "1 (Lift: 0.80)",
+    "weight": 0.8016877637130801,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Online radicalisering",
+    "id": "Migratiedruk|||Online radicalisering",
+    "label": "2 (Lift: 1.94)",
+    "weight": 1.9431818181818181,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Radioactief afval",
+    "target": "Digitale dreigingen",
+    "id": "Radioactief afval|||Digitale dreigingen",
+    "label": "1 (Lift: 20.60)",
+    "weight": 20.602409638554217,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Vertraging",
+    "id": "Klimaatverandering|||Vertraging",
+    "label": "3 (Lift: 0.64)",
+    "weight": 0.6366344005956813,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Energievoorziening",
+    "id": "Biodiversiteitsverlies|||Energievoorziening",
+    "label": "1 (Lift: 1.70)",
+    "weight": 1.6964285714285714,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Gevaarlijke stoffen",
+    "id": "Waterstofbeschikbaarheid|||Gevaarlijke stoffen",
+    "label": "5 (Lift: 9.47)",
+    "weight": 9.46843853820598,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Grondstoffenschaarste",
+    "id": "Geopolitieke spanningen|||Grondstoffenschaarste",
+    "label": "4 (Lift: 6.95)",
+    "weight": 6.951219512195122,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Circulaire economie",
+    "target": "Biodiversiteitsverlies",
+    "id": "Circulaire economie|||Biodiversiteitsverlies",
+    "label": "1 (Lift: 1.32)",
+    "weight": 1.3153846153846154,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Nucleaire escalatie",
+    "target": "China-dreiging",
+    "id": "Nucleaire escalatie|||China-dreiging",
+    "label": "1 (Lift: 8.38)",
+    "weight": 8.382352941176471,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Defensiecapaciteiten",
+    "target": "China-dreiging",
+    "id": "Defensiecapaciteiten|||China-dreiging",
+    "label": "2 (Lift: 11.83)",
+    "weight": 11.833910034602075,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "Armoede",
+    "id": "Onzekerheid|||Armoede",
+    "label": "2 (Lift: 6.42)",
+    "weight": 6.416510318949343,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Luchtverontreiniging",
+    "id": "Vogelgriep|||Luchtverontreiniging",
+    "label": "1 (Lift: 0.67)",
+    "weight": 0.6705882352941176,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale weerbaarheid",
+    "target": "Onvoldoende politiecapaciteit",
+    "id": "Digitale weerbaarheid|||Onvoldoende politiecapaciteit",
+    "label": "1 (Lift: 8.91)",
+    "weight": 8.90625,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Onzekerheid",
+    "id": "Broeikasgasemissies|||Onzekerheid",
+    "label": "1 (Lift: 1.61)",
+    "weight": 1.6101694915254237,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Luchtverontreiniging",
+    "target": "Energieprijzen",
+    "id": "Luchtverontreiniging|||Energieprijzen",
+    "label": "1 (Lift: 1.52)",
+    "weight": 1.5240641711229947,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Gebrek aan financiering",
+    "id": "Gebrek aan transparantie|||Gebrek aan financiering",
+    "label": "1 (Lift: 8.91)",
+    "weight": 8.90625,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Gegevensbescherming",
+    "id": "Gebrek aan transparantie|||Gegevensbescherming",
+    "label": "1 (Lift: 2.74)",
+    "weight": 2.7403846153846154,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan financiering",
+    "target": "Bezuinigingen",
+    "id": "Gebrek aan financiering|||Bezuinigingen",
+    "label": "1 (Lift: 42.75)",
+    "weight": 42.75,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Energievoorziening",
+    "id": "Zorgcapaciteit|||Energievoorziening",
+    "label": "1 (Lift: 1.70)",
+    "weight": 1.6964285714285714,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Testcapaciteit",
+    "id": "Gegevensdeling|||Testcapaciteit",
+    "label": "1 (Lift: 8.14)",
+    "weight": 8.142857142857142,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Vaccinatietwijfel",
+    "id": "Grondstoffenschaarste|||Vaccinatietwijfel",
+    "label": "1 (Lift: 2.06)",
+    "weight": 2.0552884615384617,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Vertraging",
+    "id": "Digitale dreigingen|||Vertraging",
+    "label": "1 (Lift: 0.64)",
+    "weight": 0.6366344005956813,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Testcapaciteit",
+    "id": "Vogelgriep|||Testcapaciteit",
+    "label": "2 (Lift: 5.75)",
+    "weight": 5.7478991596638656,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Testcapaciteit",
+    "target": "Bezuinigingen",
+    "id": "Testcapaciteit|||Bezuinigingen",
+    "label": "1 (Lift: 19.00)",
+    "weight": 19.0,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Testcapaciteit",
+    "target": "Digitale dreigingen",
+    "id": "Testcapaciteit|||Digitale dreigingen",
+    "label": "2 (Lift: 4.58)",
+    "weight": 4.578313253012048,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vaccinatietwijfel",
+    "target": "Zorgcapaciteit",
+    "id": "Vaccinatietwijfel|||Zorgcapaciteit",
+    "label": "1 (Lift: 1.37)",
+    "weight": 1.3701923076923077,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "Vertraging",
+    "id": "Onzekerheid|||Vertraging",
+    "label": "1 (Lift: 3.87)",
+    "weight": 3.8687782805429864,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Energievoorziening",
+    "id": "Netcongestie|||Energievoorziening",
+    "label": "3 (Lift: 4.45)",
+    "weight": 4.453125,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "China-dreiging",
+    "id": "Russische agressie|||China-dreiging",
+    "label": "1 (Lift: 1.42)",
+    "weight": 1.4167357083678542,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Defensiecapaciteiten",
+    "target": "Vogelgriep",
+    "id": "Defensiecapaciteiten|||Vogelgriep",
+    "label": "1 (Lift: 2.05)",
+    "weight": 2.0528211284513804,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "China-dreiging",
+    "target": "Defensiecapaciteiten",
+    "id": "China-dreiging|||Defensiecapaciteiten",
+    "label": "1 (Lift: 2.68)",
+    "weight": 2.6802507836990594,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Defensiecapaciteiten",
+    "id": "Gebrek aan transparantie|||Defensiecapaciteiten",
+    "label": "1 (Lift: 3.69)",
+    "weight": 3.685344827586207,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Defensiecapaciteiten",
+    "target": "Gebrek aan transparantie",
+    "id": "Defensiecapaciteiten|||Gebrek aan transparantie",
+    "label": "1 (Lift: 8.38)",
+    "weight": 8.382352941176471,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Online radicalisering",
+    "id": "Russische agressie|||Online radicalisering",
+    "label": "1 (Lift: 0.55)",
+    "weight": 0.5473751600512163,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Radioactief afval",
+    "id": "Digitale dreigingen|||Radioactief afval",
+    "label": "1 (Lift: 3.09)",
+    "weight": 3.092224231464738,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Sociale ongelijkheid",
+    "id": "Gebrek aan transparantie|||Sociale ongelijkheid",
+    "label": "1 (Lift: 4.28)",
+    "weight": 4.275,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gevaarlijke stoffen",
+    "target": "Biodiversiteitsverlies",
+    "id": "Gevaarlijke stoffen|||Biodiversiteitsverlies",
+    "label": "2 (Lift: 2.02)",
+    "weight": 2.0236686390532546,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Energieonzekerheid",
+    "id": "Netcongestie|||Energieonzekerheid",
+    "label": "4 (Lift: 8.91)",
+    "weight": 8.90625,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieonzekerheid",
+    "target": "Energievoorziening",
+    "id": "Energieonzekerheid|||Energievoorziening",
+    "label": "1 (Lift: 7.12)",
+    "weight": 7.125,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Krimp veestapel",
+    "id": "Woningtekort|||Krimp veestapel",
+    "label": "2 (Lift: 17.54)",
+    "weight": 17.53846153846154,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Desinformatie",
+    "target": "AI-dreigingen",
+    "id": "Desinformatie|||AI-dreigingen",
+    "label": "1 (Lift: 24.43)",
+    "weight": 24.428571428571427,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Gegevensdeling",
+    "id": "Zorgcapaciteit|||Gegevensdeling",
+    "label": "1 (Lift: 2.04)",
+    "weight": 2.0357142857142856,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Zorgcapaciteit",
+    "id": "Woningtekort|||Zorgcapaciteit",
+    "label": "2 (Lift: 2.19)",
+    "weight": 2.1923076923076925,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Krimp veestapel",
+    "target": "Woningtekort",
+    "id": "Krimp veestapel|||Woningtekort",
+    "label": "1 (Lift: 12.95)",
+    "weight": 12.954545454545455,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Gegevensdeling|||Georganiseerde criminaliteit",
+    "label": "2 (Lift: 3.56)",
+    "weight": 3.5625,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Energievoorziening",
+    "id": "Emissiereductie|||Energievoorziening",
+    "label": "1 (Lift: 3.75)",
+    "weight": 3.75,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Witwassen",
+    "target": "Mensenhandel",
+    "id": "Witwassen|||Mensenhandel",
+    "label": "1 (Lift: 3.35)",
+    "weight": 3.3529411764705883,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energievoorziening",
+    "target": "Aardbevingen",
+    "id": "Energievoorziening|||Aardbevingen",
+    "label": "1 (Lift: 11.18)",
+    "weight": 11.176470588235293,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Vertrouwenscrisis",
+    "id": "Aardbevingen|||Vertrouwenscrisis",
+    "label": "2 (Lift: 7.11)",
+    "weight": 7.11018711018711,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gevaarlijke stoffen",
+    "target": "Aardbevingen",
+    "id": "Gevaarlijke stoffen|||Aardbevingen",
+    "label": "1 (Lift: 14.62)",
+    "weight": 14.615384615384615,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Gevaarlijke stoffen",
+    "id": "Aardbevingen|||Gevaarlijke stoffen",
+    "label": "1 (Lift: 6.26)",
+    "weight": 6.263736263736264,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Klimaatverandering",
+    "id": "Waterstofbeschikbaarheid|||Klimaatverandering",
+    "label": "2 (Lift: 0.76)",
+    "weight": 0.7647584973166368,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Circulaire economie",
+    "id": "Grondstoffenschaarste|||Circulaire economie",
+    "label": "2 (Lift: 8.91)",
+    "weight": 8.90625,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Energievoorziening",
+    "id": "Waterstofbeschikbaarheid|||Energievoorziening",
+    "label": "2 (Lift: 3.31)",
+    "weight": 3.313953488372093,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Gevaarlijke stoffen",
+    "id": "Biodiversiteitsverlies|||Gevaarlijke stoffen",
+    "label": "1 (Lift: 1.94)",
+    "weight": 1.9387755102040816,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Waterverontreiniging",
+    "id": "Biodiversiteitsverlies|||Waterverontreiniging",
+    "label": "1 (Lift: 2.26)",
+    "weight": 2.261904761904762,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Sociale ongelijkheid",
+    "id": "Energieprijzen|||Sociale ongelijkheid",
+    "label": "3 (Lift: 2.18)",
+    "weight": 2.1829787234042555,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Klimaatverandering",
+    "id": "Vogelgriep|||Klimaatverandering",
+    "label": "3 (Lift: 0.58)",
+    "weight": 0.580316742081448,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vaccinatietwijfel",
+    "target": "Desinformatie",
+    "id": "Vaccinatietwijfel|||Desinformatie",
+    "label": "2 (Lift: 31.67)",
+    "weight": 31.666666666666668,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Defensiecapaciteiten",
+    "id": "Geopolitieke spanningen|||Defensiecapaciteiten",
+    "label": "2 (Lift: 4.91)",
+    "weight": 4.913793103448276,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energievoorziening",
+    "target": "Afhankelijkheid fossiele brandstoffen",
+    "id": "Energievoorziening|||Afhankelijkheid fossiele brandstoffen",
+    "label": "1 (Lift: 3.14)",
+    "weight": 3.1433823529411766,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Synthetische drugs",
+    "id": "Georganiseerde criminaliteit|||Synthetische drugs",
+    "label": "3 (Lift: 14.25)",
+    "weight": 14.25,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Armoede",
+    "id": "Gegevensdeling|||Armoede",
+    "label": "1 (Lift: 1.39)",
+    "weight": 1.3902439024390243,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensbescherming",
+    "target": "Complexiteitssystemen",
+    "id": "Gegevensbescherming|||Complexiteitssystemen",
+    "label": "1 (Lift: 14.25)",
+    "weight": 14.25,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Gebrek aan transparantie",
+    "id": "Grondstoffenschaarste|||Gebrek aan transparantie",
+    "label": "2 (Lift: 8.91)",
+    "weight": 8.90625,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Armoede",
+    "target": "Witwassen",
+    "id": "Armoede|||Witwassen",
+    "label": "1 (Lift: 1.55)",
+    "weight": 1.548913043478261,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Synthetische drugs",
+    "id": "Jeugdgeweld|||Synthetische drugs",
+    "label": "4 (Lift: 40.00)",
+    "weight": 40.0,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Woningtekort",
+    "id": "Klimaatverandering|||Woningtekort",
+    "label": "1 (Lift: 0.66)",
+    "weight": 0.6559263521288837,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Sociale ongelijkheid",
+    "id": "Klimaatverandering|||Sociale ongelijkheid",
+    "label": "2 (Lift: 0.58)",
+    "weight": 0.5772151898734177,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Stikstofdepositie",
+    "target": "Onzekerheid emissies",
+    "id": "Stikstofdepositie|||Onzekerheid emissies",
+    "label": "1 (Lift: 1.29)",
+    "weight": 1.2895927601809956,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Stikstofdepositie",
+    "target": "Broeikasgasemissies",
+    "id": "Stikstofdepositie|||Broeikasgasemissies",
+    "label": "2 (Lift: 2.14)",
+    "weight": 2.1388367729831144,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensbescherming",
+    "target": "Digitale weerbaarheid",
+    "id": "Gegevensbescherming|||Digitale weerbaarheid",
+    "label": "5 (Lift: 14.25)",
+    "weight": 14.25,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "AI-dreigingen",
+    "target": "Gegevensbescherming",
+    "id": "AI-dreigingen|||Gegevensbescherming",
+    "label": "2 (Lift: 6.75)",
+    "weight": 6.745562130177515,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Sociale ongelijkheid",
+    "target": "AI-dreigingen",
+    "id": "Sociale ongelijkheid|||AI-dreigingen",
+    "label": "1 (Lift: 34.90)",
+    "weight": 34.89795918367347,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "AI-dreigingen",
+    "target": "Vertrouwenscrisis",
+    "id": "AI-dreigingen|||Vertrouwenscrisis",
+    "label": "1 (Lift: 3.56)",
+    "weight": 3.555093555093555,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Digitale dreigingen",
+    "id": "Online radicalisering|||Digitale dreigingen",
+    "label": "1 (Lift: 0.86)",
+    "weight": 0.858433734939759,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onvoldoende politiecapaciteit",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Onvoldoende politiecapaciteit|||Georganiseerde criminaliteit",
+    "label": "3 (Lift: 14.57)",
+    "weight": 14.573863636363637,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Digitale dreigingen",
+    "id": "Vogelgriep|||Digitale dreigingen",
+    "label": "2 (Lift: 0.48)",
+    "weight": 0.4847625797306875,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Vertraging",
+    "id": "Emissiereductie|||Vertraging",
+    "label": "1 (Lift: 2.65)",
+    "weight": 2.6470588235294117,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mentale gezondheid",
+    "target": "Vertrouwenscrisis",
+    "id": "Mentale gezondheid|||Vertrouwenscrisis",
+    "label": "1 (Lift: 1.78)",
+    "weight": 1.7775467775467775,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Online radicalisering|||Georganiseerde criminaliteit",
+    "label": "1 (Lift: 2.23)",
+    "weight": 2.2265625,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Mensenhandel",
+    "id": "Vogelgriep|||Mensenhandel",
+    "label": "4 (Lift: 2.68)",
+    "weight": 2.6823529411764704,
+    "raw_count": 4,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Sociale ongelijkheid",
+    "target": "Synthetische drugs",
+    "id": "Sociale ongelijkheid|||Synthetische drugs",
+    "label": "1 (Lift: 27.14)",
+    "weight": 27.142857142857142,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Complexiteitssystemen",
+    "id": "Migratiedruk|||Complexiteitssystemen",
+    "label": "1 (Lift: 7.12)",
+    "weight": 7.125,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Stikstofdepositie",
+    "id": "Emissiereductie|||Stikstofdepositie",
+    "label": "1 (Lift: 5.29)",
+    "weight": 5.294117647058823,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Nucleaire escalatie",
+    "target": "Sancties Rusland",
+    "id": "Nucleaire escalatie|||Sancties Rusland",
+    "label": "2 (Lift: 16.76)",
+    "weight": 16.764705882352942,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Bezuinigingen",
+    "target": "Gebrek aan financiering",
+    "id": "Bezuinigingen|||Gebrek aan financiering",
+    "label": "2 (Lift: 31.67)",
+    "weight": 31.666666666666668,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Politieke instabiliteit",
+    "target": "Energieprijzen",
+    "id": "Politieke instabiliteit|||Energieprijzen",
+    "label": "1 (Lift: 4.19)",
+    "weight": 4.1911764705882355,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Mentale gezondheid",
+    "id": "Synthetische drugs|||Mentale gezondheid",
+    "label": "2 (Lift: 3.09)",
+    "weight": 3.089430894308943,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Russische agressie",
+    "id": "Netcongestie|||Russische agressie",
+    "label": "1 (Lift: 1.32)",
+    "weight": 1.3194444444444444,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Biodiversiteitsverlies",
+    "id": "Russische agressie|||Biodiversiteitsverlies",
+    "label": "1 (Lift: 0.19)",
+    "weight": 0.18526543878656554,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Russische agressie",
+    "id": "Energieprijzen|||Russische agressie",
+    "label": "3 (Lift: 2.02)",
+    "weight": 2.021276595744681,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Klimaatverandering",
+    "id": "Digitale dreigingen|||Klimaatverandering",
+    "label": "1 (Lift: 0.21)",
+    "weight": 0.2081304771178189,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertraging",
+    "target": "Grondstoffenschaarste",
+    "id": "Vertraging|||Grondstoffenschaarste",
+    "label": "1 (Lift: 3.79)",
+    "weight": 3.7915742793791574,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Mentale gezondheid",
+    "id": "Gegevensdeling|||Mentale gezondheid",
+    "label": "1 (Lift: 2.11)",
+    "weight": 2.111111111111111,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertrouwenscrisis",
+    "target": "Vogelgriep",
+    "id": "Vertrouwenscrisis|||Vogelgriep",
+    "label": "1 (Lift: 3.49)",
+    "weight": 3.489795918367347,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Complexiteitssystemen",
+    "id": "Zorgcapaciteit|||Complexiteitssystemen",
+    "label": "1 (Lift: 6.79)",
+    "weight": 6.785714285714286,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Gegevensbescherming",
+    "id": "Russische agressie|||Gegevensbescherming",
+    "label": "1 (Lift: 0.62)",
+    "weight": 0.6175514626218852,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Sancties Rusland",
+    "target": "Energieprijzen",
+    "id": "Sancties Rusland|||Energieprijzen",
+    "label": "1 (Lift: 5.59)",
+    "weight": 5.588235294117647,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Grondstoffenschaarste",
+    "id": "Onzekerheid emissies|||Grondstoffenschaarste",
+    "label": "1 (Lift: 2.09)",
+    "weight": 2.0853658536585367,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Luchtverontreiniging",
+    "id": "Emissiereductie|||Luchtverontreiniging",
+    "label": "1 (Lift: 3.00)",
+    "weight": 3.0,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Circulaire economie",
+    "target": "Vertraging",
+    "id": "Circulaire economie|||Vertraging",
+    "label": "1 (Lift: 5.03)",
+    "weight": 5.029411764705882,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Grondstoffenschaarste",
+    "id": "Synthetische drugs|||Grondstoffenschaarste",
+    "label": "1 (Lift: 1.02)",
+    "weight": 1.0172516359309935,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Jeugdgeweld",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Jeugdgeweld|||Georganiseerde criminaliteit",
+    "label": "1 (Lift: 2.81)",
+    "weight": 2.8125,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertraging",
+    "target": "Energieonzekerheid",
+    "id": "Vertraging|||Energieonzekerheid",
+    "label": "1 (Lift: 9.72)",
+    "weight": 9.715909090909092,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Emissiereductie",
+    "target": "Netcongestie",
+    "id": "Emissiereductie|||Netcongestie",
+    "label": "1 (Lift: 1.61)",
+    "weight": 1.6071428571428572,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Gegevensbescherming",
+    "id": "Gegevensdeling|||Gegevensbescherming",
+    "label": "5 (Lift: 7.31)",
+    "weight": 7.3076923076923075,
+    "raw_count": 5,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale weerbaarheid",
+    "target": "Gegevensdeling",
+    "id": "Digitale weerbaarheid|||Gegevensdeling",
+    "label": "2 (Lift: 5.34)",
+    "weight": 5.34375,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Digitale weerbaarheid",
+    "id": "Gegevensdeling|||Digitale weerbaarheid",
+    "label": "9 (Lift: 17.10)",
+    "weight": 17.1,
+    "raw_count": 9,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Digitale dreigingen",
+    "id": "Georganiseerde criminaliteit|||Digitale dreigingen",
+    "label": "6 (Lift: 3.09)",
+    "weight": 3.0903614457831323,
+    "raw_count": 6,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Gegevensdeling",
+    "id": "Digitale dreigingen|||Gegevensdeling",
+    "label": "2 (Lift: 2.16)",
+    "weight": 2.1645569620253164,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Complexiteitssystemen",
+    "target": "Energieprijzen",
+    "id": "Complexiteitssystemen|||Energieprijzen",
+    "label": "2 (Lift: 5.59)",
+    "weight": 5.588235294117647,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energievoorziening",
+    "target": "Digitale dreigingen",
+    "id": "Energievoorziening|||Digitale dreigingen",
+    "label": "1 (Lift: 1.21)",
+    "weight": 1.2119064493267186,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensbescherming",
+    "target": "Vertraging",
+    "id": "Gegevensbescherming|||Vertraging",
+    "label": "1 (Lift: 2.51)",
+    "weight": 2.514705882352941,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Sancties Rusland",
+    "id": "Digitale dreigingen|||Sancties Rusland",
+    "label": "1 (Lift: 1.27)",
+    "weight": 1.2732688011913627,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Biodiversiteitsverlies",
+    "id": "Digitale dreigingen|||Biodiversiteitsverlies",
+    "label": "1 (Lift: 0.17)",
+    "weight": 0.1665043816942551,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Armoede",
+    "id": "Geopolitieke spanningen|||Armoede",
+    "label": "1 (Lift: 1.74)",
+    "weight": 1.7378048780487805,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Online radicalisering",
+    "id": "Gebrek aan transparantie|||Online radicalisering",
+    "label": "2 (Lift: 4.86)",
+    "weight": 4.857954545454546,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "AI-dreigingen",
+    "target": "Digitale dreigingen",
+    "id": "AI-dreigingen|||Digitale dreigingen",
+    "label": "3 (Lift: 4.75)",
+    "weight": 4.754402224281742,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Synthetische drugs",
+    "target": "Online radicalisering",
+    "id": "Synthetische drugs|||Online radicalisering",
+    "label": "1 (Lift: 0.95)",
+    "weight": 0.9478935698447893,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan financiering",
+    "target": "Radioactief afval",
+    "id": "Gebrek aan financiering|||Radioactief afval",
+    "label": "1 (Lift: 61.07)",
+    "weight": 61.07142857142857,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Witwassen",
+    "target": "Vertraging",
+    "id": "Witwassen|||Vertraging",
+    "label": "1 (Lift: 2.96)",
+    "weight": 2.958477508650519,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Georganiseerde criminaliteit",
+    "id": "Digitale dreigingen|||Georganiseerde criminaliteit",
+    "label": "1 (Lift: 0.68)",
+    "weight": 0.6764240506329114,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Klimaatverandering",
+    "id": "Russische agressie|||Klimaatverandering",
+    "label": "1 (Lift: 0.23)",
+    "weight": 0.23158179848320692,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Afhankelijkheid fossiele brandstoffen",
+    "target": "Circulaire economie",
+    "id": "Afhankelijkheid fossiele brandstoffen|||Circulaire economie",
+    "label": "1 (Lift: 2.97)",
+    "weight": 2.96875,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Digitale weerbaarheid",
+    "id": "Grondstoffenschaarste|||Digitale weerbaarheid",
+    "label": "1 (Lift: 1.78)",
+    "weight": 1.78125,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Gegevensdeling",
+    "id": "Grondstoffenschaarste|||Gegevensdeling",
+    "label": "2 (Lift: 5.34)",
+    "weight": 5.34375,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onvoldoende politiecapaciteit",
+    "target": "Gebrek aan transparantie",
+    "id": "Onvoldoende politiecapaciteit|||Gebrek aan transparantie",
+    "label": "1 (Lift: 12.95)",
+    "weight": 12.954545454545455,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Defensiecapaciteiten",
+    "id": "Migratiedruk|||Defensiecapaciteiten",
+    "label": "2 (Lift: 2.95)",
+    "weight": 2.9482758620689653,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gevaarlijke stoffen",
+    "target": "Energieprijzen",
+    "id": "Gevaarlijke stoffen|||Energieprijzen",
+    "label": "1 (Lift: 2.58)",
+    "weight": 2.579185520361991,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Biodiversiteitsverlies",
+    "id": "Aardbevingen|||Biodiversiteitsverlies",
+    "label": "1 (Lift: 1.01)",
+    "weight": 1.0118343195266273,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Waterstofbeschikbaarheid",
+    "target": "Emissiereductie",
+    "id": "Waterstofbeschikbaarheid|||Emissiereductie",
+    "label": "1 (Lift: 1.10)",
+    "weight": 1.1046511627906976,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "AI-dreigingen",
+    "id": "Migratiedruk|||AI-dreigingen",
+    "label": "1 (Lift: 6.11)",
+    "weight": 6.107142857142857,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Mensenhandel",
+    "target": "Vogelgriep",
+    "id": "Mensenhandel|||Vogelgriep",
+    "label": "1 (Lift: 1.45)",
+    "weight": 1.4540816326530612,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Mentale gezondheid",
+    "id": "Energieprijzen|||Mentale gezondheid",
+    "label": "3 (Lift: 2.02)",
+    "weight": 2.021276595744681,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Waterstofbeschikbaarheid",
+    "id": "Broeikasgasemissies|||Waterstofbeschikbaarheid",
+    "label": "1 (Lift: 1.32)",
+    "weight": 1.3174114021571648,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Broeikasgasemissies",
+    "target": "Gevaarlijke stoffen",
+    "id": "Broeikasgasemissies|||Gevaarlijke stoffen",
+    "label": "1 (Lift: 1.38)",
+    "weight": 1.3801452784503632,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gevaarlijke stoffen",
+    "target": "Energieonzekerheid",
+    "id": "Gevaarlijke stoffen|||Energieonzekerheid",
+    "label": "1 (Lift: 8.22)",
+    "weight": 8.221153846153847,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Politieke instabiliteit",
+    "target": "Russische agressie",
+    "id": "Politieke instabiliteit|||Russische agressie",
+    "label": "1 (Lift: 7.92)",
+    "weight": 7.916666666666667,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "China-dreiging",
+    "id": "Geopolitieke spanningen|||China-dreiging",
+    "label": "1 (Lift: 4.19)",
+    "weight": 4.1911764705882355,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Emissiereductie",
+    "id": "Gebrek aan transparantie|||Emissiereductie",
+    "label": "1 (Lift: 2.97)",
+    "weight": 2.96875,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Complexiteitssystemen",
+    "id": "Aardbevingen|||Complexiteitssystemen",
+    "label": "1 (Lift: 21.92)",
+    "weight": 21.923076923076923,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Aardbevingen",
+    "id": "Energieprijzen|||Aardbevingen",
+    "label": "1 (Lift: 2.02)",
+    "weight": 2.021276595744681,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Aardbevingen",
+    "target": "Onzekerheid",
+    "id": "Aardbevingen|||Onzekerheid",
+    "label": "1 (Lift: 7.31)",
+    "weight": 7.3076923076923075,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vertraging",
+    "target": "Aardbevingen",
+    "id": "Vertraging|||Aardbevingen",
+    "label": "1 (Lift: 17.27)",
+    "weight": 17.272727272727273,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid emissies",
+    "target": "Broeikasgasemissies",
+    "id": "Onzekerheid emissies|||Broeikasgasemissies",
+    "label": "3 (Lift: 6.26)",
+    "weight": 6.2560975609756095,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Vaccinatietwijfel",
+    "id": "Zorgcapaciteit|||Vaccinatietwijfel",
+    "label": "2 (Lift: 3.13)",
+    "weight": 3.131868131868132,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Zorgcapaciteit",
+    "id": "Digitale dreigingen|||Zorgcapaciteit",
+    "label": "3 (Lift: 0.62)",
+    "weight": 0.6243914313534566,
+    "raw_count": 3,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Netcongestie",
+    "target": "Armoede",
+    "id": "Netcongestie|||Armoede",
+    "label": "1 (Lift: 0.87)",
+    "weight": 0.8689024390243902,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Digitale weerbaarheid",
+    "id": "Georganiseerde criminaliteit|||Digitale weerbaarheid",
+    "label": "1 (Lift: 1.43)",
+    "weight": 1.425,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Luchtverontreiniging",
+    "target": "Broeikasgasemissies",
+    "id": "Luchtverontreiniging|||Broeikasgasemissies",
+    "label": "1 (Lift: 1.90)",
+    "weight": 1.8957871396895787,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Onzekerheid",
+    "target": "Broeikasgasemissies",
+    "id": "Onzekerheid|||Broeikasgasemissies",
+    "label": "1 (Lift: 3.21)",
+    "weight": 3.2082551594746715,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Krimp veestapel",
+    "target": "Onzekerheid emissies",
+    "id": "Krimp veestapel|||Onzekerheid emissies",
+    "label": "1 (Lift: 4.19)",
+    "weight": 4.1911764705882355,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Bezuinigingen",
+    "target": "Onzekerheid",
+    "id": "Bezuinigingen|||Onzekerheid",
+    "label": "1 (Lift: 10.56)",
+    "weight": 10.555555555555555,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Klimaatverandering",
+    "id": "Zorgcapaciteit|||Klimaatverandering",
+    "label": "1 (Lift: 0.39)",
+    "weight": 0.3914835164835165,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Defensiecapaciteiten",
+    "id": "Digitale dreigingen|||Defensiecapaciteiten",
+    "label": "2 (Lift: 1.49)",
+    "weight": 1.492797904845046,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale dreigingen",
+    "target": "Mensenhandel",
+    "id": "Digitale dreigingen|||Mensenhandel",
+    "label": "1 (Lift: 0.72)",
+    "weight": 0.7215189873417721,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan financiering",
+    "target": "Woningtekort",
+    "id": "Gebrek aan financiering|||Woningtekort",
+    "label": "1 (Lift: 38.86)",
+    "weight": 38.86363636363637,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Grondstoffenschaarste",
+    "target": "Energieonzekerheid",
+    "id": "Grondstoffenschaarste|||Energieonzekerheid",
+    "label": "1 (Lift: 3.34)",
+    "weight": 3.33984375,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Sancties Rusland",
+    "target": "Digitale dreigingen",
+    "id": "Sancties Rusland|||Digitale dreigingen",
+    "label": "2 (Lift: 6.87)",
+    "weight": 6.867469879518072,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Gegevensdeling",
+    "id": "Woningtekort|||Gegevensdeling",
+    "label": "1 (Lift: 5.70)",
+    "weight": 5.7,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Woningtekort",
+    "id": "Gegevensdeling|||Woningtekort",
+    "label": "1 (Lift: 5.18)",
+    "weight": 5.181818181818182,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Complexiteitssystemen",
+    "target": "Vertrouwenscrisis",
+    "id": "Complexiteitssystemen|||Vertrouwenscrisis",
+    "label": "2 (Lift: 7.70)",
+    "weight": 7.702702702702703,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Bezuinigingen",
+    "target": "Zorgcapaciteit",
+    "id": "Bezuinigingen|||Zorgcapaciteit",
+    "label": "1 (Lift: 1.83)",
+    "weight": 1.8269230769230769,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Onvoldoende politiecapaciteit",
+    "id": "Zorgcapaciteit|||Onvoldoende politiecapaciteit",
+    "label": "1 (Lift: 6.79)",
+    "weight": 6.785714285714286,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "Defensiecapaciteiten",
+    "id": "Georganiseerde criminaliteit|||Defensiecapaciteiten",
+    "label": "1 (Lift: 1.47)",
+    "weight": 1.4741379310344827,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Online radicalisering",
+    "target": "Digitale weerbaarheid",
+    "id": "Online radicalisering|||Digitale weerbaarheid",
+    "label": "1 (Lift: 2.38)",
+    "weight": 2.375,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Sociale ongelijkheid",
+    "target": "Woningtekort",
+    "id": "Sociale ongelijkheid|||Woningtekort",
+    "label": "1 (Lift: 22.21)",
+    "weight": 22.207792207792206,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Energieprijzen",
+    "target": "Energievoorziening",
+    "id": "Energieprijzen|||Energievoorziening",
+    "label": "1 (Lift: 0.76)",
+    "weight": 0.7579787234042553,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Digitale weerbaarheid",
+    "target": "Zorgcapaciteit",
+    "id": "Digitale weerbaarheid|||Zorgcapaciteit",
+    "label": "1 (Lift: 0.51)",
+    "weight": 0.5138221153846154,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Geopolitieke spanningen",
+    "target": "Emissiereductie",
+    "id": "Geopolitieke spanningen|||Emissiereductie",
+    "label": "1 (Lift: 1.98)",
+    "weight": 1.9791666666666667,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gebrek aan transparantie",
+    "target": "Digitale dreigingen",
+    "id": "Gebrek aan transparantie|||Digitale dreigingen",
+    "label": "1 (Lift: 1.29)",
+    "weight": 1.2876506024096386,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Migratiedruk",
+    "target": "Vogelgriep",
+    "id": "Migratiedruk|||Vogelgriep",
+    "label": "1 (Lift: 0.87)",
+    "weight": 0.8724489795918368,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Vogelgriep",
+    "target": "Migratiedruk",
+    "id": "Vogelgriep|||Migratiedruk",
+    "label": "1 (Lift: 0.46)",
+    "weight": 0.4572192513368984,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Russische agressie",
+    "target": "Netcongestie",
+    "id": "Russische agressie|||Netcongestie",
+    "label": "1 (Lift: 0.43)",
+    "weight": 0.4300804828973843,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Woningtekort",
+    "target": "Migratiedruk",
+    "id": "Woningtekort|||Migratiedruk",
+    "label": "1 (Lift: 2.59)",
+    "weight": 2.590909090909091,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "Vertrouwenscrisis",
+    "id": "Klimaatverandering|||Vertrouwenscrisis",
+    "label": "1 (Lift: 0.20)",
+    "weight": 0.19500513171399247,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Luchtverontreiniging",
+    "target": "Grondstoffenschaarste",
+    "id": "Luchtverontreiniging|||Grondstoffenschaarste",
+    "label": "1 (Lift: 1.90)",
+    "weight": 1.8957871396895787,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Stikstofdepositie",
+    "target": "Waterverontreiniging",
+    "id": "Stikstofdepositie|||Waterverontreiniging",
+    "label": "1 (Lift: 2.44)",
+    "weight": 2.4358974358974357,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Zorgcapaciteit",
+    "target": "Defensiecapaciteiten",
+    "id": "Zorgcapaciteit|||Defensiecapaciteiten",
+    "label": "1 (Lift: 1.40)",
+    "weight": 1.4039408866995073,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Defensiecapaciteiten",
+    "target": "Vertrouwenscrisis",
+    "id": "Defensiecapaciteiten|||Vertrouwenscrisis",
+    "label": "1 (Lift: 2.72)",
+    "weight": 2.7186009538950717,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Klimaatverandering",
+    "target": "China-dreiging",
+    "id": "Klimaatverandering|||China-dreiging",
+    "label": "2 (Lift: 0.85)",
+    "weight": 0.8488458674609084,
+    "raw_count": 2,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Politieke instabiliteit",
+    "target": "Geopolitieke spanningen",
+    "id": "Politieke instabiliteit|||Geopolitieke spanningen",
+    "label": "1 (Lift: 11.88)",
+    "weight": 11.875,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Biodiversiteitsverlies",
+    "target": "Onzekerheid emissies",
+    "id": "Biodiversiteitsverlies|||Onzekerheid emissies",
+    "label": "1 (Lift: 1.20)",
+    "weight": 1.1974789915966386,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "China-dreiging",
+    "target": "Georganiseerde criminaliteit",
+    "id": "China-dreiging|||Georganiseerde criminaliteit",
+    "label": "1 (Lift: 2.43)",
+    "weight": 2.428977272727273,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Georganiseerde criminaliteit",
+    "target": "China-dreiging",
+    "id": "Georganiseerde criminaliteit|||China-dreiging",
+    "label": "1 (Lift: 2.51)",
+    "weight": 2.514705882352941,
+    "raw_count": 1,
+    "citaat_relaties": []
+  },
+  {
+    "source": "Gegevensdeling",
+    "target": "Onzekerheid",
+    "id": "Gegevensdeling|||Onzekerheid",
+    "label": "1 (Lift: 3.17)",
+    "weight": 3.1666666666666665,
+    "raw_count": 1,
+    "citaat_relaties": []
+  }
+]
