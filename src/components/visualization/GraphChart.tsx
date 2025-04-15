@@ -37,7 +37,8 @@ const denkWerkTheme = {
   ring: {
     ...lightTheme.ring,
     activeFill: 'rgb(0,168,120)', // Changed to teal green for active rings
-  }
+  },
+  cluster: null as any,
 };
 
 // Interface for our props  
@@ -49,11 +50,17 @@ interface GraphChartProps {
   selectedNodeId: string | null;    
   onNodeSelect: (nodeId: string | null) => void;
   showRelationships?: boolean;
-  sizingAttribute?: 'hub' | 'auth' | 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out'; 
+  sizingAttribute?:  'eigen_centrality' | 
+  'eigen_centrality_in' | 
+  'eigen_centrality_out' | 
+  'cross_category_eigen_centrality' | 
+  'cross_category_eigen_centrality_in' | 
+  'cross_category_eigen_centrality_out';
   minNodeSize?: number;
   maxNodeSize?: number;
   edgeWeightCutoff?: number;
   useWeightBasedEdgeSize?: boolean;
+  clusterOnCategory?: boolean;
 }  
 
 // Interface for the ref we expose  
@@ -79,6 +86,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
     maxNodeSize = 15,
     edgeWeightCutoff = 1.5,
     useWeightBasedEdgeSize = false,
+    clusterOnCategory = false,
   }, ref) => {      
     // Internal ref to the actual GraphCanvas      
     const graphRef = useRef<GraphCanvasRef>(null);
@@ -92,7 +100,12 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         return {
           ...node,
           fill: color,
-          color: color
+          color: color,
+          data:
+          {
+            ...node.data,
+            category: category,
+          }
         };
       });
     }, [nodes]);
@@ -228,6 +241,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         theme={denkWerkTheme}
         minNodeSize={minNodeSize}
         maxNodeSize={maxNodeSize}
+        clusterAttribute= {clusterOnCategory ? 'category' : undefined}
       />
     );
   }  
