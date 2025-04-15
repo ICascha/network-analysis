@@ -904,7 +904,7 @@
     "target": "Koolstofverlies",
     "id": "Onzekerheid gegevens|||Koolstofverlies",
     "label": "4 (Lift: 44.25)",
-    "weight": 44.25396825396825,
+    "weight": 0.25396825396825,
     "raw_count": 4,
     "citaat_relaties": []
   },
@@ -922,7 +922,7 @@
     "target": "Onzekerheid gegevens",
     "id": "Koolstofverlies|||Onzekerheid gegevens",
     "label": "6 (Lift: 74.68)",
-    "weight": 74.67857142857143,
+    "weight": 0.67857142857143,
     "raw_count": 6,
     "citaat_relaties": []
   },
