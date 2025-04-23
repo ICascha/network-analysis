@@ -31,7 +31,7 @@ const createEdgeMaps = (nodes: Node[], edges: Edge[]) => {
   edges.forEach(edge => {
     const sourceId = edge.source;
     const targetId = edge.target;
-    const weight = edge.weight || 1; // Default to 1 if weight is not provided
+    const weight = edge.weight !== undefined ? edge.weight : 0; // Default to 1 if weight is not provided
     
     // Add targetId to the outgoing edges of sourceId with weight
     const outEdges = outgoingEdges.get(sourceId) || [];
@@ -88,7 +88,7 @@ const createCrossCategoryEdgeMaps = (nodes: Node[], edges: Edge[]) => {
       return;
     }
     
-    const weight = edge.weight || 1; // Default to 1 if weight is not provided
+    const weight = edge.weight !== undefined ? edge.weight : 0; // Default to 1 if weight is not provided
     
     // Add targetId to the outgoing edges of sourceId with weight
     const outEdges = outgoingEdges.get(sourceId) || [];
@@ -248,8 +248,8 @@ const calculateEigenvector = (
 };
 
 /**
- * Modified eigenvector centrality that takes edge weights into account
- * Calculates three types of centrality:
+ * Modified centrality calculations that use HITS algorithm approach
+ * but maintain the same property names for compatibility:
  * - eigen_centrality: treats the graph as undirected
  * - eigen_centrality_in: based on incoming edges (prestige)
  * - eigen_centrality_out: based on outgoing edges (importance)

@@ -235,7 +235,7 @@ export const calculateWeightedHITS = (networkData: NetworkData, k: number = 10):
   edges.forEach(edge => {
     const sourceId = edge.source;
     const targetId = edge.target;
-    const weight = edge.weight || 1; // Default to 1 if weight is not provided
+    const weight = edge.weight !== undefined ? edge.weight : 1; // Default to 1 if weight is not provided
     
     // Add targetId to the outgoing edges of sourceId with weight
     const outEdges = outgoingEdges.get(sourceId) || [];
@@ -335,6 +335,7 @@ export const getNetworkWithHITS = async (iterations: number = 10): Promise<Netwo
  * @returns The network data with updated eigenvector centrality scores
  */
 export const calculateEigenvectorCentrality = (networkData: NetworkData, k: number = 10): NetworkData => {
+  console.log(networkData);
   const { nodes, edges } = networkData;
   
   // Create a map for quick access to nodes by id
@@ -540,7 +541,7 @@ export const calculateWeightedEigenvectorCentrality = (networkData: NetworkData,
   edges.forEach(edge => {
     const sourceId = edge.source;
     const targetId = edge.target;
-    const weight = edge.weight || 1; // Default to 1 if weight is not provided
+    const weight = edge.weight !== undefined ? edge.weight : 1; // Default to 1 if weight is not provided
     
     // Add targetId to the outgoing edges of sourceId with weight
     const outEdges = outgoingEdges.get(sourceId) || [];

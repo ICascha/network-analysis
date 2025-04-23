@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { MainContent } from '../visualization/MainContent';
 import TimeSeriesAnalysis from "../visualization/TimeSeriesAnalysis";
-import { Info, Home, Network, Clock, Newspaper, Calendar } from 'lucide-react';
+import ScenarioGenerator from "../visualization/ScenarioGenerator";
+import { Info, Home, Network, Clock, Newspaper, Calendar, GitBranch } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -101,7 +102,7 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
         </div>
         
         {isTypewriterComplete && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-fade-in">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 animate-fade-in">
             <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
               <CardHeader className="border-b border-gray-100">
                 <CardTitle className="flex items-center gap-2 text-gray-800">
@@ -183,6 +184,28 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
                   className="w-full text-white"
                   style={{ backgroundColor: brandColor, borderColor: brandColor }}
                   onClick={() => onNavigate('topic')}
+                >
+                  Bekijken
+                </Button>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
+              <CardHeader className="border-b border-gray-100">
+                <CardTitle className="flex items-center gap-2 text-gray-800">
+                  <GitBranch className="h-5 w-5" style={{ color: brandColor }} />
+                  Scenario Generator
+                </CardTitle>
+                <CardDescription className="text-gray-600">
+                  Verken causale relaties tussen dreigingen
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus.</p>
+                <Button 
+                  className="w-full text-white"
+                  style={{ backgroundColor: brandColor, borderColor: brandColor }}
+                  onClick={() => onNavigate('scenario')}
                 >
                   Bekijken
                 </Button>
@@ -355,6 +378,19 @@ export const NarrativeLayout = () => {
                 <Newspaper className="h-5 w-5" />
                 <span>Bronanalyse</span>
               </button>
+              
+              <button 
+                onClick={() => handleNavigate('scenario')}
+                className={cn(
+                  "flex items-center gap-2 px-6 py-4 text-gray-700 font-medium border-b-2 transition-colors",
+                  activeTab === 'scenario' 
+                    ? "border-[rgb(0,153,168)] text-[rgb(0,153,168)]" 
+                    : "border-transparent hover:text-[rgb(0,153,168)] hover:bg-gray-50"
+                )}
+              >
+                <GitBranch className="h-5 w-5" />
+                <span>Scenario Generator</span>
+              </button>
             </nav>
           </div>
         </div>
@@ -390,6 +426,12 @@ export const NarrativeLayout = () => {
           {activeTab === 'topic' && (
             <div className="bg-gray-50">
               <SourceAnalysis />
+            </div>
+          )}
+          
+          {activeTab === 'scenario' && (
+            <div className="bg-gray-50">
+              <ScenarioGenerator />
             </div>
           )}
         </div>
