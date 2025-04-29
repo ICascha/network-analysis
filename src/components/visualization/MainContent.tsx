@@ -8,7 +8,7 @@ import NodeSelector from './NodeSelector';
 import CameraControls from './CameraControls';
 import ColorLegend from './ColorLegend';
 // Update import path to the new location and renamed functions
-import { getNetworkWithCentralityMetrics, Node, Edge, Citation } from './networkGraph/networkService';
+import { getNetworkWithCentralityMetrics, Node, Edge } from './networkGraph/networkService';
 import GraphSettings from './GraphSettings';
 import {
   Sheet,
