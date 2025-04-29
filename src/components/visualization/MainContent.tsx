@@ -37,15 +37,6 @@ export type CentralityMetric =
   'cross_category_eigen_centrality_in' | 
   'cross_category_eigen_centrality_out';
 
-interface GroupedCitation {
-  title: string;
-  document_type: string;
-  source: string;
-  publication_date: string;
-  document_link: string;
-  citaten: string[];
-}
-
 // Helper to get centrality value safely
 const getCentralityValue = (node: Node, metric: CentralityMetric): number | null => {
   return node.data?.[metric] ?? null;
@@ -61,12 +52,12 @@ export const MainContent = ({ }: MainContentProps) => {
   const [showRelationships, setShowRelationships] = useState<boolean>(false);
   const [showPanel, setShowPanel] = useState<boolean>(false);
   // Update default scoring metric to eigen_centrality_out since we removed HITS
-  const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('eigen_centrality_out');
+  const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('cross_category_eigen_centrality_out');
   const [minNodeSize, setMinNodeSize] = useState<number>(5);
   const [maxNodeSize, setMaxNodeSize] = useState<number>(15);
-  const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(1.5);
-  const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(true);
-  const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(false);
+  const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(0.5);
+  const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(false);
+  const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(true);
 
   // Update the data fetching to use the new function name
   useEffect(() => {
@@ -103,29 +94,6 @@ export const MainContent = ({ }: MainContentProps) => {
   const selectedNode = selectedNodeId
     ? nodes.find(n => n.id === selectedNodeId) || null
     : null;
-
-  const groupCitationsByDocument = (citations: Citation[]): GroupedCitation[] => {
-    const groupedMap = new Map<string, GroupedCitation>();
-    citations.forEach(citation => {
-      const documentKey = citation.title;
-      if (!groupedMap.has(documentKey)) {
-        groupedMap.set(documentKey, {
-          title: citation.title,
-          document_type: citation.document_type,
-          source: citation.source,
-          publication_date: citation.publication_date,
-          document_link: citation.document_link,
-          citaten: [citation.citaat]
-        });
-      } else {
-        const existing = groupedMap.get(documentKey)!;
-        if (!existing.citaten.includes(citation.citaat)) {
-             existing.citaten.push(citation.citaat);
-        }
-      }
-    });
-    return Array.from(groupedMap.values());
-  };
 
   const handleNodeSelect = (nodeId: string | null) => {
     setSelectedNodeId(nodeId);
@@ -365,33 +333,33 @@ export const MainContent = ({ }: MainContentProps) => {
                     )}
                   </div>
 
-                  {/* Citations section */}
+                  {/* Citations section - Updated to display individual citations */}
                   <div className="mt-4 flex-1 flex flex-col overflow-hidden">
                     <h5 className="text-sm font-medium mb-2 flex-shrink-0">Representatieve documenten</h5>
                     <div className="space-y-3 overflow-y-auto pr-2 flex-1">
                       {selectedNode.citaten && selectedNode.citaten.length > 0 ? (
-                         groupCitationsByDocument(selectedNode.citaten).map((document, index) => (
+                         selectedNode.citaten.map((citation, index) => (
                           <div key={index} className="p-3 bg-background/50 rounded-lg border border-border/20">
                             <div className="flex justify-between items-start mb-2">
                               <a
-                                href={formatDocumentLink(document.document_link)}
+                                href={formatDocumentLink(citation.document_link)}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-sm font-medium text-primary hover:underline flex-1 mr-2"
                               >
-                                {document.title || "Onbekende Titel"}
+                                {citation.title || "Onbekende Titel"}
                               </a>
                             </div>
                             <div className="flex flex-wrap text-xs text-muted-foreground mb-2 space-x-2">
-                              {document.publication_date && <div>{document.publication_date.slice(0, 7)}</div>}
-                              {document.publication_date && (document.document_type || document.source) && <div>•</div>}
-                              {document.document_type && <div>{document.document_type}</div>}
-                              {document.document_type && document.source && <div>•</div>}
-                              {document.source && <div>{document.source}</div>}
+                              {citation.publication_date && <div>{citation.publication_date.slice(0, 7)}</div>}
+                              {citation.publication_date && (citation.document_type || citation.source) && <div>•</div>}
+                              {citation.document_type && <div>{citation.document_type}</div>}
+                              {citation.document_type && citation.source && <div>•</div>}
+                              {citation.source && <div>{citation.source}</div>}
                             </div>
-                            {document.citaten.map((citaat, citaatIndex) => (
-                              <div key={citaatIndex} className="text-sm mt-2 italic bg-muted/40 p-2 rounded">
-                                "{citaat}"
+                            {citation.citaat.split('|||').map((citaatPart, partIndex) => (
+                              <div key={partIndex} className="text-sm mt-2 italic bg-muted/40 p-2 rounded">
+                                "{citaatPart.trim()}"
                               </div>
                             ))}
                           </div>
