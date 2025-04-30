@@ -12,14 +12,18 @@ export interface Citation {
   citaat: string;
 }
 
-// Define type for relation citation objects
-export interface RelationCitation {
-  filename: string;
-  citaat: string;
-  oorzaak: string;
-  gevolg: string;
-}
-
+  // Define type for relation citation objects
+  export interface RelationCitation {
+    filename: string;
+    citaat: string;
+    oorzaak: string;
+    gevolg: string;
+    publication_date: string;
+    source: string;
+    title: string;
+    document_link: string;
+  }
+  
 // Define types for our enhanced network data
 export interface Node {
   id: string;
@@ -43,6 +47,7 @@ export interface Edge {
   target: string;
   label: string;
   weight: number;
+  raw_count: number;
   citaat_relaties: RelationCitation[];
   [key: string]: any; // For any additional properties
 }

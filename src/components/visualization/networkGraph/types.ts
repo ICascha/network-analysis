@@ -52,6 +52,7 @@ export interface Citation {
     label: string;
     weight: number;
     citaat_relaties: RelationCitation[];
+    raw_count: number;
     [key: string]: any;
   }
   
