@@ -18,6 +18,10 @@ export interface Citation {
     citaat: string;
     oorzaak: string;
     gevolg: string;
+    publication_date: string;
+    source: string;
+    title: string;
+    document_link: string;
   }
   
   // Define types for our enhanced network data

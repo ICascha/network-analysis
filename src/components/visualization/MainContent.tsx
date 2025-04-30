@@ -7,6 +7,8 @@ import GraphChart, { GraphChartRef } from './GraphChart';
 import NodeSelector from './NodeSelector';
 import CameraControls from './CameraControls';
 import ColorLegend from './ColorLegend';
+// Import the new EdgeDisplayToggle component
+import EdgeDisplayToggle, { EdgeDisplayMode } from './EdgeDisplayToggle';
 // Update import path to the new location and renamed functions
 import { getNetworkWithCentralityMetrics, Node, Edge } from './networkGraph/networkService';
 import GraphSettings from './GraphSettings';
@@ -23,6 +25,7 @@ import {
 } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
 import ThreatTable from './ThreatTable';
+import EdgeRelationshipViewer from "./EdgeRelationshipViewer";
 
 interface MainContentProps {
   settings: ModelSettings;
@@ -51,6 +54,8 @@ export const MainContent = ({ }: MainContentProps) => {
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const [showRelationships, setShowRelationships] = useState<boolean>(false);
   const [showPanel, setShowPanel] = useState<boolean>(false);
+  // Add new state for edge display mode
+  const [edgeDisplayMode, setEdgeDisplayMode] = useState<EdgeDisplayMode>('all');
   // Update default scoring metric to eigen_centrality_out since we removed HITS
   const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('cross_category_eigen_centrality_out');
   const [minNodeSize, setMinNodeSize] = useState<number>(5);
@@ -58,6 +63,8 @@ export const MainContent = ({ }: MainContentProps) => {
   const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(0.5);
   const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(false);
   const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(true);
+  const [_, setRelationshipSelectionMode] = useState<boolean>(false);
+
 
   // Update the data fetching to use the new function name
   useEffect(() => {
@@ -70,6 +77,7 @@ export const MainContent = ({ }: MainContentProps) => {
         const validEdges = Array.isArray(data?.edges) ? data.edges : [];
         setNodes(validNodes);
         setEdges(validEdges);
+        console.log(edges);
         setLoading(false);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load network data');
@@ -80,6 +88,22 @@ export const MainContent = ({ }: MainContentProps) => {
     };
     loadNetworkData();
   }, []);
+
+  // Filter edges based on the selected display mode
+  const filteredEdges = useMemo(() => {
+    if (edgeDisplayMode === 'all') {
+      return edges;
+    } else if (edgeDisplayMode === 'incoming' && selectedNodeId) {
+      return edges.filter(edge => edge.target === selectedNodeId);
+    } else if (edgeDisplayMode === 'outgoing' && selectedNodeId) {
+      return edges.filter(edge => edge.source === selectedNodeId);
+    } else if (selectedNodeId) {
+      // If a node is selected but mode is not 'all', show related edges
+      return edges.filter(edge => edge.source === selectedNodeId || edge.target === selectedNodeId);
+    }
+    // Default: return all edges
+    return edges;
+  }, [edges, edgeDisplayMode, selectedNodeId]);
 
   const sortedNodesForSelector = useMemo(() => {
     return [...nodes].sort((a, b) => {
@@ -126,7 +150,7 @@ export const MainContent = ({ }: MainContentProps) => {
         <GraphChart
           ref={graphRef}
           nodes={nodes}
-          edges={edges}
+          edges={filteredEdges}
           loading={loading}
           error={error}
           selectedNodeId={selectedNodeId}
@@ -146,7 +170,15 @@ export const MainContent = ({ }: MainContentProps) => {
         <CameraControls graphRef={graphRef} />
       </div>
 
-      {/* Color Legend */}
+      {/* Edge Display Toggle - Add it below the Camera Controls */}
+      <div className="absolute top-16 left-4 z-10">
+        <EdgeDisplayToggle 
+          displayMode={edgeDisplayMode}
+          setDisplayMode={setEdgeDisplayMode}
+        />
+      </div>
+
+      {/* Color Legend - Move it down to accommodate the new toggle */}
       <div className="absolute top-28 left-4 z-10">
         <ColorLegend />
       </div>
@@ -225,6 +257,16 @@ export const MainContent = ({ }: MainContentProps) => {
          </div>
        )}
 
+      {/* Edge Display Mode Info - Add when a specific edge display mode is active */}
+      {edgeDisplayMode !== 'all' && selectedNodeId && (
+        <div className="absolute top-24 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="bg-background/70 backdrop-blur-md px-3 py-1 rounded-lg shadow-lg text-xs">
+            <span className="text-muted-foreground">Verbindingen: </span>
+            <span>Toon alleen {edgeDisplayMode === 'incoming' ? 'inkomende' : 'uitgaande'} verbindingen voor geselecteerde dreiging</span>
+          </div>
+        </div>
+      )}
+
       {/* Mobile toggle button */}
       <div className="md:hidden absolute top-4 right-4 z-10">
         <Button
@@ -277,6 +319,17 @@ export const MainContent = ({ }: MainContentProps) => {
               <p className="text-xs text-muted-foreground mt-1">
                 Gesorteerd op: {scoringMetric.replace(/_/g, ' ')} (hoogste eerst)
               </p>
+            </div>
+
+              {/* Add Edge Relationship Viewer toggle button */}
+            <div className="mb-4">
+              <EdgeRelationshipViewer
+                nodes={nodes}
+                edges={edges}
+                onModeToggle={setRelationshipSelectionMode}
+                selectedNodeId={selectedNodeId}
+                onNodeSelect={handleNodeSelect}
+              />
             </div>
 
             {/* Divider */}
