@@ -1,7 +1,7 @@
 /**
  * Main network service module that ties together all components
  */
-import { NetworkData } from './types';
+import { NetworkData, Edge } from './types';
 import { fetchNetworkData } from './networkFetcher';
 import { calculateWeightedEigenvectorCentrality } from './eigenvectorCentrality';
 
@@ -10,14 +10,48 @@ import { calculateWeightedEigenvectorCentrality } from './eigenvectorCentrality'
  * Performs both regular and cross-category centrality metrics
  * 
  * @param iterations The number of iterations to run the algorithms (default: 10)
+ * @param rawCountThreshold Threshold for edge visibility based on raw_count (default: 1)
  * @returns The network data with updated eigenvector centrality scores
  */
-export const getNetworkWithCentralityMetrics = async (iterations: number = 10): Promise<NetworkData> => {
+export const getNetworkWithCentralityMetrics = async (
+  iterations: number = 10,
+  rawCountThreshold: number = 1
+): Promise<NetworkData> => {
   // Fetch the raw network data
   const networkData = await fetchNetworkData();
   
+  // Apply raw_count threshold to edge weights
+  const thresholdedData = applyRawCountThreshold(networkData, rawCountThreshold);
+  
   // Calculate all eigenvector centrality metrics (both regular and cross-category)
-  return calculateWeightedEigenvectorCentrality(networkData, iterations);
+  return calculateWeightedEigenvectorCentrality(thresholdedData, iterations);
+};
+
+/**
+ * Applies a threshold to edge weights based on raw_count
+ * If raw_count >= threshold, weight = 1, otherwise weight = 0
+ * 
+ * @param networkData The original network data
+ * @param threshold The minimum raw_count value for an edge to be visible
+ * @returns The network data with thresholded weights
+ */
+export const applyRawCountThreshold = (
+  networkData: NetworkData,
+  threshold: number
+): NetworkData => {
+  if (!networkData || !networkData.edges) {
+    return networkData;
+  }
+
+  const thresholdedEdges: Edge[] = networkData.edges.map(edge => ({
+    ...edge,
+    weight: edge.raw_count >= threshold ? 1 : 0
+  }));
+
+  return {
+    ...networkData,
+    edges: thresholdedEdges
+  };
 };
 
 /**

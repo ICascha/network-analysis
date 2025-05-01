@@ -26,6 +26,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import ThreatTable from './ThreatTable';
 import EdgeRelationshipViewer from "./EdgeRelationshipViewer";
+import EdgeCountFilter from "./EdgeCountFilter";
 
 interface MainContentProps {
   settings: ModelSettings;
@@ -64,6 +65,8 @@ export const MainContent = ({ }: MainContentProps) => {
   const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(false);
   const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(true);
   const [_, setRelationshipSelectionMode] = useState<boolean>(false);
+  // Add state for raw count threshold
+  const [rawCountThreshold, setRawCountThreshold] = useState<number>(6);
 
 
   // Update the data fetching to use the new function name
@@ -71,13 +74,13 @@ export const MainContent = ({ }: MainContentProps) => {
     const loadNetworkData = async () => {
       try {
         setLoading(true);
-        const data = await getNetworkWithCentralityMetrics(100);
-        console.log(data)
+        // Pass the rawCountThreshold to the function
+        const data = await getNetworkWithCentralityMetrics(2, rawCountThreshold);
+        console.log(data);
         const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
         const validEdges = Array.isArray(data?.edges) ? data.edges : [];
         setNodes(validNodes);
         setEdges(validEdges);
-        console.log(edges);
         setLoading(false);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load network data');
@@ -87,33 +90,85 @@ export const MainContent = ({ }: MainContentProps) => {
       }
     };
     loadNetworkData();
-  }, []);
+  }, [rawCountThreshold]); // Add rawCountThreshold as a dependency
+
+  // Update the useEffect to filter edges based on weight threshold
+useEffect(() => {
+  const loadNetworkData = async () => {
+    try {
+      setLoading(true);
+      // Get the network data with centrality metrics
+      const data = await getNetworkWithCentralityMetrics(2, rawCountThreshold);
+      console.log(data);
+      
+      const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
+      const validEdges = Array.isArray(data?.edges) ? data.edges : [];
+      
+      // Filter edges based on the weight threshold
+      const filteredEdges = validEdges.filter(edge => {
+        // Assuming edge.weight or a similar property exists
+        return edge.weight >= 1; // Or whatever threshold you want to use
+      });
+      
+      // Create a set of node IDs that have at least one valid edge
+      const nodeIdsWithValidEdges = new Set();
+      filteredEdges.forEach(edge => {
+        nodeIdsWithValidEdges.add(edge.source);
+        nodeIdsWithValidEdges.add(edge.target);
+      });
+      
+      // Filter nodes to only include those with at least one valid edge
+      const filteredNodes = validNodes.filter(node => 
+        nodeIdsWithValidEdges.has(node.id)
+      );
+      
+      setNodes(filteredNodes);
+      setEdges(filteredEdges);
+      setLoading(false);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load network data');
+      setLoading(false);
+      setNodes([]);
+      setEdges([]);
+    }
+  };
+  loadNetworkData();
+}, [rawCountThreshold]);
+
 
   // Filter edges based on the selected display mode
   const filteredEdges = useMemo(() => {
+    // First filter edges based on raw count threshold (if needed)
+    let edgesToUse = edges;
+    
+    // Then apply the display mode filtering
     if (edgeDisplayMode === 'all') {
-      return edges;
+      return edgesToUse;
     } else if (edgeDisplayMode === 'incoming' && selectedNodeId) {
-      return edges.filter(edge => edge.target === selectedNodeId);
+      return edgesToUse.filter(edge => edge.target === selectedNodeId);
     } else if (edgeDisplayMode === 'outgoing' && selectedNodeId) {
-      return edges.filter(edge => edge.source === selectedNodeId);
+      return edgesToUse.filter(edge => edge.source === selectedNodeId);
     } else if (selectedNodeId) {
       // If a node is selected but mode is not 'all', show related edges
-      return edges.filter(edge => edge.source === selectedNodeId || edge.target === selectedNodeId);
+      return edgesToUse.filter(edge => edge.source === selectedNodeId || edge.target === selectedNodeId);
     }
     // Default: return all edges
-    return edges;
+    return edgesToUse;
   }, [edges, edgeDisplayMode, selectedNodeId]);
 
-  const sortedNodesForSelector = useMemo(() => {
-    return [...nodes].sort((a, b) => {
-      const valA = getCentralityValue(a, scoringMetric);
-      const valB = getCentralityValue(b, scoringMetric);
-      const scoreA = valA === null ? -Infinity : valA;
-      const scoreB = valB === null ? -Infinity : valB;
-      return scoreB - scoreA;
+  const filteredNodes = useMemo(() => {
+    // Create a Set of all node IDs that have at least one edge
+    const nodeIdsWithEdges = new Set();
+    
+    // Use filteredEdges instead of edges to determine which nodes have connections
+    filteredEdges.forEach(edge => {
+      nodeIdsWithEdges.add(edge.source);
+      nodeIdsWithEdges.add(edge.target);
     });
-  }, [nodes, scoringMetric]);
+    
+    // Filter nodes to only include those with at least one edge
+    return nodes.filter(node => nodeIdsWithEdges.has(node.id));
+  }, [nodes, filteredEdges]);
 
   const selectedNode = selectedNodeId
     ? nodes.find(n => n.id === selectedNodeId) || null
@@ -125,6 +180,17 @@ export const MainContent = ({ }: MainContentProps) => {
       setShowPanel(true);
     }
   };
+
+  const sortedNodesForSelector = useMemo(() => {
+    return [...filteredNodes].sort((a, b) => {
+      const valA = getCentralityValue(a, scoringMetric);
+      const valB = getCentralityValue(b, scoringMetric);
+      const scoreA = valA === null ? -Infinity : valA;
+      const scoreB = valB === null ? -Infinity : valB;
+      return scoreB - scoreA;
+    });
+  }, [filteredNodes, scoringMetric]);
+  
 
   useEffect(() => {
     if (selectedNodeId && graphRef.current) {
@@ -147,22 +213,22 @@ export const MainContent = ({ }: MainContentProps) => {
     <div className="relative w-full h-[calc(100vh-96px)]">
       {/* Graph Container */}
       <div className="absolute inset-0 w-full h-full">
-        <GraphChart
-          ref={graphRef}
-          nodes={nodes}
-          edges={filteredEdges}
-          loading={loading}
-          error={error}
-          selectedNodeId={selectedNodeId}
-          onNodeSelect={handleNodeSelect}
-          showRelationships={showRelationships}
-          sizingAttribute={scoringMetric}
-          minNodeSize={minNodeSize}
-          maxNodeSize={maxNodeSize}
-          edgeWeightCutoff={edgeWeightCutoff}
-          useWeightBasedEdgeSize={useWeightBasedEdgeSize}
-          clusterOnCategory={clusterOnCategory}
-        />
+      <GraphChart
+        ref={graphRef}
+        nodes={filteredNodes}  // Changed from nodes to filteredNodes
+        edges={filteredEdges}
+        loading={loading}
+        error={error}
+        selectedNodeId={selectedNodeId}
+        onNodeSelect={handleNodeSelect}
+        showRelationships={showRelationships}
+        sizingAttribute={scoringMetric}
+        minNodeSize={minNodeSize}
+        maxNodeSize={maxNodeSize}
+        edgeWeightCutoff={edgeWeightCutoff}
+        useWeightBasedEdgeSize={useWeightBasedEdgeSize}
+        clusterOnCategory={clusterOnCategory}
+      />
       </div>
 
       {/* Camera Controls */}
@@ -182,6 +248,16 @@ export const MainContent = ({ }: MainContentProps) => {
       <div className="absolute top-28 left-4 z-10">
         <ColorLegend />
       </div>
+
+      {/* Edge Count Filter - Add below the Color Legend */}
+    <div className="absolute top-64 left-4 z-10">
+      <EdgeCountFilter
+        value={rawCountThreshold}
+        onChange={setRawCountThreshold}
+        max={20}
+        min={1}
+      />
+    </div>
 
       {/* Settings & Ranking Buttons */}
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 flex items-center space-x-2">
@@ -323,13 +399,13 @@ export const MainContent = ({ }: MainContentProps) => {
 
               {/* Add Edge Relationship Viewer toggle button */}
             <div className="mb-4">
-              <EdgeRelationshipViewer
-                nodes={nodes}
-                edges={edges}
-                onModeToggle={setRelationshipSelectionMode}
-                selectedNodeId={selectedNodeId}
-                onNodeSelect={handleNodeSelect}
-              />
+            <EdgeRelationshipViewer
+              nodes={filteredNodes}
+              edges={filteredEdges}
+              onModeToggle={setRelationshipSelectionMode}
+              selectedNodeId={selectedNodeId}
+              onNodeSelect={handleNodeSelect}
+            />
             </div>
 
             {/* Divider */}
