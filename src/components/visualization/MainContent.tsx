@@ -7,11 +7,19 @@ import GraphChart, { GraphChartRef } from './GraphChart';
 import NodeSelector from './NodeSelector';
 import CameraControls from './CameraControls';
 import ColorLegend from './ColorLegend';
-// Import the new EdgeDisplayToggle component
 import EdgeDisplayToggle, { EdgeDisplayMode } from './EdgeDisplayToggle';
-// Update import path to the new location and renamed functions
-import { getNetworkWithCentralityMetrics, Node, Edge } from './networkGraph/networkService';
+// Update import to include ThreatImpactWeights
+import { 
+  getNetworkWithCentralityMetrics, 
+  Node, 
+  Edge 
+} from './networkGraph/networkService';
+import { 
+  DEFAULT_THREAT_IMPACT_WEIGHTS,
+  ThreatImpactWeights 
+} from './networkGraph/threatImpactService';
 import GraphSettings from './GraphSettings';
+import ThreatImpactWeightsControl from './ThreatImpactWeightsControl';
 import {
   Sheet,
   SheetTrigger,
@@ -32,7 +40,6 @@ interface MainContentProps {
   settings: ModelSettings;
 }
 
-// Update centrality metric types to match our new implementation
 export type CentralityMetric = 
   'eigen_centrality' | 
   'eigen_centrality_in' | 
@@ -41,7 +48,6 @@ export type CentralityMetric =
   'cross_category_eigen_centrality_in' | 
   'cross_category_eigen_centrality_out';
 
-// Helper to get centrality value safely
 const getCentralityValue = (node: Node, metric: CentralityMetric): number | null => {
   return node.data?.[metric] ?? null;
 };
@@ -55,32 +61,49 @@ export const MainContent = ({ }: MainContentProps) => {
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const [showRelationships, setShowRelationships] = useState<boolean>(false);
   const [showPanel, setShowPanel] = useState<boolean>(false);
-  // Add new state for edge display mode
   const [edgeDisplayMode, setEdgeDisplayMode] = useState<EdgeDisplayMode>('all');
-  // Update default scoring metric to eigen_centrality_out since we removed HITS
-  const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('cross_category_eigen_centrality_out');
+  const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('eigen_centrality_out');
   const [minNodeSize, setMinNodeSize] = useState<number>(5);
   const [maxNodeSize, setMaxNodeSize] = useState<number>(15);
   const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(0.5);
-  const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(false);
+  const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(true);
   const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(true);
   const [_, setRelationshipSelectionMode] = useState<boolean>(false);
-  // Add state for raw count threshold
   const [rawCountThreshold, setRawCountThreshold] = useState<number>(6);
+  // Add state for threat impact weights
+  const [threatImpactWeights, setThreatImpactWeights] = useState<ThreatImpactWeights>(DEFAULT_THREAT_IMPACT_WEIGHTS);
 
-
-  // Update the data fetching to use the new function name
   useEffect(() => {
     const loadNetworkData = async () => {
       try {
         setLoading(true);
-        // Pass the rawCountThreshold to the function
-        const data = await getNetworkWithCentralityMetrics(2, rawCountThreshold);
+        // Pass the rawCountThreshold and threatImpactWeights to the function
+        const data = await getNetworkWithCentralityMetrics(2, rawCountThreshold, threatImpactWeights);
+        console.log('LOGGING DATA')
         console.log(data);
+        
         const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
         const validEdges = Array.isArray(data?.edges) ? data.edges : [];
-        setNodes(validNodes);
-        setEdges(validEdges);
+        
+        // Filter edges based on the weight threshold
+        const filteredEdges = validEdges.filter(edge => {
+          return edge.weight >= 1; // Or whatever threshold you want to use
+        });
+        
+        // Create a set of node IDs that have at least one valid edge
+        const nodeIdsWithValidEdges = new Set();
+        filteredEdges.forEach(edge => {
+          nodeIdsWithValidEdges.add(edge.source);
+          nodeIdsWithValidEdges.add(edge.target);
+        });
+        
+        // Filter nodes to only include those with at least one valid edge
+        const filteredNodes = validNodes.filter(node => 
+          nodeIdsWithValidEdges.has(node.id)
+        );
+        
+        setNodes(filteredNodes);
+        setEdges(filteredEdges);
         setLoading(false);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load network data');
@@ -90,50 +113,7 @@ export const MainContent = ({ }: MainContentProps) => {
       }
     };
     loadNetworkData();
-  }, [rawCountThreshold]); // Add rawCountThreshold as a dependency
-
-  // Update the useEffect to filter edges based on weight threshold
-useEffect(() => {
-  const loadNetworkData = async () => {
-    try {
-      setLoading(true);
-      // Get the network data with centrality metrics
-      const data = await getNetworkWithCentralityMetrics(2, rawCountThreshold);
-      console.log(data);
-      
-      const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
-      const validEdges = Array.isArray(data?.edges) ? data.edges : [];
-      
-      // Filter edges based on the weight threshold
-      const filteredEdges = validEdges.filter(edge => {
-        // Assuming edge.weight or a similar property exists
-        return edge.weight >= 1; // Or whatever threshold you want to use
-      });
-      
-      // Create a set of node IDs that have at least one valid edge
-      const nodeIdsWithValidEdges = new Set();
-      filteredEdges.forEach(edge => {
-        nodeIdsWithValidEdges.add(edge.source);
-        nodeIdsWithValidEdges.add(edge.target);
-      });
-      
-      // Filter nodes to only include those with at least one valid edge
-      const filteredNodes = validNodes.filter(node => 
-        nodeIdsWithValidEdges.has(node.id)
-      );
-      
-      setNodes(filteredNodes);
-      setEdges(filteredEdges);
-      setLoading(false);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to load network data');
-      setLoading(false);
-      setNodes([]);
-      setEdges([]);
-    }
-  };
-  loadNetworkData();
-}, [rawCountThreshold]);
+  }, [rawCountThreshold, threatImpactWeights]); // Add threatImpactWeights as a dependency
 
 
   // Filter edges based on the selected display mode
@@ -208,7 +188,7 @@ useEffect(() => {
   const getTotalCitationsCount = (node: Node): number => {
     return node.nr_citations || 0;
   };
-
+  console.log(filteredEdges)
   return (
     <div className="relative w-full h-[calc(100vh-96px)]">
       {/* Graph Container */}
@@ -258,6 +238,15 @@ useEffect(() => {
         min={1}
       />
     </div>
+    
+          {/* Threat Impact Weights Control - Add below the Edge Count Filter */}
+      <div className="absolute top-96 left-4 z-10">
+        <ThreatImpactWeightsControl
+          weights={threatImpactWeights}
+          onChange={setThreatImpactWeights}
+        />
+      </div>
+
 
       {/* Settings & Ranking Buttons */}
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 flex items-center space-x-2">

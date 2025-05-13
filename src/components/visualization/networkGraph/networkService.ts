@@ -4,6 +4,11 @@
 import { NetworkData, Edge } from './types';
 import { fetchNetworkData } from './networkFetcher';
 import { calculateWeightedEigenvectorCentrality } from './eigenvectorCentrality';
+import { 
+  applyThreatImpactWeights, 
+  DEFAULT_THREAT_IMPACT_WEIGHTS,
+  type ThreatImpactWeights
+} from './threatImpactService';
 
 /**
  * Get network data with eigenvector centrality calculations
@@ -11,11 +16,13 @@ import { calculateWeightedEigenvectorCentrality } from './eigenvectorCentrality'
  * 
  * @param iterations The number of iterations to run the algorithms (default: 10)
  * @param rawCountThreshold Threshold for edge visibility based on raw_count (default: 1)
+ * @param threatImpactWeights Custom weights for each threat impact level (optional)
  * @returns The network data with updated eigenvector centrality scores
  */
 export const getNetworkWithCentralityMetrics = async (
   iterations: number = 10,
-  rawCountThreshold: number = 1
+  rawCountThreshold: number = 1,
+  threatImpactWeights: ThreatImpactWeights = DEFAULT_THREAT_IMPACT_WEIGHTS
 ): Promise<NetworkData> => {
   // Fetch the raw network data
   const networkData = await fetchNetworkData();
@@ -23,8 +30,11 @@ export const getNetworkWithCentralityMetrics = async (
   // Apply raw_count threshold to edge weights
   const thresholdedData = applyRawCountThreshold(networkData, rawCountThreshold);
   
+  // Apply threat impact weights to the thresholded data
+  const threatWeightedData = await applyThreatImpactWeights(thresholdedData, threatImpactWeights);
+  
   // Calculate all eigenvector centrality metrics (both regular and cross-category)
-  return calculateWeightedEigenvectorCentrality(thresholdedData, iterations);
+  return calculateWeightedEigenvectorCentrality(threatWeightedData, iterations);
 };
 
 /**
@@ -60,3 +70,4 @@ export const applyRawCountThreshold = (
 export * from './types';
 export { fetchNetworkData } from './networkFetcher';
 export { calculateWeightedEigenvectorCentrality } from './eigenvectorCentrality';
+export * from './threatImpactService';
