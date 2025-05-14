@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { MainContent } from '../visualization/MainContent';
 import TimeSeriesAnalysis from "../visualization/TimeSeriesAnalysis";
 import ScenarioGenerator from "../visualization/ScenarioGenerator";
-import { Info, Home, Network, Clock, Newspaper, Calendar, GitBranch } from 'lucide-react';
+import { Info, Home, Network, Clock, Newspaper, Calendar, GitBranch, Target } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -17,6 +17,7 @@ import type { ModelSettings } from '@/types/settings';
 import ModelExplanation from './ModelExplanation';
 import SourceAnalysis from '../visualization/SourceAnalysis';
 import ChronologicalAnalysis from '../visualization/ChronologicalAnalysis';
+import Aangrijpspunten from '../visualization/Aangrijpspunten';
 
 // Create a temporary placeholder until the real component is available
 const CitationsBackground = () => <div className="absolute inset-0 z-0"></div>;
@@ -102,7 +103,7 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
         </div>
         
         {isTypewriterComplete && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 animate-fade-in">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 animate-fade-in">
             <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
               <CardHeader className="border-b border-gray-100">
                 <CardTitle className="flex items-center gap-2 text-gray-800">
@@ -211,6 +212,28 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
                 </Button>
               </CardContent>
             </Card>
+            
+            <Card className="bg-white shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-200">
+              <CardHeader className="border-b border-gray-100">
+                <CardTitle className="flex items-center gap-2 text-gray-800">
+                  <Target className="h-5 w-5" style={{ color: brandColor }} />
+                  Aangrijpingspunten
+                </CardTitle>
+                <CardDescription className="text-gray-600">
+                  Identificeer waar ingegrepen kan worden
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="pt-6">
+                <p className="text-gray-600 mb-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi posuere, arcu vel cursus ultrices, risus lacus porttitor lacus.</p>
+                <Button 
+                  className="w-full text-white"
+                  style={{ backgroundColor: brandColor, borderColor: brandColor }}
+                  onClick={() => onNavigate('aangrijpspunten')}
+                >
+                  Bekijken
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         )}
       </div>
@@ -313,7 +336,7 @@ export const NarrativeLayout = () => {
         {/* Navigation Section */}
         <div className="bg-white shadow-md sticky top-0 z-40">
           <div className="max-w-7xl mx-auto">
-            <nav className="flex">
+            <nav className="flex flex-wrap">
               <button 
                 onClick={() => handleNavigate('landing')}
                 className={cn(
@@ -391,6 +414,19 @@ export const NarrativeLayout = () => {
                 <GitBranch className="h-5 w-5" />
                 <span>Scenario Generator</span>
               </button>
+              
+              <button 
+                onClick={() => handleNavigate('aangrijpspunten')}
+                className={cn(
+                  "flex items-center gap-2 px-6 py-4 text-gray-700 font-medium border-b-2 transition-colors",
+                  activeTab === 'aangrijpspunten' 
+                    ? "border-[rgb(0,153,168)] text-[rgb(0,153,168)]" 
+                    : "border-transparent hover:text-[rgb(0,153,168)] hover:bg-gray-50"
+                )}
+              >
+                <Target className="h-5 w-5" />
+                <span>Aangrijpingspunten</span>
+              </button>
             </nav>
           </div>
         </div>
@@ -432,6 +468,12 @@ export const NarrativeLayout = () => {
           {activeTab === 'scenario' && (
             <div className="bg-gray-50">
               <ScenarioGenerator />
+            </div>
+          )}
+          
+          {activeTab === 'aangrijpspunten' && (
+            <div className="bg-gray-50">
+              <Aangrijpspunten />
             </div>
           )}
         </div>
