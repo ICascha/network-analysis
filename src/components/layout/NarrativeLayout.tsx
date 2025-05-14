@@ -217,7 +217,7 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
               <CardHeader className="border-b border-gray-100">
                 <CardTitle className="flex items-center gap-2 text-gray-800">
                   <Target className="h-5 w-5" style={{ color: brandColor }} />
-                  Aangrijpingspunten
+                  Aangrijpingsgebieden
                 </CardTitle>
                 <CardDescription className="text-gray-600">
                   Identificeer waar ingegrepen kan worden
@@ -425,7 +425,7 @@ export const NarrativeLayout = () => {
                 )}
               >
                 <Target className="h-5 w-5" />
-                <span>Aangrijpingspunten</span>
+                <span>Aangrijpingsgebieden</span>
               </button>
             </nav>
           </div>

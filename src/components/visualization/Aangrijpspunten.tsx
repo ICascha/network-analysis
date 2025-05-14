@@ -251,7 +251,7 @@ const Aangrijpspunten: React.FC = () => {
       <div className="relative w-full bg-white shadow-md px-8 py-6">
         <div className="prose max-w-none mb-6">
           <p className="text-gray-600 leading-relaxed">
-            Deze visualisatie toont de verbanden tussen verschillende categorieën van aangrijpingspunten in dreigingen.
+            Deze visualisatie toont de verbanden tussen verschillende categorieën van aangrijpingsgebieden in dreigingen.
             De dikte van elke verbinding geeft het aantal unieke combinaties weer tussen de categorieën,
             gefilterd op een minimale drempelwaarde. Klik op een verbinding om de onderliggende bronnen en doelen te zien.
           </p>
@@ -261,7 +261,7 @@ const Aangrijpspunten: React.FC = () => {
         <div className="relative pt-8 border-t border-gray-200 mb-6">
           {/* Section Label */}
           <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white px-4">
-            <h2 className="text-lg font-semibold" style={{ color: themeColor }}>Categorieën aangrijpingspunten</h2>
+            <h2 className="text-lg font-semibold" style={{ color: themeColor }}>Categorieën aangrijpingsgebieden</h2>
           </div>
         
           <div className="flex flex-wrap items-end space-x-4 mb-6">
