@@ -120,14 +120,14 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
       // Scale factor for normalization between 1 and 5
       const scaleFactor = maxWeight === minWeight 
         ? 1 
-        : 4 / (maxWeight - minWeight);
+        : 16 / (maxWeight - minWeight);
       
       return edges
         .filter(edge => edge.weight >= edgeWeightCutoff)
         .map(edge => {
           // Normalize weight to range 1-5 using min-max normalization and convert to integer
           const normalizedWeight = Math.round(
-            1 + (edge.weight - minWeight) * scaleFactor
+            1 + (edge.weight - minWeight) * scaleFactor / 3
           );
           
           return {
