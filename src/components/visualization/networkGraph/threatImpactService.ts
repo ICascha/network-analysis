@@ -12,10 +12,10 @@ export type ThreatImpactWeights = Record<ThreatImpactLevel, number>;
  */
 export const DEFAULT_THREAT_IMPACT_WEIGHTS: ThreatImpactWeights = {
   'Beperkt': 1,
-  'Aanzienlijk': 2,
-  'Ernstig': 4,
-  'Zeer ernstig': 8,
-  'Catastrofaal': 16
+  'Aanzienlijk': 3,
+  'Ernstig': 9,
+  'Zeer ernstig': 27,
+  'Catastrofaal': 81
 };
 
 /**
