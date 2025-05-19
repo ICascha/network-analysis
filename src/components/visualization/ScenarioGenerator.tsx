@@ -94,7 +94,7 @@ const EnhancedThreatSankey: React.FC = () => {
     const loadNetworkData = async () => {
       try {
         setLoading(true);
-        const data = await getNetworkWithCentralityMetrics(100);
+        const data = await getNetworkWithCentralityMetrics(2, 6);
         setNetworkData(data);
         
         // Pre-select the first threat with outgoing connections
