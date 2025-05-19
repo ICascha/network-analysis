@@ -82,7 +82,7 @@ const EnhancedThreatSankey: React.FC = () => {
   
   // Configuration options
   const [selectedThreat, setSelectedThreat] = useState<string>('');
-  const [maxRelationsPerNode, setMaxRelationsPerNode] = useState<number>(3);
+  const [maxRelationsPerNode, setMaxRelationsPerNode] = useState<number>(5);
   const [selectedLink, setSelectedLink] = useState<any | null>(null);
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
   
@@ -144,9 +144,9 @@ const EnhancedThreatSankey: React.FC = () => {
         edge.source === selectedThreat && edge.weight >= 0.5 // Only include edges with weight >= 0.5
       );
       
-      // Sort by raw_count and take top N based on slider
+      // Sort by weight and take top N based on slider (CHANGED: prioritizing by weight instead of raw_count)
       const topFirstOrderEdges = [...firstOrderEdges]
-        .sort((a, b) => b.raw_count - a.raw_count)
+        .sort((a, b) => b.weight - a.weight)
         .slice(0, maxRelationsPerNode);
       
       // Get second-order effects for each first-order node
@@ -160,9 +160,9 @@ const EnhancedThreatSankey: React.FC = () => {
           edge.weight >= 0.5 // Only include edges with weight >= 0.5
         );
         
-        // Sort by raw_count and take top N based on slider
+        // Sort by weight and take top N based on slider (CHANGED: prioritizing by weight instead of raw_count)
         secondOrderEdgesBySource[nodeId] = [...edges]
-          .sort((a, b) => b.raw_count - a.raw_count)
+          .sort((a, b) => b.weight - a.weight)
           .slice(0, maxRelationsPerNode)
           // Filter out edges that would create cycles
           .filter(edge => {
@@ -390,17 +390,10 @@ const EnhancedThreatSankey: React.FC = () => {
                 value={[maxRelationsPerNode]}
                 onValueChange={(values) => setMaxRelationsPerNode(values[0])}
                 min={1}
-                max={5}
+                max={20}
                 step={1}
                 className="my-4"
               />
-              <div className="flex justify-between text-xs text-muted-foreground">
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
-              </div>
             </div>
           </div>
         </div>
@@ -421,8 +414,8 @@ const EnhancedThreatSankey: React.FC = () => {
                 Dreigingsrelaties voor: {networkData?.nodes.find(n => n.id === selectedThreat)?.label || selectedThreat}
               </h2>
               <p className="text-gray-600 text-sm mb-4">
-                Dit diagram toont de top {maxRelationsPerNode} directe gevolgen en voor elk daarvan 
-                de top {maxRelationsPerNode} secundaire gevolgen.
+                Dit diagram toont de top {maxRelationsPerNode} directe gevolgen gerangschikt op gewicht en voor elk daarvan 
+                de top {maxRelationsPerNode} secundaire gevolgen gerangschikt op gewicht.
               </p>
             </div>
             <div style={{ height: `${sankeyHeight}px` }} className="w-full">
