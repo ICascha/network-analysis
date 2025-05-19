@@ -1,0 +1,1807 @@
+[
+    {
+        "Dreiging": "(heimelijke) be\u00efnvloeding en hybride operaties door statelijke actoren die aangrijpen op het maatschappelijk debat",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 40
+    },
+    {
+        "Dreiging": "(heimelijke) be\u00efnvloeding en hybride operaties door statelijke actoren die aangrijpen op het maatschappelijk debat",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 496
+    },
+    {
+        "Dreiging": "(heimelijke) be\u00efnvloeding en hybride operaties door statelijke actoren die aangrijpen op het maatschappelijk debat",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 45
+    },
+    {
+        "Dreiging": "(heimelijke) be\u00efnvloeding en hybride operaties door statelijke actoren die aangrijpen op het maatschappelijk debat",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 35
+    },
+    {
+        "Dreiging": "(heimelijke) be\u00efnvloeding en hybride operaties door statelijke actoren die aangrijpen op het maatschappelijk debat",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 690
+    },
+    {
+        "Dreiging": "aanval cloud service provider",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "aanval cloud service provider",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "aanval cloud service provider",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "aanval cloud service provider",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 17
+    },
+    {
+        "Dreiging": "aanval cloud service provider",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "aanval op pride evenement",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "aanval op pride evenement",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "aanval op pride evenement",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "aanval op pride evenement",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "aanval op pride evenement",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 10
+    },
+    {
+        "Dreiging": "alleenhandelende dader",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "alleenhandelende dader",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 32
+    },
+    {
+        "Dreiging": "alleenhandelende dader",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "alleenhandelende dader",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 10
+    },
+    {
+        "Dreiging": "alleenhandelende dader",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 45
+    },
+    {
+        "Dreiging": "anarcho-extremisme",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "anarcho-extremisme",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 32
+    },
+    {
+        "Dreiging": "anarcho-extremisme",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "anarcho-extremisme",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 9
+    },
+    {
+        "Dreiging": "anarcho-extremisme",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 47
+    },
+    {
+        "Dreiging": "anti-overheidsextremisme",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "anti-overheidsextremisme",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 137
+    },
+    {
+        "Dreiging": "anti-overheidsextremisme",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "anti-overheidsextremisme",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "anti-overheidsextremisme",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 143
+    },
+    {
+        "Dreiging": "bestorming en gijzeling tweede kamer",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "bestorming en gijzeling tweede kamer",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 12
+    },
+    {
+        "Dreiging": "bestorming en gijzeling tweede kamer",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "bestorming en gijzeling tweede kamer",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "bestorming en gijzeling tweede kamer",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "buitenlandse durfkapitaalinvesteringen in startups",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "buitenlandse durfkapitaalinvesteringen in startups",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "buitenlandse durfkapitaalinvesteringen in startups",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 9
+    },
+    {
+        "Dreiging": "buitenlandse durfkapitaalinvesteringen in startups",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "buitenlandse durfkapitaalinvesteringen in startups",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "buitenlandse regulering techbedrijven",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "buitenlandse regulering techbedrijven",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "buitenlandse regulering techbedrijven",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 13
+    },
+    {
+        "Dreiging": "buitenlandse regulering techbedrijven",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "buitenlandse regulering techbedrijven",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "chinese hereniging taiwan",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 20
+    },
+    {
+        "Dreiging": "chinese hereniging taiwan",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 15
+    },
+    {
+        "Dreiging": "chinese hereniging taiwan",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 21
+    },
+    {
+        "Dreiging": "chinese hereniging taiwan",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "chinese hereniging taiwan",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 11
+    },
+    {
+        "Dreiging": "collateral damage",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 15
+    },
+    {
+        "Dreiging": "collateral damage",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "collateral damage",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 13
+    },
+    {
+        "Dreiging": "collateral damage",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 14
+    },
+    {
+        "Dreiging": "collateral damage",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 34
+    },
+    {
+        "Dreiging": "correctie op waardering financi\u00eble activa",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "correctie op waardering financi\u00eble activa",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 132
+    },
+    {
+        "Dreiging": "correctie op waardering financi\u00eble activa",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 399
+    },
+    {
+        "Dreiging": "correctie op waardering financi\u00eble activa",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 108
+    },
+    {
+        "Dreiging": "correctie op waardering financi\u00eble activa",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 98
+    },
+    {
+        "Dreiging": "crimineel geweld richting media en overheid",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "crimineel geweld richting media en overheid",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 261
+    },
+    {
+        "Dreiging": "crimineel geweld richting media en overheid",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "crimineel geweld richting media en overheid",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 12
+    },
+    {
+        "Dreiging": "crimineel geweld richting media en overheid",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 247
+    },
+    {
+        "Dreiging": "criminele inmenging bedrijfsleven",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "criminele inmenging bedrijfsleven",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 36
+    },
+    {
+        "Dreiging": "criminele inmenging bedrijfsleven",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 101
+    },
+    {
+        "Dreiging": "criminele inmenging bedrijfsleven",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "criminele inmenging bedrijfsleven",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 20
+    },
+    {
+        "Dreiging": "crisis in de zuid-chinese zee",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 18
+    },
+    {
+        "Dreiging": "crisis in de zuid-chinese zee",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 10
+    },
+    {
+        "Dreiging": "crisis in de zuid-chinese zee",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 11
+    },
+    {
+        "Dreiging": "crisis in de zuid-chinese zee",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "crisis in de zuid-chinese zee",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "cyberaanvallen kritieke infrastructuur",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 129
+    },
+    {
+        "Dreiging": "cyberaanvallen kritieke infrastructuur",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 494
+    },
+    {
+        "Dreiging": "cyberaanvallen kritieke infrastructuur",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 277
+    },
+    {
+        "Dreiging": "cyberaanvallen kritieke infrastructuur",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1048
+    },
+    {
+        "Dreiging": "cyberaanvallen kritieke infrastructuur",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 433
+    },
+    {
+        "Dreiging": "cyberspionage overheid",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 12
+    },
+    {
+        "Dreiging": "cyberspionage overheid",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 117
+    },
+    {
+        "Dreiging": "cyberspionage overheid",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 22
+    },
+    {
+        "Dreiging": "cyberspionage overheid",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 12
+    },
+    {
+        "Dreiging": "cyberspionage overheid",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 21
+    },
+    {
+        "Dreiging": "desintegratie van bosni\u00eb-herzegovina",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "desintegratie van bosni\u00eb-herzegovina",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 22
+    },
+    {
+        "Dreiging": "desintegratie van bosni\u00eb-herzegovina",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "desintegratie van bosni\u00eb-herzegovina",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "desintegratie van bosni\u00eb-herzegovina",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 20
+    },
+    {
+        "Dreiging": "europese schuldencrisis",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 24
+    },
+    {
+        "Dreiging": "europese schuldencrisis",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 76
+    },
+    {
+        "Dreiging": "europese schuldencrisis",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "europese schuldencrisis",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "falen opslagtank ammoniak",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "falen opslagtank ammoniak",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "falen opslagtank ammoniak",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "falen opslagtank ammoniak",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "gebruik van generatieve ai voor deepfakes en desinformatie",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "gebruik van generatieve ai voor deepfakes en desinformatie",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 55
+    },
+    {
+        "Dreiging": "gebruik van generatieve ai voor deepfakes en desinformatie",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 108
+    },
+    {
+        "Dreiging": "gebruik van generatieve ai voor deepfakes en desinformatie",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "gebruik van generatieve ai voor deepfakes en desinformatie",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 90
+    },
+    {
+        "Dreiging": "georganiseerde criminaliteit door heel nederland",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 45
+    },
+    {
+        "Dreiging": "georganiseerde criminaliteit door heel nederland",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 1022
+    },
+    {
+        "Dreiging": "georganiseerde criminaliteit door heel nederland",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 474
+    },
+    {
+        "Dreiging": "georganiseerde criminaliteit door heel nederland",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 112
+    },
+    {
+        "Dreiging": "georganiseerde criminaliteit door heel nederland",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 956
+    },
+    {
+        "Dreiging": "geweldsescalatie rechtsextremisten",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 19
+    },
+    {
+        "Dreiging": "geweldsescalatie rechtsextremisten",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 84
+    },
+    {
+        "Dreiging": "geweldsescalatie rechtsextremisten",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "geweldsescalatie rechtsextremisten",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 9
+    },
+    {
+        "Dreiging": "geweldsescalatie rechtsextremisten",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 138
+    },
+    {
+        "Dreiging": "ge\u00efnduceerde aardbeving",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 29
+    },
+    {
+        "Dreiging": "ge\u00efnduceerde aardbeving",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 26
+    },
+    {
+        "Dreiging": "ge\u00efnduceerde aardbeving",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 39
+    },
+    {
+        "Dreiging": "ge\u00efnduceerde aardbeving",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 128
+    },
+    {
+        "Dreiging": "griep epidemie",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "griep pandemie",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "griep pandemie",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "griep pandemie",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "griep pandemie",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 11
+    },
+    {
+        "Dreiging": "handelsoorlog waar de eu bij betrokken is",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "handelsoorlog waar de eu bij betrokken is",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 14
+    },
+    {
+        "Dreiging": "handelsoorlog waar de eu bij betrokken is",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 153
+    },
+    {
+        "Dreiging": "handelsoorlog waar de eu bij betrokken is",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "handelsoorlog waar de eu bij betrokken is",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 17
+    },
+    {
+        "Dreiging": "hitte\/droogte",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 44
+    },
+    {
+        "Dreiging": "hitte\/droogte",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 47
+    },
+    {
+        "Dreiging": "hitte\/droogte",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 212
+    },
+    {
+        "Dreiging": "hitte\/droogte",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 194
+    },
+    {
+        "Dreiging": "hitte\/droogte",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 356
+    },
+    {
+        "Dreiging": "infiltratie openbaar bestuur",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "infiltratie openbaar bestuur",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 37
+    },
+    {
+        "Dreiging": "infiltratie openbaar bestuur",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "infiltratie openbaar bestuur",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "infiltratie openbaar bestuur",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "innovatie nucleaire overbrengingsmiddelen",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 15
+    },
+    {
+        "Dreiging": "innovatie nucleaire overbrengingsmiddelen",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "innovatie nucleaire overbrengingsmiddelen",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "innovatie nucleaire overbrengingsmiddelen",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "inzet van kernwapens saoedi-arabi\u00eb \u2013 iran",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 37
+    },
+    {
+        "Dreiging": "inzet van kernwapens saoedi-arabi\u00eb \u2013 iran",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "inzet van kernwapens saoedi-arabi\u00eb \u2013 iran",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "inzet van kernwapens saoedi-arabi\u00eb \u2013 iran",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "is grijpt de macht in marokko",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "kerncentrale borssele",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "kerncentrale borssele",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "kerncentrale borssele",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 19
+    },
+    {
+        "Dreiging": "kerncentrale borssele",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "keteneffecten elektriciteitsuitval",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "keteneffecten elektriciteitsuitval",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "keteneffecten elektriciteitsuitval",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 28
+    },
+    {
+        "Dreiging": "keteneffecten elektriciteitsuitval",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 76
+    },
+    {
+        "Dreiging": "keteneffecten elektriciteitsuitval",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 26
+    },
+    {
+        "Dreiging": "klassieke statelijke spionage",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 61
+    },
+    {
+        "Dreiging": "klassieke statelijke spionage",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 208
+    },
+    {
+        "Dreiging": "klassieke statelijke spionage",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 123
+    },
+    {
+        "Dreiging": "klassieke statelijke spionage",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 68
+    },
+    {
+        "Dreiging": "klassieke statelijke spionage",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 41
+    },
+    {
+        "Dreiging": "landelijke black-out",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 17
+    },
+    {
+        "Dreiging": "landelijke black-out",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 9
+    },
+    {
+        "Dreiging": "landelijke black-out",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 30
+    },
+    {
+        "Dreiging": "landelijke black-out",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 27
+    },
+    {
+        "Dreiging": "meervoudige terroristische aanslag",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 31
+    },
+    {
+        "Dreiging": "meervoudige terroristische aanslag",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 373
+    },
+    {
+        "Dreiging": "meervoudige terroristische aanslag",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 28
+    },
+    {
+        "Dreiging": "meervoudige terroristische aanslag",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 51
+    },
+    {
+        "Dreiging": "meervoudige terroristische aanslag",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 366
+    },
+    {
+        "Dreiging": "misconfiguratie internetdienstverlener",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "misconfiguratie internetdienstverlener",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "misconfiguratie internetdienstverlener",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 21
+    },
+    {
+        "Dreiging": "misconfiguratie internetdienstverlener",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "natuurbranden",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 11
+    },
+    {
+        "Dreiging": "natuurbranden",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 13
+    },
+    {
+        "Dreiging": "natuurbranden",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 28
+    },
+    {
+        "Dreiging": "natuurbranden",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 23
+    },
+    {
+        "Dreiging": "natuurbranden",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 80
+    },
+    {
+        "Dreiging": "natuurlijke aardbeving",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "natuurlijke aardbeving",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "natuurlijke aardbeving",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "natuurlijke aardbeving",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "natuurlijke aardbeving",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 15
+    },
+    {
+        "Dreiging": "ondermijnende enclaves",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "ondermijnende enclaves",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 248
+    },
+    {
+        "Dreiging": "ondermijnende enclaves",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 70
+    },
+    {
+        "Dreiging": "ondermijnende enclaves",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 13
+    },
+    {
+        "Dreiging": "ondermijnende enclaves",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 265
+    },
+    {
+        "Dreiging": "ongewenste buitenlandse inmenging in diasporagemeenschappen",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "ongewenste buitenlandse inmenging in diasporagemeenschappen",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 98
+    },
+    {
+        "Dreiging": "ongewenste buitenlandse inmenging in diasporagemeenschappen",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 16
+    },
+    {
+        "Dreiging": "ongewenste buitenlandse inmenging in diasporagemeenschappen",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "ongewenste buitenlandse inmenging in diasporagemeenschappen",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 115
+    },
+    {
+        "Dreiging": "onzekerheid energievoorziening",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 72
+    },
+    {
+        "Dreiging": "onzekerheid energievoorziening",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 66
+    },
+    {
+        "Dreiging": "onzekerheid energievoorziening",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 583
+    },
+    {
+        "Dreiging": "onzekerheid energievoorziening",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 465
+    },
+    {
+        "Dreiging": "onzekerheid energievoorziening",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 332
+    },
+    {
+        "Dreiging": "overname van bedrijf dat o.a. dual-use goederen produceert",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "overname van bedrijf dat o.a. dual-use goederen produceert",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "overname van bedrijf dat o.a. dual-use goederen produceert",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 13
+    },
+    {
+        "Dreiging": "overname van bedrijf dat o.a. dual-use goederen produceert",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "overstroming rivier",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 18
+    },
+    {
+        "Dreiging": "overstroming rivier",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 98
+    },
+    {
+        "Dreiging": "overstroming rivier",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 163
+    },
+    {
+        "Dreiging": "overstroming rivier",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 243
+    },
+    {
+        "Dreiging": "overstroming rivier",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 312
+    },
+    {
+        "Dreiging": "overstroming zee",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 12
+    },
+    {
+        "Dreiging": "overstroming zee",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 60
+    },
+    {
+        "Dreiging": "overstroming zee",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 124
+    },
+    {
+        "Dreiging": "overstroming zee",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 399
+    },
+    {
+        "Dreiging": "overstroming zee",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 255
+    },
+    {
+        "Dreiging": "pandemie door een mens overdraagbaar virus",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 57
+    },
+    {
+        "Dreiging": "pandemie door een mens overdraagbaar virus",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 912
+    },
+    {
+        "Dreiging": "pandemie door een mens overdraagbaar virus",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 599
+    },
+    {
+        "Dreiging": "pandemie door een mens overdraagbaar virus",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 799
+    },
+    {
+        "Dreiging": "pandemie door een mens overdraagbaar virus",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 1560
+    },
+    {
+        "Dreiging": "polarisatie rond complottheorie\u00ebn",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "polarisatie rond complottheorie\u00ebn",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 90
+    },
+    {
+        "Dreiging": "polarisatie rond complottheorie\u00ebn",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "polarisatie rond complottheorie\u00ebn",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "polarisatie rond complottheorie\u00ebn",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 258
+    },
+    {
+        "Dreiging": "ransomware telecom",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "ransomware telecom",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 31
+    },
+    {
+        "Dreiging": "ransomware telecom",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 42
+    },
+    {
+        "Dreiging": "ransomware telecom",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 63
+    },
+    {
+        "Dreiging": "ransomware telecom",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 27
+    },
+    {
+        "Dreiging": "ransomware zorgsector",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "ransomware zorgsector",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 19
+    },
+    {
+        "Dreiging": "ransomware zorgsector",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 80
+    },
+    {
+        "Dreiging": "ransomware zorgsector",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 61
+    },
+    {
+        "Dreiging": "ransomware zorgsector",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 36
+    },
+    {
+        "Dreiging": "sabotage van gnss-signalen",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "sabotage van gnss-signalen",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "sabotage van gnss-signalen",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "sabotage van gnss-signalen",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "sabotage van gnss-signalen",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "sabotage van onderzeese infrastructuur (zoals internetkabels)",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 12
+    },
+    {
+        "Dreiging": "sabotage van onderzeese infrastructuur (zoals internetkabels)",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 23
+    },
+    {
+        "Dreiging": "sabotage van onderzeese infrastructuur (zoals internetkabels)",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 24
+    },
+    {
+        "Dreiging": "sabotage van onderzeese infrastructuur (zoals internetkabels)",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 86
+    },
+    {
+        "Dreiging": "sabotage van onderzeese infrastructuur (zoals internetkabels)",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 18
+    },
+    {
+        "Dreiging": "sneeuwstorm",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "sneeuwstorm",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "staatlijke verwerving van een belang in grote telecom-aanbieder",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "staatlijke verwerving van een belang in grote telecom-aanbieder",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "staatlijke verwerving van een belang in grote telecom-aanbieder",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "staatlijke verwerving van een belang in grote telecom-aanbieder",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "staatlijke verwerving van een belang in grote telecom-aanbieder",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "stralingsongeval in europa",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "stralingsongeval in europa",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "stralingsongeval in europa",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 9
+    },
+    {
+        "Dreiging": "stralingsongeval in europa",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "strategische afhankelijkheden grondstoffen en technologie van buitenlande leveranciers",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 287
+    },
+    {
+        "Dreiging": "strategische afhankelijkheden grondstoffen en technologie van buitenlande leveranciers",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 164
+    },
+    {
+        "Dreiging": "strategische afhankelijkheden grondstoffen en technologie van buitenlande leveranciers",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 889
+    },
+    {
+        "Dreiging": "strategische afhankelijkheden grondstoffen en technologie van buitenlande leveranciers",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 237
+    },
+    {
+        "Dreiging": "strategische afhankelijkheden grondstoffen en technologie van buitenlande leveranciers",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 138
+    },
+    {
+        "Dreiging": "systeempartij in de financi\u00eble sector in zwaar weer",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "systeempartij in de financi\u00eble sector in zwaar weer",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "systeempartij in de financi\u00eble sector in zwaar weer",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 77
+    },
+    {
+        "Dreiging": "systeempartij in de financi\u00eble sector in zwaar weer",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "systeempartij in de financi\u00eble sector in zwaar weer",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "tekort aan drinkwater door verzilting en vervuiling",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "tekort aan drinkwater door verzilting en vervuiling",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 13
+    },
+    {
+        "Dreiging": "tekort aan drinkwater door verzilting en vervuiling",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 27
+    },
+    {
+        "Dreiging": "tekort aan drinkwater door verzilting en vervuiling",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 320
+    },
+    {
+        "Dreiging": "tekort aan drinkwater door verzilting en vervuiling",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 64
+    },
+    {
+        "Dreiging": "tekorten essenti\u00eble grondstoffen",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "tekorten essenti\u00eble grondstoffen",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 30
+    },
+    {
+        "Dreiging": "tekorten essenti\u00eble grondstoffen",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 78
+    },
+    {
+        "Dreiging": "tekorten essenti\u00eble grondstoffen",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 18
+    },
+    {
+        "Dreiging": "tekorten essenti\u00eble grondstoffen",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 129
+    },
+    {
+        "Dreiging": "terroristische aanslag met een bio-wapen",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 16
+    },
+    {
+        "Dreiging": "terroristische aanslag met een bio-wapen",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 100
+    },
+    {
+        "Dreiging": "terroristische aanslag met een bio-wapen",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 19
+    },
+    {
+        "Dreiging": "terroristische aanslag met een bio-wapen",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 37
+    },
+    {
+        "Dreiging": "terroristische aanslag met een bio-wapen",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 118
+    },
+    {
+        "Dreiging": "tijdelijke bezetting van een eu-lidstaat",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "tijdelijke bezetting van een eu-lidstaat",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "tijdelijke bezetting van een eu-lidstaat",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "tijdelijke bezetting van een eu-lidstaat",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "tijdelijke bezetting van een eu-lidstaat",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "treinramp met gaswolkbrand",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "treinramp met gaswolkbrand",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "tweespalt in de eu",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "tweespalt in de eu",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 31
+    },
+    {
+        "Dreiging": "tweespalt in de eu",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 11
+    },
+    {
+        "Dreiging": "tweespalt in de eu",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "tweespalt in de eu",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 11
+    },
+    {
+        "Dreiging": "uitbraak mkz onder koeien",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "uitbraak mkz onder koeien",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "uitbraak zo\u00f6notische variant vogelgriep",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 13
+    },
+    {
+        "Dreiging": "uitbraak zo\u00f6notische variant vogelgriep",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 22
+    },
+    {
+        "Dreiging": "uitbraak zo\u00f6notische variant vogelgriep",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 42
+    },
+    {
+        "Dreiging": "uitbraak zo\u00f6notische variant vogelgriep",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 76
+    },
+    {
+        "Dreiging": "uiteenspatten van de ovse",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 2
+    },
+    {
+        "Dreiging": "uiteenspatten van de ovse",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "uiteenspatten van de ovse",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "uiteenspatten van de ovse",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "uiteenspatten van de ovse",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "uiteenvallen van de navo",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 42
+    },
+    {
+        "Dreiging": "uiteenvallen van de navo",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "uiteenvallen van de navo",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "uiteenvallen van de navo",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "uiteenvallen van de navo",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 4
+    },
+    {
+        "Dreiging": "verarming biodiversiteit met effecten op voedselzekerheid",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "verarming biodiversiteit met effecten op voedselzekerheid",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "verarming biodiversiteit met effecten op voedselzekerheid",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 20
+    },
+    {
+        "Dreiging": "verarming biodiversiteit met effecten op voedselzekerheid",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "verarming biodiversiteit met effecten op voedselzekerheid",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 43
+    },
+    {
+        "Dreiging": "verdere militarisering van de ruimte en risico op satellietaanvallen",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 8
+    },
+    {
+        "Dreiging": "verdere militarisering van de ruimte en risico op satellietaanvallen",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "verdere militarisering van de ruimte en risico op satellietaanvallen",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "verdere militarisering van de ruimte en risico op satellietaanvallen",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "verdere militarisering van de ruimte en risico op satellietaanvallen",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 1
+    },
+    {
+        "Dreiging": "verstoring van handel door productieproblemen buitenland",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "verstoring van handel door productieproblemen buitenland",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 3
+    },
+    {
+        "Dreiging": "verstoring van handel door productieproblemen buitenland",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 37
+    },
+    {
+        "Dreiging": "verstoring van handel door productieproblemen buitenland",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 14
+    },
+    {
+        "Dreiging": "verstoring van handel door productieproblemen buitenland",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 7
+    },
+    {
+        "Dreiging": "verstoring van het betalingsverkeer",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 6
+    },
+    {
+        "Dreiging": "verstoring van het betalingsverkeer",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 11
+    },
+    {
+        "Dreiging": "verstoring van het betalingsverkeer",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 47
+    },
+    {
+        "Dreiging": "verstoring van het betalingsverkeer",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 25
+    },
+    {
+        "Dreiging": "verstoring van het betalingsverkeer",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 15
+    },
+    {
+        "Dreiging": "verzwakking van cryptografie door quantumtechnologie",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 13
+    },
+    {
+        "Dreiging": "verzwakking van cryptografie door quantumtechnologie",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 12
+    },
+    {
+        "Dreiging": "verzwakking van cryptografie door quantumtechnologie",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 12
+    },
+    {
+        "Dreiging": "verzwakking van cryptografie door quantumtechnologie",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 22
+    },
+    {
+        "Dreiging": "verzwakking van cryptografie door quantumtechnologie",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 5
+    },
+    {
+        "Dreiging": "Ecologisch",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 94
+    },
+    {
+        "Dreiging": "Ecologisch",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 269
+    },
+    {
+        "Dreiging": "Ecologisch",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 608
+    },
+    {
+        "Dreiging": "Ecologisch",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1237
+    },
+    {
+        "Dreiging": "Ecologisch",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 1254
+    },
+    {
+        "Dreiging": "Economisch",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 386
+    },
+    {
+        "Dreiging": "Economisch",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 468
+    },
+    {
+        "Dreiging": "Economisch",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 2381
+    },
+    {
+        "Dreiging": "Economisch",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 904
+    },
+    {
+        "Dreiging": "Economisch",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 752
+    },
+    {
+        "Dreiging": "Geopolitiek & militair",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 273
+    },
+    {
+        "Dreiging": "Geopolitiek & militair",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 805
+    },
+    {
+        "Dreiging": "Geopolitiek & militair",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 232
+    },
+    {
+        "Dreiging": "Geopolitiek & militair",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 144
+    },
+    {
+        "Dreiging": "Geopolitiek & militair",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 832
+    },
+    {
+        "Dreiging": "Gezondheid",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 73
+    },
+    {
+        "Dreiging": "Gezondheid",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 1027
+    },
+    {
+        "Dreiging": "Gezondheid",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 644
+    },
+    {
+        "Dreiging": "Gezondheid",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 883
+    },
+    {
+        "Dreiging": "Gezondheid",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 1768
+    },
+    {
+        "Dreiging": "Sociaal & Maatschappelijk",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 117
+    },
+    {
+        "Dreiging": "Sociaal & Maatschappelijk",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 2468
+    },
+    {
+        "Dreiging": "Sociaal & Maatschappelijk",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 726
+    },
+    {
+        "Dreiging": "Sociaal & Maatschappelijk",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 243
+    },
+    {
+        "Dreiging": "Sociaal & Maatschappelijk",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 2621
+    },
+    {
+        "Dreiging": "Technologisch & digitaal",
+        "Aangrijpingsgebied": "defensie",
+        "Aantal": 183
+    },
+    {
+        "Dreiging": "Technologisch & digitaal",
+        "Aangrijpingsgebied": "democratische rechtsorde, overheid en instituties",
+        "Aantal": 795
+    },
+    {
+        "Dreiging": "Technologisch & digitaal",
+        "Aangrijpingsgebied": "economie",
+        "Aantal": 624
+    },
+    {
+        "Dreiging": "Technologisch & digitaal",
+        "Aangrijpingsgebied": "kritieke infrastructuur en functies",
+        "Aantal": 1485
+    },
+    {
+        "Dreiging": "Technologisch & digitaal",
+        "Aangrijpingsgebied": "samenleving (sociaal\/psychologisch)",
+        "Aantal": 716
+    }
+]
