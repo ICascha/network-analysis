@@ -86,6 +86,9 @@ export const applyThreatImpactWeights = async (
         threat_impact_weight: threatImpactWeights[impactLevel]
       };
     }
+    else {
+      console.warn(`No threat impact data found for target: ${targetThreat}`);
+    }
 
     // If target not found in threat impact data, keep original weight
     return edge;
