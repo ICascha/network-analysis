@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { ResponsiveSankey } from '@nivo/sankey';
 import { Card, CardContent } from '@/components/ui/card';
-import { Switch } from '@/components/ui/switch';
 import { Label } from '@/components/ui/label';
 import { Slider } from '@/components/ui/slider';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -20,6 +19,7 @@ interface SankeyNode {
   id: string;
   nodeColor: string;
   category: string;
+  labelLines?: string[]; // Changed to array of strings for multi-line labels
 }
 
 interface SankeyLink {
@@ -48,6 +48,41 @@ const CATEGORY_COLORS = {
 // Function to get node color based on category
 const getNodeColor = (category: string): string => {
   return CATEGORY_COLORS[category as keyof typeof CATEGORY_COLORS] || CATEGORY_COLORS.default;
+};
+
+// Function to format long labels by converting them to arrays of lines
+const formatLongLabel = (label: string, maxLength = 40): string[] => {
+  if (label.length <= maxLength) return [label];
+  
+  // Split the label into words
+  const words = label.split(' ');
+  let lines: string[] = [];
+  let currentLine = '';
+  
+  // Build lines word by word
+  for (const word of words) {
+    // If adding this word exceeds the max length, start a new line
+    if (currentLine.length + word.length + 1 > maxLength) {
+      if (currentLine) {
+        // Add hyphen if we're breaking a line
+        lines.push(`${currentLine}-`);
+        currentLine = word;
+      } else {
+        // If a single word is longer than max length, we'll just use it as is
+        currentLine = word;
+      }
+    } else {
+      // Add word to current line
+      currentLine = currentLine ? `${currentLine} ${word}` : word;
+    }
+  }
+  
+  // Add the last line
+  if (currentLine) {
+    lines.push(currentLine);
+  }
+  
+  return lines;
 };
 
 const Aangrijpspunten: React.FC = () => {
@@ -85,7 +120,7 @@ const Aangrijpspunten: React.FC = () => {
         if (data.length > 0) {
           const uniqueDreigingen = [...new Set(data.map((item: DataItem) => item.Dreiging))];
           if (uniqueDreigingen.length > 0) {
-            setSelectedDreigingen([uniqueDreigingen[0]]);
+            setSelectedDreigingen([uniqueDreigingen[0] as any]);
           }
         }
         
@@ -168,7 +203,7 @@ const Aangrijpspunten: React.FC = () => {
     if (dreigingTotals.some(item => item.isSpecial)) {
       const lastSpecialIndex = dreigingTotals.findIndex(item => !item.isSpecial) - 1;
       if (lastSpecialIndex >= 0) {
-        dreigingTotals[lastSpecialIndex].isLastSpecial = true;
+        dreigingTotals[lastSpecialIndex].isSpecial = true;
       }
     }
     
@@ -204,7 +239,8 @@ const Aangrijpspunten: React.FC = () => {
         nodesMap.set(dreiging, {
           id: dreiging,
           nodeColor: themeColor,
-          category: 'dreiging'
+          category: 'dreiging',
+          labelLines: formatLongLabel(dreiging) // Format long labels into array of lines
         });
       });
       
@@ -216,7 +252,8 @@ const Aangrijpspunten: React.FC = () => {
         nodesMap.set(gebied, {
           id: gebied,
           nodeColor: getNodeColor(gebied),
-          category: 'aangrijpingsgebied'
+          category: 'aangrijpingsgebied',
+          labelLines: formatLongLabel(gebied) // Format long labels into array of lines
         });
       });
       
@@ -246,7 +283,8 @@ const Aangrijpspunten: React.FC = () => {
         nodesMap.set(dreiging, {
           id: dreiging,
           nodeColor: themeColor,
-          category: 'dreiging'
+          category: 'dreiging',
+          labelLines: formatLongLabel(dreiging) // Format long labels
         });
       });
       
@@ -258,7 +296,8 @@ const Aangrijpspunten: React.FC = () => {
         nodesMap.set(gebied, {
           id: gebied,
           nodeColor: getNodeColor(gebied),
-          category: 'aangrijpingsgebied'
+          category: 'aangrijpingsgebied',
+          labelLines: formatLongLabel(gebied) // Format long labels
         });
       });
       
@@ -542,38 +581,25 @@ const Aangrijpspunten: React.FC = () => {
                   labelOrientation="horizontal"
                   labelPadding={16}
                   labelTextColor={{ from: 'color', modifiers: [['darker', 1]] }}
+                  // Use custom label formatter with tspan elements for multi-line display
+                  label={node => {
+                    if (!node.labelLines || node.labelLines.length === 1) {
+                      return node.id;
+                    }
+                    // Cast the JSX element to string to satisfy the type checker
+                    return (
+                      <React.Fragment>
+                        {node.labelLines.map((line, i) => (
+                          <tspan key={i} x="0" dy={i === 0 ? "0" : "1.2em"}>
+                            {line}
+                          </tspan>
+                        ))}
+                      </React.Fragment>
+                    ) as unknown as string;
+                  }}
                   animate={true}
                   motionConfig="gentle"
                   onClick={handleLinkClick}
-                  tooltip={({ node, link }) => {
-                    if (node) {
-                      return (
-                        <div className="bg-white p-2 shadow rounded border border-gray-200 text-xs">
-                          <strong>{node.id}</strong>
-                        </div>
-                      );
-                    }
-                    
-                    if (link) {
-                      const sourceId = typeof link.source === 'object' ? link.source.id : link.source;
-                      const targetId = typeof link.target === 'object' ? link.target.id : link.target;
-                      
-                      return (
-                        <div className="bg-white p-2 shadow rounded border border-gray-200 text-xs">
-                          <div><strong>Van:</strong> {sourceId}</div>
-                          <div><strong>Naar:</strong> {targetId}</div>
-                          <div>
-                            <strong>{displayMode === 'absolute' ? 'Aantal:' : 'Percentage:'}</strong> 
-                            {displayMode === 'absolute' 
-                              ? Math.round(link.value) 
-                              : `${link.value.toFixed(1)}%`}
-                          </div>
-                        </div>
-                      );
-                    }
-                    
-                    return null;
-                  }}
                 />
               ) : (
                 <div className="flex items-center justify-center h-full">
