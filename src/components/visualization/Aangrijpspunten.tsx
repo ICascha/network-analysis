@@ -39,8 +39,9 @@ const CATEGORY_COLORS = {
   'democratische rechtsorde, overheid en instituties': '#0099A8',
   'kritieke infrastructuur en functies': '#33ADBA',
   'economie': '#66C2CB',
-  'defensie': '#99D6DC',
-  'samenleving (sociaal/psychologisch)': '#CCEAED',
+  'samenleving (sociaal/psychologisch)': '#99D6DC',
+  // 'defensie': '#99D6DC',
+  // 'samenleving (sociaal/psychologisch)': '#CCEAED',
   // Default color for other categories
   'default': '#CCEAED'
 };
@@ -114,16 +115,18 @@ const Aangrijpspunten: React.FC = () => {
         }
         
         const data = await response.json();
-        setRawData(data);
-        
+        // filter out data with Aangrijpingsgebied as 'defensie'
+        const filteredData = data.filter((item: DataItem) => item.Aangrijpingsgebied !== 'defensie');
+        setRawData(filteredData);
+                
         // Initially select the first dreiging
-        if (data.length > 0) {
-          const uniqueDreigingen = [...new Set(data.map((item: DataItem) => item.Dreiging))];
+        if (filteredData.length > 0) {
+          const uniqueDreigingen = [...new Set(filteredData.map((item: DataItem) => item.Dreiging))];
           if (uniqueDreigingen.length > 0) {
             setSelectedDreigingen([uniqueDreigingen[0] as any]);
           }
         }
-        
+
         setIsLoading(false);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'An error occurred');
