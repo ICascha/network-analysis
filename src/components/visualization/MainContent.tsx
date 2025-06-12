@@ -79,8 +79,6 @@ export const MainContent = ({ }: MainContentProps) => {
         setLoading(true);
         // Pass the rawCountThreshold and threatImpactWeights to the function
         const data = await getNetworkWithCentralityMetrics(2, rawCountThreshold, threatImpactWeights);
-        console.log('LOGGING DATA')
-        console.log(data);
         
         const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
         const validEdges = Array.isArray(data?.edges) ? data.edges : [];
@@ -188,7 +186,6 @@ export const MainContent = ({ }: MainContentProps) => {
   const getTotalCitationsCount = (node: Node): number => {
     return node.nr_citations || 0;
   };
-  console.log(filteredEdges)
   return (
     <div className="relative w-full h-[calc(100vh-96px)]">
       {/* Graph Container */}
