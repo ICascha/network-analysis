@@ -12,9 +12,7 @@ import EdgeDisplayToggle, { EdgeDisplayMode } from './EdgeDisplayToggle';
 import { 
   getNetworkWithCentralityMetrics, 
   Node, 
-  Edge,
-  RelationCitation
-} from './networkGraph/networkService';
+  Edge,} from './networkGraph/networkService';
 import { 
   DEFAULT_THREAT_IMPACT_WEIGHTS,
   ThreatImpactWeights 
@@ -71,8 +69,8 @@ export const MainContent = ({ }: MainContentProps) => {
   const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(true);
   // REMOVED: Relationship selection mode is no longer needed
   // const [_, setRelationshipSelectionMode] = useState<boolean>(false);
-  const [rawCountThreshold, setRawCountThreshold] = useState<number>(6);
-  const [threatImpactWeights, setThreatImpactWeights] = useState<ThreatImpactWeights>(DEFAULT_THREAT_IMPACT_WEIGHTS);
+  const [rawCountThreshold] = useState<number>(6);
+  const [threatImpactWeights] = useState<ThreatImpactWeights>(DEFAULT_THREAT_IMPACT_WEIGHTS);
 
   useEffect(() => {
     const loadNetworkData = async () => {

@@ -247,7 +247,7 @@ export const Edge: FC<EdgeProps> = ({
 
   const arrowComponent = useMemo(() => arrowPlacement !== 'none' && (
     <Arrow
-      animated={animated}
+      animated={false}
       // --- MODIFIED: Use hover color if active, otherwise use the target node color ---
       color={active ? HOVER_COLOR : targetNodeColor}
       length={arrowLength}
@@ -289,7 +289,7 @@ export const Edge: FC<EdgeProps> = ({
         curve={curve}
         curved={curved}
         curveOffset={curveOffset}
-        animated={animated}
+        animated={false}
         opacity={selectionOpacity}
         size={size}
         // --- MODIFIED: Use hover color if active, otherwise use the original node colors ---
