@@ -7,19 +7,18 @@ import {
   ColorRepresentation,
   Color,
   Curve,
-  BufferAttribute // NEW: Import BufferAttribute
+  BufferAttribute
 } from 'three';
 import { useStore } from '../store';
 import { ThreeEvent } from '@react-three/fiber';
 
-// NEW: Define segment constants for reuse
 const TUBULAR_SEGMENTS = 20;
 const RADIAL_SEGMENTS = 5;
 
 export interface LineProps {
   animated?: boolean;
-  sourceColor?: ColorRepresentation; // NEW: Use sourceColor
-  targetColor?: ColorRepresentation; // NEW: Use targetColor
+  sourceColor?: ColorRepresentation;
+  targetColor?: ColorRepresentation;
   curved: boolean;
   curve: Curve<Vector3>;
   id: string;
@@ -35,8 +34,8 @@ export interface LineProps {
 export const Line: FC<LineProps> = ({
   curveOffset,
   animated,
-  sourceColor = '#fff', // NEW: Default source color
-  targetColor = '#fff', // NEW: Default target color
+  sourceColor = '#fff',
+  targetColor = '#fff',
   curve,
   curved = false,
   id,
@@ -48,11 +47,12 @@ export const Line: FC<LineProps> = ({
   onPointerOut
 }) => {
   const tubeRef = useRef<TubeGeometry | null>(null);
+  const paddingTubeRef = useRef<TubeGeometry | null>(null);
   const isDragging = useStore(state => state.draggingIds.length > 0);
   const center = useStore(state => state.centerPosition);
   const mounted = useRef<boolean>(false);
 
-  // NEW: Memoize both source and target THREE.Color objects
+  // Memoize both source and target THREE.Color objects
   const threeSourceColor = useMemo(() => new Color(sourceColor), [sourceColor]);
   const threeTargetColor = useMemo(() => new Color(targetColor), [targetColor]);
 
@@ -61,6 +61,26 @@ export const Line: FC<LineProps> = ({
     to: { lineOpacity: opacity },
     config: { ...animationConfig, duration: animated ? undefined : 0 }
   });
+
+  // Function to apply gradient colors to geometry
+  const applyGradientColors = (geometry: TubeGeometry) => {
+    const numVertices = geometry.attributes.position.count;
+    const colors = new Float32Array(numVertices * 3);
+    const color = new Color();
+
+    for (let i = 0; i <= TUBULAR_SEGMENTS; i++) {
+      const t = i / TUBULAR_SEGMENTS;
+      color.copy(threeSourceColor).lerp(threeTargetColor, t);
+
+      for (let j = 0; j <= RADIAL_SEGMENTS; j++) {
+        const vertexIndex = i * (RADIAL_SEGMENTS + 1) + j;
+        if (vertexIndex < numVertices) {
+          colors.set([color.r, color.g, color.b], vertexIndex * 3);
+        }
+      }
+    }
+    geometry.setAttribute('color', new BufferAttribute(colors, 3));
+  };
 
   useSpring(() => {
     const from = curve.getPoint(0);
@@ -75,73 +95,95 @@ export const Line: FC<LineProps> = ({
         toVertices: [to.x, to.y, to.z]
       },
       onChange: event => {
-        if (!tubeRef.current) return;
+        if (!tubeRef.current || !paddingTubeRef.current) return;
 
         const { fromVertices, toVertices } = event.value;
         const fromVector = new Vector3(...fromVertices);
         const toVector = new Vector3(...toVertices);
 
         const animatedCurve = getCurve(fromVector, 0, toVector, 0, curved, curveOffset);
+        
+        // Create visible geometry
         const newGeometry = new TubeGeometry(animatedCurve, TUBULAR_SEGMENTS, size / 2, RADIAL_SEGMENTS, false);
+        
+        // Calculate dynamic padding - smaller edges get proportionally more padding
+        // Size 4 = 0 padding, size 3 = 1x padding, size 2 = 2x padding, etc.
+        const baseLine = 4; // Size that gets 0 padding
+        const normalizedSize = Math.max(0, Math.min(baseLine, size));
+        
+        // Simple inverse: padding = (4 - size), so size 4=0, size 3=1, size 2=2, etc.
+        const paddingMultiplier = Math.max(0, baseLine - normalizedSize);
+        const paddingRadius = (size * paddingMultiplier) / 2;
+        
+        // Create invisible padding geometry with dynamic sizing
+        const paddingGeometry = new TubeGeometry(animatedCurve, TUBULAR_SEGMENTS, paddingRadius, RADIAL_SEGMENTS, false);
 
-        // --- NEW: Gradient Logic ---
-        // Create the color buffer attribute for the new geometry before we copy it.
-        const numVertices = newGeometry.attributes.position.count;
-        const colors = new Float32Array(numVertices * 3);
-        const color = new Color(); // Create one color object to reuse in the loop
+        // Apply gradient colors to the visible geometry
+        applyGradientColors(newGeometry);
 
-        for (let i = 0; i <= TUBULAR_SEGMENTS; i++) {
-          const t = i / TUBULAR_SEGMENTS; // Normalized position along the tube
-          color.copy(threeSourceColor).lerp(threeTargetColor, t);
-
-          // Apply the interpolated color to all vertices in this "ring" of the tube
-          for (let j = 0; j <= RADIAL_SEGMENTS; j++) {
-            const vertexIndex = i * (RADIAL_SEGMENTS + 1) + j;
-            if (vertexIndex < numVertices) {
-              colors.set([color.r, color.g, color.b], vertexIndex * 3);
-            }
-          }
-        }
-        newGeometry.setAttribute('color', new BufferAttribute(colors, 3));
-        // --- End of Gradient Logic ---
-
-        // Copy the new geometry (with its color attribute) to our ref
+        // Copy the new geometries to our refs
         tubeRef.current.copy(newGeometry);
+        paddingTubeRef.current.copy(paddingGeometry);
+        
+        // Clean up
         newGeometry.dispose();
+        paddingGeometry.dispose();
       },
       config: {
         ...animationConfig,
         duration: animated && !isDragging ? undefined : 0
       }
     };
-    // The dependency array correctly includes the color objects
-  }, [animated, isDragging, curve, size, curved, curveOffset, threeSourceColor, threeTargetColor]);
+  }, [animated, isDragging, curve, size, curved, curveOffset, threeSourceColor, threeTargetColor, center]);
+
+  // Force re-render when colors change by updating the geometry
+  useEffect(() => {
+    if (tubeRef.current && mounted.current) {
+      applyGradientColors(tubeRef.current);
+      // Mark the color attribute as needing an update
+      if (tubeRef.current.attributes.color) {
+        tubeRef.current.attributes.color.needsUpdate = true;
+      }
+    }
+  }, [threeSourceColor, threeTargetColor]);
 
   useEffect(() => {
     mounted.current = true;
   }, []);
 
   return (
-    <mesh
-      userData={{ id, type: 'edge' }}
-      onPointerOver={onPointerOver}
-      onPointerOut={onPointerOut}
-      onClick={onClick}
-      onPointerDown={event => {
-        if (event.nativeEvent.buttons === 2) {
-          event.stopPropagation();
-          onContextMenu?.();
-        }
-      }}
-    >
-      <tubeGeometry ref={tubeRef} />
-      <a.meshBasicMaterial
-        opacity={lineOpacity}
-        fog={true}
-        transparent={true}
-        depthTest={false}
-        vertexColors={true} // --- NEW: Enable vertex colors ---
-      />
-    </mesh>
+    <group userData={{ id, type: 'edge' }}>
+      {/* Invisible padding mesh for improved hover detection */}
+      <mesh
+        onPointerOver={onPointerOver}
+        onPointerOut={onPointerOut}
+        onClick={onClick}
+        onPointerDown={event => {
+          if (event.nativeEvent.buttons === 2) {
+            event.stopPropagation();
+            onContextMenu?.();
+          }
+        }}
+      >
+        <tubeGeometry ref={paddingTubeRef} />
+        <meshBasicMaterial
+          transparent={true}
+          opacity={0}
+          visible={false}
+        />
+      </mesh>
+      
+      {/* Visible tube mesh */}
+      <mesh>
+        <tubeGeometry ref={tubeRef} />
+        <a.meshBasicMaterial
+          opacity={lineOpacity}
+          fog={true}
+          transparent={true}
+          depthTest={false}
+          vertexColors={true}
+        />
+      </mesh>
+    </group>
   );
 };

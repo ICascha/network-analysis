@@ -137,6 +137,9 @@ export interface EdgeProps {
 
 const LABEL_PLACEMENT_OFFSET = 3;
 
+// --- ADDED: Define a hover color ---
+const HOVER_COLOR = 'red';
+
 export const Edge: FC<EdgeProps> = ({
   animated,
   arrowPlacement = 'end',
@@ -166,7 +169,6 @@ export const Edge: FC<EdgeProps> = ({
   const to = useStore(store => store.nodes.find(node => node.id === target));
   if (!from || !to) return null;
 
-  // --- NEW: Calculate both source and target colors for the gradient ---
   const sourceNodeColor = useMemo(() => getNodeCategorizedColor(from, DEFAULT_EDGE_COLOR), [from]);
   const targetNodeColor = useMemo(() => getNodeCategorizedColor(to, DEFAULT_EDGE_COLOR), [to]);
 
@@ -207,7 +209,8 @@ export const Edge: FC<EdgeProps> = ({
   const hasSelections = useStore(state => !!state.selections?.length);
   const isActive = useStore(state => state.actives?.includes(id));
   const center = useStore(state => state.centerPosition);
-  
+
+
   let selectionOpacity: number;
   const currentEdgeWeight = weight !== undefined && weight !== null ? Number(weight) : 1;
   switch (currentEdgeWeight) {
@@ -240,10 +243,13 @@ export const Edge: FC<EdgeProps> = ({
     onPointerOut: (event) => { setActive(false); onPointerOut?.(edge, event); }
   });
 
+  console.log(pointerOver)
+
   const arrowComponent = useMemo(() => arrowPlacement !== 'none' && (
     <Arrow
       animated={animated}
-      color={targetNodeColor} // --- NEW: Arrow color is now the target color ---
+      // --- MODIFIED: Use hover color if active, otherwise use the target node color ---
+      color={active ? HOVER_COLOR : targetNodeColor}
       length={arrowLength}
       opacity={selectionOpacity}
       position={arrowPosition}
@@ -252,7 +258,8 @@ export const Edge: FC<EdgeProps> = ({
       onActive={setActive}
       onContextMenu={() => { if (!disabled) { setMenuVisible(true); onContextMenu?.(edge); }}}
     />
-  ), [animated, targetNodeColor, arrowLength, arrowPlacement, arrowPosition, arrowRotation, arrowSize, disabled, edge, onContextMenu, selectionOpacity]);
+    // --- MODIFIED: Added `active` to the dependency array to ensure this re-renders on hover ---
+  ), [animated, active, targetNodeColor, arrowLength, arrowPlacement, arrowPosition, arrowRotation, arrowSize, disabled, edge, onContextMenu, selectionOpacity]);
 
   const labelComponent = useMemo(() => labelVisible && label && (
     <a.group position={labelPosition as any} onContextMenu={() => { if (!disabled) { setMenuVisible(true); onContextMenu?.(edge); }}} onPointerOver={pointerOver} onPointerOut={pointerOut}>
@@ -285,8 +292,9 @@ export const Edge: FC<EdgeProps> = ({
         animated={animated}
         opacity={selectionOpacity}
         size={size}
-        sourceColor={sourceNodeColor} // --- NEW: Pass source color
-        targetColor={targetNodeColor} // --- NEW: Pass target color
+        // --- MODIFIED: Use hover color if active, otherwise use the original node colors ---
+        sourceColor={active ? HOVER_COLOR : sourceNodeColor}
+        targetColor={active ? HOVER_COLOR : targetNodeColor}
         onClick={event => { if (!disabled) onClick?.(edge, event); }}
         onPointerOver={pointerOver}
         onPointerOut={pointerOut}
