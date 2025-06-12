@@ -11,7 +11,7 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment
+# Allow only one concurrent deployment, cancelling in-progress runs
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -30,9 +30,28 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
+      # --- New steps to build the 'reagraph' sub-project ---
+      # This step installs the dependencies for your 'reagraph' project
+      # by running 'npm ci' inside the './reagraph' directory.
+      - name: Install dependencies in reagraph folder
+        working-directory: ./reagraph
+        run: npm ci
+
+      # This step builds your 'reagraph' project by running 'npm run build'
+      # inside the './reagraph' directory.
+      - name: Build reagraph project
+        working-directory: ./reagraph
+        run: npm run build
+
+      # --- Original steps for your main project ---
+      # This step installs dependencies for the main/root project.
+      # If your root package.json references the reagraph project
+      # (e.g., with "reagraph": "file:./reagraph"), this will link it correctly.
       - name: Install dependencies
         run: npm ci
 
+      # This step builds the main project. It should now have access to the
+      # built artifacts from the 'reagraph' project.
       - name: Build project
         run: npm run build
 
@@ -42,6 +61,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          # This should point to the final build output directory of your main project.
           path: './dist'
 
   deploy:
