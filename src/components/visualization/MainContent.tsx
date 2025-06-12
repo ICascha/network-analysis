@@ -187,7 +187,7 @@ export const MainContent = ({ }: MainContentProps) => {
     return node.nr_citations || 0;
   };
   return (
-    <div className="relative w-full h-[calc(100vh-96px)]">
+  <div className="relative w-full h-full">
       {/* Graph Container */}
       <div className="absolute inset-0 w-full h-full">
       <GraphChart

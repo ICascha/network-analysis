@@ -198,7 +198,7 @@ export const Node: FC<NodeProps> = ({
     () => ({
       from: {
         nodePosition: center ? [center.x, center.y, 0] : [0, 0, 0],
-        labelPosition: [0, -(nodeSize + 7), 2],
+        labelPosition: [0, -(nodeSize + 7), 20],
         subLabelPosition: [0, -(nodeSize + 14), 2]
       },
       to: {
@@ -209,7 +209,7 @@ export const Node: FC<NodeProps> = ({
             shouldHighlight ? position.z + 1 : position.z
           ]
           : [0, 0, 0],
-        labelPosition: [0, -(nodeSize + 7), 2],
+        labelPosition: [0, -(nodeSize + 7), 20],
         subLabelPosition: [0, -(nodeSize + 14), 2]
       },
       config: {
