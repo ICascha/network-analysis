@@ -19,7 +19,6 @@ import {
   ThreatImpactWeights 
 } from './networkGraph/threatImpactService';
 import GraphSettings from './GraphSettings';
-import ThreatImpactWeightsControl from './ThreatImpactWeightsControl';
 import {
   Sheet,
   SheetTrigger,
@@ -34,7 +33,6 @@ import {
 import { Separator } from "@/components/ui/separator";
 import ThreatTable from './ThreatTable';
 import EdgeRelationshipViewer from "./EdgeRelationshipViewer";
-import EdgeCountFilter from "./EdgeCountFilter";
 
 interface MainContentProps {
   settings: ModelSettings;
@@ -224,24 +222,6 @@ export const MainContent = ({ }: MainContentProps) => {
       {/* Color Legend - Move it down to accommodate the new toggle */}
       <div className="absolute top-28 left-4 z-10">
         <ColorLegend />
-      </div>
-
-      {/* Edge Count Filter - Add below the Color Legend */}
-    <div className="absolute top-64 left-4 z-10">
-      <EdgeCountFilter
-        value={rawCountThreshold}
-        onChange={setRawCountThreshold}
-        max={20}
-        min={1}
-      />
-    </div>
-    
-          {/* Threat Impact Weights Control - Add below the Edge Count Filter */}
-      <div className="absolute top-96 left-4 z-10">
-        <ThreatImpactWeightsControl
-          weights={threatImpactWeights}
-          onChange={setThreatImpactWeights}
-        />
       </div>
 
 

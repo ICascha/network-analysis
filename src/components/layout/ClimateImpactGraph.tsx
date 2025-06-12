@@ -91,7 +91,7 @@ const ClimateImpactGraph: React.FC = () => {
       },
       bottomLeft: {
         id: 'bottomLeft',
-        label: 'Biodiversiteit',
+        label: 'Verlies biodiversiteit',
         x: centerX - orbitRadius * 0.87,
         y: centerY + orbitRadius * 0.5,
         radius: 35, // Slightly reduced from 38
@@ -231,7 +231,7 @@ const ClimateImpactGraph: React.FC = () => {
                   userSelect: 'none'
                 }}
               >
-                {node.label.split(' ').map((word, wordIndex) => (
+                {node.label.split('||||').map((word, wordIndex) => (
                   <tspan 
                     key={wordIndex} 
                     x={node.x} 
