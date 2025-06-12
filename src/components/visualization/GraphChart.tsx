@@ -195,6 +195,7 @@ interface GraphChartProps {
   error?: string | null;
   selectedNodeId: string | null;
   onNodeSelect: (nodeId: string | null) => void;
+  onEdgeClick?: (edge: Edge | null) => void; // ADDED: Prop for handling edge clicks
   showRelationships?: boolean;
   sizingAttribute?: 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out' | 'cross_category_eigen_centrality' | 'cross_category_eigen_centrality_in' | 'cross_category_eigen_centrality_out' | 'hub';
   minNodeSize?: number;
@@ -235,6 +236,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
     error,
     selectedNodeId,
     onNodeSelect,
+    onEdgeClick, // ADDED: Destructure onEdgeClick prop
     showRelationships = false,
     sizingAttribute = 'hub', // Default sizing attribute
     minNodeSize = 5,
@@ -455,10 +457,21 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
       }      
     }));
 
-    const handleNodeClick = (node: any) => {
-      if (node && node.id) onNodeSelect(node.id === selectedNodeId ? null : node.id);
+    // MODIFIED: Click handlers now clear the other selection type (node vs edge)
+    const handleNodeClick = (node: CustomNode) => {
+      if (onEdgeClick) onEdgeClick(null);
+      onNodeSelect(node.id === selectedNodeId ? null : node.id);
     };
-    const handleCanvasClick = () => onNodeSelect(null);
+
+    const handleEdgeClick = (edge: Edge) => {
+      onNodeSelect(null);
+      if (onEdgeClick) onEdgeClick(edge);
+    };
+
+    const handleCanvasClick = () => {
+      onNodeSelect(null);
+      if (onEdgeClick) onEdgeClick(null);
+    };
 
     if (loading) return <div className="flex h-full items-center justify-center"><div className="animate-pulse text-gray-500">Loading graph data...</div></div>;
     if (error) return <div className="flex h-full items-center justify-center"><div className="text-red-500">Error loading graph: {error}</div></div>;
@@ -473,6 +486,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
           selections={selections}
           actives={actives}
           onNodeClick={handleNodeClick}
+          onEdgeClick={onEdgeClick ? handleEdgeClick : undefined} // ADDED: Pass edge click handler
           onCanvasClick={handleCanvasClick}
           sizingType="attribute"
           sizingAttribute={sizingAttribute}

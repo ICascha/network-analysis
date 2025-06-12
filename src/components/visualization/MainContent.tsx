@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Eye, Settings, ListOrdered } from "lucide-react";
+import { Eye, Settings, ListOrdered, PanelRightOpen } from "lucide-react";
 import { useState, useEffect, useRef, useMemo } from 'react';
 import type { ModelSettings } from '@/types/settings';
 import GraphChart, { GraphChartRef } from './GraphChart';
@@ -12,7 +12,8 @@ import EdgeDisplayToggle, { EdgeDisplayMode } from './EdgeDisplayToggle';
 import { 
   getNetworkWithCentralityMetrics, 
   Node, 
-  Edge 
+  Edge,
+  RelationCitation
 } from './networkGraph/networkService';
 import { 
   DEFAULT_THREAT_IMPACT_WEIGHTS,
@@ -32,7 +33,8 @@ import {
 } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
 import ThreatTable from './ThreatTable';
-import EdgeRelationshipViewer from "./EdgeRelationshipViewer";
+// REMOVED: EdgeRelationshipViewer is no longer used
+// import EdgeRelationshipViewer from "./EdgeRelationshipViewer"; 
 
 interface MainContentProps {
   settings: ModelSettings;
@@ -57,6 +59,7 @@ export const MainContent = ({ }: MainContentProps) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
+  const [selectedEdge, setSelectedEdge] = useState<Edge | null>(null); // ADDED: State for selected edge
   const [showRelationships, setShowRelationships] = useState<boolean>(false);
   const [showPanel, setShowPanel] = useState<boolean>(false);
   const [edgeDisplayMode, setEdgeDisplayMode] = useState<EdgeDisplayMode>('all');
@@ -66,34 +69,30 @@ export const MainContent = ({ }: MainContentProps) => {
   const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(0.5);
   const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(true);
   const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(true);
-  const [_, setRelationshipSelectionMode] = useState<boolean>(false);
+  // REMOVED: Relationship selection mode is no longer needed
+  // const [_, setRelationshipSelectionMode] = useState<boolean>(false);
   const [rawCountThreshold, setRawCountThreshold] = useState<number>(6);
-  // Add state for threat impact weights
   const [threatImpactWeights, setThreatImpactWeights] = useState<ThreatImpactWeights>(DEFAULT_THREAT_IMPACT_WEIGHTS);
 
   useEffect(() => {
     const loadNetworkData = async () => {
       try {
         setLoading(true);
-        // Pass the rawCountThreshold and threatImpactWeights to the function
         const data = await getNetworkWithCentralityMetrics(2, rawCountThreshold, threatImpactWeights);
         
         const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
         const validEdges = Array.isArray(data?.edges) ? data.edges : [];
         
-        // Filter edges based on the weight threshold
         const filteredEdges = validEdges.filter(edge => {
-          return edge.weight >= 1; // Or whatever threshold you want to use
+          return edge.weight >= 1;
         });
         
-        // Create a set of node IDs that have at least one valid edge
         const nodeIdsWithValidEdges = new Set();
         filteredEdges.forEach(edge => {
           nodeIdsWithValidEdges.add(edge.source);
           nodeIdsWithValidEdges.add(edge.target);
         });
         
-        // Filter nodes to only include those with at least one valid edge
         const filteredNodes = validNodes.filter(node => 
           nodeIdsWithValidEdges.has(node.id)
         );
@@ -109,15 +108,13 @@ export const MainContent = ({ }: MainContentProps) => {
       }
     };
     loadNetworkData();
-  }, [rawCountThreshold, threatImpactWeights]); // Add threatImpactWeights as a dependency
+  }, [rawCountThreshold, threatImpactWeights]); 
 
 
   // Filter edges based on the selected display mode
   const filteredEdges = useMemo(() => {
-    // First filter edges based on raw count threshold (if needed)
     let edgesToUse = edges;
     
-    // Then apply the display mode filtering
     if (edgeDisplayMode === 'all') {
       return edgesToUse;
     } else if (edgeDisplayMode === 'incoming' && selectedNodeId) {
@@ -125,37 +122,46 @@ export const MainContent = ({ }: MainContentProps) => {
     } else if (edgeDisplayMode === 'outgoing' && selectedNodeId) {
       return edgesToUse.filter(edge => edge.source === selectedNodeId);
     } else if (selectedNodeId) {
-      // If a node is selected but mode is not 'all', show related edges
       return edgesToUse.filter(edge => edge.source === selectedNodeId || edge.target === selectedNodeId);
     }
-    // Default: return all edges
     return edgesToUse;
   }, [edges, edgeDisplayMode, selectedNodeId]);
 
   const filteredNodes = useMemo(() => {
-    // Create a Set of all node IDs that have at least one edge
     const nodeIdsWithEdges = new Set();
-    
-    // Use filteredEdges instead of edges to determine which nodes have connections
     filteredEdges.forEach(edge => {
       nodeIdsWithEdges.add(edge.source);
       nodeIdsWithEdges.add(edge.target);
     });
-    
-    // Filter nodes to only include those with at least one edge
     return nodes.filter(node => nodeIdsWithEdges.has(node.id));
   }, [nodes, filteredEdges]);
 
   const selectedNode = selectedNodeId
     ? nodes.find(n => n.id === selectedNodeId) || null
     : null;
+    
+  // ADDED: Find source and target nodes for the selected edge
+  const sourceNodeForEdge = selectedEdge ? nodes.find(n => n.id === selectedEdge.source) : null;
+  const targetNodeForEdge = selectedEdge ? nodes.find(n => n.id === selectedEdge.target) : null;
 
+  // MODIFIED: handleNodeSelect clears selectedEdge
   const handleNodeSelect = (nodeId: string | null) => {
+    setSelectedEdge(null);
     setSelectedNodeId(nodeId);
     if (nodeId && window.innerWidth < 768) {
       setShowPanel(true);
     }
   };
+
+  // ADDED: handleEdgeSelect clears selectedNodeId and sets selectedEdge
+  const handleEdgeSelect = (edge: Edge | null) => {
+    setSelectedNodeId(null);
+    setSelectedEdge(edge);
+    if (edge && window.innerWidth < 768) {
+        setShowPanel(true);
+    }
+  };
+
 
   const sortedNodesForSelector = useMemo(() => {
     return [...filteredNodes].sort((a, b) => {
@@ -184,18 +190,38 @@ export const MainContent = ({ }: MainContentProps) => {
   const getTotalCitationsCount = (node: Node): number => {
     return node.nr_citations || 0;
   };
+  
+  // ADDED: Function to render citation parts, similar to old EdgeRelationshipViewer
+  const renderCitationParts = (citationText: string) => {
+    if (!citationText.includes(" ||| ")) {
+      return <div className="italic bg-muted/40 p-3 rounded text-sm">"{citationText}"</div>;
+    }
+
+    const parts = citationText.split(" ||| ");
+    return (
+      <div className="space-y-2">
+        {parts.map((part, i) => (
+          <div key={i} className="italic bg-muted/40 p-3 rounded text-sm">
+            "{part.trim()}"
+          </div>
+        ))}
+      </div>
+    );
+  };
+  
   return (
   <div className="relative w-full h-full">
       {/* Graph Container */}
       <div className="absolute inset-0 w-full h-full">
       <GraphChart
         ref={graphRef}
-        nodes={filteredNodes}  // Changed from nodes to filteredNodes
+        nodes={filteredNodes}
         edges={filteredEdges}
         loading={loading}
         error={error}
         selectedNodeId={selectedNodeId}
         onNodeSelect={handleNodeSelect}
+        onEdgeClick={handleEdgeSelect} // ADDED: Pass edge click handler
         showRelationships={showRelationships}
         sizingAttribute={scoringMetric}
         minNodeSize={minNodeSize}
@@ -206,28 +232,20 @@ export const MainContent = ({ }: MainContentProps) => {
       />
       </div>
 
-      {/* Camera Controls */}
+      {/* UI Elements */}
       <div className="absolute top-4 left-4 z-10 bg-background/70 backdrop-blur-md p-2 rounded-lg shadow-lg">
         <CameraControls graphRef={graphRef} />
       </div>
-
-      {/* Edge Display Toggle - Add it below the Camera Controls */}
       <div className="absolute top-16 left-4 z-10">
         <EdgeDisplayToggle 
           displayMode={edgeDisplayMode}
           setDisplayMode={setEdgeDisplayMode}
         />
       </div>
-
-      {/* Color Legend - Move it down to accommodate the new toggle */}
       <div className="absolute top-28 left-4 z-10">
         <ColorLegend />
       </div>
-
-
-      {/* Settings & Ranking Buttons */}
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 flex items-center space-x-2">
-        {/* Settings Button */}
         <div className="bg-background/70 backdrop-blur-md p-2 rounded-lg shadow-lg">
           <TooltipProvider>
             <Tooltip>
@@ -263,8 +281,6 @@ export const MainContent = ({ }: MainContentProps) => {
             </Tooltip>
           </TooltipProvider>
         </div>
-
-        {/* Ranking Table Button */}
         <div className="bg-background/70 backdrop-blur-md p-2 rounded-lg shadow-lg">
           <TooltipProvider>
             <Tooltip>
@@ -288,8 +304,6 @@ export const MainContent = ({ }: MainContentProps) => {
           </TooltipProvider>
         </div>
       </div>
-
-      {/* Edge Filter Info */}
        {edgeWeightCutoff > 0.5 && (
          <div className="absolute top-16 left-1/2 transform -translate-x-1/2 z-10">
            <div className="bg-background/70 backdrop-blur-md px-3 py-1 rounded-lg shadow-lg text-xs">
@@ -298,8 +312,6 @@ export const MainContent = ({ }: MainContentProps) => {
            </div>
          </div>
        )}
-
-      {/* Edge Display Mode Info - Add when a specific edge display mode is active */}
       {edgeDisplayMode !== 'all' && selectedNodeId && (
         <div className="absolute top-24 left-1/2 transform -translate-x-1/2 z-10">
           <div className="bg-background/70 backdrop-blur-md px-3 py-1 rounded-lg shadow-lg text-xs">
@@ -308,8 +320,6 @@ export const MainContent = ({ }: MainContentProps) => {
           </div>
         </div>
       )}
-
-      {/* Mobile toggle button */}
       <div className="md:hidden absolute top-4 right-4 z-10">
         <Button
           variant="secondary"
@@ -326,7 +336,6 @@ export const MainContent = ({ }: MainContentProps) => {
       } ${ window.innerWidth >= 768 ? 'md:translate-x-0' : '' }`}>
         <Card className="h-full bg-background/60 backdrop-blur-md border-0 shadow-lg rounded-l-lg rounded-r-none overflow-hidden">
           <div className="flex flex-col h-full p-4">
-            {/* Node selector and controls */}
             <div className="mb-4 pt-2">
               <h4 className="text-sm font-medium mb-2">Selecteer Dreiging</h4>
               <div className="flex gap-2 items-center">
@@ -363,27 +372,26 @@ export const MainContent = ({ }: MainContentProps) => {
               </p>
             </div>
 
-              {/* Add Edge Relationship Viewer toggle button */}
-            <div className="mb-4">
-            <EdgeRelationshipViewer
-              nodes={filteredNodes}
-              edges={filteredEdges}
-              onModeToggle={setRelationshipSelectionMode}
-              selectedNodeId={selectedNodeId}
-              onNodeSelect={handleNodeSelect}
-            />
-            </div>
+            {/* REMOVED: EdgeRelationshipViewer component is no longer needed here */}
+            
+            <Separator className="my-2 bg-border/30" />
 
-            {/* Divider */}
-             <Separator className="my-2 bg-border/30" />
-
-            {/* Node information */}
+            {/* MODIFIED: Node/Edge information area */}
             <div className="flex-1 overflow-hidden flex flex-col">
-              <h4 className="text-sm font-medium mb-3">Geselecteerde Dreiging</h4>
+              <h4 className="text-sm font-medium mb-3">
+                  {selectedNode ? "Geselecteerde Dreiging" : selectedEdge ? "Geselecteerde Verbinding" : "Details"}
+              </h4>
 
-              {selectedNode ? (
-                <div className="flex flex-col h-full">
-                  {/* Node Details Box */}
+              {/* View for when nothing is selected */}
+              {!selectedNode && !selectedEdge && (
+                <div className="text-sm text-muted-foreground p-4 bg-muted/30 rounded-lg">
+                  Klik op een dreiging of verbinding in de grafiek om details te bekijken.
+                </div>
+              )}
+
+              {/* View for when a NODE is selected */}
+              {selectedNode && (
+                <div className="flex flex-col h-full overflow-hidden">
                   <div className="p-3 bg-primary/10 backdrop-blur-md rounded-lg flex-shrink-0">
                     <p className="font-medium text-lg">{selectedNode.label}</p>
                     {selectedNode.summary && (
@@ -398,7 +406,6 @@ export const MainContent = ({ }: MainContentProps) => {
                     </div>
                     {selectedNode.data && (
                       <div className="mt-2 pt-2 border-t border-border/20 grid grid-cols-2 gap-2 text-xs">
-                        {/* Update to display only eigenvector centrality metrics */}
                         {getCentralityValue(selectedNode, 'eigen_centrality') !== null && (
                           <div><span className="text-muted-foreground">Eigen Centrality: </span>
                           <span className="font-mono">{getCentralityValue(selectedNode, 'eigen_centrality')?.toFixed(4)}</span></div>
@@ -411,7 +418,6 @@ export const MainContent = ({ }: MainContentProps) => {
                           <div><span className="text-muted-foreground">Importance (Out): </span>
                           <span className="font-mono">{getCentralityValue(selectedNode, 'eigen_centrality_out')?.toFixed(4)}</span></div>
                         )}
-                        {/* Add new cross-category centrality metrics */}
                         {getCentralityValue(selectedNode, 'cross_category_eigen_centrality') !== null && (
                           <div><span className="text-muted-foreground">Cross-Cat Centrality: </span>
                           <span className="font-mono">{getCentralityValue(selectedNode, 'cross_category_eigen_centrality')?.toFixed(4)}</span></div>
@@ -427,8 +433,6 @@ export const MainContent = ({ }: MainContentProps) => {
                       </div>
                     )}
                   </div>
-
-                  {/* Citations section - Updated to display individual citations */}
                   <div className="mt-4 flex-1 flex flex-col overflow-hidden">
                     <h5 className="text-sm font-medium mb-2 flex-shrink-0">Representatieve documenten</h5>
                     <div className="space-y-3 overflow-y-auto pr-2 flex-1">
@@ -436,12 +440,7 @@ export const MainContent = ({ }: MainContentProps) => {
                          selectedNode.citaten.map((citation, index) => (
                           <div key={index} className="p-3 bg-background/50 rounded-lg border border-border/20">
                             <div className="flex justify-between items-start mb-2">
-                              <a
-                                href={formatDocumentLink(citation.document_link)}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-sm font-medium text-primary hover:underline flex-1 mr-2"
-                              >
+                              <a href={formatDocumentLink(citation.document_link)} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary hover:underline flex-1 mr-2">
                                 {citation.title || "Onbekende Titel"}
                               </a>
                             </div>
@@ -467,9 +466,60 @@ export const MainContent = ({ }: MainContentProps) => {
                     </div>
                   </div>
                 </div>
-              ) : (
-                <div className="text-sm text-muted-foreground p-4 bg-muted/30 rounded-lg">
-                  Klik op een dreiging in de grafiek of selecteer er een uit de lijst om details te bekijken.
+              )}
+
+              {/* ADDED: View for when an EDGE is selected */}
+              {selectedEdge && (
+                <div className="flex flex-col h-full overflow-hidden">
+                   <div className="p-3 bg-primary/10 backdrop-blur-md rounded-lg flex-shrink-0">
+                      <div className="flex flex-wrap items-center gap-2">
+                          <span className="font-medium text-foreground">{sourceNodeForEdge?.label || 'Onbekend'}</span>
+                          <PanelRightOpen className="h-4 w-4 rotate-90 opacity-50 flex-shrink-0" />
+                          <span className="font-medium text-foreground">{targetNodeForEdge?.label || 'Onbekend'}</span>
+                      </div>
+                      {selectedEdge.weight && (
+                        <div className="text-xs text-muted-foreground mt-2 pt-2 border-t border-border/20">
+                          Gewicht: <span className="font-mono">{selectedEdge.weight.toFixed(2)}</span>
+                        </div>
+                      )}
+                  </div>
+
+                  <div className="mt-4 flex-1 flex flex-col overflow-hidden">
+                    <h5 className="text-sm font-medium mb-2 flex-shrink-0">Bewijsmateriaal & Context</h5>
+                     <div className="space-y-3 overflow-y-auto pr-2 flex-1">
+                      {selectedEdge.citaat_relaties && selectedEdge.citaat_relaties.length > 0 ? (
+                        selectedEdge.citaat_relaties.map((citation, index) => (
+                           <div key={index} className="p-4 bg-background/50 rounded-lg border border-border/20">
+                            <div className="flex justify-between items-start mb-2">
+                              <a href={formatDocumentLink(citation.document_link)} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary hover:underline flex-1 mr-2">
+                                {citation.title || "Onbekende Titel"}
+                              </a>
+                            </div>
+                            <div className="flex flex-wrap text-xs text-muted-foreground mb-3 space-x-2">
+                              {citation.publication_date && <div>{citation.publication_date.slice(0, 7)}</div>}
+                              {citation.publication_date && (citation.source) && <div>•</div>}
+                              {citation.source && <div>{citation.source}</div>}
+                            </div>
+                            <div className="text-sm mt-2">
+                              <div className="flex gap-2 mb-1">
+                                <span className="text-xs font-medium bg-primary/10 px-2 py-0.5 rounded">Oorzaak</span>
+                                <span>{citation.oorzaak}</span>
+                              </div>
+                              <div className="flex gap-2 mb-3">
+                                <span className="text-xs font-medium bg-primary/10 px-2 py-0.5 rounded">Gevolg</span>
+                                <span>{citation.gevolg}</span>
+                              </div>
+                              {renderCitationParts(citation.citaat)}
+                            </div>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="text-sm text-muted-foreground p-3 bg-muted/30 rounded-lg">
+                          Geen citaties beschikbaar voor deze verbinding.
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
