@@ -1,8 +1,6 @@
 import { GraphCanvas, GraphCanvasRef, useSelection, lightTheme } from 'reagraph';
 import { useRef, useImperativeHandle, forwardRef, useEffect, useMemo, useCallback } from 'react';
-// Ensure CustomNode (from ./networkDataService) includes 'category?: string;'
-import { Node as CustomNode, Edge } from './networkDataService';
-// import GraphLegend from './GraphLegend'; // Import the new legend component
+import { Node as CustomNode, Edge } from './networkGraph/networkService';
 
 // Define the structure for position data
 interface NodePositionData {
@@ -12,32 +10,8 @@ interface NodePositionData {
   z?: number; // Optional z-coordinate
 }
 
-const exampleCategorySpreadConfiguration: CategorySpreadConfig = {
-  'Sociaal & Maatschappelijk': {
-    xSpreadMultiplier: 1.6, ySpreadMultiplier: 1.3, anchorNodeId: "polarisatie rond complottheorieën", translateX: 30,
-  },
-  'Economisch': {
-    xSpreadMultiplier: 2, ySpreadMultiplier: 1.2, translateY: -50, translateX: 10,
-  },
-  'Geopolitiek & militair': {
-    xSpreadMultiplier: 1.4, ySpreadMultiplier: 1.3, anchorNodeId: "(heimelijke) beïnvloeding en hybride operaties door statelijke actoren die aangrijpen op het maatschappelijk debat", translateX: -70
-  },
-  'Technologisch & digitaal': {
-    xSpreadMultiplier: 1.25, ySpreadMultiplier: 1.25, translateY: -30,
-  },
-  'Ecologisch': {
-    anchorNodeId: "hitte/droogte", ySpreadMultiplier: 1.3, xSpreadMultiplier: 1.3, translateX: -50, translateY: 60,
-  },
-  'Gezondheid': {
-    xSpreadMultiplier: 1.5, ySpreadMultiplier: 1.2, anchorNodeId: "pandemie door een mens overdraagbaar virus", translateX: 60, translateY: 50,
-  },
-  'unknown': {
-    xSpreadMultiplier: 1.05, ySpreadMultiplier: 1.05,
-  }
-};
-
+// This static data could also be moved to its own file if it grows
 const POSITIONS: NodePositionData[] = [
-    // ... (POSITIONS data remains the same)
     { "id": "sabotage van onderzeese infrastructuur (zoals internetkabels)", "x": 145.85717491406618, "y": 90.7768099096383 },
     { "id": "(heimelijke) beïnvloeding en hybride operaties door statelijke actoren die aangrijpen op het maatschappelijk debat", "x": -87.5619038258964, "y": 95.16593310426349 },
     { "id": "polarisatie rond complottheorieën", "x": 10.701064529207207, "y": -120.06256400878351 },
@@ -93,61 +67,29 @@ const POSITIONS: NodePositionData[] = [
     { "id": "griep pandemie", "x": 225.7315084974734, "y": -115.39538284556113 }
 ];
 
-const shortNodeDescriptions: Record<string, string> = {
-  // ... (shortNodeDescriptions data remains the same)
-  "sabotage van onderzeese infrastructuur (zoals internetkabels)": "Sabotage onderzeese infra",
-  "(heimelijke) beïnvloeding en hybride operaties door statelijke actoren die aangrijpen op het maatschappelijk debat": "Hybride operaties - beïnvloeding maatschappelijk debat",
-  "polarisatie rond complottheorieën": "Polarisatie complottheorieën",
-  "cyberaanvallen kritieke infrastructuur": "Cyberaanvallen kritieke infra",
-  "hitte/droogte": "Hitte en droogte",
-  "overstroming zee": "Overstroming zee",
-  "klassieke statelijke spionage": "Klassieke statelijke spionage",
-  "innovatie nucleaire overbrengingsmiddelen": "Innovatie kernwapendragers",
-  "criminele inmenging bedrijfsleven": "Criminele inmenging bedrijfsleven",
-  "infiltratie openbaar bestuur": "Infiltratie openbaar bestuur",
-  "georganiseerde criminaliteit door heel nederland": "Georganiseerde misdaad",
-  "ondermijnende enclaves": "Ondermijnende enclaves",
-  "strategische afhankelijkheden grondstoffen en technologie van buitenlande leveranciers": "Afhankelijkheid grondstoffen en tech",
-  "crisis in de zuid-chinese zee": "Crisis zuid-chinese zee",
-  "tekorten essentiële grondstoffen": "Tekort essentiële grondstoffen",
-  "tweespalt in de eu": "Tweespalt eu",
-  "verstoring van handel door productieproblemen buitenland": "Handelsverstoring productieproblemen buitenland",
-  "uiteenvallen van de navo": "Uiteenvallen navo",
-  "tijdelijke bezetting van een eu-lidstaat": "Bezetting eu-lidstaat",
-  "onzekerheid energievoorziening": "Onzekerheid energievoorziening",
-  "crimineel geweld richting media en overheid": "Geweld media en overheid",
-  "anti-overheidsextremisme": "Anti-overheidsextremisme",
-  "meervoudige terroristische aanslag": "Meervoudige terroristische aanslag",
-  "handelsoorlog waar de eu bij betrokken is": "Handelsoorlog eu",
-  "europese schuldencrisis": "Europese schuldencrisis",
-  "overstroming rivier": "Overstroming rivier",
-  "tekort aan drinkwater door verzilting en vervuiling": "Drinkwatertekort (verzilting/vervuiling)",
-  "verarming biodiversiteit met effecten op voedselzekerheid": "Biodiversiteitsverlies (voedselzekerheid)",
-  "gebruik van generatieve ai voor deepfakes en desinformatie": "Generatieve ai deepfakes/desinfo",
-  "chinese hereniging taiwan": "Chinese hereniging taiwan",
-  "cyberspionage overheid": "Cyberspionage overheid",
-  "ongewenste buitenlandse inmenging in diasporagemeenschappen": "Buitenlandse inmenging diaspora",
-  "keteneffecten elektriciteitsuitval": "Keteneffecten elektriciteitsuitval",
-  "ransomware telecom": "Ransomware telecomsector",
-  "verstoring van het betalingsverkeer": "Verstoring betalingsverkeer",
-  "pandemie door een mens overdraagbaar virus": "Pandemie (mens-op-mens)",
-  "natuurbranden": "Natuurbranden",
-  "geweldsescalatie rechtsextremisten": "Geweldsescalatie rechtsextremisten",
-  "alleenhandelende dader": "Alleenhandelende dader",
-  "staatlijke verwerving van een belang in grote telecom-aanbieder": "Staatsovername telecomaanbieder",
-  "landelijke black-out": "Landelijke black-out",
-  "stralingsongeval in europa": "Stralingsongeval europa",
-  "collateral damage": "Collateral damage",
-  "systeempartij in de financiële sector in zwaar weer": "Financiële systeempartij in problemen",
-  "correctie op waardering financiële activa": "Correctie waardering financiële activa",
-  "aanval cloud service provider": "Aanval cloudprovider",
-  "ransomware zorgsector": "Ransomware zorgsector",
-  "geïnduceerde aardbeving": "Geïnduceerde aardbeving",
-  "kerncentrale borssele": "Incident kerncentrale borssele",
-  "anarcho-extremisme": "Anarcho-extremisme",
-  "uitbraak zoönotische variant vogelgriep": "Zoönotische vogelgriepuitbraak",
-  "uitbraak mkz onder koeien": "Mkz-uitbraak koeien",
-  "griep pandemie": "Grieppandemie"
+
+const exampleCategorySpreadConfiguration: CategorySpreadConfig = {
+  'Sociaal & Maatschappelijk': {
+    xSpreadMultiplier: 1.6, ySpreadMultiplier: 1.3, anchorNodeId: "polarisatie rond complottheorieën", translateX: 30,
+  },
+  'Economisch': {
+    xSpreadMultiplier: 2, ySpreadMultiplier: 1.2, translateY: -50, translateX: 10,
+  },
+  'Geopolitiek & militair': {
+    xSpreadMultiplier: 1.4, ySpreadMultiplier: 1.3, anchorNodeId: "(heimelijke) beïnvloeding en hybride operaties door statelijke actoren die aangrijpen op het maatschappelijk debat", translateX: -70
+  },
+  'Technologisch & digitaal': {
+    xSpreadMultiplier: 1.25, ySpreadMultiplier: 1.25, translateY: -30,
+  },
+  'Ecologisch': {
+    anchorNodeId: "hitte/droogte", ySpreadMultiplier: 1.3, xSpreadMultiplier: 1.3, translateX: -50, translateY: 60,
+  },
+  'Gezondheid': {
+    xSpreadMultiplier: 1.5, ySpreadMultiplier: 1.2, anchorNodeId: "pandemie door een mens overdraagbaar virus", translateX: 60, translateY: 50,
+  },
+  'unknown': {
+    xSpreadMultiplier: 1.05, ySpreadMultiplier: 1.05,
+  }
 };
 
 export const categoryColors: Record<string, string> = {
@@ -170,7 +112,7 @@ const denkWerkTheme = {
     ...lightTheme.edge,
     activeStroke: 'rgb(0,168,120)',
     activeFill: 'rgb(0,168,120)',
-    opacity: 0.5, // Default opacity for edges
+    opacity: 0.5,
   },
   arrow: { ...lightTheme.arrow, activeFill: 'rgb(0,168,120)' },
   ring: { ...lightTheme.ring, activeFill: 'rgb(0,168,120)' },
@@ -193,8 +135,9 @@ interface GraphChartProps {
   loading?: boolean;
   error?: string | null;
   selectedNodeId: string | null;
+  shortNodeDescriptions: Record<string, string>; // <-- ADDED PROP
   onNodeSelect: (nodeId: string | null) => void;
-  onEdgeClick?: (edge: Edge | null) => void; // ADDED: Prop for handling edge clicks
+  onEdgeClick?: (edge: Edge | null) => void;
   showRelationships?: boolean;
   sizingAttribute?: 'eigen_centrality' | 'eigen_centrality_in' | 'eigen_centrality_out' | 'cross_category_eigen_centrality' | 'cross_category_eigen_centrality_in' | 'cross_category_eigen_centrality_out' | 'hub';
   minNodeSize?: number;
@@ -234,14 +177,15 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
     loading,
     error,
     selectedNodeId,
+    shortNodeDescriptions, // <-- DESTRUCTURED PROP
     onNodeSelect,
-    onEdgeClick, // ADDED: Destructure onEdgeClick prop
+    onEdgeClick,
     showRelationships = false,
-    sizingAttribute = 'hub', // Default sizing attribute
+    sizingAttribute = 'hub',
     minNodeSize = 5,
     maxNodeSize = 15,
     edgeWeightCutoff = 0.5,
-    useWeightBasedEdgeSize = false, // Default for edge size
+    useWeightBasedEdgeSize = false,
     rotationAngleDegrees = 78,
     categorySpreadConfig = exampleCategorySpreadConfiguration,
   }, ref) => {
@@ -249,40 +193,36 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
 
     const processedNodes = useMemo(() => {
       return nodes
-        .filter(node => node.category) // Filter nodes by category
+        .filter(node => node.category)
         .map(node => {
-          const category = node.category || 'unknown'; // Should always have a category due to filter, but good for safety
+          const category = node.category || 'unknown';
           const color = categoryColors[category] || categoryColors.unknown;
+          // Use the passed-in descriptions
           const displayLabel = shortNodeDescriptions[node.id] || node.label || node.id;
           return { ...node, label: displayLabel, fill: color, color: color, data: { ...(node.data || {}), category: category } };
         });
-    }, [nodes]);
+    }, [nodes, shortNodeDescriptions]);
 
-    // Get IDs of the filtered nodes to filter edges
-    const filteredNodeIds = useMemo(() => {
-      return new Set(processedNodes.map(node => node.id));
-    }, [processedNodes]);
+    const filteredNodeIds = useMemo(() => new Set(processedNodes.map(node => node.id)), [processedNodes]);
 
     const finalNodePositions = useMemo(() => {
-      // Filter original nodes based on ALLOWED_CATEGORIES before calculating positions
       const nodesToProcessForPositioning = nodes.filter(node => node.category);
 
       if (!graphCenter) {
           const fallbackPositions = new Map<string, { x: number; y: number; z?: number }>();
-          nodesToProcessForPositioning.forEach((appNode, index) => { // Use filtered nodes
+          nodesToProcessForPositioning.forEach((appNode, index) => {
               const positionData = POSITIONS.find(p => p.id === appNode.id);
               if (positionData) {
                   fallbackPositions.set(appNode.id, { x: positionData.x, y: positionData.y, z: positionData.z || 0 });
               } else {
-                  // Fallback for nodes that might not have a predefined position but are in allowed categories
                   fallbackPositions.set(appNode.id, { x: (index % 10) * 100 - 500, y: Math.floor(index / 10) * 100 - 500, z: 0 });
               }
           });
-          console.warn("Graph center could not be calculated or initial nodes are empty. Spreading/translation adjustments might not be accurately applied to all nodes.");
+          console.warn("Graph center could not be calculated. Spreading/translation might not be accurately applied.");
           return fallbackPositions;
       }
 
-      const { centerX, centerY } = graphCenter; // graphCenter is calculated from ALL POSITIONS, which is fine.
+      const { centerX, centerY } = graphCenter;
       const angleRad = rotationAngleDegrees * (Math.PI / 180);
       const cosAngle = Math.cos(angleRad);
       const sinAngle = Math.sin(angleRad);
@@ -291,15 +231,12 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
           id: string; category?: string; rotatedX: number; rotatedY: number; rotatedZ?: number;
       }>();
 
-      // Only process nodes that are in the allowed categories for positioning logic
       nodesToProcessForPositioning.forEach((customNode, index) => {
           const positionInfo = POSITIONS.find(p => p.id === customNode.id);
           let ox, oy, oz;
           if (positionInfo) {
               ox = positionInfo.x; oy = positionInfo.y; oz = positionInfo.z;
           } else {
-              // This case should ideally not happen if POSITIONS includes all relevant nodes,
-              // but provide a fallback if a node is in an allowed category but missing from POSITIONS.
               console.warn(`Position data missing for node ${customNode.id}, applying fallback.`);
               ox = (index % 10) * 1000 + 10000; oy = Math.floor(index / 10) * 1000 + 10000; oz = 0;
           }
@@ -315,8 +252,6 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
       nodeDataMap.forEach(data => newPositions.set(data.id, { x: data.rotatedX, y: data.rotatedY, z: data.rotatedZ }));
 
       Object.entries(categorySpreadConfig).forEach(([categoryName, config]) => {
-        // Only apply spread if the category is one of the allowed ones
-
         const { xSpreadMultiplier = 1.0, ySpreadMultiplier = 1.0, anchorNodeId, translateX = 0, translateY = 0 } = config;
         const categoryNodesData = Array.from(nodeDataMap.values()).filter(node => node.category === categoryName);
         if (categoryNodesData.length === 0) return;
@@ -324,7 +259,6 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         let referenceX: number, referenceY: number;
         let explicitAnchorData = anchorNodeId ? nodeDataMap.get(anchorNodeId) : undefined;
 
-        // Ensure anchor node is actually in the current (filtered) set of nodes
         if (explicitAnchorData && !filteredNodeIds.has(explicitAnchorData.id)) {
             explicitAnchorData = undefined;
         }
@@ -339,9 +273,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         }
 
         categoryNodesData.forEach(currentNodeData => {
-          // Ensure current node is one of the filtered nodes
           if (!filteredNodeIds.has(currentNodeData.id)) return;
-
           let postSpreadX: number, postSpreadY: number;
           if (explicitAnchorData && currentNodeData.id === explicitAnchorData.id) {
             postSpreadX = currentNodeData.rotatedX; postSpreadY = currentNodeData.rotatedY;
@@ -356,25 +288,21 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         });
       });
       return newPositions;
-    }, [nodes, rotationAngleDegrees, categorySpreadConfig, filteredNodeIds]); // Added filteredNodeIds dependency
+    }, [nodes, rotationAngleDegrees, categorySpreadConfig, filteredNodeIds]);
 
     const getNodePositionCallback = useCallback((nodeId: string): { x: number; y: number; z?: number } => {
         const precalculatedPos = finalNodePositions.get(nodeId);
         if (precalculatedPos) return precalculatedPos;
-
-        // Fallback only if the node ID should have been in finalNodePositions (i.e., it's an allowed node)
         if (filteredNodeIds.has(nodeId)) {
-            console.warn(`Position for filtered node ID "${nodeId}" not found in finalNodePositions. Applying basic fallback.`);
-            const originalNodeIndex = nodes.findIndex(n => n.id === nodeId); // Find index in original nodes array
+            console.warn(`Position for filtered node ID "${nodeId}" not found. Applying fallback.`);
+            const originalNodeIndex = nodes.findIndex(n => n.id === nodeId);
              return originalNodeIndex !== -1
                 ? { x: (originalNodeIndex % 10) * 150 - 750, y: Math.floor(originalNodeIndex / 10) * 150 - 750, z: 0 }
-                : { x: Math.random() * 200 - 100, y: Math.random() * 200 - 100, z: 0 }; // Absolute fallback
+                : { x: Math.random() * 200 - 100, y: Math.random() * 200 - 100, z: 0 };
         }
-        // If nodeId is not in filteredNodeIds, it means it was filtered out, so it shouldn't be requested by reagraph.
-        // However, returning a default to prevent errors if it somehow is.
-        console.warn(`Position requested for node ID "${nodeId}" which was filtered out. This should not happen.`);
+        console.warn(`Position requested for filtered-out node ID "${nodeId}".`);
         return { x: 0, y: 0, z: 0 };
-    }, [finalNodePositions, nodes, filteredNodeIds]); // Added filteredNodeIds
+    }, [finalNodePositions, nodes, filteredNodeIds]);
 
     const layoutOverrides: any = useMemo(() => ({
         getNodePosition: getNodePositionCallback
@@ -384,7 +312,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
       if (edges.length === 0) return [];
 
       const filteredEdges = edges.filter(edge =>
-        filteredNodeIds.has(edge.source) && filteredNodeIds.has(edge.target) // Filter edges based on filtered nodes
+        filteredNodeIds.has(edge.source) && filteredNodeIds.has(edge.target)
       );
 
       if (filteredEdges.length === 0) return [];
@@ -396,7 +324,6 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
 
       const minWeight = Math.min(...weights, 0);
       const maxWeight = Math.max(...weights, 1);
-
       const scaleFactor = maxWeight === minWeight ? 0 : 2 / (maxWeight - minWeight);
 
       return filteredEdges
@@ -408,79 +335,55 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
             : 1;
           return { ...edge, size: useWeightBasedEdgeSize ? Math.max(1, normalizedWeight) : 1, normalizedWeight };
         });
-    }, [edges, edgeWeightCutoff, useWeightBasedEdgeSize, filteredNodeIds]); // Added filteredNodeIds
+    }, [edges, edgeWeightCutoff, useWeightBasedEdgeSize, filteredNodeIds]);
 
     const { selections, actives, clearSelections, setSelections } = useSelection({
-      ref: graphRef, nodes: processedNodes, edges: processedEdges, // Use filtered nodes and edges
+      ref: graphRef, nodes: processedNodes, edges: processedEdges,
       pathSelectionType: showRelationships ? 'all' : 'direct',
       selections: selectedNodeId ? [selectedNodeId] : [],
     });
 
     useEffect(() => {
-      // Ensure selectedNodeId is part of the currently displayed (filtered) nodes
       if (selectedNodeId && filteredNodeIds.has(selectedNodeId) && !selections.includes(selectedNodeId)) {
         setSelections([selectedNodeId]);
       } else if (!selectedNodeId && selections.length > 0) {
         clearSelections();
       } else if (selectedNodeId && !filteredNodeIds.has(selectedNodeId) && selections.includes(selectedNodeId)) {
-        // If a selected node is filtered out, clear the selection
         clearSelections();
-        onNodeSelect(null); // Also notify parent that selection is cleared
+        onNodeSelect(null);
       }
     }, [selectedNodeId, selections, clearSelections, setSelections, filteredNodeIds, onNodeSelect]);
 
-    // [MODIFIED] Set initial camera position after the graph loads
     useEffect(() => {
       if (graphRef.current) {
-        // Use a timeout to ensure the graph has fully initialized
         const timer = setTimeout(() => {
           if (graphRef.current) {
-            // 1. Fit all nodes in view as a starting point
-            // graphRef.current.fitNodesInView();
-            
-            // 2. Zoom out slightly for a broader view
             graphRef.current.zoomOut();
-
-            // 3. Pan the camera to the left
-            // Positive x value pans right, negative x pans left
             const controls = graphRef.current.getControls();
             if (controls && controls.pan) {
-              controls.pan(230, 0); // Pan 150 units to the left
+              controls.pan(230, 0);
             }
           }
-        }, 100); // A short delay of 100ms
-
-        return () => clearTimeout(timer); // Cleanup timer on unmount
+        }, 100);
+        return () => clearTimeout(timer);
       }
-    }, [nodes, edges]); // Rerun if nodes/edges change
+    }, [nodes, edges]);
     
-    // Expose methods to the parent component via ref      
     useImperativeHandle(ref, () => ({        
       centerOnNode: (nodeId: string) => {          
         if (graphRef.current) {            
-          // Use only fitNodesInView with a specific zoom level for smoothness            
           graphRef.current.centerGraph([nodeId]);            
           if(graphRef.current.getControls().camera.zoom < 2){              
-            graphRef.current.zoomIn();            
+            graphRef.current.dollyIn();            
           }            
-          console.log(graphRef.current.getControls().camera.zoom);          
         }        
       },        
-      fitAllNodesInView: () => {          
-        graphRef.current?.fitNodesInView();        
-      },        
-      zoomIn: () => {          
-        graphRef.current?.zoomIn();
-      },        
-      zoomOut: () => {          
-        graphRef.current?.zoomOut();        
-      },        
-      resetCamera: () => {          
-        graphRef.current?.resetControls();        
-      }      
+      fitAllNodesInView: () => graphRef.current?.fitNodesInView(),        
+      zoomIn: () => graphRef.current?.zoomIn(),        
+      zoomOut: () => graphRef.current?.zoomOut(),        
+      resetCamera: () => graphRef.current?.resetControls()
     }));
 
-    // MODIFIED: Click handlers now clear the other selection type (node vs edge)
     const handleNodeClick = (node: CustomNode) => {
       if (onEdgeClick) onEdgeClick(null);
       onNodeSelect(node.id === selectedNodeId ? null : node.id);
@@ -504,12 +407,12 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         <GraphCanvas
           edgeInterpolation="curved"
           ref={graphRef}
-          nodes={processedNodes} // Use filtered nodes
-          edges={processedEdges} // Use filtered edges
+          nodes={processedNodes}
+          edges={processedEdges}
           selections={selections}
           actives={actives}
           onNodeClick={handleNodeClick as any}
-          onEdgeClick={onEdgeClick ? handleEdgeClick : undefined as any} // ADDED: Pass edge click handler
+          onEdgeClick={onEdgeClick ? handleEdgeClick : undefined as any}
           onCanvasClick={handleCanvasClick}
           sizingType="attribute"
           sizingAttribute={sizingAttribute}

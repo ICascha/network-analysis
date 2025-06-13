@@ -1,35 +1,20 @@
-// src/components/visualization/MainContent.tsx
-
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Eye, Settings, ListOrdered, PanelRightOpen } from "lucide-react";
-// MODIFIED: useEffect and useMemo are no longer needed for the lifted state
+import { Settings, ListOrdered, ArrowBigRight, BookText, Move, ShieldAlert } from "lucide-react";
 import { useState, useEffect, useRef, useMemo } from 'react';
 import type { ModelSettings } from '@/types/settings';
 import GraphChart, { GraphChartRef } from './GraphChart';
 import NodeSelector from './NodeSelector';
-import CameraControls from './CameraControls';
 import ColorLegend from './ColorLegend';
 import EdgeDisplayToggle, { EdgeDisplayMode } from './EdgeDisplayToggle';
-// MODIFIED: Only need Node and Edge types here now
 import type { Node, Edge } from './networkGraph/networkService';
-// REMOVED: ThreatImpactWeights not needed here anymore
 import GraphSettings from './GraphSettings';
-import {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-} from "@/components/ui/sheet";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
 import ThreatTable from './ThreatTable';
+import { shortNodeDescriptions, threatImpacts } from './shortNodeDescriptions'; // <-- IMPORTED
 
-// MODIFIED: Props interface is expanded to accept all the lifted state and setters
 interface MainContentProps {
   settings: ModelSettings;
   nodes: Node[];
@@ -43,20 +28,58 @@ interface MainContentProps {
   onSetEdgeDisplayMode: (mode: EdgeDisplayMode) => void;
 }
 
-export type CentralityMetric = 
-  'eigen_centrality' | 
-  'eigen_centrality_in' | 
-  'eigen_centrality_out' | 
-  'cross_category_eigen_centrality' | 
-  'cross_category_eigen_centrality_in' | 
+export type CentralityMetric =
+  'eigen_centrality' |
+  'eigen_centrality_in' |
+  'eigen_centrality_out' |
+  'cross_category_eigen_centrality' |
+  'cross_category_eigen_centrality_in' |
   'cross_category_eigen_centrality_out';
 
+// Helper function to get the centrality value for a node
 const getCentralityValue = (node: Node, metric: CentralityMetric): number | null => {
   return node.data?.[metric] ?? null;
 };
 
-// MODIFIED: Component now receives many more props
-export const MainContent = ({ 
+// Helper function to determine the centrality tier
+const getCentralityTier = (node: Node | null, allNodes: Node[]): string => {
+  const metric: CentralityMetric = 'cross_category_eigen_centrality_out';
+  if (!node) return "N.v.t.";
+
+  const currentValue = getCentralityValue(node, metric);
+  if (currentValue === null) return "N.v.t.";
+
+  // 1. Get all non-null values for the metric and sort them
+  const allValues = allNodes
+    .map(n => getCentralityValue(n, metric))
+    .filter((v): v is number => v !== null)
+    .sort((a, b) => a - b);
+
+  if (allValues.length === 0) return "N.v.t.";
+
+  // 2. Find the rank of the current node's value
+  const rank = allValues.indexOf(currentValue);
+
+  // 3. Calculate percentile
+  const percentile = (rank / (allValues.length -1)) * 100;
+
+  // 4. Return the tier string
+  if (percentile >= 80) return "Zeer hoog";
+  if (percentile >= 60) return "Hoog";
+  if (percentile >= 40) return "Gemiddeld";
+  if (percentile >= 20) return "Laag";
+  return "Zeer laag";
+};
+
+// MODIFIED: Helper function to get the impact level
+const getImpactLevel = (node: Node | null): string => {
+  if (!node) return "N.v.t.";
+  // The full threat name is the node's ID
+  return threatImpacts[node.id] || "Onbekend";
+};
+
+
+export const MainContent = ({
   nodes,
   loading,
   error,
@@ -69,66 +92,56 @@ export const MainContent = ({
 }: MainContentProps) => {
   const graphRef = useRef<GraphChartRef>(null);
 
-  // REMOVED: All state and effects that were lifted up
-  // const [nodes, setNodes] = useState<Node[]>([]);
-  // const [edges, setEdges] = useState<Edge[]>([]);
-  // const [loading, setLoading] = useState<boolean>(true);
-  // const [error, setError] = useState<string | null>(null);
-  // const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
-  // const [edgeDisplayMode, setEdgeDisplayMode] = useState<EdgeDisplayMode>('all');
-  // const [rawCountThreshold] = useState<number>(6);
-  // const [threatImpactWeights] = useState<ThreatImpactWeights>(DEFAULT_THREAT_IMPACT_WEIGHTS);
-  // const [useEffect, useMemo blocks for data fetching and filtering]
-
-  // KEPT: State that is local to MainContent's UI
   const [selectedEdge, setSelectedEdge] = useState<Edge | null>(null);
   const [showRelationships, setShowRelationships] = useState<boolean>(false);
   const [showPanel, setShowPanel] = useState<boolean>(false);
-  const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('eigen_centrality_out');
+  // Default sizing attribute is now the primary centrality metric
+  const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('cross_category_eigen_centrality_out');
   const [minNodeSize, setMinNodeSize] = useState<number>(5);
   const [maxNodeSize, setMaxNodeSize] = useState<number>(15);
   const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(0.5);
   const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(true);
   const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(true);
-  
-  // REMOVED: The useMemo blocks for filteredEdges and filteredNodes are now in the parent.
-  // The component now receives filteredNodes and filteredEdges directly as props.
 
   const selectedNode = selectedNodeId
     ? nodes.find(n => n.id === selectedNodeId) || null
     : null;
-    
+
   const sourceNodeForEdge = selectedEdge ? nodes.find(n => n.id === selectedEdge.source) : null;
   const targetNodeForEdge = selectedEdge ? nodes.find(n => n.id === selectedEdge.target) : null;
 
-  // MODIFIED: handleNodeSelect now calls the onSelectNode prop
   const handleNodeSelect = (nodeId: string | null) => {
     setSelectedEdge(null);
-    onSelectNode(nodeId); // Use the function passed via props
+    onSelectNode(nodeId);
     if (nodeId && window.innerWidth < 768) {
       setShowPanel(true);
     }
   };
 
   const handleEdgeSelect = (edge: Edge | null) => {
-    onSelectNode(null); // Use the function passed via props
+    onSelectNode(null);
     setSelectedEdge(edge);
     if (edge && window.innerWidth < 768) {
         setShowPanel(true);
     }
   };
 
-  // This memo can stay as it's for the UI (the dropdown list)
   const sortedNodesForSelector = useMemo(() => {
-    return [...filteredNodes].sort((a, b) => {
-      const valA = getCentralityValue(a, scoringMetric);
-      const valB = getCentralityValue(b, scoringMetric);
-      const scoreA = valA === null ? -Infinity : valA;
-      const scoreB = valB === null ? -Infinity : valB;
-      return scoreB - scoreA;
-    });
+    return [...filteredNodes]
+      .map(node => ({
+        ...node,
+        // Add the short label to the objects for the selector component
+        displayLabel: shortNodeDescriptions[node.id] || node.label,
+      }))
+      .sort((a, b) => {
+        const valA = getCentralityValue(a, scoringMetric);
+        const valB = getCentralityValue(b, scoringMetric);
+        const scoreA = valA === null ? -Infinity : valA;
+        const scoreB = valB === null ? -Infinity : valB;
+        return scoreB - scoreA;
+      });
   }, [filteredNodes, scoringMetric]);
-  
+
 
   useEffect(() => {
     if (selectedNodeId && graphRef.current) {
@@ -136,11 +149,6 @@ export const MainContent = ({
     }
   }, [selectedNodeId]);
 
-  // ... (The rest of the component's render logic and helper functions remain the same)
-  // Just ensure that anywhere you used a lifted state variable (like selectedNodeId or loading)
-  // or a setter (like setEdgeDisplayMode), you are now using the prop version 
-  // (selectedNodeId and onSetEdgeDisplayMode). The code below is already correct based on this.
-  
   const formatDocumentLink = (link: string): string => {
     if (link && link.startsWith('/')) {
       return `https://open.overheid.nl${link}`;
@@ -151,12 +159,11 @@ export const MainContent = ({
   const getTotalCitationsCount = (node: Node): number => {
     return node.nr_citations || 0;
   };
-  
+
   const renderCitationParts = (citationText: string) => {
     if (!citationText.includes(" ||| ")) {
       return <div className="italic bg-muted/40 p-3 rounded text-sm">"{citationText}"</div>;
     }
-
     const parts = citationText.split(" ||| ");
     return (
       <div className="space-y-2">
@@ -168,18 +175,17 @@ export const MainContent = ({
       </div>
     );
   };
-  
+
   return (
   <div className="relative w-full h-full">
-      {/* Graph Container */}
       <div className="absolute inset-0 w-full h-full">
       <GraphChart
         ref={graphRef}
-        nodes={filteredNodes} // Use prop
-        edges={filteredEdges}   // Use prop
-        loading={loading}       // Use prop
-        error={error}           // Use prop
-        selectedNodeId={selectedNodeId} // Use prop
+        nodes={filteredNodes}
+        edges={filteredEdges}
+        loading={loading}
+        error={error}
+        selectedNodeId={selectedNodeId}
         onNodeSelect={handleNodeSelect}
         onEdgeClick={handleEdgeSelect}
         showRelationships={showRelationships}
@@ -188,20 +194,10 @@ export const MainContent = ({
         maxNodeSize={maxNodeSize}
         edgeWeightCutoff={edgeWeightCutoff}
         useWeightBasedEdgeSize={useWeightBasedEdgeSize}
-        clusterOnCategory={clusterOnCategory}
+        shortNodeDescriptions={shortNodeDescriptions} // <-- PASSED AS PROP
       />
       </div>
 
-      {/* UI Elements */}
-      <div className="absolute top-4 left-4 z-10 bg-background/70 backdrop-blur-md p-2 rounded-lg shadow-lg">
-        <CameraControls graphRef={graphRef} />
-      </div>
-      <div className="absolute top-16 left-4 z-10">
-        <EdgeDisplayToggle 
-          displayMode={edgeDisplayMode}         // Use prop
-          setDisplayMode={onSetEdgeDisplayMode} // Use prop
-        />
-      </div>
       <div className="absolute bottom-10 left-10 z-10">
         <ColorLegend />
       </div>
@@ -211,33 +207,9 @@ export const MainContent = ({
             <Tooltip>
               <TooltipTrigger asChild>
                 <Sheet>
-                  <SheetTrigger asChild>
-                    <Button variant="outline" size="sm" className="gap-1 px-3">
-                      <Settings className="h-4 w-4" />
-                      <span>Instellingen</span>
-                    </Button>
-                  </SheetTrigger>
-                  <GraphSettings
-                     scoringMetric={scoringMetric}
-                     setScoringMetric={setScoringMetric}
-                     minNodeSize={minNodeSize}
-                     setMinNodeSize={setMinNodeSize}
-                     maxNodeSize={maxNodeSize}
-                     setMaxNodeSize={setMaxNodeSize}
-                     showRelationships={showRelationships}
-                     setShowRelationships={setShowRelationships}
-                     edgeWeightCutoff={edgeWeightCutoff}
-                     setEdgeWeightCutoff={setEdgeWeightCutoff}
-                     useWeightBasedEdgeSize={useWeightBasedEdgeSize}
-                     setUseWeightBasedEdgeSize={setUseWeightBasedEdgeSize}
-                     clusterOnCategory={clusterOnCategory}
-                     setClusterOnCategory={setClusterOnCategory}
-                   />
                 </Sheet>
               </TooltipTrigger>
-              <TooltipContent>
-                <p>Open grafiek instellingen</p>
-              </TooltipContent>
+              <TooltipContent><p>Open grafiek instellingen</p></TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </div>
@@ -257,9 +229,7 @@ export const MainContent = ({
                    </SheetContent>
                  </Sheet>
               </TooltipTrigger>
-              <TooltipContent>
-                <p>Bekijk dreiging ranglijst & exporteer</p>
-              </TooltipContent>
+              <TooltipContent><p>Bekijk dreiging ranglijst & exporteer</p></TooltipContent>
             </Tooltip>
           </TooltipProvider>
         </div>
@@ -281,16 +251,11 @@ export const MainContent = ({
         </div>
       )}
       <div className="md:hidden absolute top-4 right-4 z-10">
-        <Button
-          variant="secondary"
-          className="bg-background/70 backdrop-blur-md shadow-lg"
-          onClick={() => setShowPanel(!showPanel)}
-        >
+        <Button variant="secondary" className="bg-background/70 backdrop-blur-md shadow-lg" onClick={() => setShowPanel(!showPanel)}>
           {showPanel ? "Verberg Paneel" : "Toon Paneel"}
         </Button>
       </div>
 
-      {/* Floating Panel */}
       <div className={`absolute right-0 top-0 bottom-0 z-10 w-full md:w-2/5 lg:w-1/3 transform transition-transform duration-300 ease-in-out ${
         showPanel || window.innerWidth >= 768 ? 'translate-x-0' : 'translate-x-full'
       } ${ window.innerWidth >= 768 ? 'md:translate-x-0' : '' }`}>
@@ -302,36 +267,17 @@ export const MainContent = ({
                 <div className="flex-1">
                   <NodeSelector
                     nodes={sortedNodesForSelector}
-                    selectedNodeId={selectedNodeId} // Use prop
+                    selectedNodeId={selectedNodeId}
                     onSelectNode={handleNodeSelect}
                     placeholder="Selecteer een dreiging..."
                   />
                 </div>
-                <TooltipProvider>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className={`whitespace-nowrap ${showRelationships ? 'bg-primary/10' : ''}`}
-                        onClick={() => setShowRelationships(!showRelationships)}
-                        disabled={!selectedNodeId}
-                      >
-                        <Eye className="h-4 w-4 mr-1" />
-                        {showRelationships ? 'Verberg Relaties' : 'Toon Relaties'}
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>{!selectedNodeId ? "Selecteer eerst een dreiging" : (showRelationships ? "Stop met het markeren van relaties" : "Markeer de relaties van de geselecteerde dreiging")}</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </TooltipProvider>
               </div>
               <p className="text-xs text-muted-foreground mt-1">
-                Gesorteerd op: {scoringMetric.replace(/_/g, ' ')} (hoogste eerst)
+                Gesorteerd op centraliteit (hoogste eerst)
               </p>
             </div>
-            
+
             <Separator className="my-2 bg-border/30" />
 
             <div className="flex-1 overflow-hidden flex flex-col">
@@ -347,49 +293,43 @@ export const MainContent = ({
 
               {selectedNode && (
                 <div className="flex flex-col h-full overflow-hidden">
-                  <div className="p-3 bg-primary/10 backdrop-blur-md rounded-lg flex-shrink-0">
-                    <p className="font-medium text-lg">{selectedNode.label}</p>
-                    {selectedNode.summary && (
-                      <p className="text-sm mt-1 mb-2 text-muted-foreground">
-                        {selectedNode.summary}
-                      </p>
-                    )}
-                    <div className="text-sm text-muted-foreground mt-1">
-                      <span>Genoemd in <span className="font-semibold">{selectedNode.nr_docs}</span> documenten</span>
-                      <span className="mx-2">•</span>
-                      <span><span className="font-semibold">{getTotalCitationsCount(selectedNode)}</span> totale citaties</span>
-                    </div>
-                    {selectedNode.data && (
-                      <div className="mt-2 pt-2 border-t border-border/20 grid grid-cols-2 gap-2 text-xs">
-                        {getCentralityValue(selectedNode, 'eigen_centrality') !== null && (
-                          <div><span className="text-muted-foreground">Eigen Centrality: </span>
-                          <span className="font-mono">{getCentralityValue(selectedNode, 'eigen_centrality')?.toFixed(4)}</span></div>
-                        )}
-                        {getCentralityValue(selectedNode, 'eigen_centrality_in') !== null && (
-                          <div><span className="text-muted-foreground">Prestige (In): </span>
-                          <span className="font-mono">{getCentralityValue(selectedNode, 'eigen_centrality_in')?.toFixed(4)}</span></div>
-                        )}
-                        {getCentralityValue(selectedNode, 'eigen_centrality_out') !== null && (
-                          <div><span className="text-muted-foreground">Importance (Out): </span>
-                          <span className="font-mono">{getCentralityValue(selectedNode, 'eigen_centrality_out')?.toFixed(4)}</span></div>
-                        )}
-                        {getCentralityValue(selectedNode, 'cross_category_eigen_centrality') !== null && (
-                          <div><span className="text-muted-foreground">Cross-Cat Centrality: </span>
-                          <span className="font-mono">{getCentralityValue(selectedNode, 'cross_category_eigen_centrality')?.toFixed(4)}</span></div>
-                        )}
-                        {getCentralityValue(selectedNode, 'cross_category_eigen_centrality_in') !== null && (
-                          <div><span className="text-muted-foreground">Cross-Cat Prestige: </span>
-                          <span className="font-mono">{getCentralityValue(selectedNode, 'cross_category_eigen_centrality_in')?.toFixed(4)}</span></div>
-                        )}
-                        {getCentralityValue(selectedNode, 'cross_category_eigen_centrality_out') !== null && (
-                          <div><span className="text-muted-foreground">Cross-Cat Importance: </span>
-                          <span className="font-mono">{getCentralityValue(selectedNode, 'cross_category_eigen_centrality_out')?.toFixed(4)}</span></div>
-                        )}
+                  {/* MODIFIED: Sleek and elegant selected node display */}
+                  <div className="flex-shrink-0">
+                    <div className="p-4 bg-muted/20 rounded-lg border border-border/20">
+                      <p className="font-semibold text-lg text-primary mb-4">{shortNodeDescriptions[selectedNode.id] || selectedNode.label}</p>
+
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+
+                        <div className="p-3 bg-background/50 rounded-md flex items-center gap-3">
+                          <BookText className="h-5 w-5 text-muted-foreground" />
+                          <div>
+                            <span className="text-muted-foreground">Citaties</span>
+                            <p className="font-bold text-sm text-foreground">{getTotalCitationsCount(selectedNode)}</p>
+                          </div>
+                        </div>
+
+                        <div className="p-3 bg-background/50 rounded-md flex items-center gap-3">
+                          <Move className="h-5 w-5 text-muted-foreground" />
+                          <div>
+                            <span className="text-muted-foreground">Centraliteit</span>
+                            <p className="font-semibold text-sm text-foreground">{getCentralityTier(selectedNode, nodes)}</p>
+                          </div>
+                        </div>
+
+                        <div className="p-3 bg-background/50 rounded-md flex items-center gap-3">
+                          <ShieldAlert className="h-5 w-5 text-muted-foreground" />
+                          <div>
+                            <span className="text-muted-foreground">Impact</span>
+                            <p className="font-semibold text-sm text-foreground">{getImpactLevel(selectedNode)}</p>
+                          </div>
+                        </div>
+
                       </div>
-                    )}
+                    </div>
                   </div>
+
                   <div className="mt-4 flex-1 flex flex-col overflow-hidden">
-                    <h5 className="text-sm font-medium mb-2 flex-shrink-0">Representatieve documenten</h5>
+                    <h5 className="text-sm font-medium mb-2 flex-shrink-0">Representatieve citaten</h5>
                     <div className="space-y-3 overflow-y-auto pr-2 flex-1">
                       {selectedNode.citaten && selectedNode.citaten.length > 0 ? (
                          selectedNode.citaten.map((citation, index) => (
@@ -423,23 +363,39 @@ export const MainContent = ({
                 </div>
               )}
 
+              {/* MODIFICATION START: Updated edge info screen */}
               {selectedEdge && (
                 <div className="flex flex-col h-full overflow-hidden">
-                   <div className="p-3 bg-primary/10 backdrop-blur-md rounded-lg flex-shrink-0">
-                      <div className="flex flex-wrap items-center gap-2">
-                          <span className="font-medium text-foreground">{sourceNodeForEdge?.label || 'Onbekend'}</span>
-                          <PanelRightOpen className="h-4 w-4 rotate-90 opacity-50 flex-shrink-0" />
-                          <span className="font-medium text-foreground">{targetNodeForEdge?.label || 'Onbekend'}</span>
+                   <div className="flex-shrink-0">
+                    <div className="p-4 bg-muted/20 rounded-lg border border-border/20">
+                      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-4">
+                          <span className="font-semibold text-lg text-primary">{shortNodeDescriptions[sourceNodeForEdge?.id || ''] || sourceNodeForEdge?.label || 'Onbekend'}</span>
+                          <ArrowBigRight className="h-5 w-5 text-muted-foreground flex-shrink-0" />
+                          <span className="font-semibold text-lg text-primary">{shortNodeDescriptions[targetNodeForEdge?.id || ''] || targetNodeForEdge?.label || 'Onbekend'}</span>
                       </div>
-                      {selectedEdge.weight && (
-                        <div className="text-xs text-muted-foreground mt-2 pt-2 border-t border-border/20">
-                          Gewicht: <span className="font-mono">{selectedEdge.weight.toFixed(2)}</span>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+                        <div className="p-3 bg-background/50 rounded-md flex items-center gap-3">
+                          <BookText className="h-5 w-5 text-muted-foreground" />
+                          <div>
+                            <span className="text-muted-foreground">Citaties Verbinding</span>
+                            <p className="font-bold text-sm text-foreground">{selectedEdge.citaat_relaties?.length || 0}</p>
+                          </div>
                         </div>
-                      )}
+
+                        <div className="p-3 bg-background/50 rounded-md flex items-center gap-3">
+                          <ShieldAlert className="h-5 w-5 text-muted-foreground" />
+                          <div>
+                            <span className="text-muted-foreground">Impact van Gevolg</span>
+                            <p className="font-semibold text-sm text-foreground">{getImpactLevel(targetNodeForEdge)}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
 
                   <div className="mt-4 flex-1 flex flex-col overflow-hidden">
-                    <h5 className="text-sm font-medium mb-2 flex-shrink-0">Bewijsmateriaal & Context</h5>
+                    <h5 className="text-sm font-medium mb-2 flex-shrink-0">Representatieve citaten</h5>
                      <div className="space-y-3 overflow-y-auto pr-2 flex-1">
                       {selectedEdge.citaat_relaties && selectedEdge.citaat_relaties.length > 0 ? (
                         selectedEdge.citaat_relaties.map((citation, index) => (
@@ -476,14 +432,11 @@ export const MainContent = ({
                   </div>
                 </div>
               )}
+              {/* MODIFICATION END */}
             </div>
 
             <div className="md:hidden mt-4">
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={() => setShowPanel(false)}
-              >
+              <Button variant="outline" className="w-full" onClick={() => setShowPanel(false)}>
                 Sluit Paneel
               </Button>
             </div>
