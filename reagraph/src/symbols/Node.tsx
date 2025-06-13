@@ -154,6 +154,13 @@ export const Node: FC<NodeProps> = ({
   const center = useStore(state => state.centerPosition);
   const cluster = useStore(state => state.clusters.get(node.cluster));
 
+  if(isActive) {
+    console.log('active')
+  }
+  if(isSelected){
+    console.log('selected')
+  }
+
   const isDraggingCurrent = draggingIds.includes(id);
   const isDragging = draggingIds.length > 0;
 

@@ -143,11 +143,11 @@ export const CameraControls: FC<
     useEffect(() => () => cameraRef.current?.dispose(), []);
 
     const zoomIn = useCallback(() => {
-      cameraRef.current?.zoom(camera.zoom / 2, animated);
+      cameraRef.current?.zoom(camera.zoom / 4, animated);
     }, [animated, camera.zoom]);
 
     const zoomOut = useCallback(() => {
-      cameraRef.current?.zoom(-camera.zoom / 2, animated);
+      cameraRef.current?.zoom(-camera.zoom / 4, animated);
     }, [animated, camera.zoom]);
 
     const dollyIn = useCallback(

@@ -374,7 +374,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
         if (graphRef.current) {            
           graphRef.current.centerGraph([nodeId]);            
           if(graphRef.current.getControls().camera.zoom < 2){              
-            graphRef.current.dollyIn();            
+            graphRef.current.zoomIn();            
           }            
         }        
       },        
@@ -422,7 +422,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
           layoutType="custom"
           layoutOverrides={layoutOverrides}
           labelType='nodes'
-          maxDistance={2400}
+          // maxDistance={5000}
         />
       </div>
     );

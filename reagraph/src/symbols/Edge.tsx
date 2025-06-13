@@ -203,26 +203,35 @@ export const Edge: FC<EdgeProps> = ({
     return newMidPoint;
   }, [from.position, to.position, labelOffset, labelPlacement, curved, curve]);
 
-  const isSelected = useStore(state => state.selections?.includes(id));
-  const hasSelections = useStore(state => !!state.selections?.length);
-  const isActive = useStore(state => state.actives?.includes(id));
-  const center = useStore(state => state.centerPosition);
+const isSelected = useStore(state => state.selections?.includes(id));
+const hasSelections = useStore(state => !!state.selections?.length);
+const isActive = useStore(state => state.actives?.includes(id));
+const center = useStore(state => state.centerPosition);
+const selections = useStore(state => state.selections);
 
+// Check if this edge connects to any selected node
+const edgeTouchesSelection = selections?.some(selectedId => 
+  edge.source === selectedId || edge.target === selectedId
+) || false;
 
-  let selectionOpacity: number;
-  const currentEdgeWeight = weight !== undefined && weight !== null ? Number(weight) : 1;
+let selectionOpacity: number;
+const currentEdgeWeight = weight !== undefined && weight !== null ? Number(weight) : 1;
+
+// Apply the logic based on selections
+if (!hasSelections || edgeTouchesSelection) {
+  // Follow switch logic when no selections OR edge touches a selected node
   switch (currentEdgeWeight) {
     case 1: selectionOpacity = 0.1; break;
     case 3: selectionOpacity = 0.2; break;
     case 9: selectionOpacity = 0.3; break;
     case 27: selectionOpacity = 0.5; break;
     case 81: selectionOpacity = 0.8; break;
-    default:
-      selectionOpacity = hasSelections
-        ? (isSelected || isActive ? theme.edge.selectedOpacity : theme.edge.inactiveOpacity)
-        : theme.edge.opacity;
-      break;
+    default: selectionOpacity = theme.edge.opacity; break;
   }
+} else {
+  // Has selections but edge doesn't touch any selected node
+  selectionOpacity = 0;
+}
 
   const [{ labelPosition }] = useSpring(() => ({
     from: { labelPosition: center ? [center.x, center.y, center.z] : [0, 0, 0] },
@@ -240,8 +249,6 @@ export const Edge: FC<EdgeProps> = ({
     onPointerOver: (event) => { setActive(true); onPointerOver?.(edge, event); },
     onPointerOut: (event) => { setActive(false); onPointerOut?.(edge, event); }
   });
-
-  console.log(pointerOver)
 
   const arrowComponent = useMemo(() => arrowPlacement !== 'none' && (
     <Arrow
