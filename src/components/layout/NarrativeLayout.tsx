@@ -325,7 +325,7 @@ export const NarrativeLayout = () => {
                         </div>
                     </Card>
                     <p className="text-lg text-gray-700 leading-relaxed text-left">
-                        De dreigingen in de visualisatie zijn verdeeld over vijf thema's, met een focus op de verbanden tussen deze thema's. De dikte van een lijn geeft de geschatte impact van een verband aan. De grootte van het knooppunt representeert de invloed van een dreiging op andere thema’s.
+                        De dreigingen in de visualisatie zijn verdeeld over vijf thema's, met een <strong style={{ color: 'rgb(0, 153, 168)' }}>focus op de verbanden tussen deze thema's</strong>. De dikte van een lijn geeft de geschatte impact van een verband aan. De grootte van het knooppunt representeert de invloed van een dreiging op andere thema’s.
                     </p>
                     <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
                         <div className="p-6">
@@ -337,9 +337,7 @@ export const NarrativeLayout = () => {
                             </p>
                         </div>
                     </Card>
-                    <p className="text-lg text-gray-700 leading-relaxed text-left">
-                        De visualisatie is interactief: klik op een verbinding om de onderliggende citaten en brondocumenten te raadplegen. Voor een diepgaande blik en uitleg verwijzen we u naar ons rapport en de bijbehorende appendix.
-                    </p>
+                    <p className="text-lg text-gray-700 leading-relaxed text-left">De visualisatie is interactief: <strong style={{ color: 'rgb(0, 153, 168)' }}>klik op een verbinding om de onderliggende citaten en brondocumenten te raadplegen.</strong> Voor een diepgaande blik en uitleg verwijzen we u naar ons <a href='https://google.com' target='_blank' rel='noopener noreferrer' style={{ color: 'rgb(0, 153, 168)', fontWeight: 'bold' }} className='underline'>rapport</a> en de bijbehorende <a href='https://google.com' target='_blank' rel='noopener noreferrer' style={{ color: 'rgb(0, 153, 168)', fontWeight: 'bold' }} className='underline'>appendix</a>.</p>
                 </div>
               </div>
               

@@ -52,8 +52,8 @@ export const categoryColors: Record<string, string> = {
 const theme = {
   ...lightTheme,
   canvas: {
-    background: 'rgb(248, 250, 252)',
-    fog: 'rgb(248, 250, 252)'
+    background: 'rgb(252, 253, 254)',
+    fog: 'rgb(252, 253, 254)',
   },
   node: {
     ...lightTheme.node,
