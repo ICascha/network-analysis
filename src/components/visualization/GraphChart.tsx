@@ -317,7 +317,6 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
 
       Object.entries(categorySpreadConfig).forEach(([categoryName, config]) => {
         // Only apply spread if the category is one of the allowed ones
-        if (categoryName !== 'unknown') return;
 
         const { xSpreadMultiplier = 1.0, ySpreadMultiplier = 1.0, anchorNodeId, translateX = 0, translateY = 0 } = config;
         const categoryNodesData = Array.from(nodeDataMap.values()).filter(node => node.category === categoryName);
