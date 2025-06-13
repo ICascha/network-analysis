@@ -373,7 +373,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
       centerOnNode: (nodeId: string) => {          
         if (graphRef.current) {            
           graphRef.current.centerGraph([nodeId]);            
-          if(graphRef.current.getControls().camera.zoom < 2){              
+          if(graphRef.current.getControls().camera.zoom < 1){              
             graphRef.current.zoomIn();            
           }            
         }        
