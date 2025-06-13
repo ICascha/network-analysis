@@ -1,14 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Settings, ListOrdered, ArrowBigRight, BookText, Move, ShieldAlert } from "lucide-react";
+import { ListOrdered, ArrowBigRight, BookText, Move, ShieldAlert } from "lucide-react";
 import { useState, useEffect, useRef, useMemo } from 'react';
 import type { ModelSettings } from '@/types/settings';
 import GraphChart, { GraphChartRef } from './GraphChart';
 import NodeSelector from './NodeSelector';
 import ColorLegend from './ColorLegend';
-import EdgeDisplayToggle, { EdgeDisplayMode } from './EdgeDisplayToggle';
+import { EdgeDisplayMode } from './EdgeDisplayToggle';
 import type { Node, Edge } from './networkGraph/networkService';
-import GraphSettings from './GraphSettings';
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
@@ -88,20 +87,18 @@ export const MainContent = ({
   selectedNodeId,
   onSelectNode,
   edgeDisplayMode,
-  onSetEdgeDisplayMode
 }: MainContentProps) => {
   const graphRef = useRef<GraphChartRef>(null);
 
   const [selectedEdge, setSelectedEdge] = useState<Edge | null>(null);
-  const [showRelationships, setShowRelationships] = useState<boolean>(false);
+  const [showRelationships] = useState<boolean>(false);
   const [showPanel, setShowPanel] = useState<boolean>(false);
   // Default sizing attribute is now the primary centrality metric
-  const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('cross_category_eigen_centrality_out');
-  const [minNodeSize, setMinNodeSize] = useState<number>(5);
-  const [maxNodeSize, setMaxNodeSize] = useState<number>(15);
-  const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(0.5);
-  const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(true);
-  const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(true);
+  const [scoringMetric] = useState<CentralityMetric>('cross_category_eigen_centrality_out');
+  const [minNodeSize] = useState<number>(5);
+  const [maxNodeSize] = useState<number>(15);
+  const [edgeWeightCutoff] = useState<number>(0.5);
+  const [useWeightBasedEdgeSize] = useState<boolean>(true);
 
   const selectedNode = selectedNodeId
     ? nodes.find(n => n.id === selectedNodeId) || null
@@ -387,7 +384,7 @@ export const MainContent = ({
                           <ShieldAlert className="h-5 w-5 text-muted-foreground" />
                           <div>
                             <span className="text-muted-foreground">Impact van Gevolg</span>
-                            <p className="font-semibold text-sm text-foreground">{getImpactLevel(targetNodeForEdge)}</p>
+                            <p className="font-semibold text-sm text-foreground">{getImpactLevel(targetNodeForEdge as any)}</p>
                           </div>
                         </div>
                       </div>

@@ -8,7 +8,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import type { ModelSettings } from '@/types/settings';
 import ModelExplanation from './ModelExplanation';
