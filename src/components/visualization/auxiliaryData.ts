@@ -1,12 +1,11 @@
 // Define a sophisticated color palette for categories
 export const categoryColors: Record<string, string> = {
-  'Gezondheid': 'rgb(72, 143, 177)', // Original teal blue
-  'Geopolitiek & militair': 'rgb(72, 92, 114)', // Slate blue
-  'Economisch': 'rgb(165, 137, 67)', // Muted gold
-  'Sociaal & Maatschappelijk': 'rgb(158, 109, 135)', // Muted mauve
-  'Ecologisch': 'rgb(105, 145, 94)', // Sage green
-  'Technologisch & digitaal': 'rgb(99, 113, 163)', // Dusty blue
-  'unknown': 'rgb(133, 133, 133)' // Sophisticated grey for unknown categories
+  'Sociaal & Maatschappelijk': '#0699a9',
+  'Economisch': '#702f8e',
+  'Ecologisch': '#84b440',
+  'Geopolitiek & militair': '#a8aaad',
+  'Technologisch & digitaal': '#abccd5',
+  'Gezondheid': '#e42259'
 };
 
 // Optional renaming of 'Dreiging' attribute (key = old name, value = new name)

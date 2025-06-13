@@ -150,14 +150,13 @@ const shortNodeDescriptions: Record<string, string> = {
   "griep pandemie": "Grieppandemie"
 };
 
-const categoryColors: Record<string, string> = {
-  'Gezondheid': 'rgb(72, 143, 177)',
-  'Geopolitiek & militair': 'rgb(72, 92, 114)',
-  'Economisch': 'rgb(165, 137, 67)',
-  'Sociaal & Maatschappelijk': 'rgb(158, 109, 135)',
-  'Ecologisch': 'rgb(105, 145, 94)',
-  'Technologisch & digitaal': 'rgb(99, 113, 163)',
-  'unknown': 'rgb(133, 133, 133)'
+export const categoryColors: Record<string, string> = {
+  'Sociaal & Maatschappelijk': '#0699a9',
+  'Economisch': '#702f8e',
+  'Ecologisch': '#84b440',
+  'Geopolitiek & militair': '#a8aaad',
+  'Technologisch & digitaal': '#abccd5',
+  'Gezondheid': '#e42259'
 };
 
 const denkWerkTheme = {

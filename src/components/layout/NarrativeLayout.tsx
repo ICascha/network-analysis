@@ -47,6 +47,10 @@ export const NarrativeLayout = () => {
   const mainContentRef = useRef<HTMLDivElement>(null);
   const basePath = import.meta.env.BASE_URL;
 
+  // --- NEW: State for view tracking and controlled dialogs ---
+  const [isMainContentVisible, setIsMainContentVisible] = useState(false);
+  const [isLogoDialogOpen, setIsLogoDialogOpen] = useState(false);
+
   // --- State and Data Fetching Logic (existing, unchanged) ---
   const [nodes, setNodes] = useState<Node[]>([]);
   const [edges, setEdges] = useState<Edge[]>([]);
@@ -56,6 +60,30 @@ export const NarrativeLayout = () => {
   const [edgeDisplayMode, setEdgeDisplayMode] = useState<EdgeDisplayMode>('all');
   const [rawCountThreshold] = useState<number>(6);
   const [threatImpactWeights] = useState<ThreatImpactWeights>(DEFAULT_THREAT_IMPACT_WEIGHTS);
+
+  // --- NEW: Intersection Observer to track main content visibility ---
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsMainContentVisible(entry.isIntersecting);
+      },
+      {
+        threshold: 0.5, // Triggers when 50% of the section is visible
+      }
+    );
+
+    const currentRef = mainContentRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
+
 
   useEffect(() => {
     const loadNetworkData = async () => {
@@ -105,39 +133,72 @@ export const NarrativeLayout = () => {
     ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
+  // --- NEW: Handler for the top-left button that changes function ---
+  const handleTopLeftButtonClick = () => {
+    if (isMainContentVisible) {
+      handleScrollTo(introRef);
+    } else {
+      setIsLogoDialogOpen(true);
+    }
+  };
+
   return (
     
     <div className="w-full h-screen overflow-y-scroll scroll-snap-type-y-mandatory">
-      {/* Dialogs (existing) */}
-       <div className="fixed top-8 left-8 z-50">
-        <Dialog>
-          <DialogTrigger asChild>
-            <div className="relative w-16 h-16 rounded-full bg-[rgb(0,153,168)] flex items-center justify-center shadow-lg hover:scale-105 transition-transform cursor-pointer">
-              <img
-                src={`${basePath}denkwerk_logo.svg`}
-                alt="Denkwerk Logo"
-                className="h-8 w-auto"
-                style={{ filter: 'brightness(0) invert(1)' }}
-              />
-            </div>
-          </DialogTrigger>
-          <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-sm p-0">
-            <DialogHeader className="p-6 pb-4">
-              <DialogTitle className="text-xl">Over het Rapport</DialogTitle>
-            </DialogHeader>
-            <div className="px-6 pb-6 space-y-4">
-              <p className="text-gray-700 leading-relaxed text-left">
-                Dit analyse-instrument is ontwikkeld als onderdeel van het DenkWerk rapport 'NAAM'. VERDERE UITLEG.
-              </p>
-              <p className="text-gray-700 leading-relaxed text-left">
-                <a href="https://denkwerk.online/" target="_blank" rel="noopener noreferrer" className="text-[rgb(0,153,168)] hover:underline">DenkWerk</a> is een onafhankelijke denktank die met krachtige ideeën bijdraagt aan een welvarend, inclusief en vooruitstrevend Nederland.
-              </p>
-            </div>
-          </DialogContent>
+      {/* --- MODIFIED: Header buttons with morphing behavior --- */}
+      <div className="fixed top-8 left-8 z-50">
+        <Dialog open={isLogoDialogOpen} onOpenChange={setIsLogoDialogOpen}>
+            {/* This is a controlled dialog, triggered by the button below */}
+            <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-sm p-0">
+                <DialogHeader className="p-6 pb-4">
+                <DialogTitle className="text-xl">Over het Rapport</DialogTitle>
+                </DialogHeader>
+                <div className="px-6 pb-6 space-y-4">
+                <p className="text-gray-700 leading-relaxed text-left">
+                    Dit analyse-instrument is ontwikkeld als onderdeel van het DenkWerk rapport 'NAAM'. VERDERE UITLEG.
+                </p>
+                <p className="text-gray-700 leading-relaxed text-left">
+                    <a href="https://denkwerk.online/" target="_blank" rel="noopener noreferrer" className="text-[rgb(0,153,168)] hover:underline">DenkWerk</a> is een onafhankelijke denktank die met krachtige ideeën bijdraagt aan een welvarend, inclusief en vooruitstrevend Nederland.
+                </p>
+                </div>
+            </DialogContent>
         </Dialog>
+        
+        {/* The single button that morphs its appearance and function */}
+                <button
+            onClick={handleTopLeftButtonClick}
+            aria-label={isMainContentVisible ? "Terug naar uitleg" : "Open 'Over het Rapport' dialoog"}
+            className={`
+                group flex items-center justify-center h-16 bg-[rgb(0,153,168)] shadow-lg hover:scale-105
+                transition-all duration-500 ease-in-out
+                ${isMainContentVisible ? 'w-52 rounded-full px-4' : 'w-16 rounded-full'}
+            `}
+        >
+            {/* Content for the "Back to Top" pill state */}
+            <div className={`flex items-center space-x-3 transition-opacity duration-300 ${isMainContentVisible ? 'opacity-100' : 'opacity-0'}`}>
+                <img
+                    src={`${basePath}denkwerk_logo.svg`}
+                    alt="Denkwerk Logo"
+                    className="h-6 w-auto"
+                    style={{ filter: 'brightness(0) invert(1)' }}
+                />
+                <span className="text-white font-medium whitespace-nowrap">Naar Uitleg</span>
+                <ArrowUp className="h-5 w-5 text-white" />
+            </div>
+            
+            {/* Content for the original logo circle state */}
+            <div className={`absolute transition-opacity duration-300 ${isMainContentVisible ? 'opacity-0' : 'opacity-100'}`}>
+                <img
+                    src={`${basePath}denkwerk_logo.svg`}
+                    alt="Denkwerk Logo"
+                    className="h-8 w-auto"
+                    style={{ filter: 'brightness(0) invert(1)' }}
+                />
+            </div>
+        </button>
       </div>
 
-      <div className="fixed top-8 right-8 z-50">
+      <div className={`fixed top-8 right-8 z-50 transition-all duration-500 ease-in-out ${isMainContentVisible ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-100 scale-100'}`}>
         <Dialog>
           <DialogTrigger asChild>
             <div className="relative w-16 h-16 rounded-full bg-[rgb(0,153,168)] flex items-center justify-center shadow-lg hover:scale-105 transition-transform cursor-pointer">
@@ -153,7 +214,7 @@ export const NarrativeLayout = () => {
         </Dialog>
       </div>
 
-      {/* --- ENHANCED NARRATIVE SECTION --- */}
+      {/* --- ENHANCED NARRATIVE SECTION (Unchanged) --- */}
       <section
         ref={introRef}
         className="relative w-full h-screen bg-slate-50 scroll-snap-align-start overflow-hidden"
@@ -176,17 +237,15 @@ export const NarrativeLayout = () => {
         </div>
         <div className="flex-1 overflow-y-auto" style={{ height: 'calc(100vh - 250px)' }}>
           <div className="p-8">
-            <div className="max-w-4xl mx-auto space-y-8"> {/* CHANGED: max-w-4xl to max-w-5xl */}
+            <div className="max-w-4xl mx-auto space-y-8">
 
               {/* Context Section */}
               <div className="relative pt-8">
-                {/* Section Label with side lines */}
                 <div className="flex items-center justify-center mb-8">
                   <div className="flex-1 h-[1.5px] bg-gray-300"></div>
                   <h2 className="text-2xl font-semibold text-[rgb(0,153,168)] px-6">Een veranderende wereld</h2>
                   <div className="flex-1 h-[1.5px] bg-gray-300"></div>
                 </div>
-
                  <div className="space-y-6 mb-12">
                   <p className="text-lg text-gray-700 leading-relaxed text-left">
                 Nederland nadert een kantelpunt. Na jaren waarin we vooral met afzonderlijke uitdagingen te maken hadden, komen we nu in een periode waarin verschillende bedreigingen met elkaar verweven raken. De wereld om ons heen verandert in hoog tempo: geopolitieke verschuiving, klimaatdruk en de digitale revolutie.</p>
@@ -302,7 +361,7 @@ export const NarrativeLayout = () => {
         </div>
       </section>
 
-      {/* Section 2: Main Content (The Interactive Graph) - Unchanged */}
+      {/* --- Section 2: Main Content (The Interactive Graph) --- */}
       <section
         ref={mainContentRef}
         className="relative w-full h-screen bg-gray-900 scroll-snap-align-start"
@@ -319,16 +378,7 @@ export const NarrativeLayout = () => {
           edgeDisplayMode={edgeDisplayMode}
           onSetEdgeDisplayMode={setEdgeDisplayMode}
         />
-        <div className="absolute top-6 right-6 z-30">
-          <Button
-            onClick={() => handleScrollTo(introRef)}
-            variant="secondary"
-            className="bg-white/80 backdrop-blur-sm hover:bg-white text-gray-800 rounded-full shadow-lg h-12 w-12 p-0"
-          >
-            <ArrowUp className="h-6 w-6" />
-            <span className="sr-only">Return to Top</span>
-          </Button>
-        </div>
+        {/* --- REMOVED: Redundant "Return to Top" button --- */}
       </section>
       
       <style>{`

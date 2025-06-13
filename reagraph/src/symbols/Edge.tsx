@@ -101,15 +101,13 @@ export const THREAT_TOPIC_TO_CATEGORY_LOWER: Record<string, string> = Object.fro
 );
 
 const CATEGORY_COLORS: Record<string, string> = {
-  'Gezondheid': 'rgb(72, 143, 177)',
-  'Geopolitiek & militair': 'rgb(72, 92, 114)',
-  'Economisch': 'rgb(165, 137, 67)',
-  'Sociaal & Maatschappelijk': 'rgb(158, 109, 135)',
-  'Ecologisch': 'rgb(105, 145, 94)',
-  'Technologisch & digitaal': 'rgb(99, 113, 163)',
-  'unknown': 'rgb(133, 133, 133)'
+  'Sociaal & Maatschappelijk': '#0699a9',
+  'Economisch': '#702f8e',
+  'Ecologisch': '#84b440',
+  'Geopolitiek & militair': '#a8aaad',
+  'Technologisch & digitaal': '#abccd5',
+  'Gezondheid': '#e42259'
 };
-
 const DEFAULT_EDGE_COLOR = '#D3D3D3';
 
 const getNodeCategorizedColor = (node: InternalGraphNode, defaultColor: string): string => {

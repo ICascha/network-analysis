@@ -202,7 +202,7 @@ export const MainContent = ({
           setDisplayMode={onSetEdgeDisplayMode} // Use prop
         />
       </div>
-      <div className="absolute top-28 left-4 z-10">
+      <div className="absolute bottom-10 left-10 z-10">
         <ColorLegend />
       </div>
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 flex items-center space-x-2">
