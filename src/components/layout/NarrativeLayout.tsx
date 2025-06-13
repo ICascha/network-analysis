@@ -1,5 +1,3 @@
-// src/components/narrative/NarrativeLayout.tsx
-
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { MainContent } from '../visualization/MainContent';
 import { Info, ArrowUp, ChevronsDown } from 'lucide-react';
@@ -11,26 +9,27 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import type { ModelSettings } from '@/types/settings';
 import ModelExplanation from './ModelExplanation';
 import TransformerAttentionVisualizer from './TransformerAttentionVisualizer';
 import ClimateImpactGraph from './ClimateImpactGraph';
+import TraditionalRiskMatrix from './TraditionalRiskMatrix';
 import { RelationGraphCanvas } from '../visualization/relationGraph/RelationGraphCanvas';
 
-// --- ADDED: Imports moved up from MainContent ---
+// --- Imports from MainContent (existing) ---
 import type { Node, Edge } from '../visualization/networkGraph/networkService';
 import { getNetworkWithCentralityMetrics } from '../visualization/networkGraph/networkService';
 import { DEFAULT_THREAT_IMPACT_WEIGHTS, ThreatImpactWeights } from '../visualization/networkGraph/threatImpactService';
 import { EdgeDisplayMode } from '../visualization/EdgeDisplayToggle';
 
-export type CentralityMetric = 
-  'eigen_centrality' | 
-  'eigen_centrality_in' | 
-  'eigen_centrality_out' | 
-  'cross_category_eigen_centrality' | 
-  'cross_category_eigen_centrality_in' | 
+export type CentralityMetric =
+  'eigen_centrality' |
+  'eigen_centrality_in' |
+  'eigen_centrality_out' |
+  'cross_category_eigen_centrality' |
+  'cross_category_eigen_centrality_in' |
   'cross_category_eigen_centrality_out';
-
 
 const initialSettings: ModelSettings = {
   productivity: 1.0,
@@ -48,29 +47,23 @@ export const NarrativeLayout = () => {
   const mainContentRef = useRef<HTMLDivElement>(null);
   const basePath = import.meta.env.BASE_URL;
 
-  // --- ADDED: State lifted up from MainContent ---
+  // --- State and Data Fetching Logic (existing, unchanged) ---
   const [nodes, setNodes] = useState<Node[]>([]);
   const [edges, setEdges] = useState<Edge[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
   const [edgeDisplayMode, setEdgeDisplayMode] = useState<EdgeDisplayMode>('all');
-  
-  // State for fetching logic, can be controlled from here if needed
   const [rawCountThreshold] = useState<number>(6);
   const [threatImpactWeights] = useState<ThreatImpactWeights>(DEFAULT_THREAT_IMPACT_WEIGHTS);
 
-  // --- ADDED: Data fetching logic moved up from MainContent ---
   useEffect(() => {
     const loadNetworkData = async () => {
       try {
         setLoading(true);
         const data = await getNetworkWithCentralityMetrics(2, rawCountThreshold, threatImpactWeights);
-        
         const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
         const validEdges = Array.isArray(data?.edges) ? data.edges : [];
-        
-        // This initial filtering can stay here
         const filteredInitialEdges = validEdges.filter(edge => edge.weight >= 1);
         const nodeIdsWithValidEdges = new Set();
         filteredInitialEdges.forEach(edge => {
@@ -78,36 +71,27 @@ export const NarrativeLayout = () => {
           nodeIdsWithValidEdges.add(edge.target);
         });
         const filteredInitialNodes = validNodes.filter(node => nodeIdsWithValidEdges.has(node.id));
-        
         setNodes(filteredInitialNodes);
         setEdges(filteredInitialEdges);
         setLoading(false);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load network data');
         setLoading(false);
-        setNodes([]);
-        setEdges([]);
       }
     };
     loadNetworkData();
   }, [rawCountThreshold, threatImpactWeights]);
 
-  // --- ADDED: filteredEdges logic moved up from MainContent ---
   const filteredEdges = useMemo(() => {
-    let edgesToUse = edges;
-    if (edgeDisplayMode === 'all') {
-      return edgesToUse;
-    } else if (edgeDisplayMode === 'incoming' && selectedNodeId) {
-      return edgesToUse.filter(edge => edge.target === selectedNodeId);
-    } else if (edgeDisplayMode === 'outgoing' && selectedNodeId) {
-      return edgesToUse.filter(edge => edge.source === selectedNodeId);
-    } else if (selectedNodeId) {
-      return edgesToUse.filter(edge => edge.source === selectedNodeId || edge.target === selectedNodeId);
+    if (edgeDisplayMode === 'all') return edges;
+    if (selectedNodeId) {
+      if (edgeDisplayMode === 'incoming') return edges.filter(e => e.target === selectedNodeId);
+      if (edgeDisplayMode === 'outgoing') return edges.filter(e => e.source === selectedNodeId);
+      return edges.filter(e => e.source === selectedNodeId || e.target === selectedNodeId);
     }
-    return edgesToUse;
+    return edges;
   }, [edges, edgeDisplayMode, selectedNodeId]);
 
-  // --- ADDED: filteredNodes logic moved up from MainContent ---
   const filteredNodes = useMemo(() => {
     const nodeIdsWithEdges = new Set();
     filteredEdges.forEach(edge => {
@@ -122,10 +106,10 @@ export const NarrativeLayout = () => {
   };
 
   return (
+    
     <div className="w-full h-screen overflow-y-scroll scroll-snap-type-y-mandatory">
-      {/* Floating Dialogs - remain for informational purposes */}
-      {/* ... (Dialogs code remains unchanged) ... */}
-      <div className="fixed top-8 left-8 z-50">
+      {/* Dialogs (existing) */}
+       <div className="fixed top-8 left-8 z-50">
         <Dialog>
           <DialogTrigger asChild>
             <div className="relative w-16 h-16 rounded-full bg-[rgb(0,153,168)] flex items-center justify-center shadow-lg hover:scale-105 transition-transform cursor-pointer">
@@ -139,11 +123,14 @@ export const NarrativeLayout = () => {
           </DialogTrigger>
           <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-sm p-0">
             <DialogHeader className="p-6 pb-4">
-              <DialogTitle className="text-xl">Over Denkwerk</DialogTitle>
+              <DialogTitle className="text-xl">Over het Rapport</DialogTitle>
             </DialogHeader>
-            <div className="px-6 pb-6">
-              <p className="text-gray-700 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.
+            <div className="px-6 pb-6 space-y-4">
+              <p className="text-gray-700 leading-relaxed text-left">
+                Dit analyse-instrument is ontwikkeld als onderdeel van het DenkWerk rapport 'NAAM'. VERDERE UITLEG.
+              </p>
+              <p className="text-gray-700 leading-relaxed text-left">
+                <a href="https://denkwerk.online/" target="_blank" rel="noopener noreferrer" className="text-[rgb(0,153,168)] hover:underline">DenkWerk</a> is een onafhankelijke denktank die met krachtige ideeën bijdraagt aan een welvarend, inclusief en vooruitstrevend Nederland.
               </p>
             </div>
           </DialogContent>
@@ -159,60 +146,144 @@ export const NarrativeLayout = () => {
           </DialogTrigger>
           <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-sm">
             <DialogHeader>
-              <DialogTitle className="text-xl">Toelichting model</DialogTitle>
+              <DialogTitle className="text-xl">Toelichting Analysemodel</DialogTitle>
             </DialogHeader>
             <ModelExplanation/>
           </DialogContent>
         </Dialog>
       </div>
 
-      {/* Section 1: Introduction */}
+      {/* --- ENHANCED NARRATIVE SECTION --- */}
       <section
         ref={introRef}
         className="relative w-full h-screen bg-slate-50 scroll-snap-align-start overflow-hidden"
       >
-        {/* ... (Introductory content remains unchanged) ... */}
-         <div className="relative w-full h-[200px] md:h-[250px] flex-shrink-0">
+        <div className="relative w-full h-[200px] md:h-[250px] flex-shrink-0">
           <img
             src={`${basePath}nl_from_above.jpg`}
             alt="Netherlands by night"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/70 flex flex-col justify-center items-center text-white text-center px-4">
-            <h1 className="text-5xl font-bold mb-4">
+          <div className="absolute bottom-2 left-2 text-white text-xs bg-black/50 px-2 py-1 rounded">
+            Foto: ©ESA/NASA - André Kuipers
+          </div>
+          <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center px-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Knooppuntenanalyse Dreigingen
             </h1>
+            <p className="text-lg max-w-3xl">Een nieuw perspectief op de nationale veiligheid</p>
           </div>
         </div>
         <div className="flex-1 overflow-y-auto" style={{ height: 'calc(100vh - 250px)' }}>
-          <div className="p-8 text-center">
-            <div className="max-w-4xl mx-auto space-y-8">
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Deze interactieve visualisatie brengt de complexe relaties binnen het Nederlandse dreigingslandschap in kaart. Met behulp van AI taalmodellen (LLMs) hebben we duizenden beleidsdocumenten en onderzoeksrapporten geanalyseerd om de verborgen verbanden tussen diverse dreigingen bloot te leggen. Een taalmodel kan, zoals het onderstaande voorbeeld illustreert, de contextuele relaties identificeren die experts in tekst leggen:
-              </p>
-              
-              <TransformerAttentionVisualizer />
-              <p className="text-sm text-gray-500 italic">
-                Een LLM kan contextueel relaties tussen concepten in tekst herkennen. Hierdoor zijn LLMs een geschikte tool om verbanden te ontdekken.
-              </p>
-              <p className="text-lg text-gray-600 leading-relaxed">
-                Uit deze analyse zijn duizenden citaten verzameld die wijzen op causale verbanden. Deze verbanden vormen een netwerk waarin elke dreiging een 'knooppunt' is. Om de betrouwbaarheid te waarborgen, negeren we verbanden die slechts sporadisch in de data voorkomen. Dit netwerk stelt ons in staat te identificeren welke dreigingen als <strong style={{ color: 'rgb(0, 153, 168)' }}>centrale knooppunten</strong> functioneren. Door ons te richten op dreigingen die kettingreacties kunnen veroorzaken, kunnen we effectiever prioriteiten stellen in ons nationaal veiligheidsbeleid.
-              </p>
-              
-              <ClimateImpactGraph />
-              
-              <p className="text-sm text-gray-500 italic">
-                Een voorbeeld van een causaal verband: hitte en droogte als centrale dreiging die leidt tot andere dreigingen.
-              </p>
+          <div className="p-8">
+            <div className="max-w-4xl mx-auto space-y-8"> {/* CHANGED: max-w-4xl to max-w-5xl */}
 
-              <p className="text-lg text-gray-600 leading-relaxed">
-                De dreigingen in de visualisatie zijn verdeeld over vijf thema's, met een focus op de verbanden tussen deze thema's. De dikte van een lijn geeft de geschatte impact van een verband aan. De grootte van het knooppunt representeert de invloed van een dreiging op andere thema's.
-              </p>
+              {/* Context Section */}
+              <div className="relative pt-8">
+                {/* Section Label with side lines */}
+                <div className="flex items-center justify-center mb-8">
+                  <div className="flex-1 h-[1.5px] bg-gray-300"></div>
+                  <h2 className="text-2xl font-semibold text-[rgb(0,153,168)] px-6">Een veranderende wereld</h2>
+                  <div className="flex-1 h-[1.5px] bg-gray-300"></div>
+                </div>
 
-              {/* MODIFIED: Pass filtered data to RelationGraphCanvas */}
-              <RelationGraphCanvas nodes={filteredNodes} edges={filteredEdges} />
+                 <div className="space-y-6 mb-12">
+                  <p className="text-lg text-gray-700 leading-relaxed text-left">
+                Nederland nadert een kantelpunt. Na jaren waarin we vooral met afzonderlijke uitdagingen te maken hadden, komen we nu in een periode waarin verschillende bedreigingen met elkaar verweven raken. De wereld om ons heen verandert in hoog tempo: geopolitieke verschuiving, klimaatdruk en de digitale revolutie.</p>
+                  <p className="text-lg text-gray-700 leading-relaxed text-left">
+                    Deze trends maken dat <strong className="text-[rgb(0,153,168)]">dreigingen elkaar versterken en versnellen</strong>. Wat begint als een lokale storing, een cyberaanval, overstroming of handelsblokkade, kan uitgroeien tot een kettingreactie.  Een lokaal incident kan zich snel verspreiden en uitgroeien tot een crisis die meerdere sectoren raakt. De COVID-pandemie toonde dit pijnlijk aan: van gezondheidscrisis naar economische recessie, sociale spanningen en politieke polarisatie.
+                  </p>
+                </div>
+              </div>
 
-              <p className="text-lg text-gray-600 leading-relaxed">De visualisatie is interactief: <strong style={{ color: 'rgb(0, 153, 168)' }}>klik op een verbinding om de onderliggende citaten en brondocumenten te raadplegen.</strong> Voor een diepgaande blik en uitleg verwijzen we u naar ons <a href='https://google.com' target='_blank' rel='noopener noreferrer' style={{ color: 'rgb(0, 153, 168)', fontWeight: 'bold' }} className='underline'>rapport</a> en de bijbehorende <a href='https://google.com' target='_blank' rel='noopener noreferrer' style={{ color: 'rgb(0, 153, 168)', fontWeight: 'bold' }} className='underline'>appendix</a>.</p>
+              {/* Risk Analysis Section */}
+              <div className="relative pt-8">
+                <div className="flex items-center justify-center mb-8">
+                  <div className="flex-1 h-[1.5px] bg-gray-300"></div>
+                  <h2 className="text-2xl font-semibold text-[rgb(0,153,168)] px-6">Van traditioneel naar nieuw denken</h2>
+                  <div className="flex-1 h-[1.5px] bg-gray-300"></div>
+                </div>
+                 <div className="space-y-6 mb-12">
+                  <p className="text-lg text-gray-700 leading-relaxed text-left">
+                                De klassieke benadering van risico's kijkt naar waarschijnlijkheid en impact. Deze methode werkt goed voor losstaande dreigingen, maar in onze verweven wereld is een aanvullende dimensie nodig: <strong className="text-[rgb(0,153,168)]">verwevenheid</strong>.
+                Deze derde dimensie brengt in kaart hoe dreigingen elkaar beïnvloeden en versterken. Het gaat om het identificeren van knooppunten; dreigingen die als centrale schakels werken voor andere risico's. Door deze verbindingen systematisch te identificeren, kunnen we effectiever prioriteiten stellen.
+                                </p>
+                </div>
+                <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
+                  <div className="p-6">
+                    <TraditionalRiskMatrix />
+                  </div>
+                  <div className="px-6 pb-4 border-t border-gray-200/40">
+                    <p className="text-sm text-gray-600 leading-relaxed pt-4 text-left">
+                      De klassieke aanpak beoordeelt risico's individueel op kans en impact. <strong>Maar wat als een cyberaanval leidt tot energieuitval, die weer zorgt voor economische schade en sociale onrust?</strong> Deze ketens blijven in de traditionele benadering onzichtbaar. De nieuwe benadering voegt <strong>verwevenheid</strong> toe als derde dimensie.
+                    </p>
+                  </div>
+                </Card>
+              </div>
+
+              {/* Section: Verbanden tussen dreigingen */}
+              <div className="relative pt-8 mt-12">
+                <div className="flex items-center justify-center mb-8">
+                    <div className="flex-1 h-[1.5px] bg-gray-300"></div>
+                    <h2 className="text-2xl font-semibold text-[rgb(0,153,168)] px-6">Verbanden tussen dreigingen</h2>
+                    <div className="flex-1 h-[1.5px] bg-gray-300"></div>
+                </div>
+                <div className="space-y-6">
+                    <p className="text-lg text-gray-700 leading-relaxed text-left">
+                        Om een netwerk van dreigingen te creëren, moeten we eerst de verbanden tussen dreigingen vaststellen. Gezien het dreigingslandschap breed is, is er niet een enkele expert die wij kunnen informeren over verbanden tussen allerlei dreigingen. Daarom richten wij ons op de ‘wijsheid van de massa’. Met behulp van AI-taalmodellen (LLMs) hebben we duizenden beleidsdocumenten en onderzoeksrapporten geanalyseerd om de verborgen verbanden tussen diverse dreigingen bloot te leggen. Een taalmodel kan, zoals het onderstaande voorbeeld illustreert, de contextuele relaties identificeren die experts in tekst leggen.
+                    </p>
+                    <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
+                        <div className="p-6">
+                            <TransformerAttentionVisualizer />
+                        </div>
+                        <div className="px-6 pb-4 border-t border-gray-200/40">
+                            <p className="text-sm text-gray-600 leading-relaxed pt-4 font-medium text-left">
+                                AI-taalmodellen kunnen contextuele relaties tussen concepten in tekst herkennen, waardoor we causale verbanden kunnen ontdekken die experts beschrijven.
+                            </p>
+                        </div>
+                    </Card>
+                </div>
+              </div>
+              
+              {/* Section: Knooppunten identificeren */}
+              <div className="relative pt-8">
+                <div className="flex items-center justify-center mb-8">
+                    <div className="flex-1 h-[1.5px] bg-gray-300"></div>
+                    <h2 className="text-2xl font-semibold text-[rgb(0,153,168)] px-6">Knooppunten identificeren</h2>
+                    <div className="flex-1 h-[1.5px] bg-gray-300"></div>
+                </div>
+                <div className="space-y-6">
+                    <p className="text-lg text-gray-700 leading-relaxed text-left">
+                        Uit deze analyse zijn duizenden citaten verzameld die wijzen op causale verbanden. Deze verbanden vormen een netwerk waarin elke dreiging een 'knooppunt' is. Om de betrouwbaarheid te waarborgen, negeren we verbanden die slechts sporadisch in de data voorkomen. Dit netwerk stelt ons in staat te identificeren welke dreigingen als centrale knooppunten functioneren. Door ons te richten op dreigingen die kettingreacties kunnen veroorzaken, kunnen we effectiever prioriteiten stellen in ons nationaal veiligheidsbeleid.
+                    </p>
+                    <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
+                        <div className="p-6">
+                            <ClimateImpactGraph />
+                        </div>
+                         <div className="px-6 pb-4 border-t border-gray-200/40">
+                            <p className="text-sm text-gray-600 leading-relaxed pt-4 font-medium text-left">
+                                Voorbeeld uit onze analyse: hitte en droogte fungeren als centrale dreiging met cascaderende effecten op landbouw, gezondheid, energie en economie.
+                            </p>
+                        </div>
+                    </Card>
+                    <p className="text-lg text-gray-700 leading-relaxed text-left">
+                        De dreigingen in de visualisatie zijn verdeeld over vijf thema's, met een focus op de verbanden tussen deze thema's. De dikte van een lijn geeft de geschatte impact van een verband aan. De grootte van het knooppunt representeert de invloed van een dreiging op andere thema’s.
+                    </p>
+                    <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
+                        <div className="p-6">
+                            <RelationGraphCanvas nodes={filteredNodes} edges={filteredEdges} />
+                        </div>
+                        <div className="px-6 pb-4 border-t border-gray-200/40">
+                            <p className="text-sm text-gray-600 leading-relaxed pt-4 text-center font-medium">
+                                Het dreigingsnetwerk: grotere knopen hebben meer invloed op andere dreigingen. Door ons te richten op deze knooppunten kunnen we kettingreacties voorkomen.
+                            </p>
+                        </div>
+                    </Card>
+                    <p className="text-lg text-gray-700 leading-relaxed text-left">
+                        De visualisatie is interactief: klik op een verbinding om de onderliggende citaten en brondocumenten te raadplegen. Voor een diepgaande blik en uitleg verwijzen we u naar ons rapport en de bijbehorende appendix.
+                    </p>
+                </div>
+              </div>
               
               <div className="h-24"></div>
             </div>
@@ -225,18 +296,17 @@ export const NarrativeLayout = () => {
             className="flex flex-col items-center text-gray-500 hover:text-[rgb(0,153,168)] transition-colors animate-subtle-glow-pulse bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-lg"
             aria-label="Scroll to main content"
           >
-            <span className="mb-1 text-sm font-medium text-[rgb(0,153,168)]">Verken de data</span>
+            <span className="mb-1 text-sm font-medium text-[rgb(0,153,168)]">Verken het Netwerk</span>
             <ChevronsDown className="w-8 h-8" />
           </button>
         </div>
       </section>
 
-      {/* Section 2: Main Content (The Interactive Graph) */}
+      {/* Section 2: Main Content (The Interactive Graph) - Unchanged */}
       <section
         ref={mainContentRef}
         className="relative w-full h-screen bg-gray-900 scroll-snap-align-start"
       >
-        {/* MODIFIED: Pass all necessary state and setters down to MainContent */}
         <MainContent
           settings={settings}
           nodes={nodes}
@@ -249,8 +319,6 @@ export const NarrativeLayout = () => {
           edgeDisplayMode={edgeDisplayMode}
           onSetEdgeDisplayMode={setEdgeDisplayMode}
         />
-
-        {/* Button to return to the top */}
         <div className="absolute top-6 right-6 z-30">
           <Button
             onClick={() => handleScrollTo(introRef)}
@@ -263,27 +331,14 @@ export const NarrativeLayout = () => {
         </div>
       </section>
       
-      {/* ... (CSS remains unchanged) ... */}
-       <style>{`
-        .scroll-snap-type-y-mandatory {
-          scroll-snap-type: y mandatory;
-        }
-        .scroll-snap-align-start {
-          scroll-snap-align: start;
-        }
+      <style>{`
+        .scroll-snap-type-y-mandatory { scroll-snap-type: y mandatory; }
+        .scroll-snap-align-start { scroll-snap-align: start; }
         @keyframes subtle-glow-pulse {
-          0%, 100% {
-            opacity: 0.85;
-            filter: drop-shadow(0 0 1px rgba(${brandColorRgb}, 0.1));
-          }
-          50% {
-            opacity: 1;
-            filter: drop-shadow(0 0 6px rgba(${brandColorRgb}, 0.4));
-          }
+          0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 1px rgba(${brandColorRgb}, 0.1)); }
+          50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(${brandColorRgb}, 0.4)); }
         }
-        .animate-subtle-glow-pulse {
-          animation: subtle-glow-pulse 3s infinite ease-in-out;
-        }
+        .animate-subtle-glow-pulse { animation: subtle-glow-pulse 3s infinite ease-in-out; }
       `}</style>
     </div>
   );
