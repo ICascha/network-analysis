@@ -11,7 +11,7 @@ const TraditionalRiskMatrix = () => {
     { name: "Pandemie", probability: 25, impact: 85, x: 25, y: 70, newSize: 'w-5 h-5' },
     { name: "Droogte", probability: 70, impact: 60, x: 75, y: 70, newSize: 'w-7 h-7' },
     { name: "Polarisatie", probability: 80, impact: 55, x: 70, y: 20, newSize: 'w-9 h-9' },
-    { name: "Energietekort", probability: 45, impact: 70, x: 45, y: 30, newSize: 'w-4 h-4' },
+    { name: "Energietekort", probability: 45, impact: 70, x: 45, y: 30, newSize: 'w-6 h-6' },
   ];
 
 
