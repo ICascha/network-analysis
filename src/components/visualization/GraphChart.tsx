@@ -429,6 +429,31 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
       }
     }, [selectedNodeId, selections, clearSelections, setSelections, filteredNodeIds, onNodeSelect]);
 
+    // [MODIFIED] Set initial camera position after the graph loads
+    useEffect(() => {
+      if (graphRef.current) {
+        // Use a timeout to ensure the graph has fully initialized
+        const timer = setTimeout(() => {
+          if (graphRef.current) {
+            // 1. Fit all nodes in view as a starting point
+            // graphRef.current.fitNodesInView();
+            
+            // 2. Zoom out slightly for a broader view
+            graphRef.current.zoomOut();
+
+            // 3. Pan the camera to the left
+            // Positive x value pans right, negative x pans left
+            const controls = graphRef.current.getControls();
+            if (controls && controls.pan) {
+              controls.pan(230, 0); // Pan 150 units to the left
+            }
+          }
+        }, 100); // A short delay of 100ms
+
+        return () => clearTimeout(timer); // Cleanup timer on unmount
+      }
+    }, [nodes, edges]); // Rerun if nodes/edges change
+    
     // Expose methods to the parent component via ref      
     useImperativeHandle(ref, () => ({        
       centerOnNode: (nodeId: string) => {          
@@ -494,6 +519,7 @@ const GraphChart = forwardRef<GraphChartRef, GraphChartProps>(
           layoutType="custom"
           layoutOverrides={layoutOverrides}
           labelType='nodes'
+          maxDistance={2400}
         />
       </div>
     );
