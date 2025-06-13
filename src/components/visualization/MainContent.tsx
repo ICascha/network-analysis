@@ -1,6 +1,9 @@
+// src/components/visualization/MainContent.tsx
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Eye, Settings, ListOrdered, PanelRightOpen } from "lucide-react";
+// MODIFIED: useEffect and useMemo are no longer needed for the lifted state
 import { useState, useEffect, useRef, useMemo } from 'react';
 import type { ModelSettings } from '@/types/settings';
 import GraphChart, { GraphChartRef } from './GraphChart';
@@ -8,15 +11,9 @@ import NodeSelector from './NodeSelector';
 import CameraControls from './CameraControls';
 import ColorLegend from './ColorLegend';
 import EdgeDisplayToggle, { EdgeDisplayMode } from './EdgeDisplayToggle';
-// Update import to include ThreatImpactWeights
-import { 
-  getNetworkWithCentralityMetrics, 
-  Node, 
-  Edge,} from './networkGraph/networkService';
-import { 
-  DEFAULT_THREAT_IMPACT_WEIGHTS,
-  ThreatImpactWeights 
-} from './networkGraph/threatImpactService';
+// MODIFIED: Only need Node and Edge types here now
+import type { Node, Edge } from './networkGraph/networkService';
+// REMOVED: ThreatImpactWeights not needed here anymore
 import GraphSettings from './GraphSettings';
 import {
   Sheet,
@@ -31,11 +28,19 @@ import {
 } from "@/components/ui/tooltip";
 import { Separator } from "@/components/ui/separator";
 import ThreatTable from './ThreatTable';
-// REMOVED: EdgeRelationshipViewer is no longer used
-// import EdgeRelationshipViewer from "./EdgeRelationshipViewer"; 
 
+// MODIFIED: Props interface is expanded to accept all the lifted state and setters
 interface MainContentProps {
   settings: ModelSettings;
+  nodes: Node[];
+  loading: boolean;
+  error: string | null;
+  filteredNodes: Node[];
+  filteredEdges: Edge[];
+  selectedNodeId: string | null;
+  onSelectNode: (id: string | null) => void;
+  edgeDisplayMode: EdgeDisplayMode;
+  onSetEdgeDisplayMode: (mode: EdgeDisplayMode) => void;
 }
 
 export type CentralityMetric = 
@@ -50,117 +55,70 @@ const getCentralityValue = (node: Node, metric: CentralityMetric): number | null
   return node.data?.[metric] ?? null;
 };
 
-export const MainContent = ({ }: MainContentProps) => {
+// MODIFIED: Component now receives many more props
+export const MainContent = ({ 
+  nodes,
+  loading,
+  error,
+  filteredNodes,
+  filteredEdges,
+  selectedNodeId,
+  onSelectNode,
+  edgeDisplayMode,
+  onSetEdgeDisplayMode
+}: MainContentProps) => {
   const graphRef = useRef<GraphChartRef>(null);
-  const [nodes, setNodes] = useState<Node[]>([]);
-  const [edges, setEdges] = useState<Edge[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
-  const [selectedEdge, setSelectedEdge] = useState<Edge | null>(null); // ADDED: State for selected edge
+
+  // REMOVED: All state and effects that were lifted up
+  // const [nodes, setNodes] = useState<Node[]>([]);
+  // const [edges, setEdges] = useState<Edge[]>([]);
+  // const [loading, setLoading] = useState<boolean>(true);
+  // const [error, setError] = useState<string | null>(null);
+  // const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
+  // const [edgeDisplayMode, setEdgeDisplayMode] = useState<EdgeDisplayMode>('all');
+  // const [rawCountThreshold] = useState<number>(6);
+  // const [threatImpactWeights] = useState<ThreatImpactWeights>(DEFAULT_THREAT_IMPACT_WEIGHTS);
+  // const [useEffect, useMemo blocks for data fetching and filtering]
+
+  // KEPT: State that is local to MainContent's UI
+  const [selectedEdge, setSelectedEdge] = useState<Edge | null>(null);
   const [showRelationships, setShowRelationships] = useState<boolean>(false);
   const [showPanel, setShowPanel] = useState<boolean>(false);
-  const [edgeDisplayMode, setEdgeDisplayMode] = useState<EdgeDisplayMode>('all');
   const [scoringMetric, setScoringMetric] = useState<CentralityMetric>('eigen_centrality_out');
   const [minNodeSize, setMinNodeSize] = useState<number>(5);
   const [maxNodeSize, setMaxNodeSize] = useState<number>(15);
   const [edgeWeightCutoff, setEdgeWeightCutoff] = useState<number>(0.5);
   const [useWeightBasedEdgeSize, setUseWeightBasedEdgeSize] = useState<boolean>(true);
   const [clusterOnCategory, setClusterOnCategory] = useState<boolean>(true);
-  // REMOVED: Relationship selection mode is no longer needed
-  // const [_, setRelationshipSelectionMode] = useState<boolean>(false);
-  const [rawCountThreshold] = useState<number>(6);
-  const [threatImpactWeights] = useState<ThreatImpactWeights>(DEFAULT_THREAT_IMPACT_WEIGHTS);
-
-  useEffect(() => {
-    const loadNetworkData = async () => {
-      try {
-        setLoading(true);
-        const data = await getNetworkWithCentralityMetrics(2, rawCountThreshold, threatImpactWeights);
-        
-        const validNodes = Array.isArray(data?.nodes) ? data.nodes : [];
-        const validEdges = Array.isArray(data?.edges) ? data.edges : [];
-        
-        const filteredEdges = validEdges.filter(edge => {
-          return edge.weight >= 1;
-        });
-        
-        const nodeIdsWithValidEdges = new Set();
-        filteredEdges.forEach(edge => {
-          nodeIdsWithValidEdges.add(edge.source);
-          nodeIdsWithValidEdges.add(edge.target);
-        });
-        
-        const filteredNodes = validNodes.filter(node => 
-          nodeIdsWithValidEdges.has(node.id)
-        );
-        
-        setNodes(filteredNodes);
-        setEdges(filteredEdges);
-        setLoading(false);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to load network data');
-        setLoading(false);
-        setNodes([]);
-        setEdges([]);
-      }
-    };
-    loadNetworkData();
-  }, [rawCountThreshold, threatImpactWeights]); 
-
-
-  // Filter edges based on the selected display mode
-  const filteredEdges = useMemo(() => {
-    let edgesToUse = edges;
-    
-    if (edgeDisplayMode === 'all') {
-      return edgesToUse;
-    } else if (edgeDisplayMode === 'incoming' && selectedNodeId) {
-      return edgesToUse.filter(edge => edge.target === selectedNodeId);
-    } else if (edgeDisplayMode === 'outgoing' && selectedNodeId) {
-      return edgesToUse.filter(edge => edge.source === selectedNodeId);
-    } else if (selectedNodeId) {
-      return edgesToUse.filter(edge => edge.source === selectedNodeId || edge.target === selectedNodeId);
-    }
-    return edgesToUse;
-  }, [edges, edgeDisplayMode, selectedNodeId]);
-
-  const filteredNodes = useMemo(() => {
-    const nodeIdsWithEdges = new Set();
-    filteredEdges.forEach(edge => {
-      nodeIdsWithEdges.add(edge.source);
-      nodeIdsWithEdges.add(edge.target);
-    });
-    return nodes.filter(node => nodeIdsWithEdges.has(node.id));
-  }, [nodes, filteredEdges]);
+  
+  // REMOVED: The useMemo blocks for filteredEdges and filteredNodes are now in the parent.
+  // The component now receives filteredNodes and filteredEdges directly as props.
 
   const selectedNode = selectedNodeId
     ? nodes.find(n => n.id === selectedNodeId) || null
     : null;
     
-  // ADDED: Find source and target nodes for the selected edge
   const sourceNodeForEdge = selectedEdge ? nodes.find(n => n.id === selectedEdge.source) : null;
   const targetNodeForEdge = selectedEdge ? nodes.find(n => n.id === selectedEdge.target) : null;
 
-  // MODIFIED: handleNodeSelect clears selectedEdge
+  // MODIFIED: handleNodeSelect now calls the onSelectNode prop
   const handleNodeSelect = (nodeId: string | null) => {
     setSelectedEdge(null);
-    setSelectedNodeId(nodeId);
+    onSelectNode(nodeId); // Use the function passed via props
     if (nodeId && window.innerWidth < 768) {
       setShowPanel(true);
     }
   };
 
-  // ADDED: handleEdgeSelect clears selectedNodeId and sets selectedEdge
   const handleEdgeSelect = (edge: Edge | null) => {
-    setSelectedNodeId(null);
+    onSelectNode(null); // Use the function passed via props
     setSelectedEdge(edge);
     if (edge && window.innerWidth < 768) {
         setShowPanel(true);
     }
   };
 
-
+  // This memo can stay as it's for the UI (the dropdown list)
   const sortedNodesForSelector = useMemo(() => {
     return [...filteredNodes].sort((a, b) => {
       const valA = getCentralityValue(a, scoringMetric);
@@ -178,6 +136,11 @@ export const MainContent = ({ }: MainContentProps) => {
     }
   }, [selectedNodeId]);
 
+  // ... (The rest of the component's render logic and helper functions remain the same)
+  // Just ensure that anywhere you used a lifted state variable (like selectedNodeId or loading)
+  // or a setter (like setEdgeDisplayMode), you are now using the prop version 
+  // (selectedNodeId and onSetEdgeDisplayMode). The code below is already correct based on this.
+  
   const formatDocumentLink = (link: string): string => {
     if (link && link.startsWith('/')) {
       return `https://open.overheid.nl${link}`;
@@ -189,7 +152,6 @@ export const MainContent = ({ }: MainContentProps) => {
     return node.nr_citations || 0;
   };
   
-  // ADDED: Function to render citation parts, similar to old EdgeRelationshipViewer
   const renderCitationParts = (citationText: string) => {
     if (!citationText.includes(" ||| ")) {
       return <div className="italic bg-muted/40 p-3 rounded text-sm">"{citationText}"</div>;
@@ -213,13 +175,13 @@ export const MainContent = ({ }: MainContentProps) => {
       <div className="absolute inset-0 w-full h-full">
       <GraphChart
         ref={graphRef}
-        nodes={filteredNodes}
-        edges={filteredEdges}
-        loading={loading}
-        error={error}
-        selectedNodeId={selectedNodeId}
+        nodes={filteredNodes} // Use prop
+        edges={filteredEdges}   // Use prop
+        loading={loading}       // Use prop
+        error={error}           // Use prop
+        selectedNodeId={selectedNodeId} // Use prop
         onNodeSelect={handleNodeSelect}
-        onEdgeClick={handleEdgeSelect} // ADDED: Pass edge click handler
+        onEdgeClick={handleEdgeSelect}
         showRelationships={showRelationships}
         sizingAttribute={scoringMetric}
         minNodeSize={minNodeSize}
@@ -236,8 +198,8 @@ export const MainContent = ({ }: MainContentProps) => {
       </div>
       <div className="absolute top-16 left-4 z-10">
         <EdgeDisplayToggle 
-          displayMode={edgeDisplayMode}
-          setDisplayMode={setEdgeDisplayMode}
+          displayMode={edgeDisplayMode}         // Use prop
+          setDisplayMode={onSetEdgeDisplayMode} // Use prop
         />
       </div>
       <div className="absolute top-28 left-4 z-10">
@@ -340,7 +302,7 @@ export const MainContent = ({ }: MainContentProps) => {
                 <div className="flex-1">
                   <NodeSelector
                     nodes={sortedNodesForSelector}
-                    selectedNodeId={selectedNodeId}
+                    selectedNodeId={selectedNodeId} // Use prop
                     onSelectNode={handleNodeSelect}
                     placeholder="Selecteer een dreiging..."
                   />
@@ -369,25 +331,20 @@ export const MainContent = ({ }: MainContentProps) => {
                 Gesorteerd op: {scoringMetric.replace(/_/g, ' ')} (hoogste eerst)
               </p>
             </div>
-
-            {/* REMOVED: EdgeRelationshipViewer component is no longer needed here */}
             
             <Separator className="my-2 bg-border/30" />
 
-            {/* MODIFIED: Node/Edge information area */}
             <div className="flex-1 overflow-hidden flex flex-col">
               <h4 className="text-sm font-medium mb-3">
                   {selectedNode ? "Geselecteerde Dreiging" : selectedEdge ? "Geselecteerde Verbinding" : "Details"}
               </h4>
 
-              {/* View for when nothing is selected */}
               {!selectedNode && !selectedEdge && (
                 <div className="text-sm text-muted-foreground p-4 bg-muted/30 rounded-lg">
                   Klik op een dreiging of verbinding in de grafiek om details te bekijken.
                 </div>
               )}
 
-              {/* View for when a NODE is selected */}
               {selectedNode && (
                 <div className="flex flex-col h-full overflow-hidden">
                   <div className="p-3 bg-primary/10 backdrop-blur-md rounded-lg flex-shrink-0">
@@ -466,7 +423,6 @@ export const MainContent = ({ }: MainContentProps) => {
                 </div>
               )}
 
-              {/* ADDED: View for when an EDGE is selected */}
               {selectedEdge && (
                 <div className="flex flex-col h-full overflow-hidden">
                    <div className="p-3 bg-primary/10 backdrop-blur-md rounded-lg flex-shrink-0">
@@ -522,7 +478,6 @@ export const MainContent = ({ }: MainContentProps) => {
               )}
             </div>
 
-            {/* Mobile close button */}
             <div className="md:hidden mt-4">
               <Button
                 variant="outline"

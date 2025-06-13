@@ -14,6 +14,14 @@ export interface HierarchicalLayoutInputs extends LayoutFactoryProps {
    */
   nodeSeparation?: number;
   /**
+   * Horizontal scaling factor for node positions. Default 1.
+   */
+  horizontalScale?: number;
+  /**
+   * Vertical scaling factor for node positions. Default 1.
+   */
+  verticalScale?: number;
+  /**
    * Size of each node. Default [50,50]
    */
   nodeSize?: [number, number];
@@ -37,6 +45,8 @@ export function hierarchical({
   drags,
   mode = 'td',
   nodeSeparation = 1,
+  horizontalScale = 1,
+  verticalScale = 3,
   nodeSize = [50, 50],
   getNodePosition
 }: HierarchicalLayoutInputs): LayoutStrategy {
@@ -58,7 +68,13 @@ export function hierarchical({
 
   const mappedNodes = new Map<string, InternalGraphNode>(
     nodes.map(n => {
-      const { x, y } = treeNodes.find((t: any) => t.data.id === n.id);
+      const treeNode = treeNodes.find((t: any) => t.data.id === n.id);
+      let { x, y } = treeNode;
+      
+      // Apply different scaling to x and y coordinates
+      x *= horizontalScale;
+      y *= verticalScale;
+      
       return [
         n.id,
         {

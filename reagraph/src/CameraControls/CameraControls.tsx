@@ -8,8 +8,7 @@ import React, {
   useImperativeHandle,
   useMemo,
   ReactNode,
-  useState,
-  useLayoutEffect
+  useState
 } from 'react';
 import { useThree, useFrame, extend } from '@react-three/fiber';
 import {
@@ -119,6 +118,9 @@ export const CameraControls: FC<
     },
     ref: Ref<CameraControlsRef>
   ) => {
+    // MODIFIED: Create a new variable that is true if the disabled prop is true OR if the mode is 'rotate'.
+    const isDisabled = disabled || mode === 'rotate';
+
     const cameraRef = useRef<ThreeCameraControls | null>(null);
     const camera = useThree(state => state.camera);
     const gl = useThree(state => state.gl);
@@ -164,47 +166,44 @@ export const CameraControls: FC<
 
     const panRight = useCallback(
       event => {
-        if (!isOrbiting) {
+        if (mode === 'pan') {
           cameraRef.current?.truck(-0.03 * event.deltaTime, 0, animated);
         }
       },
-      [animated, isOrbiting]
+      [animated, mode]
     );
 
     const panLeft = useCallback(
       event => {
-        if (!isOrbiting) {
+        if (mode === 'pan') {
           cameraRef.current?.truck(0.03 * event.deltaTime, 0, animated);
         }
       },
-      [animated, isOrbiting]
+      [animated, mode]
     );
 
     const panUp = useCallback(
       event => {
-        if (!isOrbiting) {
+        if (mode === 'pan') {
           cameraRef.current?.truck(0, 0.03 * event.deltaTime, animated);
         }
       },
-      [animated, isOrbiting]
+      [animated, mode]
     );
 
     const panDown = useCallback(
       event => {
-        if (!isOrbiting) {
+        if (mode === 'pan') {
           cameraRef.current?.truck(0, -0.03 * event.deltaTime, animated);
         }
       },
-      [animated, isOrbiting]
+      [animated, mode]
     );
 
     const onKeyDown = useCallback(
       event => {
         if (event.code === 'Space') {
-          if (mode === 'rotate') {
-            cameraRef.current.mouseButtons.left =
-              ThreeCameraControls.ACTION.TRUCK;
-          } else {
+          if (mode === 'pan' && cameraRef.current) {
             cameraRef.current.mouseButtons.left =
               ThreeCameraControls.ACTION.ROTATE;
           }
@@ -216,10 +215,7 @@ export const CameraControls: FC<
     const onKeyUp = useCallback(
       event => {
         if (event.code === 'Space') {
-          if (mode === 'rotate') {
-            cameraRef.current.mouseButtons.left =
-              ThreeCameraControls.ACTION.ROTATE;
-          } else {
+          if (mode === 'pan' && cameraRef.current) {
             cameraRef.current.mouseButtons.left =
               ThreeCameraControls.ACTION.TRUCK;
           }
@@ -229,7 +225,8 @@ export const CameraControls: FC<
     );
 
     useEffect(() => {
-      if (!disabled) {
+      // MODIFIED: Use the new isDisabled variable to determine if listeners should be active.
+      if (!isDisabled) {
         leftKey.addEventListener('holding', panLeft);
         rightKey.addEventListener('holding', panRight);
         upKey.addEventListener('holding', panUp);
@@ -252,20 +249,8 @@ export const CameraControls: FC<
           window.removeEventListener('keyup', onKeyUp);
         }
       };
-    }, [disabled, onKeyDown, onKeyUp, panDown, panLeft, panRight, panUp]);
-
-    useEffect(() => {
-      if (disabled) {
-        cameraRef.current.mouseButtons.left = ThreeCameraControls.ACTION.NONE;
-        cameraRef.current.mouseButtons.middle = ThreeCameraControls.ACTION.NONE;
-        cameraRef.current.mouseButtons.wheel = ThreeCameraControls.ACTION.NONE;
-      } else {
-        cameraRef.current.mouseButtons.left = ThreeCameraControls.ACTION.TRUCK;
-        cameraRef.current.mouseButtons.middle =
-          ThreeCameraControls.ACTION.TRUCK;
-        cameraRef.current.mouseButtons.wheel = ThreeCameraControls.ACTION.DOLLY;
-      }
-    }, [disabled]);
+      // MODIFIED: The dependency array now uses isDisabled.
+    }, [isDisabled, onKeyDown, onKeyUp, panDown, panLeft, panRight, panUp]);
 
     useEffect(() => {
       const onControl = () => setPanning(true);
@@ -284,26 +269,34 @@ export const CameraControls: FC<
         }
       };
     }, [cameraRef, setPanning]);
-
+    
+    // MODIFIED: The logic from two separate useEffect hooks has been consolidated into this single hook
+    // for clarity and correctness. It now correctly disables all controls when needed.
     useEffect(() => {
-      // If a node is being dragged, disable the camera controls
-      if (isDragging) {
+      if (!cameraRef.current) return;
+
+      // Highest priority: If controls are disabled (either by prop or 'rotate' mode) or a node is being dragged,
+      // disable all user interaction.
+      if (isDisabled || isDragging) {
         cameraRef.current.mouseButtons.left = ThreeCameraControls.ACTION.NONE;
+        cameraRef.current.mouseButtons.middle = ThreeCameraControls.ACTION.NONE;
+        cameraRef.current.mouseButtons.wheel = ThreeCameraControls.ACTION.NONE;
         cameraRef.current.touches.one = ThreeCameraControls.ACTION.NONE;
-      } else {
-        if (mode === 'rotate') {
-          cameraRef.current.mouseButtons.left =
-            ThreeCameraControls.ACTION.ROTATE;
-          cameraRef.current.touches.one =
-            ThreeCameraControls.ACTION.TOUCH_ROTATE;
-        } else {
-          cameraRef.current.touches.one =
-            ThreeCameraControls.ACTION.TOUCH_TRUCK;
-          cameraRef.current.mouseButtons.left =
-            ThreeCameraControls.ACTION.TRUCK;
-        }
+        cameraRef.current.touches.two = ThreeCameraControls.ACTION.NONE;
+        cameraRef.current.touches.three = ThreeCameraControls.ACTION.NONE;
+        return;
       }
-    }, [isDragging, mode]);
+      
+      // Default case: Controls are enabled ('pan' or 'orbit' mode) and nothing is being dragged.
+      // Set the standard controls for panning and zooming.
+      cameraRef.current.mouseButtons.left = ThreeCameraControls.ACTION.TRUCK;
+      cameraRef.current.mouseButtons.middle = ThreeCameraControls.ACTION.TRUCK;
+      cameraRef.current.mouseButtons.wheel = ThreeCameraControls.ACTION.DOLLY;
+      cameraRef.current.touches.one = ThreeCameraControls.ACTION.TOUCH_TRUCK;
+      cameraRef.current.touches.two = ThreeCameraControls.ACTION.TOUCH_DOLLY_TRUCK;
+      cameraRef.current.touches.three = ThreeCameraControls.ACTION.TOUCH_DOLLY_TRUCK;
+
+    }, [isDisabled, isDragging]);
 
     const values = useMemo(
       () => ({
@@ -320,12 +313,18 @@ export const CameraControls: FC<
           cameraRef.current?.reset(animated),
         freeze: () => {
           // Save the current speed
-          if (cameraRef.current.truckSpeed) {
+          if (cameraRef.current?.truckSpeed) {
             cameraSpeedRef.current = cameraRef.current.truckSpeed;
           }
-          cameraRef.current.truckSpeed = 0;
+          if (cameraRef.current) {
+            cameraRef.current.truckSpeed = 0;
+          }
         },
-        unFreeze: () => (cameraRef.current.truckSpeed = cameraSpeedRef.current)
+        unFreeze: () => {
+            if (cameraRef.current) {
+                cameraRef.current.truckSpeed = cameraSpeedRef.current
+            }
+        }
       }),
       // eslint-disable-next-line
       [zoomIn, zoomOut, panLeft, panRight, panDown, panUp, cameraRef.current]
@@ -339,7 +338,6 @@ export const CameraControls: FC<
           ref={controls => {
             cameraRef.current = controls;
             if (!controlMounted) {
-              // Update the state when the controls are mounted to notify about it component that using that controls
               setControlMounted(true);
             }
           }}

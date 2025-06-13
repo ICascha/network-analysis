@@ -112,7 +112,7 @@ export const Line: FC<LineProps> = ({
         const normalizedSize = Math.max(0, Math.min(baseLine, size));
         
         // Simple inverse: padding = (4 - size), so size 4=0, size 3=1, size 2=2, etc.
-        const paddingMultiplier = Math.max(0, baseLine - normalizedSize);
+        const paddingMultiplier = 4//  Math.max(0, baseLine - normalizedSize);
         const paddingRadius = (size * paddingMultiplier) / 2;
         
         // Create invisible padding geometry with dynamic sizing
