@@ -220,13 +220,22 @@ const currentEdgeWeight = weight !== undefined && weight !== null ? Number(weigh
 // Apply the logic based on selections
 if (!hasSelections || edgeTouchesSelection) {
   // Follow switch logic when no selections OR edge touches a selected node
+  let baseOpacity: number;
   switch (currentEdgeWeight) {
-    case 1: selectionOpacity = 0.1; break;
-    case 3: selectionOpacity = 0.2; break;
-    case 9: selectionOpacity = 0.3; break;
-    case 27: selectionOpacity = 0.5; break;
-    case 81: selectionOpacity = 0.8; break;
-    default: selectionOpacity = theme.edge.opacity; break;
+    case 1: baseOpacity = 0.1; break;
+    case 3: baseOpacity = 0.2; break;
+    case 9: baseOpacity = 0.3; break;
+    case 27: baseOpacity = 0.5; break;
+    case 81: baseOpacity = 0.8; break;
+    default: baseOpacity = theme.edge.opacity; break;
+  }
+  
+  // Boost opacity if edge touches selection and there are selections
+  if (hasSelections && edgeTouchesSelection) {
+    const gap = 1 - baseOpacity;
+    selectionOpacity = baseOpacity + (gap * 0.5);
+  } else {
+    selectionOpacity = baseOpacity;
   }
 } else {
   // Has selections but edge doesn't touch any selected node
