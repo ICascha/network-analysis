@@ -9,7 +9,6 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Card } from "@/components/ui/card";
-import type { ModelSettings } from '@/types/settings';
 import ModelExplanation from './ModelExplanation';
 import TransformerAttentionVisualizer from './TransformerAttentionVisualizer';
 import ClimateImpactGraph from './ClimateImpactGraph';
@@ -30,18 +29,9 @@ export type CentralityMetric =
   'cross_category_eigen_centrality_in' |
   'cross_category_eigen_centrality_out';
 
-const initialSettings: ModelSettings = {
-  productivity: 1.0,
-  steering: 'with',
-  workHours: 'noone',
-  jobPriority: 'standard',
-  nonSourceJobs: 'standard'
-};
-
 const brandColorRgb = "0, 153, 168";
 
 export const NarrativeLayout = () => {
-  const [settings] = useState<ModelSettings>(initialSettings);
   const introRef = useRef<HTMLDivElement>(null);
   const mainContentRef = useRef<HTMLDivElement>(null);
   const basePath = import.meta.env.BASE_URL;
@@ -364,7 +354,6 @@ export const NarrativeLayout = () => {
         className="relative w-full h-screen bg-gray-900 scroll-snap-align-start"
       >
         <MainContent
-          settings={settings}
           nodes={nodes}
           loading={loading}
           error={error}

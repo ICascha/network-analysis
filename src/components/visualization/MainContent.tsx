@@ -2,7 +2,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ListOrdered, ArrowBigRight, BookText, Move, ShieldAlert } from "lucide-react";
 import { useState, useEffect, useRef, useMemo } from 'react';
-import type { ModelSettings } from '@/types/settings';
 import GraphChart, { GraphChartRef } from './GraphChart';
 import NodeSelector from './NodeSelector';
 import ColorLegend from './ColorLegend';
@@ -15,7 +14,6 @@ import ThreatTable from './ThreatTable';
 import { shortNodeDescriptions, threatImpacts } from './shortNodeDescriptions'; // <-- IMPORTED
 
 interface MainContentProps {
-  settings: ModelSettings;
   nodes: Node[];
   loading: boolean;
   error: string | null;
