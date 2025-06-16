@@ -20,6 +20,7 @@ import type { Node, Edge } from '../visualization/networkGraph/networkService';
 import { getNetworkWithCentralityMetrics } from '../visualization/networkGraph/networkService';
 import { DEFAULT_THREAT_IMPACT_WEIGHTS, ThreatImpactWeights } from '../visualization/networkGraph/threatImpactService';
 import { EdgeDisplayMode } from '../visualization/EdgeDisplayToggle';
+import ScreenAlert from '../ui/ScreenAlert';
 
 export type CentralityMetric =
   'eigen_centrality' |
@@ -134,6 +135,7 @@ export const NarrativeLayout = () => {
   return (
     
     <div className="w-full h-screen overflow-y-scroll scroll-snap-type-y-mandatory">
+      <ScreenAlert />
       {/* --- MODIFIED: Header buttons with morphing behavior --- */}
       <div className="fixed top-4 left-4 md:top-8 md:left-8 z-50">
         <Dialog open={isLogoDialogOpen} onOpenChange={setIsLogoDialogOpen}>
