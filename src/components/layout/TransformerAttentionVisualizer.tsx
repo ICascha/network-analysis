@@ -115,7 +115,7 @@ const TransformerAttentionVisualizer = () => {
       setDisplayedText(current => {
         if (current.length >= targetSentence.length) {
           setGenerationComplete(true);
-          setIsGenerating(false);
+          //setIsGenerating(false); // <-- REMOVED FROM HERE
           return current;
         }
         
@@ -170,10 +170,11 @@ const TransformerAttentionVisualizer = () => {
     return () => clearInterval(cleanupInterval);
   }, [isGenerating, neuralFiringDuration]);
 
-  // Clear firings when generation complete
+  // Actions to perform when generation completes
   useEffect(() => {
     if (generationComplete) {
       setNeuralFirings([]);
+      setIsGenerating(false); // <-- MOVED TO HERE: Reliably hide cursor
     }
   }, [generationComplete]);
 

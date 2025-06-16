@@ -135,10 +135,9 @@ export const NarrativeLayout = () => {
     
     <div className="w-full h-screen overflow-y-scroll scroll-snap-type-y-mandatory">
       {/* --- MODIFIED: Header buttons with morphing behavior --- */}
-      <div className="fixed top-8 left-8 z-50">
+      <div className="fixed top-4 left-4 md:top-8 md:left-8 z-50">
         <Dialog open={isLogoDialogOpen} onOpenChange={setIsLogoDialogOpen}>
-            {/* This is a controlled dialog, triggered by the button below */}
-            <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-sm p-0">
+            <DialogContent className="w-[95vw] sm:w-[90vw] max-w-2xl bg-white/95 backdrop-blur-sm p-0">
                 <DialogHeader className="p-6 pb-4">
                 <DialogTitle className="text-xl">Over het Rapport</DialogTitle>
                 </DialogHeader>
@@ -154,25 +153,25 @@ export const NarrativeLayout = () => {
         </Dialog>
         
         {/* The single button that morphs its appearance and function */}
-                <button
+        <button
             onClick={handleTopLeftButtonClick}
             aria-label={isMainContentVisible ? "Terug naar uitleg" : "Open 'Over het Rapport' dialoog"}
             className={`
-                group flex items-center justify-center h-16 bg-[rgb(0,153,168)] shadow-lg hover:scale-105
+                group flex items-center justify-center h-14 md:h-16 bg-[rgb(0,153,168)] shadow-lg hover:scale-105
                 transition-all duration-500 ease-in-out
-                ${isMainContentVisible ? 'w-52 rounded-full px-4' : 'w-16 rounded-full'}
+                ${isMainContentVisible ? 'w-48 md:w-52 rounded-full px-4' : 'w-14 md:w-16 rounded-full'}
             `}
         >
             {/* Content for the "Back to Top" pill state */}
-            <div className={`flex items-center space-x-3 transition-opacity duration-300 ${isMainContentVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className={`flex items-center space-x-2 md:space-x-3 transition-opacity duration-300 ${isMainContentVisible ? 'opacity-100' : 'opacity-0'}`}>
                 <img
                     src={`${basePath}denkwerk_logo.svg`}
                     alt="Denkwerk Logo"
-                    className="h-6 w-auto"
+                    className="h-5 md:h-6 w-auto"
                     style={{ filter: 'brightness(0) invert(1)' }}
                 />
-                <span className="text-white font-medium whitespace-nowrap">Naar Uitleg</span>
-                <ArrowUp className="h-5 w-5 text-white" />
+                <span className="text-white font-medium whitespace-nowrap text-sm md:text-base">Naar Uitleg</span>
+                <ArrowUp className="h-4 w-4 md:h-5 md:w-5 text-white" />
             </div>
             
             {/* Content for the original logo circle state */}
@@ -180,21 +179,21 @@ export const NarrativeLayout = () => {
                 <img
                     src={`${basePath}denkwerk_logo.svg`}
                     alt="Denkwerk Logo"
-                    className="h-8 w-auto"
+                    className="h-7 md:h-8 w-auto"
                     style={{ filter: 'brightness(0) invert(1)' }}
                 />
             </div>
         </button>
       </div>
 
-      <div className={`fixed top-8 right-8 z-50 transition-all duration-500 ease-in-out ${isMainContentVisible ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-100 scale-100'}`}>
+      <div className={`fixed top-4 right-4 md:top-8 md:right-8 z-50 transition-all duration-500 ease-in-out ${isMainContentVisible ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-100 scale-100'}`}>
         <Dialog>
           <DialogTrigger asChild>
-            <div className="relative w-16 h-16 rounded-full bg-[rgb(0,153,168)] flex items-center justify-center shadow-lg hover:scale-105 transition-transform cursor-pointer">
-              <Info className="h-8 w-8 text-white" />
+            <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-[rgb(0,153,168)] flex items-center justify-center shadow-lg hover:scale-105 transition-transform cursor-pointer">
+              <Info className="h-7 w-7 md:h-8 md:w-8 text-white" />
             </div>
           </DialogTrigger>
-          <DialogContent className="max-w-2xl bg-white/95 backdrop-blur-sm">
+          <DialogContent className="w-[95vw] sm:w-[90vw] max-w-2xl bg-white/95 backdrop-blur-sm">
             <DialogHeader>
               <DialogTitle className="text-xl">Toelichting Analysemodel</DialogTitle>
             </DialogHeader>
@@ -206,7 +205,7 @@ export const NarrativeLayout = () => {
       {/* --- ENHANCED NARRATIVE SECTION (Unchanged) --- */}
       <section
         ref={introRef}
-        className="relative w-full h-screen bg-slate-50 scroll-snap-align-start overflow-hidden"
+        className="relative w-full h-screen bg-slate-50 scroll-snap-align-start overflow-hidden flex flex-col"
       >
         <div className="relative w-full h-[200px] md:h-[250px] flex-shrink-0">
           <img
@@ -218,27 +217,29 @@ export const NarrativeLayout = () => {
             Foto: ©ESA/NASA - André Kuipers
           </div>
           <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-white text-center px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Knooppuntenanalyse Dreigingen
             </h1>
-            <p className="text-lg max-w-3xl">Een nieuw perspectief op de nationale veiligheid</p>
+            <p className="text-base md:text-lg max-w-3xl">Een nieuw perspectief op de nationale veiligheid</p>
           </div>
         </div>
-        <div className="flex-1 overflow-y-auto" style={{ height: 'calc(100vh - 250px)' }}>
-          <div className="p-8">
+        
+        {/* MODIFICATION: Removed fixed height, using flex-1 to fill available space */}
+        <div className="flex-1 overflow-y-auto">
+          <div className="p-4 sm:p-6 md:p-8">
             <div className="max-w-4xl mx-auto space-y-8">
 
               {/* Context Section */}
               <div className="relative pt-8">
                 <div className="flex items-center justify-center mb-8">
                   <div className="flex-1 h-[1.5px] bg-gray-300"></div>
-                  <h2 className="text-2xl font-semibold text-[rgb(0,153,168)] px-6">Een veranderende wereld</h2>
+                  <h2 className="text-xl md:text-2xl font-semibold text-[rgb(0,153,168)] px-4 sm:px-6 text-center">Een veranderende wereld</h2>
                   <div className="flex-1 h-[1.5px] bg-gray-300"></div>
                 </div>
                  <div className="space-y-6 mb-12">
-                  <p className="text-lg text-gray-700 leading-relaxed text-left">
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
                 Nederland nadert een kantelpunt. Na jaren waarin we vooral met afzonderlijke uitdagingen te maken hadden, komen we nu in een periode waarin verschillende bedreigingen met elkaar verweven raken. De wereld om ons heen verandert in hoog tempo: geopolitieke verschuiving, klimaatdruk en de digitale revolutie.</p>
-                  <p className="text-lg text-gray-700 leading-relaxed text-left">
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
                     Deze trends maken dat <strong className="text-[rgb(0,153,168)]">dreigingen elkaar versterken en versnellen</strong>. Wat begint als een lokale storing, een cyberaanval, overstroming of handelsblokkade, kan uitgroeien tot een kettingreactie.  Een lokaal incident kan zich snel verspreiden en uitgroeien tot een crisis die meerdere sectoren raakt. De COVID-pandemie toonde dit pijnlijk aan: van gezondheidscrisis naar economische recessie, sociale spanningen en politieke polarisatie.
                   </p>
                 </div>
@@ -248,20 +249,20 @@ export const NarrativeLayout = () => {
               <div className="relative pt-8">
                 <div className="flex items-center justify-center mb-8">
                   <div className="flex-1 h-[1.5px] bg-gray-300"></div>
-                  <h2 className="text-2xl font-semibold text-[rgb(0,153,168)] px-6">Van traditioneel naar nieuw denken</h2>
+                  <h2 className="text-xl md:text-2xl font-semibold text-[rgb(0,153,168)] px-4 sm:px-6 text-center">Van traditioneel naar nieuw denken</h2>
                   <div className="flex-1 h-[1.5px] bg-gray-300"></div>
                 </div>
                  <div className="space-y-6 mb-12">
-                  <p className="text-lg text-gray-700 leading-relaxed text-left">
+                  <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
                                 De klassieke benadering van risico's kijkt naar waarschijnlijkheid en impact. Deze methode werkt goed voor losstaande dreigingen, maar in onze verweven wereld is een aanvullende dimensie nodig: <strong className="text-[rgb(0,153,168)]">verwevenheid</strong>.
                 Deze derde dimensie brengt in kaart hoe dreigingen elkaar beïnvloeden en versterken. Het gaat om het identificeren van knooppunten; dreigingen die als centrale schakels werken voor andere risico's. Door deze verbindingen systematisch te identificeren, kunnen we effectiever prioriteiten stellen.
                                 </p>
                 </div>
                 <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
-                  <div className="p-6">
+                  <div className="p-4 sm:p-6 max-w-full overflow-x-auto">
                     <TraditionalRiskMatrix />
                   </div>
-                  <div className="px-6 pb-4 border-t border-gray-200/40">
+                  <div className="px-4 sm:px-6 pb-4 border-t border-gray-200/40">
                     <p className="text-sm text-gray-600 leading-relaxed pt-4 text-left">
                       De klassieke aanpak beoordeelt risico's individueel op kans en impact. <strong>Maar wat als een cyberaanval leidt tot energieuitval, die weer zorgt voor economische schade en sociale onrust?</strong> Deze ketens blijven in de traditionele benadering onzichtbaar. De nieuwe benadering voegt <strong>verwevenheid</strong> toe als derde dimensie.
                     </p>
@@ -273,18 +274,18 @@ export const NarrativeLayout = () => {
               <div className="relative pt-8 mt-12">
                 <div className="flex items-center justify-center mb-8">
                     <div className="flex-1 h-[1.5px] bg-gray-300"></div>
-                    <h2 className="text-2xl font-semibold text-[rgb(0,153,168)] px-6">Verbanden tussen dreigingen</h2>
+                    <h2 className="text-xl md:text-2xl font-semibold text-[rgb(0,153,168)] px-4 sm:px-6 text-center">Verbanden tussen dreigingen</h2>
                     <div className="flex-1 h-[1.5px] bg-gray-300"></div>
                 </div>
                 <div className="space-y-6">
-                    <p className="text-lg text-gray-700 leading-relaxed text-left">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
                         Om een netwerk van dreigingen te creëren, moeten we eerst de verbanden tussen dreigingen vaststellen. Gezien het dreigingslandschap breed is, is er niet een enkele expert die wij kunnen informeren over verbanden tussen allerlei dreigingen. Daarom richten wij ons op de ‘wijsheid van de massa’. Met behulp van AI-taalmodellen (LLMs) hebben we duizenden beleidsdocumenten en onderzoeksrapporten geanalyseerd om de verborgen verbanden tussen diverse dreigingen bloot te leggen. Een taalmodel kan, zoals het onderstaande voorbeeld illustreert, de contextuele relaties identificeren die experts in tekst leggen.
                     </p>
                     <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
-                        <div className="p-6">
+                        <div className="p-4 sm:p-6">
                             <TransformerAttentionVisualizer />
                         </div>
-                        <div className="px-6 pb-4 border-t border-gray-200/40">
+                        <div className="px-4 sm:px-6 pb-4 border-t border-gray-200/40">
                             <p className="text-sm text-gray-600 leading-relaxed pt-4 font-medium text-left">
                                 AI-taalmodellen kunnen contextuele relaties tussen concepten in tekst herkennen, waardoor we causale verbanden kunnen ontdekken die experts beschrijven.
                             </p>
@@ -297,37 +298,37 @@ export const NarrativeLayout = () => {
               <div className="relative pt-8">
                 <div className="flex items-center justify-center mb-8">
                     <div className="flex-1 h-[1.5px] bg-gray-300"></div>
-                    <h2 className="text-2xl font-semibold text-[rgb(0,153,168)] px-6">Knooppunten identificeren</h2>
+                    <h2 className="text-xl md:text-2xl font-semibold text-[rgb(0,153,168)] px-4 sm:px-6 text-center">Knooppunten identificeren</h2>
                     <div className="flex-1 h-[1.5px] bg-gray-300"></div>
                 </div>
                 <div className="space-y-6">
-                    <p className="text-lg text-gray-700 leading-relaxed text-left">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
                         Uit deze analyse zijn duizenden citaten verzameld die wijzen op causale verbanden. Deze verbanden vormen een netwerk waarin elke dreiging een 'knooppunt' is. Om de betrouwbaarheid te waarborgen, negeren we verbanden die slechts sporadisch in de data voorkomen. Dit netwerk stelt ons in staat te identificeren welke dreigingen als centrale knooppunten functioneren. Door ons te richten op dreigingen die kettingreacties kunnen veroorzaken, kunnen we effectiever prioriteiten stellen in ons nationaal veiligheidsbeleid.
                     </p>
                     <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
-                        <div className="p-6">
+                        <div className="p-4 sm:p-6">
                             <ClimateImpactGraph />
                         </div>
-                         <div className="px-6 pb-4 border-t border-gray-200/40">
+                         <div className="px-4 sm:px-6 pb-4 border-t border-gray-200/40">
                             <p className="text-sm text-gray-600 leading-relaxed pt-4 font-medium text-left">
                                 Voorbeeld uit onze analyse: hitte en droogte fungeren als centrale dreiging met cascaderende effecten op landbouw, gezondheid, energie en economie.
                             </p>
                         </div>
                     </Card>
-                    <p className="text-lg text-gray-700 leading-relaxed text-left">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
                         De dreigingen in de visualisatie zijn verdeeld over vijf thema's, met een <strong style={{ color: 'rgb(0, 153, 168)' }}>focus op de verbanden tussen deze thema's</strong>. De dikte van een lijn geeft de geschatte impact van een verband aan. De grootte van het knooppunt representeert de invloed van een dreiging op andere thema’s.
                     </p>
                     <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
-                        <div className="p-6">
+                        <div className="p-4 sm:p-6">
                             <RelationGraphCanvas nodes={filteredNodes} edges={filteredEdges} />
                         </div>
-                        <div className="px-6 pb-4 border-t border-gray-200/40">
+                        <div className="px-4 sm:px-6 pb-4 border-t border-gray-200/40">
                             <p className="text-sm text-gray-600 leading-relaxed pt-4 text-center font-medium">
                                 Het dreigingsnetwerk: grotere knopen hebben meer invloed op andere dreigingen. Door ons te richten op deze knooppunten kunnen we kettingreacties voorkomen.
                             </p>
                         </div>
                     </Card>
-                    <p className="text-lg text-gray-700 leading-relaxed text-left">De visualisatie is interactief: <strong style={{ color: 'rgb(0, 153, 168)' }}>klik op een verbinding om de onderliggende citaten en brondocumenten te raadplegen.</strong> Voor een diepgaande blik en uitleg verwijzen we u naar ons <a href='https://google.com' target='_blank' rel='noopener noreferrer' style={{ color: 'rgb(0, 153, 168)', fontWeight: 'bold' }} className='underline'>rapport</a> en de bijbehorende <a href='https://google.com' target='_blank' rel='noopener noreferrer' style={{ color: 'rgb(0, 153, 168)', fontWeight: 'bold' }} className='underline'>appendix</a>.</p>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">De visualisatie is interactief: <strong style={{ color: 'rgb(0, 153, 168)' }}>klik op een verbinding om de onderliggende citaten en brondocumenten te raadplegen.</strong> Voor een diepgaande blik en uitleg verwijzen we u naar ons <a href='https://google.com' target='_blank' rel='noopener noreferrer' style={{ color: 'rgb(0, 153, 168)', fontWeight: 'bold' }} className='underline'>rapport</a> en de bijbehorende <a href='https://google.com' target='_blank' rel='noopener noreferrer' style={{ color: 'rgb(0, 153, 168)', fontWeight: 'bold' }} className='underline'>appendix</a>.</p>
                 </div>
               </div>
               
@@ -364,7 +365,6 @@ export const NarrativeLayout = () => {
           edgeDisplayMode={edgeDisplayMode}
           onSetEdgeDisplayMode={setEdgeDisplayMode}
         />
-        {/* --- REMOVED: Redundant "Return to Top" button --- */}
       </section>
       
       <style>{`
