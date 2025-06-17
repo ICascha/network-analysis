@@ -248,8 +248,7 @@ const calculateEigenvector = (
 };
 
 /**
- * Modified centrality calculations that use HITS algorithm approach
- * but maintain the same property names for compatibility:
+ * Modified centrality calculations
  * - eigen_centrality: treats the graph as undirected
  * - eigen_centrality_in: based on incoming edges (prestige)
  * - eigen_centrality_out: based on outgoing edges (importance)

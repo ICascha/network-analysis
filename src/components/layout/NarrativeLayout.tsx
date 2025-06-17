@@ -1,15 +1,13 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
 import { MainContent } from '../visualization/MainContent';
-import { Info, ArrowUp, ChevronsDown } from 'lucide-react';
+import { ArrowUp, ChevronsDown } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { Card } from "@/components/ui/card";
-import ModelExplanation from './ModelExplanation';
 import TransformerAttentionVisualizer from './TransformerAttentionVisualizer';
 import ClimateImpactGraph from './ClimateImpactGraph';
 import TraditionalRiskMatrix from './TraditionalRiskMatrix';
@@ -188,22 +186,6 @@ export const NarrativeLayout = () => {
         </button>
       </div>
 
-      <div className={`fixed top-4 right-4 md:top-8 md:right-8 z-50 transition-all duration-500 ease-in-out ${isMainContentVisible ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-100 scale-100'}`}>
-        <Dialog>
-          <DialogTrigger asChild>
-            <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-[rgb(0,153,168)] flex items-center justify-center shadow-lg hover:scale-105 transition-transform cursor-pointer">
-              <Info className="h-7 w-7 md:h-8 md:w-8 text-white" />
-            </div>
-          </DialogTrigger>
-          <DialogContent className="w-[95vw] sm:w-[90vw] max-w-2xl bg-white/95 backdrop-blur-sm">
-            <DialogHeader>
-              <DialogTitle className="text-xl">Toelichting Analysemodel</DialogTitle>
-            </DialogHeader>
-            <ModelExplanation/>
-          </DialogContent>
-        </Dialog>
-      </div>
-
       {/* --- ENHANCED NARRATIVE SECTION (Unchanged) --- */}
       <section
         ref={introRef}
@@ -240,10 +222,9 @@ export const NarrativeLayout = () => {
                 </div>
                  <div className="space-y-6 mb-12">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
-                Nederland nadert een kantelpunt. Na jaren waarin we vooral met afzonderlijke uitdagingen te maken hadden, komen we nu in een periode waarin verschillende bedreigingen met elkaar verweven raken. De wereld om ons heen verandert in hoog tempo: geopolitieke verschuiving, klimaatdruk en de digitale revolutie.</p>
+               De uitdagingen waar Nederland voor staat zijn niet alleen groter, maar ook complexer en meer verweven dan we de afgelopen decennia gewend zijn. Dreigingen zijn geen op zichzelf staande incidenten meer, maar verweven ketens van oorzaak en gevolg. De wereld om ons heen verandert in hoog tempo: geopolitieke machtsverschuiving, klimaatdruk en de digitale revolutie.</p>
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
-                    Deze trends maken dat <strong className="text-[rgb(0,153,168)]">dreigingen elkaar versterken en versnellen</strong>. Wat begint als een lokale storing, een cyberaanval, overstroming of handelsblokkade, kan uitgroeien tot een kettingreactie.  Een lokaal incident kan zich snel verspreiden en uitgroeien tot een crisis die meerdere sectoren raakt. De COVID-pandemie toonde dit pijnlijk aan: van gezondheidscrisis naar economische recessie, sociale spanningen en politieke polarisatie.
-                  </p>
+Deze trends maken dat <strong className="text-[rgb(0,153,168)]">dreigingen elkaar versterken en versnellen</strong>. Wat begint als een lokale storing, een cyberaanval, overstroming of handelsblokkade, kan uitgroeien tot een keten van afhankelijkheden. Een lokaal incident kan zich snel verspreiden en uitgroeien tot een crisis die meerdere sectoren raakt. De COVID-pandemie toonde dit pijnlijk aan: van gezondheidscrisis naar economische recessie, sociale spanningen en politieke polarisatie.                  </p>
                 </div>
               </div>
 
@@ -256,8 +237,7 @@ export const NarrativeLayout = () => {
                 </div>
                  <div className="space-y-6 mb-12">
                   <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
-                                De klassieke benadering van risico's kijkt naar waarschijnlijkheid en impact. Deze methode werkt goed voor losstaande dreigingen, maar in onze verweven wereld is een aanvullende dimensie nodig: <strong className="text-[rgb(0,153,168)]">verwevenheid</strong>.
-                Deze derde dimensie brengt in kaart hoe dreigingen elkaar beïnvloeden en versterken. Het gaat om het identificeren van knooppunten; dreigingen die als centrale schakels werken voor andere risico's. Door deze verbindingen systematisch te identificeren, kunnen we effectiever prioriteiten stellen.
+De klassieke benadering van risico's kijkt naar waarschijnlijkheid en impact. Deze methode werkt goed voor losstaande dreigingen, maar in onze verweven wereld is een aanvullende dimensie nodig: <strong style={{ color: 'rgb(0, 153, 168)' }}>verwevenheid</strong>. Deze derde dimensie brengt in kaart hoe dreigingen elkaar beïnvloeden en versterken. Het gaat om het identificeren van knooppunten; dreigingen die als centrale schakels werken voor andere risico’s. Door deze verbindingen systematisch te identificeren, kunnen we effectiever prioriteren.
                                 </p>
                 </div>
                 <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
@@ -281,8 +261,7 @@ export const NarrativeLayout = () => {
                 </div>
                 <div className="space-y-6">
                     <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
-                        Om een netwerk van dreigingen te creëren, moeten we eerst de verbanden tussen dreigingen vaststellen. Gezien het dreigingslandschap breed is, is er niet een enkele expert die wij kunnen informeren over verbanden tussen allerlei dreigingen. Daarom richten wij ons op de ‘wijsheid van de massa’. Met behulp van AI-taalmodellen (LLMs) hebben we duizenden beleidsdocumenten en onderzoeksrapporten geanalyseerd om de verborgen verbanden tussen diverse dreigingen bloot te leggen. Een taalmodel kan, zoals het onderstaande voorbeeld illustreert, de contextuele relaties identificeren die experts in tekst leggen.
-                    </p>
+Om een netwerk van dreigingen te creëren, moeten we eerst de verbanden tussen dreigingen vaststellen. Gezien het dreigingslandschap breed is, is er niet een enkele expert die wij kunnen informeren over verbanden tussen allerlei dreigingen. Daarom richten wij ons op de ‘wijsheid van de massa’. Met behulp van AI-taalmodellen (LLMs) hebben we duizenden beleidsdocumenten en onderzoeksrapporten geanalyseerd om de verborgen verbanden tussen diverse dreigingen bloot te leggen. Een taalmodel kan, zoals het onderstaande voorbeeld illustreert, de contextuele relaties identificeren die experts in de tekst leggen.                    </p>
                     <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
                         <div className="p-4 sm:p-6">
                             <TransformerAttentionVisualizer />
@@ -305,8 +284,7 @@ export const NarrativeLayout = () => {
                 </div>
                 <div className="space-y-6">
                     <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
-                        Uit deze analyse zijn duizenden citaten verzameld die wijzen op causale verbanden. Deze verbanden vormen een netwerk waarin elke dreiging een 'knooppunt' is. Om de betrouwbaarheid te waarborgen, negeren we verbanden die slechts sporadisch in de data voorkomen. Dit netwerk stelt ons in staat te identificeren welke dreigingen als centrale knooppunten functioneren. Door ons te richten op dreigingen die kettingreacties kunnen veroorzaken, kunnen we effectiever prioriteiten stellen in ons nationaal veiligheidsbeleid.
-                    </p>
+Uit deze analyse zijn duizenden citaten verzameld die wijzen op causale verbanden. Deze verbanden vormen een netwerk waarin elke dreiging een knoop is. Om de betrouwbaarheid te waarborgen, negeren we verbanden die slechts sporadisch in de data voorkomen. Dit netwerk stelt ons in staat te identificeren welke dreigingen als centrale knooppunten functioneren, ofwel dreigingen die vele andere dreigingen beïnvloeden. Door ons te richten op dreigingen die keteneffecten kunnen veroorzaken, kunnen we effectiever prioriteiten stellen in ons nationaal veiligheidsbeleid.                    </p>
                     <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
                         <div className="p-4 sm:p-6">
                             <ClimateImpactGraph />
@@ -318,8 +296,7 @@ export const NarrativeLayout = () => {
                         </div>
                     </Card>
                     <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
-                        De dreigingen in de visualisatie zijn verdeeld over vijf thema's, met een <strong style={{ color: 'rgb(0, 153, 168)' }}>focus op de verbanden tussen deze thema's</strong>. De dikte van een lijn geeft de geschatte impact van een verband aan. De grootte van het knooppunt representeert de invloed van een dreiging op andere thema’s.
-                    </p>
+De dreigingen in de visualisatie zijn verdeeld over zes categorieën (zoals economisch, ecologisch, technologisch & digitaal), met een <strong style={{ color: 'rgb(0, 153, 168)' }}>focus op de verbanden tussen deze categorieën</strong>. De dikte van een lijn geeft de geschatte impact van de gevolgdreiging aan. De grootte van het knooppunt representeert de invloed van een dreiging op andere categorieën.                    </p>
                     <Card className="border border-gray-200/60 bg-white/50 backdrop-blur-sm shadow-sm rounded-lg overflow-hidden">
                         <div className="p-4 sm:p-6">
                             <RelationGraphCanvas nodes={filteredNodes} edges={filteredEdges} />
